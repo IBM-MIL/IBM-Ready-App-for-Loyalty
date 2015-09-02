@@ -1,0 +1,99 @@
+
+/* Class = "UILabel"; text = "ES-Enable Twitter"; ObjectID = "0lp-gf-6r7"; */
+"0lp-gf-6r7.text" = "ES-Enable Twitter";
+
+/* Class = "UILabel"; text = "ES-Edit profile"; ObjectID = "3U4-wY-90U"; */
+"3U4-wY-90U.text" = "ES-Edit profile";
+
+/* Class = "UILabel"; text = "ES-Enable location services"; ObjectID = "4SP-oQ-UFl"; */
+"4SP-oQ-UFl.text" = "ES-Enable location services";
+
+/* Class = "UILabel"; text = "ES-2.45"; ObjectID = "4jj-ud-WBQ"; */
+"4jj-ud-WBQ.text" = "ES-2.45";
+
+/* Class = "UILabel"; text = "ES-Add your interests"; ObjectID = "5ha-5b-vk4"; */
+"5ha-5b-vk4.text" = "ES-Add your interests";
+
+/* Class = "UILabel"; text = "ES-2.45"; ObjectID = "6jb-H7-10S"; */
+"6jb-H7-10S.text" = "ES-2.45";
+
+/* Class = "UILabel"; text = "ES-Enable Notifications"; ObjectID = "7kf-3J-OuU"; */
+"7kf-3J-OuU.text" = "ES-Enable Notifications";
+
+/* Class = "UILabel"; text = "ES-Cynthia Jennings"; ObjectID = "95o-c9-S7z"; */
+"95o-c9-S7z.text" = "ES-Cynthia Jennings";
+
+/* Class = "UILabel"; text = "ES-About points"; ObjectID = "EjE-Se-QNP"; */
+"EjE-Se-QNP.text" = "ES-About points";
+
+/* Class = "UILabel"; text = "ES-SAVED DEALS"; ObjectID = "FOB-CN-vf3"; */
+"FOB-CN-vf3.text" = "ES-SAVED DEALS";
+
+/* Class = "UILabel"; text = "ES-.74 MI"; ObjectID = "GkC-HH-7z4"; */
+"GkC-HH-7z4.text" = "ES-.74 MI";
+
+/* Class = "UILabel"; text = "ES-CHEAPEST"; ObjectID = "Ktp-ey-lf3"; */
+"Ktp-ey-lf3.text" = "ES-CHEAPEST";
+
+/* Class = "UIButton"; normalTitle = "ES-ADD TO PASSBOOK"; ObjectID = "OIA-oA-4VB"; */
+"OIA-oA-4VB.normalTitle" = "ES-ADD TO PASSBOOK";
+
+/* Class = "UILabel"; text = "ES-25 points"; ObjectID = "RLR-Ms-rp0"; */
+"RLR-Ms-rp0.text" = "ES-25 points";
+
+/* Class = "UILabel"; text = "ES-AVAILABLE DEALS:"; ObjectID = "S9K-MP-eZN"; */
+"S9K-MP-eZN.text" = "ES-AVAILABLE DEALS:";
+
+/* Class = "UILabel"; text = "ES-2 MIN"; ObjectID = "Tsf-oB-l5M"; */
+"Tsf-oB-l5M.text" = "ES-2 MIN";
+
+/* Class = "UILabel"; text = "ES-You've earned 10% off per gallon!"; ObjectID = "W94-5S-53o"; */
+"W94-5S-53o.text" = "ES-You've earned 10% off per gallon!";
+
+/* Class = "UILabel"; text = "ES-Expires 7/30/15"; ObjectID = "a2r-DT-Sgm"; */
+"a2r-DT-Sgm.text" = "ES-Expires 7/30/15";
+
+/* Class = "UILabel"; text = "Show tutorial"; ObjectID = "bqZ-ef-9PY"; */
+"bqZ-ef-9PY.text" = "ES-Show tutorial";
+
+/* Class = "UILabel"; text = "ES-LOYALTY REWARDS"; ObjectID = "d6X-dU-xjW"; */
+"d6X-dU-xjW.text" = "ES-LOYALTY REWARDS";
+
+/* Class = "UILabel"; text = "ES-Free Soft Drink"; ObjectID = "dXr-SI-rd0"; */
+"dXr-SI-rd0.text" = "ES-Free Soft Drink";
+
+/* Class = "UILabel"; text = "ES-LOYALTY POINTS:"; ObjectID = "ftf-AP-Dnt"; */
+"ftf-AP-Dnt.text" = "ES-LOYALTY POINTS:";
+
+/* Class = "UILabel"; text = "ES-8570 Bayberry \nDrive"; ObjectID = "fuf-2I-OF9"; */
+"fuf-2I-OF9.text" = "ES-8570 Bayberry \nDrive";
+
+/* Class = "UILabel"; text = "ES-8570 Bayberry \nDrive"; ObjectID = "kAi-8S-iO1"; */
+"kAi-8S-iO1.text" = "ES-8570 Bayberry \nDrive";
+
+/* Class = "UIViewController"; title = "ES-SETTINGS"; ObjectID = "kbk-hs-0LY"; */
+"kbk-hs-0LY.title" = "ES-SETTINGS";
+
+/* Class = "UILabel"; text = "ES-CLOSEST"; ObjectID = "n4z-p0-lDX"; */
+"n4z-p0-lDX.text" = "ES-CLOSEST";
+
+/* Class = "UILabel"; text = "ES-75 points left until\n10% off next fill-up"; ObjectID = "nBg-XV-56W"; */
+"nBg-XV-56W.text" = "ES-75 points left until\n10% off next fill-up";
+
+/* Class = "UILabel"; text = "ES-X"; ObjectID = "okj-02-Opi"; */
+"okj-02-Opi.text" = "ES-X";
+
+/* Class = "UILabel"; text = "ES-2 MIN"; ObjectID = "q50-DI-Yhe"; */
+"q50-DI-Yhe.text" = "ES-2 MIN";
+
+/* Class = "UILabel"; text = "ES-Enter your phone number at the pump to redeem your reward."; ObjectID = "qL5-oK-Exg"; */
+"qL5-oK-Exg.text" = "ES-Enter your phone number at the pump to redeem your reward.";
+
+/* Class = "UILabel"; text = "ES-SETTINGS"; ObjectID = "ssL-vE-xLn"; */
+"ssL-vE-xLn.text" = "ES-SETTINGS";
+
+/* Class = "UILabel"; text = "ES-Y"; ObjectID = "we1-IG-ghZ"; */
+"we1-IG-ghZ.text" = "ES-Y";
+
+/* Class = "UILabel"; text = "ES-.74 MI"; ObjectID = "zRh-RY-Dix"; */
+"zRh-RY-Dix.text" = "ES-.74 MI";

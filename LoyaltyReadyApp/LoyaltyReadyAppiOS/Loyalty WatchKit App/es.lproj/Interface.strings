@@ -1,0 +1,75 @@
+
+/* Class = "WKInterfaceLabel"; text = "Exp: 00/00/00"; ObjectID = "1WL-10-sqV"; */
+"1WL-10-sqV.text" = "Exp: 00/00/00";
+
+/* Class = "WKInterfaceLabel"; text = "points left until"; ObjectID = "27F-RO-2lP"; */
+"27F-RO-2lP.text" = "points left until";
+
+/* Class = "WKInterfaceLabel"; text = "X"; ObjectID = "2fs-AG-AS5"; */
+"2fs-AG-AS5.text" = "X";
+
+/* Class = "WKInterfaceController"; title = "Close"; ObjectID = "5bK-eK-ztj"; */
+"5bK-eK-ztj.title" = "Close";
+
+/* Class = "WKInterfaceController"; title = "My Deals"; ObjectID = "6dR-6z-5XN"; */
+"6dR-6z-5XN.title" = "My Deals";
+
+/* Class = "WKInterfaceButton"; title = "Save Deal"; ObjectID = "7mv-T0-fhX"; */
+"7mv-T0-fhX.title" = "Save Deal";
+
+/* Class = "WKInterfaceController"; title = "My Reward"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "My Reward";
+
+/* Class = "WKInterfaceLabel"; text = " POINTS"; ObjectID = "FTf-uN-c4u"; */
+"FTf-uN-c4u.text" = " POINTS";
+
+/* Class = "WKInterfaceLabel"; text = "10% off per gallon"; ObjectID = "M0j-Tt-aq1"; */
+"M0j-Tt-aq1.text" = "10% off per gallon";
+
+/* Class = "WKInterfaceLabel"; text = "Exp: 00/00/00"; ObjectID = "Rm4-x9-EId"; */
+"Rm4-x9-EId.text" = "Exp: 00/00/00";
+
+/* Class = "WKInterfaceLabel"; text = "You did it"; ObjectID = "TVG-6O-5yw"; */
+"TVG-6O-5yw.text" = "You did it";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Title"; ObjectID = "U4m-fj-YtA"; */
+"U4m-fj-YtA.text" = "Alert Title";
+
+/* Class = "WKInterfaceLabel"; text = "Error retrieving data from server"; ObjectID = "VoP-gW-8Wb"; */
+"VoP-gW-8Wb.text" = "Error retrieving data from server";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "XkS-y5-khE"; */
+"XkS-y5-khE.text" = "Alert Label";
+
+/* Class = "WKInterfaceLabel"; text = "Deal Body"; ObjectID = "Y5Y-nt-2hx"; */
+"Y5Y-nt-2hx.text" = "Deal Body";
+
+/* Class = "WKInterfaceLabel"; text = "65"; ObjectID = "bSh-9X-Gag"; */
+"bSh-9X-Gag.text" = "65";
+
+/* Class = "WKInterfaceLabel"; text = "Redeem now using Passbook"; ObjectID = "fLj-s8-zRl"; */
+"fLj-s8-zRl.text" = "Redeem now using Passbook";
+
+/* Class = "WKInterfaceLabel"; text = "Nearby Deal"; ObjectID = "gcb-1g-0v1"; */
+"gcb-1g-0v1.text" = "Nearby Deal";
+
+/* Class = "WKInterfaceLabel"; text = "Goal Reached"; ObjectID = "igs-QO-b75"; */
+"igs-QO-b75.text" = "Goal Reached";
+
+/* Class = "WKInterfaceLabel"; text = "Reward"; ObjectID = "j61-VF-q6f"; */
+"j61-VF-q6f.text" = "Reward";
+
+/* Class = "WKInterfaceLabel"; text = "Reward"; ObjectID = "moB-My-nw8"; */
+"moB-My-nw8.text" = "Reward";
+
+/* Class = "WKInterfaceMenuItem"; title = "Save Deal"; ObjectID = "nCm-Sb-lgj"; */
+"nCm-Sb-lgj.title" = "Save Deal";
+
+/* Class = "WKInterfaceLabel"; text = "-"; ObjectID = "sIH-VL-Drg"; */
+"sIH-VL-Drg.text" = "-";
+
+/* Class = "WKInterfaceLabel"; text = "Copy"; ObjectID = "vxX-Dd-m1k"; */
+"vxX-Dd-m1k.text" = "Copy";
+
+/* Class = "WKInterfaceLabel"; text = "My Points"; ObjectID = "wpD-lD-NYm"; */
+"wpD-lD-NYm.text" = "My Points";

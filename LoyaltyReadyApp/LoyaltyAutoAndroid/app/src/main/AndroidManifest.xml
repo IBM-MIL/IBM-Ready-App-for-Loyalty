@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mil.ibm.com.loyaltyauto" >
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <permission android:name="mil.ibm.com.loyaltyauto.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="mil.ibm.com.loyaltyauto.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="android.support.multidex.MultiDexApplication">
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+
+        <activity android:name="com.worklight.wlclient.ui.UIActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <receiver
+            android:name=".MyMessageHeardReceiver"
+            android:enabled="true"
+            android:exported="true" >
+        </receiver>
+        <!--receiver android:name=".MyMessageReplyReceiver" >
+            <intent-filter>
+                <action android:name="com.myapp.messagingservice.MY_ACTION_MESSAGE_REPLY" />
+            </intent-filter>
+        </receiver-->
+        <receiver
+            android:name=".MyMesageReplyReceiver"
+            android:enabled="true"
+            android:exported="true" >
+        </receiver>
+        <provider
+            android:name="com.xtify.sdk.db.Provider"
+            android:authorities="mil.ibm.com.loyaltyauto.XTIFY_PROVIDER"
+            android:exported="false" />
+        <receiver android:name="com.xtify.sdk.c2dm.C2DMBroadcastReceiver" >
+            <intent-filter android:permission="com.google.android.c2dm.permission.SEND" >
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="mil.ibm.com.loyaltyauto" />
+            </intent-filter>
+            <intent-filter android:permission="com.google.android.c2dm.permission.SEND" >
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="mil.ibm.com.loyaltyauto" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="mil.ibm.com.loyaltyauto.XtifyNotifier" >
+            <intent-filter>
+                <action android:name="com.xtify.sdk.NOTIFIER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.xtify.sdk.NotifActionReceiver" />
+        <receiver android:name="com.xtify.sdk.wi.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.xtify.sdk.location.LocationUpdateService" />
+        <service android:name="com.xtify.sdk.c2dm.C2DMIntentService" />
+        <service android:name="com.xtify.sdk.alarm.MetricsIntentService" />
+        <service android:name="com.xtify.sdk.alarm.TagIntentService" />
+        <service android:name="com.xtify.sdk.alarm.RegistrationIntentService" />
+        <service android:name="com.xtify.sdk.alarm.LocationIntentService" />
+    </application>
+
+</manifest>

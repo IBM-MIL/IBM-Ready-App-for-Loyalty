@@ -1,0 +1,30 @@
+{
+    "WatchKit Simulator Actions": [
+        {
+           "title": "Details",
+           "identifier": "detailsButtonAction"
+           },
+           {
+           "title": "Save Deal",
+           "identifier": "saveDealButtonAction"
+           }
+        ],
+    
+    "aps": {
+        "alert": {
+            "action-loc-key": "Open",
+            "body": "Free Soft Drink with any purchase"
+        },
+        "category": "dealCategory",
+        "sound":"default"
+    },
+    "SN": "qTzzU",
+    "title": "Nearby Deal",
+    "deal": {
+        "name": "25% Off Sports Drinks",
+        "im": "sportsDrink",
+        "exp": 23,
+        "hl": "25% Off Sports Drinks, check it out"
+    }
+}
+

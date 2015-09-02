@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_cards"
+        android:icon="@drawable/ic_credit_card_black_24dp"
+        android:title="Loyalty Card"
+        android:showAsAction="always"  />
+    <item android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings"
+       android:showAsAction="ifRoom"  />
+</menu>

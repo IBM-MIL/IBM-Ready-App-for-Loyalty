@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchFilterTableViewCell" rowHeight="58" id="lr6-qC-cuf" customClass="SearchFilterTableViewCell" customModule="Loyalty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="58"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lr6-qC-cuf" id="c6M-Qg-thv">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hNL-hB-I8Z">
+                        <rect key="frame" x="8" y="18" width="22" height="22"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="Gu5-ej-Fcf"/>
+                            <constraint firstAttribute="height" constant="22" id="pOM-lJ-8Vn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx5-Xe-u38">
+                        <rect key="frame" x="45" y="20" width="251" height="19"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="hNL-hB-I8Z" firstAttribute="leading" secondItem="c6M-Qg-thv" secondAttribute="leadingMargin" id="Hpn-8x-Zre"/>
+                    <constraint firstItem="zx5-Xe-u38" firstAttribute="trailing" secondItem="c6M-Qg-thv" secondAttribute="trailingMargin" constant="-39" id="IOq-3d-hiC"/>
+                    <constraint firstAttribute="centerY" secondItem="hNL-hB-I8Z" secondAttribute="centerY" id="ZfR-7h-kWe"/>
+                    <constraint firstItem="zx5-Xe-u38" firstAttribute="leading" secondItem="hNL-hB-I8Z" secondAttribute="trailing" constant="15" id="d7M-cL-op5"/>
+                    <constraint firstItem="hNL-hB-I8Z" firstAttribute="centerY" secondItem="zx5-Xe-u38" secondAttribute="centerY" id="gAc-fG-8sm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="filterNameLabel" destination="zx5-Xe-u38" id="Ycr-Tw-TCp"/>
+                <outlet property="iconImageView" destination="hNL-hB-I8Z" id="0hF-DO-6vZ"/>
+            </connections>
+            <point key="canvasLocation" x="300.5" y="257"/>
+        </tableViewCell>
+    </objects>
+</document>

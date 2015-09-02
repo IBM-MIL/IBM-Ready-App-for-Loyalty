@@ -1,0 +1,42 @@
+
+/* Class = "UIButton"; normalTitle = "NEAR ME"; ObjectID = "2AD-kC-ReF"; */
+"2AD-kC-ReF.normalTitle" = "ES-NEAR ME";
+
+/* Class = "UILabel"; text = "FINE PRINT"; ObjectID = "DZU-RB-RvL"; */
+"DZU-RB-RvL.text" = "ES-FINE PRINT";
+
+/* Class = "UILabel"; text = "Expires tomorrow!"; ObjectID = "FGd-aq-2w5"; */
+"FGd-aq-2w5.text" = "ES-Expires tomorrow!";
+
+/* Class = "UILabel"; text = "DEAL DETAILS"; ObjectID = "eJl-z3-QoB"; */
+"eJl-z3-QoB.text" = "ES-DEAL DETAILS";
+
+/* Class = "UIViewController"; title = "DEAL DETAILS"; ObjectID = "ftE-TL-Md7"; */
+"ftE-TL-Md7.title" = "ES-DEAL DETAILS";
+
+/* Class = "UILabel"; text = "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."; ObjectID = "gwT-Rv-GhX"; */
+"gwT-Rv-GhX.text" = "ES-Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only.";
+
+/* Class = "UILabel"; text = "$.99 Fountain Drink"; ObjectID = "mHS-1G-i9n"; */
+"mHS-1G-i9n.text" = "ES-$.99 Fountain Drink";
+
+/* Class = "UILabel"; text = "Free Soft Drink"; ObjectID = "rzL-Lx-v6D"; */
+"rzL-Lx-v6D.text" = "ES-Free Soft Drink";
+
+/* Class = "UILabel"; text = "$.99 for any fountain drink of your choice"; ObjectID = "uc8-1L-Ch2"; */
+"uc8-1L-Ch2.text" = "ES-$.99 for any fountain drink of your choice";
+
+/* Class = "UIButton"; normalTitle = "CREATE ACCOUNT"; ObjectID = "vxO-ed-hm1"; */
+"vxO-ed-hm1.normalTitle" = "ES-CREATE ACCOUNT";
+
+/* Class = "UILabel"; text = "Create a loyalty\naccount to see\nrecommended deals"; ObjectID = "wQG-09-VEH"; */
+"wQG-09-VEH.text" = "ES-Create a loyalty\naccount to see\nrecommended deals";
+
+/* Class = "UILabel"; text = "HIGHLIGHTS"; ObjectID = "xgC-PO-zZ5"; */
+"xgC-PO-zZ5.text" = "ES-HIGHLIGHTS";
+
+/* Class = "UILabel"; text = "Expires 7/30/15"; ObjectID = "xgN-CA-S7M"; */
+"xgN-CA-S7M.text" = "ES-Expires 7/30/15";
+
+/* Class = "UIButton"; normalTitle = "RECOMMENDED"; ObjectID = "xyt-9v-1hR"; */
+"xyt-9v-1hR.normalTitle" = "ES-RECOMMENDED";

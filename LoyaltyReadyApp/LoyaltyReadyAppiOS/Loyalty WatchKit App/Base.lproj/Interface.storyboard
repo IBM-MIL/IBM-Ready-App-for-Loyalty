@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6dR-6z-5XN">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--My Reward-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="secondController" title="My Reward" id="AgC-eL-Hgc" customClass="RewardsInterfaceController" customModule="Loyalty_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" spacing="0.0" id="69S-NB-E8M">
+                            <items>
+                                <imageView width="1" height="67" alignment="left" id="5W7-2f-794">
+                                    <variation key="device=watch42mm" height="75"/>
+                                </imageView>
+                                <group width="1" height="21" alignment="left" id="amP-ql-k1o">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="-" id="sIH-VL-Drg">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                        </label>
+                                        <label height="20" alignment="center" verticalAlignment="center" text=" POINTS" id="FTf-uN-c4u">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="2"/>
+                                    <variation key="device=watch42mm">
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="9" bottom="5"/>
+                                    </variation>
+                                </group>
+                                <group width="1" alignment="left" id="Suz-eH-UON">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" alpha="0.5" text="X" id="2fs-AG-AS5">
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" alpha="0.5" text="points left until" id="27F-RO-2lP">
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="center" verticalAlignment="center" alpha="0.5" text="10% off per gallon" id="M0j-Tt-aq1">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="1" right="1" top="14" bottom="0.0"/>
+                    <variation key="device=watch42mm">
+                        <edgeInsets key="margins" left="1" right="1" top="18" bottom="0.0"/>
+                    </variation>
+                    <connections>
+                        <outlet property="amountLeftLabel" destination="2fs-AG-AS5" id="Chu-gu-W3X"/>
+                        <outlet property="dollarLabel" destination="sIH-VL-Drg" id="PeK-f2-erG"/>
+                        <outlet property="gasAnimation" destination="5W7-2f-794" id="27b-sW-lNO"/>
+                        <outlet property="radialAnimationGroup" destination="69S-NB-E8M" id="dzF-Yr-Ikh"/>
+                        <outlet property="rewardLabel" destination="M0j-Tt-aq1" id="nWu-dN-q9o"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="639" y="347"/>
+        </scene>
+        <!--My Deals-->
+        <scene sceneID="YQe-zG-GDt">
+            <objects>
+                <controller identifier="firstController" title="My Deals" id="6dR-6z-5XN" customClass="DealListInterfaceController" customModule="Loyalty_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="zqq-RO-trc">
+                            <items>
+                                <tableRow identifier="DealRow" id="3C8-Dw-b4Q" customClass="DealRow" customModule="Loyalty_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="8NM-en-bvx">
+                                        <items>
+                                            <label alignment="left" text="Reward" id="moB-My-nw8">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                            </label>
+                                            <group width="1" alignment="left" id="m9U-uY-ulz">
+                                                <items>
+                                                    <label width="100" alignment="left" alpha="0.5" text="Exp: 00/00/00" id="Rm4-x9-EId">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                    <imageView alignment="right" id="2mO-on-dIR"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="8" right="8" top="4" bottom="4"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dealImg" destination="2mO-on-dIR" id="afc-Lw-CyT"/>
+                                        <outlet property="expirationLabel" destination="Rm4-x9-EId" id="ElK-MO-2d0"/>
+                                        <outlet property="titleLabel" destination="moB-My-nw8" id="0OS-gk-fAo"/>
+                                        <segue destination="5bK-eK-ztj" kind="modal" identifier="DealDetails" id="utO-a1-QeZ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label width="107" height="35.5" alignment="center" verticalAlignment="center" hidden="YES" text="Error retrieving data from server" textAlignment="center" numberOfLines="2" id="VoP-gW-8Wb">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="dealTable" destination="zqq-RO-trc" id="M7n-bh-ltM"/>
+                        <outlet property="errorLabel" destination="VoP-gW-8Wb" id="hYe-1n-E6O"/>
+                        <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="9ii-49-xws"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="434" y="348"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="7UV-eC-SSh">
+            <objects>
+                <glanceController id="nsw-iV-ppY" customClass="GlanceInterfaceController" customModule="Loyalty_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" id="JeZ-dW-QCg">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" verticalAlignment="center" image="app icon" id="gtj-yL-L1x"/>
+                                <label alignment="center" verticalAlignment="center" text="My Points" id="wpD-lD-NYm">
+                                    <color key="textColor" red="0.16862745098039217" green="0.59607843137254901" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="13"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" spacing="0.0" id="dNa-fp-Y1P">
+                            <items>
+                                <label height="15" alignment="center" verticalAlignment="bottom" text="65" id="bSh-9X-Gag">
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="glanceRadialAnimationGroup" destination="dNa-fp-Y1P" id="sq0-jz-GIk"/>
+                        <outlet property="pointLabel" destination="bSh-9X-Gag" id="w33-wr-4J1"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="28" y="525"/>
+        </scene>
+        <!--Close-->
+        <scene sceneID="2fM-9B-x6S">
+            <objects>
+                <controller identifier="DealDetails" title="Close" id="5bK-eK-ztj" customClass="DealDetailInterfaceController" customModule="Loyalty_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Reward" numberOfLines="0" id="j61-VF-q6f">
+                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                        </label>
+                        <label alignment="left" alpha="0.5" text="Exp: 00/00/00" id="1WL-10-sqV">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <group width="1" alignment="left" spacing="6" id="lZf-pK-BED">
+                            <items>
+                                <imageView width="20" height="20" alignment="left" verticalAlignment="center" image="Passbook" id="a5v-ud-flx"/>
+                                <label alignment="left" text="Redeem now using Passbook" numberOfLines="0" id="fLj-s8-zRl">
+                                    <color key="textColor" red="0.1960784314" green="0.65490196079999996" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                        </group>
+                        <button width="1" alignment="left" title="Save Deal" id="7mv-T0-fhX">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.19607843137254902" green="0.65490196078431373" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                            <connections>
+                                <action selector="saveDealItemAction" destination="5bK-eK-ztj" id="qyW-ah-b7y"/>
+                            </connections>
+                        </button>
+                        <label width="1" alignment="left" alpha="0.5" text="Copy" numberOfLines="0" id="vxX-Dd-m1k">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                    </items>
+                    <menu key="menu" id="Mzy-m5-nCf">
+                        <items>
+                            <menuItem title="Save Deal" icon="add" id="nCm-Sb-lgj">
+                                <connections>
+                                    <action selector="saveDealItemAction" destination="5bK-eK-ztj" id="hSS-58-Jta"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="dealBody" destination="vxX-Dd-m1k" id="4sW-WW-NsU"/>
+                        <outlet property="dealRedemptionGroup" destination="lZf-pK-BED" id="pdS-BS-bEf"/>
+                        <outlet property="dealTitle" destination="j61-VF-q6f" id="rm2-at-Y9K"/>
+                        <outlet property="expirationDate" destination="1WL-10-sqV" id="yUl-kt-WTM"/>
+                        <outlet property="saveDealBtn" destination="7mv-T0-fhX" id="GTV-MK-9rP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="434" y="639"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="nLq-dk-bhk">
+                            <items>
+                                <label alignment="left" text="Alert Label" numberOfLines="0" id="XkS-y5-khE">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                                <label alignment="left" numberOfLines="0" id="I1v-fb-bgU">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="8" right="8" top="8" bottom="8"/>
+                        </group>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="dealCategory" wantsSashBlur="YES" id="JfB-70-Muf">
+                        <color key="sashColor" red="0.1960784314" green="0.65490196079999996" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="NiM-EU-uMl">
+            <objects>
+                <notificationController id="G0d-D1-cQJ">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="Tik-X1-j6Q">
+                            <items>
+                                <label alignment="left" text="Alert Title" id="U4m-fj-YtA">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                                <label alignment="left" id="fEa-95-0xM">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="8" right="8" top="8" bottom="8"/>
+                        </group>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="goalCategory" wantsSashBlur="YES" id="1mg-sV-Mj9">
+                        <color key="sashColor" red="0.1960784314" green="0.65490196079999996" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="U4m-fj-YtA" id="p6c-ID-h3e"/>
+                        <segue destination="Rd2-lL-jp0" kind="relationship" relationship="dynamicNotificationInterface" id="zsR-3s-gOX"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1251"/>
+        </scene>
+        <!--Deal Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="DealNotificationController" customModule="Loyalty_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="XXZ-t4-MaY">
+                            <items>
+                                <label alignment="left" text="Nearby Deal" id="gcb-1g-0v1">
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                                <label alignment="left" text="Deal Body" numberOfLines="0" id="Y5Y-nt-2hx">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="8" right="8" top="8" bottom="8"/>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="Y5Y-nt-2hx" id="k9e-Wu-L1r"/>
+                        <outlet property="titleLabel" destination="gcb-1g-0v1" id="nw6-65-pST"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="573" y="1001"/>
+        </scene>
+        <!--Goal Notification Controller-->
+        <scene sceneID="Z1G-m8-JkB">
+            <objects>
+                <controller id="Rd2-lL-jp0" customClass="GoalNotificationController" customModule="Loyalty_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="tOK-Iq-whX">
+                            <items>
+                                <label alignment="left" text="Goal Reached" id="igs-QO-b75">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                                <label alignment="left" text="You did it" numberOfLines="0" id="TVG-6O-5yw">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="8" right="8" top="8" bottom="8"/>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="TVG-6O-5yw" id="fhn-uC-DDd"/>
+                        <outlet property="titleLabel" destination="igs-QO-b75" id="GEn-ww-SG6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="535" y="1251"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.1960784314" green="0.65490196079999996" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+</document>

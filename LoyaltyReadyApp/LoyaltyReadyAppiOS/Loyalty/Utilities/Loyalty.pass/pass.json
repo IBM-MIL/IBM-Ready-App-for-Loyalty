@@ -1,0 +1,39 @@
+{
+    "formatVersion" : 1,
+    "passTypeIdentifier" : "pass.com.ibm.test1",
+    "serialNumber" : "p69f2J",
+    "teamIdentifier" : "PP64RT7P8Z",
+    "webServiceURL" : "https://example.com/passes/",
+    "authenticationToken" : "vxwxd7J8AlNNFPS8k0a0FfUFtq0ewzFdc",
+    "locations" : [{
+                   "longitude" : -122.3748889,
+                   "latitude" : 37.6189722
+                   }],
+    "barcode" : {
+        "message" : "123456789",
+        "format" : "PKBarcodeFormatPDF417",
+        "messageEncoding" : "iso-8859-1"
+    },
+    "organizationName" : "RA5 Loyality",
+    "description" : "Gas Loyalty Card",
+    "logoText" : "Loyalty Rewards",
+    "foregroundColor" : "rgb(255, 255, 255)",
+    "backgroundColor" : "rgb(0, 180, 160)",
+    "storeCard" : {
+        "headerFields" : [{
+                          "key" : "header",
+                          "value" : 60,
+                          "label" : "POINTS"
+        }],
+        "secondaryFields" : [{
+                           "key" : "user",
+                           "label" : "NAME",
+                           "value" : "Cynthia Jennings"
+                           }],
+        "auxiliaryFields" : [{
+                             "key" : "deals",
+                             "label" : "AVALIBLE",
+                             "value" : "4 deals"
+                             }]
+    }
+}

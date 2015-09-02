@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+--><nativeIOSApp xmlns="http://www.worklight.com/native-ios-descriptor" bundleId="com.Loyalty" id="LoyaltyiOS" platformVersion="7.0.0.00.20150608-1356" version="1.0">
+	
+	<displayName>LoyaltyiOS</displayName>
+	<description>Loyalty</description>
+	<accessTokenExpiration>3600</accessTokenExpiration>
+	<userIdentityRealms/>
+	<pushSender password="ibm4you1"/> 
+</nativeIOSApp>

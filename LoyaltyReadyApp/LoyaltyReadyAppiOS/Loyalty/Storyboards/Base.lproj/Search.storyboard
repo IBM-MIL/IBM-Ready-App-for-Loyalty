@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uYa-4j-TdE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="uxQ-P5-XcU">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uYa-4j-TdE" customClass="SearchViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fC7-E2-dnW"/>
+                        <viewControllerLayoutGuide type="bottom" id="o1k-m3-gk2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JO7-ra-LRF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ry6-tZ-qCc">
+                                <rect key="frame" x="0.0" y="20" width="600" height="530"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bS8-KS-buG">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wca-yX-8M0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o1k-m3-gk2" firstAttribute="top" secondItem="bS8-KS-buG" secondAttribute="bottom" id="Tst-wa-imo"/>
+                            <constraint firstAttribute="centerX" secondItem="bS8-KS-buG" secondAttribute="centerX" id="TvF-a7-U3G"/>
+                            <constraint firstItem="bS8-KS-buG" firstAttribute="top" secondItem="ry6-tZ-qCc" secondAttribute="bottom" id="fAn-KL-0Uz"/>
+                            <constraint firstItem="ry6-tZ-qCc" firstAttribute="top" secondItem="fC7-E2-dnW" secondAttribute="bottom" id="idH-Os-UGx"/>
+                            <constraint firstAttribute="centerX" secondItem="ry6-tZ-qCc" secondAttribute="centerX" id="ikU-A6-klK"/>
+                            <constraint firstItem="bS8-KS-buG" firstAttribute="width" secondItem="JO7-ra-LRF" secondAttribute="width" id="jIH-S2-bR2"/>
+                            <constraint firstItem="ry6-tZ-qCc" firstAttribute="width" secondItem="JO7-ra-LRF" secondAttribute="width" id="lqL-62-Vcd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomSegmentedControlHolderView" destination="bS8-KS-buG" id="iRs-1G-Ibd"/>
+                        <outlet property="tableView" destination="ry6-tZ-qCc" id="E7i-SP-e6Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ff-jI-Ger" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="428"/>
+        </scene>
+    </scenes>
+</document>

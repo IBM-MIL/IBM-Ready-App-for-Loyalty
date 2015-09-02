@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Np-iO-tLb"; */
+"4Np-iO-tLb.text" = "Label";
+
+/* Class = "UILabel"; text = "HOW DO I USE MY POINTS?"; ObjectID = "ALb-Nh-i3p"; */
+"ALb-Nh-i3p.text" = "HOW DO I USE MY POINTS?";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "NTH-Ws-Sb7"; */
+"NTH-Ws-Sb7.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "Earn points by spending money at the gas pump or in the convenience store. One dollar equals one point, so every dollar you spend gets you closer to 100 points."; ObjectID = "PRw-b7-8pS"; */
+"PRw-b7-8pS.text" = "Earn points by spending money at the gas pump or in the convenience store. One dollar equals one point, so every dollar you spend gets you closer to 100 points.";
+
+/* Class = "UILabel"; text = "ABOUT POINTS"; ObjectID = "TLt-2g-Ewm"; */
+"TLt-2g-Ewm.text" = "ABOUT POINTS";
+
+/* Class = "UILabel"; text = "You can add or change them later"; ObjectID = "Uki-YG-Rgb"; */
+"Uki-YG-Rgb.text" = "You can add or change them later";
+
+/* Class = "UILabel"; text = "HOW DO I EARN POINTS?"; ObjectID = "hbc-T1-z2i"; */
+"hbc-T1-z2i.text" = "HOW DO I EARN POINTS?";
+
+/* Class = "UILabel"; text = "Once you’ve reached 100 points, you receive 10% off the total cost of your fill-up. Redeem this reward simply by entering your phone number at the pump."; ObjectID = "ll9-FN-uwq"; */
+"ll9-FN-uwq.text" = "Once you’ve reached 100 points, you receive 10% off the total cost of your fill-up. Redeem this reward simply by entering your phone number at the pump.";
+
+/* Class = "UILabel"; text = "Add your interests"; ObjectID = "pCO-th-mBc"; */
+"pCO-th-mBc.text" = "Add your interests";

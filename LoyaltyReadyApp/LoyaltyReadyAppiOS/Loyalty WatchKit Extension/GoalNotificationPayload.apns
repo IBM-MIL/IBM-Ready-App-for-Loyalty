@@ -1,0 +1,26 @@
+{
+    "WatchKit Simulator Actions": [
+       {
+            "title": "Details",
+            "identifier": "goalReachedButtonAction"
+       }
+       ],
+    
+    "aps": {
+        "alert": {
+            "action-loc-key": "Open",
+            "body": "You have received $.10 off per gallon"
+        },
+        "category": "goalCategory",
+        "sound":"default"
+    },
+    "SN": "qTzzU",
+    "title": "Goal Reached",
+    "deal": {
+        "name": "$.10 off gas",
+        "image_name": "iceCream",
+        "exp": 14,
+        "hl": "You have received $.10 off per gallon"
+    }
+}
+

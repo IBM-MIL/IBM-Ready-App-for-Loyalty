@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Code confirmed!"; ObjectID = "1bE-Sd-2Y4"; */
+"1bE-Sd-2Y4.text" = "Code confirmed!";
+
+/* Class = "UILabel"; text = "Collect 100 points to receive 10%\noff per gallon of gas. Earn points\nby spending money at the pump\nor at a convenience store."; ObjectID = "2Hm-ry-FtJ"; */
+"2Hm-ry-FtJ.text" = "Collect 100 points to receive 10%\noff per gallon of gas. Earn points\nby spending money at the pump\nor at a convenience store.";
+
+/* Class = "UIButton"; normalTitle = "START SAVING!"; ObjectID = "6r5-0N-z77"; */
+"6r5-0N-z77.normalTitle" = "START SAVING!";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "BJz-JT-0VT"; */
+"BJz-JT-0VT.placeholder" = "Phone Number";
+
+/* Class = "UILabel"; text = "Start saving today!"; ObjectID = "Bbh-Mm-FeC"; */
+"Bbh-Mm-FeC.text" = "Start saving today!";
+
+/* Class = "UIViewController"; title = "Login"; ObjectID = "H3X-3M-h4u"; */
+"H3X-3M-h4u.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "VERIFY DEVICE"; ObjectID = "Sor-GO-sQz"; */
+"Sor-GO-sQz.normalTitle" = "VERIFY DEVICE";
+
+/* Class = "UILabel"; text = "Enter your code"; ObjectID = "YyN-K4-38o"; */
+"YyN-K4-38o.text" = "Enter your code";
+
+/* Class = "UILabel"; text = "We texted you a confirmation\ncode at "; ObjectID = "chn-4Q-UjJ"; */
+"chn-4Q-UjJ.text" = "We texted you a confirmation\ncode at ";
+
+/* Class = "UILabel"; text = "Please enter your phone number\nto receive a confirmation code."; ObjectID = "dlS-nJ-Doc"; */
+"dlS-nJ-Doc.text" = "Please enter your phone number\nto receive a confirmation code.";
+
+/* Class = "UILabel"; text = "Incorrect login!"; ObjectID = "eSB-38-w6m"; */
+"eSB-38-w6m.text" = "Incorrect login!";
+
+/* Class = "UIButton"; normalTitle = "LOG IN WITH TWITTER"; ObjectID = "klU-lF-eFl"; */
+"klU-lF-eFl.normalTitle" = "LOG IN WITH TWITTER";
+
+/* Class = "UILabel"; text = "You’ve earned 10 points just for\ncreating an account!"; ObjectID = "kwK-Rc-Few"; */
+"kwK-Rc-Few.text" = "You’ve earned 10 points just for\ncreating an account!";
+
+/* Class = "UILabel"; text = "or"; ObjectID = "mbZ-eq-Fln"; */
+"mbZ-eq-Fln.text" = "or";
+
+/* Class = "UIButton"; normalTitle = "RECEIVE CODE"; ObjectID = "n9x-OO-2aY"; */
+"n9x-OO-2aY.normalTitle" = "RECEIVE CODE";
+
+/* Class = "UILabel"; text = "Incorrect code!"; ObjectID = "zTD-vC-m1D"; */
+"zTD-vC-m1D.text" = "Incorrect code!";

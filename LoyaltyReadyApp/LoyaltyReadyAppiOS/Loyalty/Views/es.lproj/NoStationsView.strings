@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "REFINE SEARCH"; ObjectID = "0LH-xK-iT9"; */
+"0LH-xK-iT9.normalTitle" = "ES-REFINE SEARCH";
+
+/* Class = "UILabel"; text = "No Results"; ObjectID = "9Iy-rI-38n"; */
+"9Iy-rI-38n.text" = "ES-No Results";
+
+/* Class = "UILabel"; text = "Sorry, we couldn't find anything that matched your search. Try removing filters or expanding your search area."; ObjectID = "nhF-s0-Zgb"; */
+"nhF-s0-Zgb.text" = "ES-Sorry, we couldn't find anything that matched your search. Try removing filters or expanding your search area.";

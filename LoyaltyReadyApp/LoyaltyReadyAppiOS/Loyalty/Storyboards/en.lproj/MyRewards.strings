@@ -1,0 +1,99 @@
+
+/* Class = "UILabel"; text = "Enable Twitter"; ObjectID = "0lp-gf-6r7"; */
+"0lp-gf-6r7.text" = "Enable Twitter";
+
+/* Class = "UILabel"; text = "Edit profile"; ObjectID = "3U4-wY-90U"; */
+"3U4-wY-90U.text" = "Edit profile";
+
+/* Class = "UILabel"; text = "Enable location services"; ObjectID = "4SP-oQ-UFl"; */
+"4SP-oQ-UFl.text" = "Enable location services";
+
+/* Class = "UILabel"; text = "2.45"; ObjectID = "4jj-ud-WBQ"; */
+"4jj-ud-WBQ.text" = "2.45";
+
+/* Class = "UILabel"; text = "Add your interests"; ObjectID = "5ha-5b-vk4"; */
+"5ha-5b-vk4.text" = "Add your interests";
+
+/* Class = "UILabel"; text = "2.45"; ObjectID = "6jb-H7-10S"; */
+"6jb-H7-10S.text" = "2.45";
+
+/* Class = "UILabel"; text = "Enable Notifications"; ObjectID = "7kf-3J-OuU"; */
+"7kf-3J-OuU.text" = "Enable Notifications";
+
+/* Class = "UILabel"; text = "Cynthia Jennings"; ObjectID = "95o-c9-S7z"; */
+"95o-c9-S7z.text" = "Cynthia Jennings";
+
+/* Class = "UILabel"; text = "About points"; ObjectID = "EjE-Se-QNP"; */
+"EjE-Se-QNP.text" = "About points";
+
+/* Class = "UILabel"; text = "SAVED DEALS"; ObjectID = "FOB-CN-vf3"; */
+"FOB-CN-vf3.text" = "SAVED DEALS";
+
+/* Class = "UILabel"; text = ".74 MI"; ObjectID = "GkC-HH-7z4"; */
+"GkC-HH-7z4.text" = ".74 MI";
+
+/* Class = "UILabel"; text = "CHEAPEST"; ObjectID = "Ktp-ey-lf3"; */
+"Ktp-ey-lf3.text" = "CHEAPEST";
+
+/* Class = "UIButton"; normalTitle = "ADD TO PASSBOOK"; ObjectID = "OIA-oA-4VB"; */
+"OIA-oA-4VB.normalTitle" = "ADD TO PASSBOOK";
+
+/* Class = "UILabel"; text = "25 points"; ObjectID = "RLR-Ms-rp0"; */
+"RLR-Ms-rp0.text" = "25 points";
+
+/* Class = "UILabel"; text = "AVAILABLE DEALS:"; ObjectID = "S9K-MP-eZN"; */
+"S9K-MP-eZN.text" = "AVAILABLE DEALS:";
+
+/* Class = "UILabel"; text = "2 MIN"; ObjectID = "Tsf-oB-l5M"; */
+"Tsf-oB-l5M.text" = "2 MIN";
+
+/* Class = "UILabel"; text = "You've earned 10% off per gallon!"; ObjectID = "W94-5S-53o"; */
+"W94-5S-53o.text" = "You've earned 10% off per gallon!";
+
+/* Class = "UILabel"; text = "Expires 7/30/15"; ObjectID = "a2r-DT-Sgm"; */
+"a2r-DT-Sgm.text" = "Expires 7/30/15";
+
+/* Class = "UILabel"; text = "Show tutorial"; ObjectID = "bqZ-ef-9PY"; */
+"bqZ-ef-9PY.text" = "Show tutorial";
+
+/* Class = "UILabel"; text = "LOYALTY REWARDS"; ObjectID = "d6X-dU-xjW"; */
+"d6X-dU-xjW.text" = "LOYALTY REWARDS";
+
+/* Class = "UILabel"; text = "Free Soft Drink"; ObjectID = "dXr-SI-rd0"; */
+"dXr-SI-rd0.text" = "Free Soft Drink";
+
+/* Class = "UILabel"; text = "LOYALTY POINTS:"; ObjectID = "ftf-AP-Dnt"; */
+"ftf-AP-Dnt.text" = "LOYALTY POINTS:";
+
+/* Class = "UILabel"; text = "8570 Bayberry \nDrive"; ObjectID = "fuf-2I-OF9"; */
+"fuf-2I-OF9.text" = "8570 Bayberry \nDrive";
+
+/* Class = "UILabel"; text = "8570 Bayberry \nDrive"; ObjectID = "kAi-8S-iO1"; */
+"kAi-8S-iO1.text" = "8570 Bayberry \nDrive";
+
+/* Class = "UIViewController"; title = "SETTINGS"; ObjectID = "kbk-hs-0LY"; */
+"kbk-hs-0LY.title" = "SETTINGS";
+
+/* Class = "UILabel"; text = "CLOSEST"; ObjectID = "n4z-p0-lDX"; */
+"n4z-p0-lDX.text" = "CLOSEST";
+
+/* Class = "UILabel"; text = "75 points left until\n10% off next fill-up"; ObjectID = "nBg-XV-56W"; */
+"nBg-XV-56W.text" = "75 points left until\n10% off next fill-up";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "okj-02-Opi"; */
+"okj-02-Opi.text" = "X";
+
+/* Class = "UILabel"; text = "2 MIN"; ObjectID = "q50-DI-Yhe"; */
+"q50-DI-Yhe.text" = "2 MIN";
+
+/* Class = "UILabel"; text = "Enter your phone number at the pump to redeem your reward."; ObjectID = "qL5-oK-Exg"; */
+"qL5-oK-Exg.text" = "Enter your phone number at the pump to redeem your reward.";
+
+/* Class = "UILabel"; text = "SETTINGS"; ObjectID = "ssL-vE-xLn"; */
+"ssL-vE-xLn.text" = "SETTINGS";
+
+/* Class = "UILabel"; text = "Y"; ObjectID = "we1-IG-ghZ"; */
+"we1-IG-ghZ.text" = "Y";
+
+/* Class = "UILabel"; text = ".74 MI"; ObjectID = "zRh-RY-Dix"; */
+"zRh-RY-Dix.text" = ".74 MI";

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qaz-22-ZGi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="2OB-fo-lji">
+            <objects>
+                <tabBarController id="qaz-22-ZGi" customClass="CustomTabBarController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="NdF-Sj-9bj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="tintColor" red="0.45098039509999999" green="0.25098040700000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.45098039509999999" green="0.25098040700000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="c2Z-Gp-Rup" kind="relationship" relationship="viewControllers" id="Sx3-w2-NxS"/>
+                        <segue destination="tsz-h9-ZXL" kind="relationship" relationship="viewControllers" id="FjI-Yr-oxn"/>
+                        <segue destination="57m-aR-cqa" kind="relationship" relationship="viewControllers" id="vfy-Ls-2K5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY6-2I-FQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097" y="292"/>
+        </scene>
+        <!--MY REWARDS-->
+        <scene sceneID="3xA-iH-SXG">
+            <objects>
+                <navigationController id="c2Z-Gp-Rup" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MY REWARDS" image="my-rewards_unselected" id="YOh-qE-Ki7" customClass="RAMAnimatedTabBarItem" customModule="Loyalty" customModuleProvider="target">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-6"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="my-rewards_selected"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="9J1-oT-ZR2" id="ZZb-9C-m6G"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage="arrow-back" backIndicatorTransitionMaskImage="arrow-back" id="bdx-jd-5cU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="tintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lG1-Gw-Vpy" kind="relationship" relationship="rootViewController" id="Rr5-Mj-XMz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0g8-kn-8x8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="9J1-oT-ZR2" customClass="RAMBounceAnimation" customModule="Loyalty" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-1757" y="1117"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="i9c-8F-bfP">
+            <objects>
+                <viewController id="lG1-Gw-Vpy" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ouJ-hw-8tq"/>
+                        <viewControllerLayoutGuide type="bottom" id="R5H-vX-Jg5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZHA-RP-KcE">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7BD-14-0Xu"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="MyRewards"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROy-bt-Yy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1757" y="1993"/>
+        </scene>
+        <!--STATIONS-->
+        <scene sceneID="lIZ-JK-MUG">
+            <objects>
+                <navigationController storyboardIdentifier="StationNav" id="57m-aR-cqa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="STATIONS" image="stations_unselected" id="19l-L6-Sle" customClass="RAMAnimatedTabBarItem" customModule="Loyalty" customModuleProvider="target">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="stations_selected"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="vaj-vh-Xof" id="0Kq-xC-EUt"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0Yu-J3-rgd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NFq-Yh-2mW" kind="relationship" relationship="rootViewController" id="TJb-QA-p5I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AnB-9b-wQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="vaj-vh-Xof" customClass="RAMBounceAnimation" customModule="Loyalty" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-379" y="1117"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="yg0-wN-EPW">
+            <objects>
+                <viewController id="NFq-Yh-2mW" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MWn-au-gZX"/>
+                        <viewControllerLayoutGuide type="bottom" id="lGe-8S-5Tr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fyv-o3-bp2">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DqL-h3-Brr"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Stations"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8l-yN-hvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-379" y="1993"/>
+        </scene>
+        <!--DEALS-->
+        <scene sceneID="SYG-hQ-G9h">
+            <objects>
+                <navigationController id="tsz-h9-ZXL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DEALS" image="deals_unselected" id="sWA-RN-GLL" customClass="RAMAnimatedTabBarItem" customModule="Loyalty" customModuleProvider="target">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="deals_selected"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="sQU-i6-epj" id="6Fc-H0-YZe"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage="arrow-back" backIndicatorTransitionMaskImage="arrow-back" id="xP3-oG-BhX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="tintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pmV-fM-QkR" kind="relationship" relationship="rootViewController" id="gbR-tw-t17"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52j-vy-FHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="sQU-i6-epj" customClass="RAMBounceAnimation" customModule="Loyalty" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-1093" y="1117"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="Yij-dF-vHc">
+            <objects>
+                <viewController id="pmV-fM-QkR" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cDg-ep-eot"/>
+                        <viewControllerLayoutGuide type="bottom" id="qGX-vV-lFV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b3T-2V-QzP">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7V8-wk-Rfi"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Deals"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vqr-BF-wwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1093" y="1993"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow-back" width="10" height="17"/>
+        <image name="deals_selected" width="22" height="22"/>
+        <image name="deals_unselected" width="22" height="22"/>
+        <image name="my-rewards_selected" width="25" height="22"/>
+        <image name="my-rewards_unselected" width="25" height="22"/>
+        <image name="stations_selected" width="24" height="23"/>
+        <image name="stations_unselected" width="24" height="23"/>
+    </resources>
+</document>

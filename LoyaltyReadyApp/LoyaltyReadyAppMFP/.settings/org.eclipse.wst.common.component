@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="LoyaltyReadyApp">
+        <wb-resource deploy-path="/" source-path="/adapters/LoyaltyUserAdapter/src"/>
+        <wb-resource deploy-path="/" source-path="/tests/mobilefirst"/>
+        <wb-resource deploy-path="/" source-path="/server/java"/>
+        <wb-resource deploy-path="/" source-path="/apps/LoyaltyiOS"/>
+        <property name="context-root" value="LoyaltyReadyApp"/>
+    </wb-module>
+</project-modules>

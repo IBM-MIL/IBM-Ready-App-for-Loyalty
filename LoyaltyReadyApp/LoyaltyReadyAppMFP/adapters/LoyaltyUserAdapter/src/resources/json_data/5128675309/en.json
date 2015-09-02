@@ -1,0 +1,383 @@
+{
+    "id" : 1000,
+    "rev" : 1,
+    "type" : "user",
+    "username" : "user1",
+    "geo_location": {
+        "lat": 30.4,
+        "lon": -97.721223
+    },
+    "profile" : {
+        "contact" : {
+            "first_name" : "Cynthia",
+            "last_name" : "Jennings",
+            "gender" : "female",
+            "age" : 37,
+            "city" : "Austin",
+            "state" : "TX",
+            "zip" : 78758,
+            "country" : "United States of America",
+            "phone" : "512-867-5309"
+        },
+        "vehicles" : [{
+                      "make" : "Chrysler",
+                      "model" : "Town and Country",
+                      "year" : 2013
+                      }],
+        "preferences" : ["sports drinks", "potato chips", "soda", "candy"],
+        "rewards" : {
+            "points" : 75,
+            "savings" : 27.50,
+            "progress" : 75
+        },
+        "tags" : ["extroverted"]
+    },
+    "transactions" : [{
+                      "id" : 1,
+                      "timestamp" : 1432657413,
+                      "type" : "pump",
+                      "method" : "credit",
+                      "provider" : "Visa",
+                      "total" : 28.37,
+                      "items" : [{
+                                 "name" : "Unleaded Regular Fuel",
+                                 "quantity" : 12,
+                                 "unit" : "gallon",
+                                 "ppu" : 2.54
+                                 }]
+                      },{
+                      "id" : 2,
+                      "timestamp" : 1432657795,
+                      "type" : "retail",
+                      "method" : "credit",
+                      "provider" : "Visa",
+                      "total" : 7.05,
+                      "items" : [{
+                                 "name" : "Fruit Punch Gatorade 20oz",
+                                 "quantity" : 1,
+                                 "unit" : "bottle",
+                                 "ppu" : 2.50
+                                 }, {
+                                 "name" : "Lay's Baked Potato Chips",
+                                 "quantity" : 1,
+                                 "unit" : "bag",
+                                 "ppu" : 1.50
+                                 },{
+                                 "name" : "Diet Coke 20oz",
+                                 "quantity" : 1,
+                                 "unit" : "bottle",
+                                 "ppu" : 2.50
+                                 }]
+                      }],
+    "deals" : [{
+      "deal_id" : 1,
+               "name" : "$.99 Fountain Drink",
+               "image_name": "fountainDrink",
+               "watch_image" : "drink",
+               "expiration" : 1,
+               "highlight" : "$.99 for any fountain drink of your choice",
+               "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+               },
+               {
+                "deal_id" : 2,
+               "name" : "Buy 1 Get 1 Free ",
+               "image_name": "bogo",
+               "watch_image" : "shoppingbag",
+               "expiration" : 14,
+               "highlight" : "Buy 1 scoop of Bluebell ice cream get another one for free",
+               "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+               },
+               {
+                "deal_id" : 3,
+               "name" : "Free Oatmeal Bar",
+               "image_name": "freeOatmealBar",
+               "watch_image" : "shoppingbag",
+               "expiration" : 14,
+               "highlight" : "Free oatmeal bar with a $20 minimum gas purchase",
+               "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+               },
+               {
+                "deal_id" : 4,
+               "name" : "$5.99 Large Pizza",
+               "image_name": "pizza",
+               "watch_image" : "pizza",
+               "expiration" : 14,
+               "highlight" : "$5.99 on a large pizza of your choice with the purchase of a 2L Coca-Cola",
+               "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+               },
+               {
+                "deal_id" : 5,
+               "name" : "$3 off lunch meal",
+               "image_name": "lunchMeal",
+               "watch_image" : "shoppingbag",
+               "expiration" : 60,
+               "highlight" : "$3 off any lunch combo of your choice",
+               "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+               },
+               {
+                "deal_id" : 6,
+               "name" : "3 for $3",
+               "image_name": "3for3",
+               "watch_image" : "shoppingbag",
+               "expiration" : 60,
+               "highlight" : "Pick any 3 items from our hot case for $3",
+               "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+               }],
+    "gas_stations" : [{
+                      "name" : "Generic Gas Station",
+                      "gas_price": 2.55,
+                      "amenities": ["car wash","restrooms","atm","alcohol"],
+                      "geo_location" : {
+                      "lat": 30.391813,
+                      "lon": -97.721223
+                      },
+                      "address": "5404 6th Street West",
+                      "hours" : {
+                      "open" : 9,
+                      "close" : 17
+                      },
+                      "phone_number" : 8888888888,
+                      "website" : "opengas.com",
+                      "deals" : [{
+                        "deal_id" : 7,
+                                 "name" : "$1.99 Fruit Cup",
+                                 "image_name": "fruitCup",
+                                 "watch_image" : "shoppingbag",
+                                 "expiration" : 1,
+                                 "highlight" : "$1.99 for strawberry, water melon or mix fruit cup",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 },
+                                 {
+                                  "deal_id" : 8,
+                                 "name" : "25% Off Sports Drinks",
+                                 "watch_image" : "drink",
+                                 "image_name": "sportsDrink",
+                                 "expiration" : 4,
+                                 "highlight" : "Come in and pick out any sports drink and get it for 25% off!",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 },
+                                 {
+                                  "deal_id" : 9,
+                                 "name" : "Buy 2 Get 1 Free",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "bogo",
+                                 "expiration" : 1,
+                                 "highlight" : "Buy 1 cup of yogurt get another one for free",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 },
+                                 {
+                                  "deal_id" : 10,
+                                 "name" : "5% Off Chips",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "freeChips",
+                                 "expiration" : 6,
+                                 "highlight" : "Come in now and get 5% off any chips in the store!",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 },
+                                 {
+                                  "deal_id" : 11,
+                                 "name" : "Half Off Candy!",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "candy",
+                                 "expiration" : 9,
+                                 "highlight" : "Act now and get half off any candy we carry in our entire store!",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 },
+                                 {
+                                  "deal_id" : 12,
+                                 "name" : "$5.99 Large Pizza",
+                                 "watch_image" : "pizza",
+                                 "image_name": "pizza",
+                                 "expiration" : 14,
+                                 "highlight" : "$5.99 on a large pizza of your choice with the purchase of a 2L Coca-Cola",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 }],
+                      "items" : ["soft drinks","coffee","water","fresh fruit"]
+                      },
+                      {
+                      "name" : "Generic Gas Station",
+                      "gas_price": 2.59,
+                      "amenities": ["restrooms", "24hours","alcohol","diesel"],
+                      "geo_location" : {
+                      "lat": 30.396932,
+                      "lon": -97.733599
+                      },
+                      "address" : "5602 Clark Street",
+                      "hours" : {
+                      "open" : 9,
+                      "close" : 22
+                      },
+                      "phone_number" : 8888888888,
+                      "website" : "opengas.com",
+                      "deals" : [{
+                        "deal_id" : 13,
+                                 "name" : "Buy 2 Get 1 Free",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "bogo",
+                                 "expiration" : 1,
+                                 "highlight" : "Buy 1 cup of yogurt get another one for free",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 },
+                                 {
+                                  "deal_id" : 14,
+                                 "name" : "10% Off Any Chips in the Store",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "freeChips",
+                                 "expiration" : 7,
+                                 "highlight" : "Act now and get 10% of any bag of chips in the store!",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 }],
+                      "items" : ["souvenirs", "coffee", "soft drinks", "water"]
+                      },
+                      {
+                      "name" : "Generic Gas Station",
+                      "gas_price": 2.45,
+                      "amenities": ["restaurant","restrooms","alcohol","diesel"],
+                      "geo_location" : {
+                      "lat": 30.390099,
+                      "lon": -97.719618
+                      },
+                      "address" : "8570 Bayberry Drive",
+                      "hours" : {
+                      "open" : 9,
+                      "close" : 22
+                      },
+                      "phone_number" : 8888888888,
+                      "website" : "opengas.com",
+                      "deals" : [{
+                        "deal_id" : 15,
+                                 "name" : "$.99 Fountain Drink",
+                                 "watch_image" : "drink",
+                                 "image_name": "fountainDrink",
+                                 "expiration" : 14,
+                                 "highlight" : "$.99 for any fountain drink of your choice",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 },
+                                 {
+                                  "deal_id" : 16,
+                                 "name" : "5% Off Chips",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "freeChips",
+                                 "expiration" : 6,
+                                 "highlight" : "Come in now and get 5% off any chips in the store!",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 }],
+                      "items" : ["electronics", "coffee", "soft drinks", "snacks"]
+                      },
+                      {
+                      "name" : "Generic Gas Station",
+                      "gas_price": 2.49,
+                      "amenities": ["atm","fresh fruit","restrooms","car wash"],
+                      "geo_location" : {
+                      "lat": 30.409683,
+                      "lon": -97.715632
+                      },
+                      "address" : "1554 Bay Street",
+                      "hours" : {
+                      "open" : 9,
+                      "close" : 17
+                      },
+                      "phone_number" : 8888888888,
+                      "website" : "opengas.com",
+                      "deals" : [{
+                        "deal_id" : 17,
+                                 "name" : "Free Chips",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "freeChips",
+                                 "expiration" : 14,
+                                 "highlight" : "Free Chips with a purchase of salsa sauce",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 },
+                                 {
+                                  "deal_id" : 18,
+                                 "name" : "Half Off Candy!",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "candy",
+                                 "expiration" : 9,
+                                 "highlight" : "Act now and get half off any candy we carry in our entire store!",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 }],
+                      "items" : ["energy drinks", "water", "soft drinks", "hot food"]
+                      },
+                      {
+                      "name" : "Generic Gas Station",
+                      "gas_price": 2.49,
+                      "amenities": ["alcohol","pay phone","restrooms","car wash"],
+                      "geo_location" : {
+                      "lat": 30.41234,
+                      "lon": -97.715632
+                      },
+                      "address" : "3421 Hawthorne Lane",
+                      "hours" : {
+                      "open" : 9,
+                      "close" : 17
+                      },
+                      "phone_number" : 8888888888,
+                      "website" : "opengas.com",
+                      "deals" : [{
+                        "deal_id" : 19,
+                                 "name" : "$3 off lunch meal",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "lunchMeal",
+                                 "expiration" : 60,
+                                 "highlight" : "$3 off any lunch combo of your choice",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 },
+                                 {
+                                  "deal_id" : 20,
+                                 "name" : "Half Off Candy!",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "candy",
+                                 "expiration" : 9,
+                                 "highlight" : "Act now and get half off any candy we carry in our entire store!",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 }],
+                      "items" : ["snacks", "toiletry items", "souvenirs", "coffee"]
+                      },
+                      {
+                      "name" : "Generic Gas Station",
+                      "gas_price": 2.53,
+                      "amenities": ["alcohol","24hours","restrooms","car wash","coffee"],
+                      "geo_location" : {
+                      "lat": 30.41234,
+                      "lon": -97.72567
+                      },
+                      "address" : "9716 Railroad Street",
+                      "hours" : {
+                      "open" : 9,
+                      "close" : 17
+                      },
+                      "phone_number" : 8888888888,
+                      "website" : "opengas.com",
+                      "deals" : [{
+                        "deal_id" : 21,
+                                 "name" : "$5.99 Large Pizza",
+                                 "watch_image" : "pizza",
+                                 "image_name": "pizza",
+                                 "expiration" : 14,
+                                 "highlight" : "$5.99 on a large pizza of your choice with the purchase of a 2L Coca-Cola",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 },
+                                 {
+                                  "deal_id" : 22,
+                                 "name" : "Half Off Candy!",
+                                 "watch_image" : "shoppingbag",
+                                 "image_name": "candy",
+                                 "expiration" : 9,
+                                 "highlight" : "Act now and get half off any candy we carry in our entire store!",
+                                 "fine_print" : "Coupon must be presented at time of purchase. Offer not valid on clearance and marked down items. May not be combined with other coupons or associate discount. One coupon per family. No reproductions. Not valid for shopping online. Participation and availability may vary by store. Valid in US stores only."
+                                 
+                                 }],
+                      "items" : ["coffee", "soft drinks", "water", "fresh fruit"]
+                      }]
+}

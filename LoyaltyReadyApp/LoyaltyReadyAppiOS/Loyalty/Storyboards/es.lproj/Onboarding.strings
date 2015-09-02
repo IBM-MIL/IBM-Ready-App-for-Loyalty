@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Deal Title"; ObjectID = "McA-fk-cHA"; */
+"McA-fk-cHA.text" = "ES-Deal Title";
+
+/* Class = "UIButton"; normalTitle = "SKIP"; ObjectID = "qhr-0q-QSl"; */
+"qhr-0q-QSl.normalTitle" = "ES-SKIP";
+
+/* Class = "UIButton"; normalTitle = "DONE"; ObjectID = "sU2-dj-M2L"; */
+"sU2-dj-M2L.normalTitle" = "ES-DONE";
+
+/* Class = "UILabel"; text = "Deal Subtitle"; ObjectID = "tBV-F0-0wS"; */
+"tBV-F0-0wS.text" = "ES-Deal Subtitle";
