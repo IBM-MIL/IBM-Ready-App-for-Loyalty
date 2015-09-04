@@ -210,7 +210,7 @@ extension LoginViewController: UITextFieldDelegate {
             //Remove non-numeric characters from phone number
             let newString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
             let components = newString.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet)
-            let decimalString = components.joinWithSeparator("")
+            let decimalString = "".join(components) //components.joinWithSeparator("") //for Xcode7 Beta 7, use this
             
             rawPhoneNumber = decimalString
             

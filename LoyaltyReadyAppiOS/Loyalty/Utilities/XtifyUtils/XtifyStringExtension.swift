@@ -20,8 +20,8 @@ extension String {
     func htmlToText() -> String {
 
         let data = self.dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)
-        let attrStr = try? NSAttributedString(data: data!, options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType ], documentAttributes: nil)
+        let attrStr = try! NSAttributedString(data: data!, options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType ], documentAttributes: nil)
         
-        return attrStr!.string
+        return attrStr.string
     }
 }
