@@ -69,7 +69,7 @@ class NotificationData: NSObject {
             if actionData != "" {
                 let objectData: NSData = actionData.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) as NSData!
                 do{
-                    self.actionJson = try? NSJSONSerialization.JSONObjectWithData(objectData, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<NSObject, AnyObject>
+                    self.actionJson = try! NSJSONSerialization.JSONObjectWithData(objectData, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<NSObject, AnyObject>
                     
                     if let category = self.actionJson!["category"] as? String {
                         self.category = category
