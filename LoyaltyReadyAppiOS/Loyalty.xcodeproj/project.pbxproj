@@ -154,7 +154,6 @@
 		2EC72ADB1B3C5756001913CE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83251B18E45200FD80F5 /* CoreLocation.framework */; };
 		2EC72ADC1B3C5756001913CE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
 		2EC72ADD1B3C5756001913CE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83211B18E44100FD80F5 /* MobileCoreServices.framework */; };
-		2EC72AEE1B3C5DE9001913CE /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC72AED1B3C5DE9001913CE /* libstdc++.6.dylib */; };
 		2EC72AEF1B3C5E3A001913CE /* worklight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D11B30B56300B94AAE /* worklight.plist */; };
 		2EED14A51B419398001E123A /* WatchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED14A41B419398001E123A /* WatchDataManager.swift */; };
 		2EED14A61B419398001E123A /* WatchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED14A41B419398001E123A /* WatchDataManager.swift */; };
@@ -514,7 +513,6 @@
 		2EC0083C1B3DE7BD00BB3523 /* GoalNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalNotificationController.swift; sourceTree = "<group>"; };
 		2EC72AB71B3C4CF4001913CE /* LoyaltyWatchDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyWatchDataTests.swift; sourceTree = "<group>"; };
 		2EC72AEB1B3C5B8C001913CE /* WatchKitTests-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatchKitTests-BridgingHeader.h"; sourceTree = "<group>"; };
-		2EC72AED1B3C5DE9001913CE /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		2EED14A41B419398001E123A /* WatchDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchDataManager.swift; sourceTree = "<group>"; };
 		2EED6E5F1B39F9FE00AB52F1 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		2EED6E691B3A0AAC00AB52F1 /* DealDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealDetailInterfaceController.swift; sourceTree = "<group>"; };
@@ -905,7 +903,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC72AEE1B3C5DE9001913CE /* libstdc++.6.dylib in Frameworks */,
 				2EC72AC31B3C5746001913CE /* libWorklightStaticLibProjectNative.a in Frameworks */,
 				2EC72AC41B3C5748001913CE /* sqlcipher.framework in Frameworks */,
 				2EC72AC61B3C5756001913CE /* CoreMotion.framework in Frameworks */,
@@ -1266,7 +1263,6 @@
 		81BC82921B18E29500FD80F5 = {
 			isa = PBXGroup;
 			children = (
-				2EC72AED1B3C5DE9001913CE /* libstdc++.6.dylib */,
 				8125386B1B1E52340008C299 /* apns-certificate-production.p12 */,
 				81BC82C01B18E2CC00FD80F5 /* WorklightAPI */,
 				81BC829D1B18E29500FD80F5 /* Loyalty */,
