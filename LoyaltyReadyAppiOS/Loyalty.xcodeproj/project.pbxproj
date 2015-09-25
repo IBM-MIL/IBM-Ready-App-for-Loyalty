@@ -104,8 +104,6 @@
 		2E5CA0521B32126E002E4F5F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83A91B18EB9400FD80F5 /* AssetsLibrary.framework */; };
 		2E5CA0531B32126E002E4F5F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */; };
 		2E5CA0541B32126E002E4F5F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838E1B18E9A900FD80F5 /* CoreTelephony.framework */; };
-		2E5CA0551B32126E002E4F5F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838C1B18E99800FD80F5 /* libz.1.1.3.dylib */; };
-		2E5CA0561B32126E002E4F5F /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838A1B18E98D00FD80F5 /* libxml2.2.dylib */; };
 		2E5CA0571B32126E002E4F5F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83881B18E98500FD80F5 /* CFNetwork.framework */; };
 		2E5CA0581B32126E002E4F5F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83861B18E96C00FD80F5 /* MessageUI.framework */; };
 		2E5CA0591B32126E002E4F5F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
@@ -114,15 +112,11 @@
 		2E5CA05C1B32126E002E4F5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837E1B18E95000FD80F5 /* UIKit.framework */; };
 		2E5CA05D1B32126E002E4F5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837C1B18E94A00FD80F5 /* Foundation.framework */; };
 		2E5CA05E1B32126E002E4F5F /* Q4M.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83771B18E68800FD80F5 /* Q4M.framework */; };
-		2E5CA0601B32126E002E4F5F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832B1B18E47100FD80F5 /* libc++.dylib */; };
-		2E5CA0611B32126E002E4F5F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83291B18E46400FD80F5 /* libz.dylib */; };
 		2E5CA0621B32126E002E4F5F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83271B18E45C00FD80F5 /* Security.framework */; };
 		2E5CA0631B32126E002E4F5F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83251B18E45200FD80F5 /* CoreLocation.framework */; };
 		2E5CA0641B32126E002E4F5F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
 		2E5CA0651B32126E002E4F5F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83211B18E44100FD80F5 /* MobileCoreServices.framework */; };
 		2E5CA0671B32146C002E4F5F /* worklight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D11B30B56300B94AAE /* worklight.plist */; };
-		2E5CA0681B3216D4002E4F5F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832D1B18E47900FD80F5 /* libstdc++.dylib */; };
-		2E5CA06B1B3217FA002E4F5F /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83B81B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib */; };
 		2EB037ED1B4D7C5D002BBDFB /* Onboarding.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB037EC1B4D7C5D002BBDFB /* Onboarding.xcassets */; };
 		2EC0083D1B3DE7BD00BB3523 /* GoalNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC0083C1B3DE7BD00BB3523 /* GoalNotificationController.swift */; };
 		2EC72AB81B3C4CF4001913CE /* LoyaltyWatchDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC72AB71B3C4CF4001913CE /* LoyaltyWatchDataTests.swift */; };
@@ -137,8 +131,6 @@
 		2EC72ACA1B3C5756001913CE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83A91B18EB9400FD80F5 /* AssetsLibrary.framework */; };
 		2EC72ACB1B3C5756001913CE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */; };
 		2EC72ACC1B3C5756001913CE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838E1B18E9A900FD80F5 /* CoreTelephony.framework */; };
-		2EC72ACD1B3C5756001913CE /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838C1B18E99800FD80F5 /* libz.1.1.3.dylib */; };
-		2EC72ACE1B3C5756001913CE /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838A1B18E98D00FD80F5 /* libxml2.2.dylib */; };
 		2EC72ACF1B3C5756001913CE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83881B18E98500FD80F5 /* CFNetwork.framework */; };
 		2EC72AD01B3C5756001913CE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83861B18E96C00FD80F5 /* MessageUI.framework */; };
 		2EC72AD11B3C5756001913CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
@@ -147,9 +139,6 @@
 		2EC72AD41B3C5756001913CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837E1B18E95000FD80F5 /* UIKit.framework */; };
 		2EC72AD51B3C5756001913CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837C1B18E94A00FD80F5 /* Foundation.framework */; };
 		2EC72AD61B3C5756001913CE /* Q4M.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83771B18E68800FD80F5 /* Q4M.framework */; };
-		2EC72AD71B3C5756001913CE /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832D1B18E47900FD80F5 /* libstdc++.dylib */; };
-		2EC72AD81B3C5756001913CE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832B1B18E47100FD80F5 /* libc++.dylib */; };
-		2EC72AD91B3C5756001913CE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83291B18E46400FD80F5 /* libz.dylib */; };
 		2EC72ADA1B3C5756001913CE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83271B18E45C00FD80F5 /* Security.framework */; };
 		2EC72ADB1B3C5756001913CE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83251B18E45200FD80F5 /* CoreLocation.framework */; };
 		2EC72ADC1B3C5756001913CE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
@@ -238,13 +227,9 @@
 		81BC83241B18E44B00FD80F5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
 		81BC83261B18E45200FD80F5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83251B18E45200FD80F5 /* CoreLocation.framework */; };
 		81BC83281B18E45C00FD80F5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83271B18E45C00FD80F5 /* Security.framework */; };
-		81BC832A1B18E46400FD80F5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83291B18E46400FD80F5 /* libz.dylib */; };
-		81BC832C1B18E47100FD80F5 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832B1B18E47100FD80F5 /* libc++.dylib */; };
 		81BC83781B18E68800FD80F5 /* Q4M.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83771B18E68800FD80F5 /* Q4M.framework */; };
 		81BC83921B18E9E800FD80F5 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */; };
 		81BC83931B18E9E800FD80F5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838E1B18E9A900FD80F5 /* CoreTelephony.framework */; };
-		81BC83941B18E9E800FD80F5 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838C1B18E99800FD80F5 /* libz.1.1.3.dylib */; };
-		81BC83951B18E9E800FD80F5 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838A1B18E98D00FD80F5 /* libxml2.2.dylib */; };
 		81BC83961B18E9E800FD80F5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83881B18E98500FD80F5 /* CFNetwork.framework */; };
 		81BC83971B18E9E800FD80F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83861B18E96C00FD80F5 /* MessageUI.framework */; };
 		81BC83981B18E9E800FD80F5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
@@ -257,7 +242,6 @@
 		81BC83B51B18EBCE00FD80F5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AD1B18EBAD00FD80F5 /* QuartzCore.framework */; };
 		81BC83B61B18EBCE00FD80F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AB1B18EBA400FD80F5 /* AudioToolbox.framework */; };
 		81BC83B71B18EBCE00FD80F5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83A91B18EB9400FD80F5 /* AssetsLibrary.framework */; };
-		81BC83B91B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83B81B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib */; };
 		81BF53D21B30B56300B94AAE /* worklight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D11B30B56300B94AAE /* worklight.plist */; };
 		81BF53DF1B30B59200B94AAE /* Heuristica-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D61B30B59200B94AAE /* Heuristica-Bold.otf */; };
 		81BF53E11B30B59200B94AAE /* Heuristica-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D71B30B59200B94AAE /* Heuristica-BoldItalic.otf */; };
@@ -701,9 +685,6 @@
 		81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BC83251B18E45200FD80F5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		81BC83271B18E45C00FD80F5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		81BC83291B18E46400FD80F5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		81BC832B1B18E47100FD80F5 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		81BC832D1B18E47900FD80F5 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		81BC83371B18E58F00FD80F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81BC83771B18E68800FD80F5 /* Q4M.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Q4M.framework; sourceTree = "<group>"; };
 		81BC837B1B18E79D00FD80F5 /* Loyalty-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loyalty-BridgingHeader.h"; sourceTree = "<group>"; };
@@ -714,8 +695,6 @@
 		81BC83841B18E96700FD80F5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		81BC83861B18E96C00FD80F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		81BC83881B18E98500FD80F5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		81BC838A1B18E98D00FD80F5 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
-		81BC838C1B18E99800FD80F5 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		81BC838E1B18E9A900FD80F5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		81BC83A91B18EB9400FD80F5 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -723,7 +702,6 @@
 		81BC83AD1B18EBAD00FD80F5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		81BC83AF1B18EBB500FD80F5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		81BC83B11B18EBBB00FD80F5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		81BC83B81B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		81BF53D11B30B56300B94AAE /* worklight.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = worklight.plist; sourceTree = "<group>"; };
 		81BF53D61B30B59200B94AAE /* Heuristica-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heuristica-Bold.otf"; sourceTree = "<group>"; };
 		81BF53D71B30B59200B94AAE /* Heuristica-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heuristica-BoldItalic.otf"; sourceTree = "<group>"; };
@@ -823,7 +801,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81BC83B91B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib in Frameworks */,
 				81BC83B31B18EBCE00FD80F5 /* CoreMotion.framework in Frameworks */,
 				81BC83B41B18EBCE00FD80F5 /* CoreText.framework in Frameworks */,
 				81BC83B51B18EBCE00FD80F5 /* QuartzCore.framework in Frameworks */,
@@ -831,9 +808,7 @@
 				81BC83B71B18EBCE00FD80F5 /* AssetsLibrary.framework in Frameworks */,
 				81BC83921B18E9E800FD80F5 /* CoreBluetooth.framework in Frameworks */,
 				81BC83931B18E9E800FD80F5 /* CoreTelephony.framework in Frameworks */,
-				81BC83941B18E9E800FD80F5 /* libz.1.1.3.dylib in Frameworks */,
 				81DE28A91B1F8682004A2DE8 /* XtifyPush.framework in Frameworks */,
-				81BC83951B18E9E800FD80F5 /* libxml2.2.dylib in Frameworks */,
 				81BC83961B18E9E800FD80F5 /* CFNetwork.framework in Frameworks */,
 				81BC83971B18E9E800FD80F5 /* MessageUI.framework in Frameworks */,
 				81BC83981B18E9E800FD80F5 /* CoreData.framework in Frameworks */,
@@ -842,8 +817,6 @@
 				81BC839B1B18E9E800FD80F5 /* UIKit.framework in Frameworks */,
 				81BC839C1B18E9E800FD80F5 /* Foundation.framework in Frameworks */,
 				81BC83781B18E68800FD80F5 /* Q4M.framework in Frameworks */,
-				81BC832C1B18E47100FD80F5 /* libc++.dylib in Frameworks */,
-				81BC832A1B18E46400FD80F5 /* libz.dylib in Frameworks */,
 				81BC83281B18E45C00FD80F5 /* Security.framework in Frameworks */,
 				81BC83261B18E45200FD80F5 /* CoreLocation.framework in Frameworks */,
 				81BC83241B18E44B00FD80F5 /* SystemConfiguration.framework in Frameworks */,
@@ -876,20 +849,14 @@
 				2E5CA0521B32126E002E4F5F /* AssetsLibrary.framework in Frameworks */,
 				2E5CA0531B32126E002E4F5F /* CoreBluetooth.framework in Frameworks */,
 				2E5CA0541B32126E002E4F5F /* CoreTelephony.framework in Frameworks */,
-				2E5CA0551B32126E002E4F5F /* libz.1.1.3.dylib in Frameworks */,
-				2E5CA0561B32126E002E4F5F /* libxml2.2.dylib in Frameworks */,
 				2E5CA0571B32126E002E4F5F /* CFNetwork.framework in Frameworks */,
 				2E5CA0581B32126E002E4F5F /* MessageUI.framework in Frameworks */,
 				2E5CA0591B32126E002E4F5F /* CoreData.framework in Frameworks */,
-				2E5CA06B1B3217FA002E4F5F /* libstdc++.6.0.9.dylib in Frameworks */,
 				2E5CA05A1B32126E002E4F5F /* MapKit.framework in Frameworks */,
 				2E5CA05B1B32126E002E4F5F /* CoreGraphics.framework in Frameworks */,
 				2E5CA05C1B32126E002E4F5F /* UIKit.framework in Frameworks */,
 				2E5CA05D1B32126E002E4F5F /* Foundation.framework in Frameworks */,
 				2E5CA05E1B32126E002E4F5F /* Q4M.framework in Frameworks */,
-				2E5CA0601B32126E002E4F5F /* libc++.dylib in Frameworks */,
-				2E5CA0611B32126E002E4F5F /* libz.dylib in Frameworks */,
-				2E5CA0681B3216D4002E4F5F /* libstdc++.dylib in Frameworks */,
 				2E5CA0621B32126E002E4F5F /* Security.framework in Frameworks */,
 				2E5CA0631B32126E002E4F5F /* CoreLocation.framework in Frameworks */,
 				2E5CA0641B32126E002E4F5F /* SystemConfiguration.framework in Frameworks */,
@@ -912,8 +879,6 @@
 				2EC72ACA1B3C5756001913CE /* AssetsLibrary.framework in Frameworks */,
 				2EC72ACB1B3C5756001913CE /* CoreBluetooth.framework in Frameworks */,
 				2EC72ACC1B3C5756001913CE /* CoreTelephony.framework in Frameworks */,
-				2EC72ACD1B3C5756001913CE /* libz.1.1.3.dylib in Frameworks */,
-				2EC72ACE1B3C5756001913CE /* libxml2.2.dylib in Frameworks */,
 				2EC72ACF1B3C5756001913CE /* CFNetwork.framework in Frameworks */,
 				2EC72AD01B3C5756001913CE /* MessageUI.framework in Frameworks */,
 				2EC72AD11B3C5756001913CE /* CoreData.framework in Frameworks */,
@@ -922,9 +887,6 @@
 				2EC72AD41B3C5756001913CE /* UIKit.framework in Frameworks */,
 				2EC72AD51B3C5756001913CE /* Foundation.framework in Frameworks */,
 				2EC72AD61B3C5756001913CE /* Q4M.framework in Frameworks */,
-				2EC72AD71B3C5756001913CE /* libstdc++.dylib in Frameworks */,
-				2EC72AD81B3C5756001913CE /* libc++.dylib in Frameworks */,
-				2EC72AD91B3C5756001913CE /* libz.dylib in Frameworks */,
 				2EC72ADA1B3C5756001913CE /* Security.framework in Frameworks */,
 				2EC72ADB1B3C5756001913CE /* CoreLocation.framework in Frameworks */,
 				2EC72ADC1B3C5756001913CE /* SystemConfiguration.framework in Frameworks */,
@@ -1497,7 +1459,6 @@
 			isa = PBXGroup;
 			children = (
 				81DE28701B1F8682004A2DE8 /* XtifyLib */,
-				81BC83B81B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib */,
 				81BC83B11B18EBBB00FD80F5 /* CoreMotion.framework */,
 				81BC83AF1B18EBB500FD80F5 /* CoreText.framework */,
 				81BC83AD1B18EBAD00FD80F5 /* QuartzCore.framework */,
@@ -1505,8 +1466,6 @@
 				81BC83A91B18EB9400FD80F5 /* AssetsLibrary.framework */,
 				81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */,
 				81BC838E1B18E9A900FD80F5 /* CoreTelephony.framework */,
-				81BC838C1B18E99800FD80F5 /* libz.1.1.3.dylib */,
-				81BC838A1B18E98D00FD80F5 /* libxml2.2.dylib */,
 				81BC83881B18E98500FD80F5 /* CFNetwork.framework */,
 				81BC83861B18E96C00FD80F5 /* MessageUI.framework */,
 				81BC83841B18E96700FD80F5 /* CoreData.framework */,
@@ -1515,9 +1474,6 @@
 				81BC837E1B18E95000FD80F5 /* UIKit.framework */,
 				81BC837C1B18E94A00FD80F5 /* Foundation.framework */,
 				81BC83771B18E68800FD80F5 /* Q4M.framework */,
-				81BC832D1B18E47900FD80F5 /* libstdc++.dylib */,
-				81BC832B1B18E47100FD80F5 /* libc++.dylib */,
-				81BC83291B18E46400FD80F5 /* libz.dylib */,
 				81BC83271B18E45C00FD80F5 /* Security.framework */,
 				81BC83251B18E45200FD80F5 /* CoreLocation.framework */,
 				81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */,
