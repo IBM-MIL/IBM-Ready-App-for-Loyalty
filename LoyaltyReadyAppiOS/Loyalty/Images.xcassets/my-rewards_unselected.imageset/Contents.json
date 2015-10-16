@@ -2,7 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "my-rewards_unselected.pdf"
+      "filename" : "my-rewards_unselected.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "my-rewards_unselected@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "my-rewards_unselected@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

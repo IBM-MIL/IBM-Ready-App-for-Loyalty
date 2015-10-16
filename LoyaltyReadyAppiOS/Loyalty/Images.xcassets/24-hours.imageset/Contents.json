@@ -2,7 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "24-hours.pdf"
+      "filename" : "24-hours.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "24-hours@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "24-hours@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

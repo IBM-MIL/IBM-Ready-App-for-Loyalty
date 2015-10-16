@@ -2,7 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "clock_small.pdf"
+      "filename" : "clock_small.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "clock_small@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "clock_small@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
