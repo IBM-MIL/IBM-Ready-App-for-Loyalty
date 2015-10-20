@@ -2,18 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "fuel-gage_teal.png"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "fuel-gage_teal@2x.png"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "fuel-gage_teal@3x.png"
+      "filename" : "fuel gage teal.pdf",
+      "scale" : "1x"
     }
   ],
   "info" : {
