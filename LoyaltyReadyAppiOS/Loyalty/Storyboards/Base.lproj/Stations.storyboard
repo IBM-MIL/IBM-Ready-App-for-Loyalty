@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sm4-cm-5u8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sm4-cm-5u8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -120,7 +121,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stationCell" rowHeight="100" id="JVp-1L-dJW" customClass="StationTableViewCell" customModule="Loyalty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="250" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="22" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JVp-1L-dJW" id="Vm4-7e-xCn">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
@@ -226,7 +227,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="pEx-6w-fP8" customClass="DealCollectionViewCell" customModule="Loyalty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="10" y="390" width="148" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="148" height="175"/>
@@ -350,10 +351,10 @@
                                             <rect key="frame" x="0.0" y="190" width="600" height="43"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock_big" translatesAutoresizingMaskIntoConstraints="NO" id="ByA-aW-ONa">
-                                                    <rect key="frame" x="14" y="10" width="17" height="17"/>
+                                                    <rect key="frame" x="14" y="9.5" width="18" height="18"/>
                                                     <animations/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open from 9:00 AM - 5:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JF-sN-7KF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Open from 9:00 AM - 5:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JF-sN-7KF">
                                                     <rect key="frame" x="45" y="10" width="220" height="18"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
@@ -521,7 +522,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="amenitiesCollectionViewCell" id="wpk-uD-nAk" customClass="AmenitiesCollectionViewCell" customModule="Loyalty" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="7.5" width="22" height="22"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
@@ -660,7 +661,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWt-e4-xBC">
-                                                    <rect key="frame" x="481" y="33" width="109" height="16"/>
+                                                    <rect key="frame" x="481" y="33" width="109" height="15.5"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="109" id="WmF-l9-edU"/>
@@ -670,7 +671,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zU-RP-Z7F">
-                                                    <rect key="frame" x="481" y="51" width="109" height="16"/>
+                                                    <rect key="frame" x="481" y="50" width="109" height="15.5"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="109" id="jNp-K8-G9d"/>
@@ -939,14 +940,14 @@
     </scenes>
     <resources>
         <image name="arrow_forward" width="7" height="12"/>
-        <image name="clock_big" width="17" height="17"/>
-        <image name="deal added sm white" width="28" height="20"/>
-        <image name="directions" width="14" height="17"/>
+        <image name="clock_big" width="18" height="18"/>
+        <image name="deal added sm white" width="27" height="20"/>
+        <image name="directions" width="13" height="17"/>
         <image name="list" width="21" height="13"/>
         <image name="phone" width="15" height="17"/>
         <image name="search" width="17" height="17"/>
         <image name="web" width="17" height="17"/>
-        <image name="wine-beer" width="12" height="17"/>
+        <image name="wine-beer" width="13" height="18"/>
         <image name="x" width="17" height="17"/>
     </resources>
 </document>
