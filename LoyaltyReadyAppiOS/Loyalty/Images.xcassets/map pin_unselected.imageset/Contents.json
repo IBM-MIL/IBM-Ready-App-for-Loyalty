@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "map-pin_unselected.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "map-pin_unselected.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "map-pin_unselected@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "map-pin_unselected@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "map-pin_unselected@3x.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "map-pin_unselected@3x.png"
     }
   ],
   "info" : {

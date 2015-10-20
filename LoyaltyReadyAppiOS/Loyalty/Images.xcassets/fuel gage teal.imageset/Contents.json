@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "fuel-gage_teal.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "fuel-gage_teal.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "fuel-gage_teal@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "fuel-gage_teal@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "fuel-gage_teal@3x.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "fuel-gage_teal@3x.png"
     }
   ],
   "info" : {
