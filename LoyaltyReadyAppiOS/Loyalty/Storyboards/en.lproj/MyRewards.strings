@@ -35,8 +35,8 @@
 /* Class = "UILabel"; text = "CHEAPEST"; ObjectID = "Ktp-ey-lf3"; */
 "Ktp-ey-lf3.text" = "CHEAPEST";
 
-/* Class = "UIButton"; normalTitle = "ADD TO PASSBOOK"; ObjectID = "OIA-oA-4VB"; */
-"OIA-oA-4VB.normalTitle" = "ADD TO PASSBOOK";
+/* Class = "UIButton"; normalTitle = "ADD TO WALLET"; ObjectID = "OIA-oA-4VB"; */
+"OIA-oA-4VB.normalTitle" = "ADD TO WALLET";
 
 /* Class = "UILabel"; text = "25 points"; ObjectID = "RLR-Ms-rp0"; */
 "RLR-Ms-rp0.text" = "25 points";

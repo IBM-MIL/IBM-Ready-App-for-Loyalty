@@ -47,8 +47,8 @@
 /* Class = "WKInterfaceLabel"; text = "65"; ObjectID = "bSh-9X-Gag"; */
 "bSh-9X-Gag.text" = "65";
 
-/* Class = "WKInterfaceLabel"; text = "Redeem now using Passbook"; ObjectID = "fLj-s8-zRl"; */
-"fLj-s8-zRl.text" = "Redeem now using Passbook";
+/* Class = "WKInterfaceLabel"; text = "Redeem now using Wallet"; ObjectID = "fLj-s8-zRl"; */
+"fLj-s8-zRl.text" = "Redeem now using Wallet";
 
 /* Class = "WKInterfaceLabel"; text = "Nearby Deal"; ObjectID = "gcb-1g-0v1"; */
 "gcb-1g-0v1.text" = "Nearby Deal";

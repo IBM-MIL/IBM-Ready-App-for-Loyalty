@@ -150,7 +150,7 @@
                         <group width="1" alignment="left" spacing="6" id="lZf-pK-BED">
                             <items>
                                 <imageView width="20" height="20" alignment="left" verticalAlignment="center" image="Wallet" id="a5v-ud-flx"/>
-                                <label alignment="left" text="Redeem now using Passbook" numberOfLines="0" id="fLj-s8-zRl">
+                                <label alignment="left" text="Redeem now using Wallet" numberOfLines="0" id="fLj-s8-zRl">
                                     <color key="textColor" red="0.1960784314" green="0.65490196079999996" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
                                 </label>
