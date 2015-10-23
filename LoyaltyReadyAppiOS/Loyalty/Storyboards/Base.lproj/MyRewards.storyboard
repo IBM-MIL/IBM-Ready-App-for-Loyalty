@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rHA-51-EmY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rHA-51-EmY">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -182,19 +181,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fuel gage grey" translatesAutoresizingMaskIntoConstraints="NO" id="f5O-T3-NeD">
-                                            <rect key="frame" x="54.5" y="25" width="266" height="133"/>
+                                            <rect key="frame" x="55" y="25" width="265" height="133"/>
                                             <animations/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fuel gage teal" translatesAutoresizingMaskIntoConstraints="NO" id="hLm-rV-O8X">
-                                            <rect key="frame" x="54.5" y="25" width="266" height="133"/>
+                                            <rect key="frame" x="55" y="25" width="265" height="265"/>
                                             <animations/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fuel gage hash marks" translatesAutoresizingMaskIntoConstraints="NO" id="laL-gO-KyE">
-                                            <rect key="frame" x="51" y="22.5" width="272" height="138"/>
+                                            <rect key="frame" x="51" y="23" width="272" height="137"/>
                                             <animations/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4Z-5m-zlP">
-                                            <rect key="frame" x="51" y="160" width="272" height="231.5"/>
+                                            <rect key="frame" x="51" y="160" width="272" height="232"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
@@ -205,17 +204,17 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="174" height="145"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJ7-iO-acb">
-                                                            <rect key="frame" x="13" y="19" width="147" height="107.5"/>
+                                                            <rect key="frame" x="13" y="19" width="147" height="108"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHEAPEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktp-ey-lf3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="147" height="12.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="147" height="13"/>
                                                                     <animations/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
                                                                     <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jb-H7-10S">
-                                                                    <rect key="frame" x="0.0" y="22" width="147" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="147" height="23"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="23" id="n3R-iO-9fb"/>
@@ -225,7 +224,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAi-8S-iO1">
-                                                                    <rect key="frame" x="0.0" y="55" width="147" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="56" width="147" height="36"/>
                                                                     <animations/>
                                                                     <string key="text">8570 Bayberry 
 Drive</string>
@@ -234,10 +233,10 @@ Drive</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blH-TU-l3K">
-                                                                    <rect key="frame" x="26" y="96.5" width="96" height="11"/>
+                                                                    <rect key="frame" x="27" y="97" width="94" height="11"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="zTz-3e-vK4">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="7" height="11"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="6" height="11"/>
                                                                             <animations/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="10" id="jLg-Sb-Hfh"/>
@@ -251,14 +250,14 @@ Drive</string>
                                                                             </variation>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".74 MI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkC-HH-7z4">
-                                                                            <rect key="frame" x="12" y="0.0" width="27" height="11"/>
+                                                                            <rect key="frame" x="11" y="0.0" width="27" height="11"/>
                                                                             <animations/>
                                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                                                             <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock_small" translatesAutoresizingMaskIntoConstraints="NO" id="62e-JH-y1n">
-                                                                            <rect key="frame" x="55" y="1.5" width="9" height="9"/>
+                                                                            <rect key="frame" x="54" y="2" width="8" height="8"/>
                                                                             <animations/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="10" id="2fH-GE-DYd"/>
@@ -270,7 +269,7 @@ Drive</string>
                                                                             </variation>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 MIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsf-oB-l5M">
-                                                                            <rect key="frame" x="69" y="0.0" width="27" height="11"/>
+                                                                            <rect key="frame" x="67" y="0.0" width="27" height="11"/>
                                                                             <animations/>
                                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                                                             <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
@@ -358,17 +357,17 @@ Drive</string>
                                                     <rect key="frame" x="180" y="0.0" width="175" height="145"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhM-Aa-Vkh">
-                                                            <rect key="frame" x="14" y="19" width="147" height="107.5"/>
+                                                            <rect key="frame" x="14" y="19" width="147" height="108"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOSEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4z-p0-lDX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="147" height="12.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="147" height="13"/>
                                                                     <animations/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
                                                                     <color key="textColor" red="0.29019609089999998" green="0.29019609089999998" blue="0.29019609089999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jj-ud-WBQ">
-                                                                    <rect key="frame" x="0.0" y="22" width="147" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="147" height="23"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="23" id="TOP-3w-5C3"/>
@@ -378,7 +377,7 @@ Drive</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuf-2I-OF9">
-                                                                    <rect key="frame" x="0.0" y="55" width="147" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="56" width="147" height="36"/>
                                                                     <animations/>
                                                                     <string key="text">8570 Bayberry 
 Drive</string>
@@ -387,10 +386,10 @@ Drive</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXQ-Yw-MBD">
-                                                                    <rect key="frame" x="26" y="96.5" width="96" height="11"/>
+                                                                    <rect key="frame" x="27" y="97" width="94" height="11"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="gML-19-fzw">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="7" height="11"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="6" height="11"/>
                                                                             <animations/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="10" id="D9u-Si-9wo"/>
@@ -404,14 +403,14 @@ Drive</string>
                                                                             </variation>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".74 MI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRh-RY-Dix">
-                                                                            <rect key="frame" x="12" y="0.0" width="27" height="11"/>
+                                                                            <rect key="frame" x="11" y="0.0" width="27" height="11"/>
                                                                             <animations/>
                                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                                                             <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock_small" translatesAutoresizingMaskIntoConstraints="NO" id="ICr-Bv-M4T">
-                                                                            <rect key="frame" x="55" y="1.5" width="9" height="9"/>
+                                                                            <rect key="frame" x="54" y="2" width="8" height="8"/>
                                                                             <animations/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="10" id="XaB-Xr-yrG"/>
@@ -423,7 +422,7 @@ Drive</string>
                                                                             </variation>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 MIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q50-DI-Yhe">
-                                                                            <rect key="frame" x="69" y="0.0" width="27" height="11"/>
+                                                                            <rect key="frame" x="67" y="0.0" width="27" height="11"/>
                                                                             <animations/>
                                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                                                             <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -520,18 +519,18 @@ Drive</string>
                                             </constraints>
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fuel gage gas pump" translatesAutoresizingMaskIntoConstraints="NO" id="Stv-e6-Xbg">
-                                            <rect key="frame" x="175" y="62" width="24" height="22"/>
+                                            <rect key="frame" x="175" y="63" width="24" height="22"/>
                                             <animations/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLR-Ms-rp0">
-                                            <rect key="frame" x="134" y="99" width="106" height="29.5"/>
+                                            <rect key="frame" x="134" y="100" width="106" height="30"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="24"/>
                                             <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-XV-56W">
-                                            <rect key="frame" x="131" y="133" width="112" height="29.5"/>
+                                            <rect key="frame" x="131" y="134" width="112" height="30"/>
                                             <animations/>
                                             <string key="text">75 points left until
 10% off next fill-up</string>
@@ -540,7 +539,7 @@ Drive</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVED DEALS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOB-CN-vf3">
-                                            <rect key="frame" x="15" y="377" width="71.5" height="12.5"/>
+                                            <rect key="frame" x="15" y="377" width="72" height="13"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
                                             <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
@@ -1372,15 +1371,15 @@ Drive</string>
         <image name="bar-code" width="282" height="25"/>
         <image name="check_selected" width="22" height="22"/>
         <image name="check_unselected" width="22" height="22"/>
-        <image name="clock_small" width="9" height="9"/>
+        <image name="clock_small" width="8" height="8"/>
         <image name="fuel gage gas pump" width="24" height="22"/>
-        <image name="fuel gage grey" width="266" height="133"/>
-        <image name="fuel gage hash marks" width="272" height="138"/>
-        <image name="fuel gage teal" width="266" height="133"/>
-        <image name="gas pump_white" width="18" height="17"/>
-        <image name="location" width="7" height="9"/>
+        <image name="fuel gage grey" width="265" height="133"/>
+        <image name="fuel gage hash marks" width="272" height="137"/>
+        <image name="fuel gage teal" width="265" height="265"/>
+        <image name="gas pump_white" width="19" height="17"/>
+        <image name="location" width="6" height="8"/>
         <image name="logo" width="22" height="22"/>
-        <image name="loyalty card" width="19" height="17"/>
+        <image name="loyalty card" width="20" height="17"/>
         <image name="settings" width="17" height="17"/>
     </resources>
 </document>
