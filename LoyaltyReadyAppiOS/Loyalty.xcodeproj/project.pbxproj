@@ -294,6 +294,7 @@
 		81DE28A71B1F8682004A2DE8 /* richnotificationV1.15.mom in Resources */ = {isa = PBXBuildFile; fileRef = 81DE28951B1F8682004A2DE8 /* richnotificationV1.15.mom */; };
 		81DE28A81B1F8682004A2DE8 /* silence.caf in Resources */ = {isa = PBXBuildFile; fileRef = 81DE28961B1F8682004A2DE8 /* silence.caf */; };
 		81DE28A91B1F8682004A2DE8 /* XtifyPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DE28971B1F8682004A2DE8 /* XtifyPush.framework */; };
+		A2D4E9AA1BDAD14D00EB9693 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
 		B16ABC171B273D500036878B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC161B273D500036878B /* Images.xcassets */; };
 		B16ABC1B1B273D510036878B /* Loyalty WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC1A1B273D510036878B /* Loyalty WatchKit App.app */; };
 		B16ABC231B273D510036878B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC211B273D510036878B /* Interface.storyboard */; };
@@ -772,6 +773,7 @@
 		81DE28951B1F8682004A2DE8 /* richnotificationV1.15.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = richnotificationV1.15.mom; sourceTree = "<group>"; };
 		81DE28961B1F8682004A2DE8 /* silence.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = silence.caf; sourceTree = "<group>"; };
 		81DE28971B1F8682004A2DE8 /* XtifyPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XtifyPush.framework; sourceTree = "<group>"; };
+		A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B16ABC0B1B273D500036878B /* Loyalty WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Loyalty WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16ABC0E1B273D500036878B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16ABC0F1B273D500036878B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -1529,6 +1531,7 @@
 		81BF53D01B30B56300B94AAE /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */,
 				81BF53D11B30B56300B94AAE /* worklight.plist */,
 				34715B4B1B95086600F4E9B2 /* MQA_key.plist */,
 			);
@@ -2009,6 +2012,7 @@
 				81BF53EB1B30B59200B94AAE /* Montserrat-Regular.ttf in Resources */,
 				81DE28A61B1F8682004A2DE8 /* richnotification.mom in Resources */,
 				1B03F1841B4C144E000D511D /* SubSettingsView.xib in Resources */,
+				A2D4E9AA1BDAD14D00EB9693 /* GoogleService-Info.plist in Resources */,
 				81DE28A71B1F8682004A2DE8 /* richnotificationV1.15.mom in Resources */,
 				346D78E21B5021A10071BFA9 /* Localizable.strings in Resources */,
 				BDBC7D9B1B3A433100A2F0CD /* NBPhoneNumberMetadata.plist in Resources */,
