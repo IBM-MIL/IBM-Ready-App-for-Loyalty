@@ -235,10 +235,8 @@
 		81BC831F1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC831A1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a */; };
 		81BC83201B18E2CC00FD80F5 /* Localizations.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 81BC831B1B18E2CC00FD80F5 /* Localizations.bundle */; };
 		81BC83221B18E44100FD80F5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83211B18E44100FD80F5 /* MobileCoreServices.framework */; };
-		81BC83241B18E44B00FD80F5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
 		81BC83261B18E45200FD80F5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83251B18E45200FD80F5 /* CoreLocation.framework */; };
 		81BC83281B18E45C00FD80F5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83271B18E45C00FD80F5 /* Security.framework */; };
-		81BC832A1B18E46400FD80F5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83291B18E46400FD80F5 /* libz.dylib */; };
 		81BC832C1B18E47100FD80F5 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832B1B18E47100FD80F5 /* libc++.dylib */; };
 		81BC83781B18E68800FD80F5 /* Q4M.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83771B18E68800FD80F5 /* Q4M.framework */; };
 		81BC83921B18E9E800FD80F5 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */; };
@@ -247,7 +245,6 @@
 		81BC83951B18E9E800FD80F5 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838A1B18E98D00FD80F5 /* libxml2.2.dylib */; };
 		81BC83961B18E9E800FD80F5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83881B18E98500FD80F5 /* CFNetwork.framework */; };
 		81BC83971B18E9E800FD80F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83861B18E96C00FD80F5 /* MessageUI.framework */; };
-		81BC83981B18E9E800FD80F5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
 		81BC83991B18E9E800FD80F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83821B18E96200FD80F5 /* MapKit.framework */; };
 		81BC839A1B18E9E800FD80F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83801B18E95600FD80F5 /* CoreGraphics.framework */; };
 		81BC839B1B18E9E800FD80F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837E1B18E95000FD80F5 /* UIKit.framework */; };
@@ -295,6 +292,30 @@
 		81DE28A81B1F8682004A2DE8 /* silence.caf in Resources */ = {isa = PBXBuildFile; fileRef = 81DE28961B1F8682004A2DE8 /* silence.caf */; };
 		81DE28A91B1F8682004A2DE8 /* XtifyPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DE28971B1F8682004A2DE8 /* XtifyPush.framework */; };
 		A2D4E9AA1BDAD14D00EB9693 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB161BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB171BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB181BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB191BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB1A1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB1B1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB1C1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB1D1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB1E1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB1F1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB201BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB211BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB291BDADFA700EB9693 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */; };
+		A2D4EB2A1BDADFE400EB9693 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
+		A2D4EB2B1BDADFF000EB9693 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
+		A2D4EB2D1BDAE01100EB9693 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */; };
+		A2D4EB2E1BDAE11300EB9693 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
+		A2D4EB2F1BDAE12100EB9693 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
+		A2D4EB311BDAE14B00EB9693 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */; };
+		A2D4EB321BDAE15200EB9693 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */; };
+		A2D4EB391BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB3A1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB3B1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB3C1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B16ABC171B273D500036878B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC161B273D500036878B /* Images.xcassets */; };
 		B16ABC1B1B273D510036878B /* Loyalty WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC1A1B273D510036878B /* Loyalty WatchKit App.app */; };
 		B16ABC231B273D510036878B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC211B273D510036878B /* Interface.storyboard */; };
@@ -774,6 +795,28 @@
 		81DE28961B1F8682004A2DE8 /* silence.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = silence.caf; sourceTree = "<group>"; };
 		81DE28971B1F8682004A2DE8 /* XtifyPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XtifyPush.framework; sourceTree = "<group>"; };
 		A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2D4EAFC1BDADC0F00EB9693 /* Analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Analytics.h; sourceTree = "<group>"; };
+		A2D4EAFD1BDADC0F00EB9693 /* GGLContext+Analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGLContext+Analytics.h"; sourceTree = "<group>"; };
+		A2D4EB001BDADC0F00EB9693 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		A2D4EB011BDADC0F00EB9693 /* GGLConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGLConfiguration.h; sourceTree = "<group>"; };
+		A2D4EB021BDADC0F00EB9693 /* GGLContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGLContext.h; sourceTree = "<group>"; };
+		A2D4EB031BDADC0F00EB9693 /* GGLErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGLErrorCode.h; sourceTree = "<group>"; };
+		A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGGLAnalytics.a; sourceTree = "<group>"; };
+		A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGGLCore.a; sourceTree = "<group>"; };
+		A2D4EB0A1BDADC0F00EB9693 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		A2D4EB0B1BDADC0F00EB9693 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		A2D4EB0C1BDADC0F00EB9693 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		A2D4EB0D1BDADC0F00EB9693 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		A2D4EB0E1BDADC0F00EB9693 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		A2D4EB0F1BDADC0F00EB9693 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		A2D4EB101BDADC0F00EB9693 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		A2D4EB111BDADC0F00EB9693 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		A2D4EB121BDADC0F00EB9693 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		A2D4EB131BDADC0F00EB9693 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = "<absolute>"; };
+		A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = /usr/lib/libz.1.dylib; sourceTree = "<absolute>"; };
+		A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyUIViewController.swift; sourceTree = "<group>"; };
 		B16ABC0B1B273D500036878B /* Loyalty WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Loyalty WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16ABC0E1B273D500036878B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16ABC0F1B273D500036878B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -825,6 +868,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D4EB2D1BDAE01100EB9693 /* libz.1.dylib in Frameworks */,
+				A2D4EB2B1BDADFF000EB9693 /* SystemConfiguration.framework in Frameworks */,
+				A2D4EB2A1BDADFE400EB9693 /* CoreData.framework in Frameworks */,
+				A2D4EB291BDADFA700EB9693 /* libsqlite3.dylib in Frameworks */,
 				81BC83B91B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib in Frameworks */,
 				81BC83B31B18EBCE00FD80F5 /* CoreMotion.framework in Frameworks */,
 				81BC83B41B18EBCE00FD80F5 /* CoreText.framework in Frameworks */,
@@ -834,24 +881,24 @@
 				81BC83921B18E9E800FD80F5 /* CoreBluetooth.framework in Frameworks */,
 				81BC83931B18E9E800FD80F5 /* CoreTelephony.framework in Frameworks */,
 				81BC83941B18E9E800FD80F5 /* libz.1.1.3.dylib in Frameworks */,
+				A2D4EB161BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */,
+				A2D4EB1A1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */,
 				81DE28A91B1F8682004A2DE8 /* XtifyPush.framework in Frameworks */,
 				81BC83951B18E9E800FD80F5 /* libxml2.2.dylib in Frameworks */,
 				81BC83961B18E9E800FD80F5 /* CFNetwork.framework in Frameworks */,
 				81BC83971B18E9E800FD80F5 /* MessageUI.framework in Frameworks */,
-				81BC83981B18E9E800FD80F5 /* CoreData.framework in Frameworks */,
 				81BC83991B18E9E800FD80F5 /* MapKit.framework in Frameworks */,
 				81BC839A1B18E9E800FD80F5 /* CoreGraphics.framework in Frameworks */,
 				81BC839B1B18E9E800FD80F5 /* UIKit.framework in Frameworks */,
 				81BC839C1B18E9E800FD80F5 /* Foundation.framework in Frameworks */,
 				81BC83781B18E68800FD80F5 /* Q4M.framework in Frameworks */,
 				81BC832C1B18E47100FD80F5 /* libc++.dylib in Frameworks */,
-				81BC832A1B18E46400FD80F5 /* libz.dylib in Frameworks */,
 				81BC83281B18E45C00FD80F5 /* Security.framework in Frameworks */,
 				81BC83261B18E45200FD80F5 /* CoreLocation.framework in Frameworks */,
-				81BC83241B18E44B00FD80F5 /* SystemConfiguration.framework in Frameworks */,
 				81BC83221B18E44100FD80F5 /* MobileCoreServices.framework in Frameworks */,
 				81BC831F1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a in Frameworks */,
 				81BC831D1B18E2CC00FD80F5 /* sqlcipher.framework in Frameworks */,
+				A2D4EB1E1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,11 +906,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D4EB2F1BDAE12100EB9693 /* SystemConfiguration.framework in Frameworks */,
+				A2D4EB2E1BDAE11300EB9693 /* CoreData.framework in Frameworks */,
 				803C1A791B2F75F80085999E /* Foundation.framework in Frameworks */,
 				803C1A751B2F59A00085999E /* UIKit.framework in Frameworks */,
+				A2D4EB321BDAE15200EB9693 /* libsqlite3.dylib in Frameworks */,
 				803C1A781B2F75B80085999E /* IOKit.framework in Frameworks */,
+				A2D4EB181BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */,
+				A2D4EB1C1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */,
 				803C1A721B2F58E50085999E /* CoreGraphics.framework in Frameworks */,
 				803C1A711B2F58DA0085999E /* libKIF.a in Frameworks */,
+				A2D4EB201BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */,
+				A2D4EB311BDAE14B00EB9693 /* libz.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -880,6 +934,8 @@
 				2E5CA0541B32126E002E4F5F /* CoreTelephony.framework in Frameworks */,
 				2E5CA0551B32126E002E4F5F /* libz.1.1.3.dylib in Frameworks */,
 				2E5CA0561B32126E002E4F5F /* libxml2.2.dylib in Frameworks */,
+				A2D4EB171BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */,
+				A2D4EB1B1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */,
 				2E5CA0571B32126E002E4F5F /* CFNetwork.framework in Frameworks */,
 				2E5CA0581B32126E002E4F5F /* MessageUI.framework in Frameworks */,
 				2E5CA0591B32126E002E4F5F /* CoreData.framework in Frameworks */,
@@ -898,6 +954,7 @@
 				2E5CA0651B32126E002E4F5F /* MobileCoreServices.framework in Frameworks */,
 				2E5CA0491B321221002E4F5F /* libWorklightStaticLibProjectNative.a in Frameworks */,
 				2E5CA04A1B321224002E4F5F /* sqlcipher.framework in Frameworks */,
+				A2D4EB1F1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,12 +980,15 @@
 				2EC72AD31B3C5756001913CE /* CoreGraphics.framework in Frameworks */,
 				2EC72AD41B3C5756001913CE /* UIKit.framework in Frameworks */,
 				2EC72AD51B3C5756001913CE /* Foundation.framework in Frameworks */,
+				A2D4EB211BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */,
 				2EC72AD61B3C5756001913CE /* Q4M.framework in Frameworks */,
 				2EC72AD71B3C5756001913CE /* libstdc++.dylib in Frameworks */,
 				2EC72AD81B3C5756001913CE /* libc++.dylib in Frameworks */,
 				2EC72AD91B3C5756001913CE /* libz.dylib in Frameworks */,
 				2EC72ADA1B3C5756001913CE /* Security.framework in Frameworks */,
 				2EC72ADB1B3C5756001913CE /* CoreLocation.framework in Frameworks */,
+				A2D4EB191BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */,
+				A2D4EB1D1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */,
 				2EC72ADC1B3C5756001913CE /* SystemConfiguration.framework in Frameworks */,
 				2EC72ADD1B3C5756001913CE /* MobileCoreServices.framework in Frameworks */,
 			);
@@ -1050,6 +1110,7 @@
 		05F4C8BC1B28833D00B81D66 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				A2D4EAF71BDADC0F00EB9693 /* GoogleAnalyticsServices */,
 				3410D5611B56C84500CA4D7C /* Reachability */,
 				05A87BAA1B546BCA009D3F37 /* RAMAnimatedTabBarController */,
 				BDBC7D6D1B3A432200A2F0CD /* libPhoneNumber */,
@@ -1211,6 +1272,7 @@
 				2E4098CD1B5039B2005AD7FD /* EditProfileViewController.swift */,
 				05E8BE171B540FCC0048BE46 /* CustomTabBarController.swift */,
 				2E2BD7671B56FA1100D865F8 /* AboutPointsViewController.swift */,
+				A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1498,6 +1560,8 @@
 		81BC833B1B18E5A300FD80F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */,
+				A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */,
 				81DE28701B1F8682004A2DE8 /* XtifyLib */,
 				81BC83B81B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib */,
 				81BC83B11B18EBBB00FD80F5 /* CoreMotion.framework */,
@@ -1672,6 +1736,120 @@
 				81DE28961B1F8682004A2DE8 /* silence.caf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A2D4EAF71BDADC0F00EB9693 /* GoogleAnalyticsServices */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EAF81BDADC0F00EB9693 /* Google */,
+				A2D4EB071BDADC0F00EB9693 /* GoogleAnalytics */,
+			);
+			path = GoogleAnalyticsServices;
+			sourceTree = "<group>";
+		};
+		A2D4EAF81BDADC0F00EB9693 /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EAF91BDADC0F00EB9693 /* Headers */,
+				A2D4EB041BDADC0F00EB9693 /* Libraries */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
+		A2D4EAF91BDADC0F00EB9693 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EAFA1BDADC0F00EB9693 /* GGLAnalytics */,
+				A2D4EAFE1BDADC0F00EB9693 /* GGLCore */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		A2D4EAFA1BDADC0F00EB9693 /* GGLAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EAFB1BDADC0F00EB9693 /* Public */,
+			);
+			path = GGLAnalytics;
+			sourceTree = "<group>";
+		};
+		A2D4EAFB1BDADC0F00EB9693 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EAFC1BDADC0F00EB9693 /* Analytics.h */,
+				A2D4EAFD1BDADC0F00EB9693 /* GGLContext+Analytics.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		A2D4EAFE1BDADC0F00EB9693 /* GGLCore */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EAFF1BDADC0F00EB9693 /* Public */,
+			);
+			path = GGLCore;
+			sourceTree = "<group>";
+		};
+		A2D4EAFF1BDADC0F00EB9693 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EB001BDADC0F00EB9693 /* Core.h */,
+				A2D4EB011BDADC0F00EB9693 /* GGLConfiguration.h */,
+				A2D4EB021BDADC0F00EB9693 /* GGLContext.h */,
+				A2D4EB031BDADC0F00EB9693 /* GGLErrorCode.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		A2D4EB041BDADC0F00EB9693 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */,
+				A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A2D4EB071BDADC0F00EB9693 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EB081BDADC0F00EB9693 /* Headers */,
+				A2D4EB141BDADC0F00EB9693 /* Libraries */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		A2D4EB081BDADC0F00EB9693 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EB091BDADC0F00EB9693 /* Public */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		A2D4EB091BDADC0F00EB9693 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EB0A1BDADC0F00EB9693 /* GAI.h */,
+				A2D4EB0B1BDADC0F00EB9693 /* GAIDictionaryBuilder.h */,
+				A2D4EB0C1BDADC0F00EB9693 /* GAIEcommerceFields.h */,
+				A2D4EB0D1BDADC0F00EB9693 /* GAIEcommerceProduct.h */,
+				A2D4EB0E1BDADC0F00EB9693 /* GAIEcommerceProductAction.h */,
+				A2D4EB0F1BDADC0F00EB9693 /* GAIEcommercePromotion.h */,
+				A2D4EB101BDADC0F00EB9693 /* GAIFields.h */,
+				A2D4EB111BDADC0F00EB9693 /* GAILogger.h */,
+				A2D4EB121BDADC0F00EB9693 /* GAITrackedViewController.h */,
+				A2D4EB131BDADC0F00EB9693 /* GAITracker.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		A2D4EB141BDADC0F00EB9693 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		B16ABC0C1B273D500036878B /* Loyalty WatchKit Extension */ = {
@@ -2185,6 +2363,7 @@
 				3430258D1B544BA900F3BF03 /* MILFakeMessageAlertView.swift in Sources */,
 				1B5AFF111B4AEC8100026D20 /* InterestCollectionViewCell.swift in Sources */,
 				05F2D03C1B41E19D003CE1B5 /* LoyaltyCardViewController.swift in Sources */,
+				A2D4EB391BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				81DE286E1B1F8649004A2DE8 /* XLTag.swift in Sources */,
 				05088A361B26267500C1FD9F /* UILabelExtension.swift in Sources */,
 				BDBC7D951B3A433100A2F0CD /* NBMetadataHelper.m in Sources */,
@@ -2221,6 +2400,7 @@
 				8053CBB91B2F85C3007BFE64 /* KIFSwiftExtension.swift in Sources */,
 				8052FCD21B45EAC300DE864D /* TestxLogin.swift in Sources */,
 				8021C3691B39051E004037EF /* TestMyRewards.swift in Sources */,
+				A2D4EB3B1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				2E2BD7691B56FA1100D865F8 /* AboutPointsViewController.swift in Sources */,
 				340127DB1B962FEF00A7B126 /* NSDateExtension.swift in Sources */,
 				8053CBC11B2F8631007BFE64 /* TestSwitchingViews.swift in Sources */,
@@ -2235,6 +2415,7 @@
 				058807CA1B30A1A400332DF9 /* Contact.swift in Sources */,
 				2EED6E721B3A0AAC00AB52F1 /* GlanceInterfaceController.swift in Sources */,
 				058807CD1B30A1A900332DF9 /* Transaction.swift in Sources */,
+				A2D4EB3A1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				058807C91B30A1A400332DF9 /* Profile.swift in Sources */,
 				058807CC1B30A1A400332DF9 /* Vehicle.swift in Sources */,
 				2E3E31241B3B0D7D0005D9FF /* SharedConstants.swift in Sources */,
@@ -2279,6 +2460,7 @@
 				B1E34A241B387043008950D9 /* LoyaltyLocalWatchDataTests.swift in Sources */,
 				0554364B1B41C88F00D1C5C7 /* User.swift in Sources */,
 				B1E34A531B39BFE5008950D9 /* Profile.swift in Sources */,
+				A2D4EB3C1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				B1E34A311B3870F8008950D9 /* DealRow.swift in Sources */,
 				B1E34A551B39BFFE008950D9 /* Rewards.swift in Sources */,
 			);
@@ -2551,6 +2733,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WorklightAPI",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1;
@@ -2580,6 +2764,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WorklightAPI",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1;
@@ -2609,6 +2795,11 @@
 				);
 				INFOPLIST_FILE = LoyaltyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -2636,6 +2827,11 @@
 				);
 				INFOPLIST_FILE = LoyaltyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -2671,6 +2867,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WorklightAPI",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1.watchkitextension;
@@ -2698,6 +2896,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WorklightAPI",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1.watchkitextension;
@@ -2782,6 +2982,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WorklightAPI",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2818,6 +3020,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WorklightAPI",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
+					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

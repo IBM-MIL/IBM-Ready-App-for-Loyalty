@@ -13,3 +13,4 @@
 #import "ReachabilityMIL.h"
 #import "../Utilities/MQAExceptionHandler/MQAExceptionHandler.h"
 #import "RBStoryboardLink.h"
+#import "Analytics.h"
