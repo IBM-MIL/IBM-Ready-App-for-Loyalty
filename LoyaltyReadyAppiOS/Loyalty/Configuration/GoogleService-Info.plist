@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>TRACKING_ID</key>
-	<string>UA-62299725-10</string>
+	<string>&lt;YOUR_TRACKING_ID&gt;</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.ibm.test1</string>
+	<string>&lt;YOUR_BUNDLE_ID&gt;</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -19,6 +19,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<false/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:238097940619:ios:f1324cf2c787b9df</string>
+	<string>&lt;YOUR_GOOGLE_ID&gt;</string>
 </dict>
 </plist>
