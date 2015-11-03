@@ -5,7 +5,7 @@ Licensed Materials - Property of IBM
 
 import UIKit
 
-class EditProfileViewController: UIViewController, UIPageViewControllerDelegate {
+class EditProfileViewController: LoyaltyUIViewController, UIPageViewControllerDelegate {
     
     @IBOutlet weak var pageControl: UIPageControl!
     var pageViewController: UIPageViewController!

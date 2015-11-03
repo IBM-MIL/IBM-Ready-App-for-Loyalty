@@ -5,7 +5,7 @@ Licensed Materials - Property of IBM
 
 import UIKit
 
-class SubSettingsViewController: UIViewController {
+class SubSettingsViewController: LoyaltyUIViewController {
     
     var subSettingsView : SubSettingsView!
     var titleText = ""

@@ -6,7 +6,7 @@ Licensed Materials - Property of IBM
 import UIKit
 
 /// ViewController showing the loyalty card
-class LoyaltyCardViewController: UIViewController {
+class LoyaltyCardViewController: LoyaltyUIViewController {
 
     /// Current user
     var user: User!

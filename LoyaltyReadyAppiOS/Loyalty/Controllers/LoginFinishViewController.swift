@@ -8,7 +8,7 @@ import UIKit
 /**
 *  Shows user a confirmation statement and possibly savings as a reward for making an account. Finishes Login flow
 */
-class LoginFinishViewController: UIViewController {
+class LoginFinishViewController: LoyaltyUIViewController {
     
     /// Raw phone number string
     var rawPhoneNumber: String!

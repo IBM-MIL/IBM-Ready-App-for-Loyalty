@@ -8,7 +8,7 @@ import UIKit
 /**
 *  Shows the Deals that are recommended and near the user
 */
-class DealsViewController: UIViewController {
+class DealsViewController: LoyaltyUIViewController {
     
     /// Navigation bar view below recommended and near me buttons
     @IBOutlet weak var navView: UIView!

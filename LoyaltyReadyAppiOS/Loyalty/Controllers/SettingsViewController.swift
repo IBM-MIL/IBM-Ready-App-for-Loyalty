@@ -5,7 +5,7 @@ Licensed Materials - Property of IBM
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: LoyaltyUIViewController {
     
     @IBOutlet weak var firstCheckButton: UIButton!
     @IBOutlet weak var secondCheckButton: UIButton!

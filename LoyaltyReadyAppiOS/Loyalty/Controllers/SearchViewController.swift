@@ -14,7 +14,7 @@ import UIKit
     func resetSearchBarText()
 }
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var segmentedControlHolderView: UIView!
     @IBOutlet weak var tableView: UITableView!

@@ -6,7 +6,7 @@ Licensed Materials - Property of IBM
 import UIKit
 import MapKit
 
-class StationsViewController: UIViewController{
+class StationsViewController: LoyaltyUIViewController {
     
     /**
     Defines state of collection view.

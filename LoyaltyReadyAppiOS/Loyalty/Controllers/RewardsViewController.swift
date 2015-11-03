@@ -8,7 +8,7 @@ import UIKit
 /*
 *  Shows the Rewards that are associated with the user
 */
-class RewardsViewController: UIViewController {
+class RewardsViewController: LoyaltyUIViewController {
 
     /// Navigation bar for rewards
     var navigationBar : UINavigationBar?

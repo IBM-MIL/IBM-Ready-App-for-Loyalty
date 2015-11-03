@@ -8,7 +8,7 @@ import UIKit
 /**
 *  Displays SMS Alert containing confirmation number; allows user to input number
 */
-class LoginConfirmationViewController: UIViewController {
+class LoginConfirmationViewController: LoyaltyUIViewController {
     /// UITextField containing the first digit of the confirmation code
     @IBOutlet var codeField1: UITextField!
     /// UITextField containing the second digit of the confirmation code

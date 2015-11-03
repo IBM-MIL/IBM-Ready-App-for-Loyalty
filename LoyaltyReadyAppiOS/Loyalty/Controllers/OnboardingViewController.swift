@@ -13,7 +13,7 @@ import UIKit
 /*
 *  A UIPageViewController handler, that displays correct pages with the right content for onboarding process
 */
-class OnboardingViewController: UIViewController, UIPageViewControllerDelegate {
+class OnboardingViewController: LoyaltyUIViewController, UIPageViewControllerDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var transparentView: UIView!

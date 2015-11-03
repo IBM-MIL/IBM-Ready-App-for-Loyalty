@@ -8,7 +8,7 @@ import UIKit
 /*
 *  View Controller that handles UI for onboarding pages
 */
-class PageContentViewController: UIViewController {
+class PageContentViewController: LoyaltyUIViewController {
     
     @IBOutlet weak var onboardImageView: UIImageView!
     @IBOutlet weak var pageTitleLabel: UILabel!

@@ -312,10 +312,7 @@
 		A2D4EB2F1BDAE12100EB9693 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
 		A2D4EB311BDAE14B00EB9693 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */; };
 		A2D4EB321BDAE15200EB9693 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */; };
-		A2D4EB391BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB3A1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB3B1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB3C1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A2D4EB3E1BDAE6B500EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB3D1BDAE6B500EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B16ABC171B273D500036878B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC161B273D500036878B /* Images.xcassets */; };
 		B16ABC1B1B273D510036878B /* Loyalty WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC1A1B273D510036878B /* Loyalty WatchKit App.app */; };
 		B16ABC231B273D510036878B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC211B273D510036878B /* Interface.storyboard */; };
@@ -816,7 +813,7 @@
 		A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = "<absolute>"; };
 		A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = /usr/lib/libz.1.dylib; sourceTree = "<absolute>"; };
-		A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyUIViewController.swift; sourceTree = "<group>"; };
+		A2D4EB3D1BDAE6B500EB9693 /* LoyaltyUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyUIViewController.swift; sourceTree = "<group>"; };
 		B16ABC0B1B273D500036878B /* Loyalty WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Loyalty WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16ABC0E1B273D500036878B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16ABC0F1B273D500036878B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -1251,6 +1248,7 @@
 		349BCFAE1B27451800FB6535 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A2D4EB3D1BDAE6B500EB9693 /* LoyaltyUIViewController.swift */,
 				05B62EDD1B3CAA28003EB920 /* DealsDetailViewController.swift */,
 				053CC3D81B29FFB10098288F /* DealsViewController.swift */,
 				349BCFAF1B27452800FB6535 /* LoginViewController.swift */,
@@ -1272,7 +1270,6 @@
 				2E4098CD1B5039B2005AD7FD /* EditProfileViewController.swift */,
 				05E8BE171B540FCC0048BE46 /* CustomTabBarController.swift */,
 				2E2BD7671B56FA1100D865F8 /* AboutPointsViewController.swift */,
-				A2D4EB381BDAE4B800EB9693 /* LoyaltyUIViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2284,6 +2281,7 @@
 				329869961B311DDB00CC6B55 /* MapPin.swift in Sources */,
 				B1F21C1A1B446E670029ED80 /* PassbookUtils.swift in Sources */,
 				05B62EDE1B3CAA28003EB920 /* DealsDetailViewController.swift in Sources */,
+				A2D4EB3E1BDAE6B500EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				343025941B544C2200F3BF03 /* MILAlertView.swift in Sources */,
 				05088A351B26267500C1FD9F /* UIImageViewExtension.swift in Sources */,
 				05DB516F1B3B4E1E0015E8F1 /* StationView.swift in Sources */,
@@ -2363,7 +2361,6 @@
 				3430258D1B544BA900F3BF03 /* MILFakeMessageAlertView.swift in Sources */,
 				1B5AFF111B4AEC8100026D20 /* InterestCollectionViewCell.swift in Sources */,
 				05F2D03C1B41E19D003CE1B5 /* LoyaltyCardViewController.swift in Sources */,
-				A2D4EB391BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				81DE286E1B1F8649004A2DE8 /* XLTag.swift in Sources */,
 				05088A361B26267500C1FD9F /* UILabelExtension.swift in Sources */,
 				BDBC7D951B3A433100A2F0CD /* NBMetadataHelper.m in Sources */,
@@ -2400,7 +2397,6 @@
 				8053CBB91B2F85C3007BFE64 /* KIFSwiftExtension.swift in Sources */,
 				8052FCD21B45EAC300DE864D /* TestxLogin.swift in Sources */,
 				8021C3691B39051E004037EF /* TestMyRewards.swift in Sources */,
-				A2D4EB3B1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				2E2BD7691B56FA1100D865F8 /* AboutPointsViewController.swift in Sources */,
 				340127DB1B962FEF00A7B126 /* NSDateExtension.swift in Sources */,
 				8053CBC11B2F8631007BFE64 /* TestSwitchingViews.swift in Sources */,
@@ -2415,7 +2411,6 @@
 				058807CA1B30A1A400332DF9 /* Contact.swift in Sources */,
 				2EED6E721B3A0AAC00AB52F1 /* GlanceInterfaceController.swift in Sources */,
 				058807CD1B30A1A900332DF9 /* Transaction.swift in Sources */,
-				A2D4EB3A1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				058807C91B30A1A400332DF9 /* Profile.swift in Sources */,
 				058807CC1B30A1A400332DF9 /* Vehicle.swift in Sources */,
 				2E3E31241B3B0D7D0005D9FF /* SharedConstants.swift in Sources */,
@@ -2460,7 +2455,6 @@
 				B1E34A241B387043008950D9 /* LoyaltyLocalWatchDataTests.swift in Sources */,
 				0554364B1B41C88F00D1C5C7 /* User.swift in Sources */,
 				B1E34A531B39BFE5008950D9 /* Profile.swift in Sources */,
-				A2D4EB3C1BDAE4B800EB9693 /* LoyaltyUIViewController.swift in Sources */,
 				B1E34A311B3870F8008950D9 /* DealRow.swift in Sources */,
 				B1E34A551B39BFFE008950D9 /* Rewards.swift in Sources */,
 			);

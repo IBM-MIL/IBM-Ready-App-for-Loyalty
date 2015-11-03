@@ -4,11 +4,14 @@ Licensed Materials - Property of IBM
 */
 
 import Foundation
-
-class LoyaltyUIViewController : UIViewController {
+class LoyaltyUIViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
-       //let tracker = g
-        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: NSStringFromClass(self.dynamicType))
+    
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    
         super.viewWillAppear(animated)
     }
 }

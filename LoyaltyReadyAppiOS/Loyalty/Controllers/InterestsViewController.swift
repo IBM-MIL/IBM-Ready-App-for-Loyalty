@@ -5,7 +5,7 @@ Licensed Materials - Property of IBM
 
 import UIKit
 
-class InterestsViewController: UIViewController {
+class InterestsViewController: LoyaltyUIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     

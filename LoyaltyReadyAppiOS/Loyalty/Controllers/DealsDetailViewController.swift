@@ -6,7 +6,7 @@ Licensed Materials - Property of IBM
 import UIKit
 
 /// UIViewController used to view the details of a deal
-class DealsDetailViewController: UIViewController {
+class DealsDetailViewController: LoyaltyUIViewController {
     
     @IBOutlet weak var finePrintLabel: UILabel!
     @IBOutlet weak var highlightLabel: UILabel!
