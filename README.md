@@ -16,7 +16,7 @@ IBM Ready App for Loyalty is made great via
 * [**IBM MobileFirst Platform**](http://www-03.ibm.com/software/products/en/mobilefirstplatform)
 * [**IBM Bluemix**](https://console.ng.bluemix.net/)
   * [**Watson Personality Insights**] (http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/personality-insights.html)
-* [**IBM Mobile Push Notification, formerly Xtify Mobile Push Notification**] (http://www-03.ibm.com/software/products/en/mobile-push-notificatio
+* [**IBM Mobile Push Notification, formerly Xtify Mobile Push Notification**] (http://estimote.com/)
 
 ### Getting Started
 The user can browse the application without logging in. However, to access user specific deals, add personal interests/preferences, and save deals, they will be prompted to login. A native pop up screen will prompt the user to login in with demo mode.
