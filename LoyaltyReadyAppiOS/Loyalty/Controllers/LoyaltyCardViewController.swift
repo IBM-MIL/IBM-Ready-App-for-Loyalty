@@ -5,9 +5,16 @@ Licensed Materials - Property of IBM
 
 import UIKit
 
+// used to determine if user is on an ipad or an iphone
+enum UIUserInterfaceIdiom : Int {
+    case Unspecified
+    
+    case Phone // iPhone and iPod touch style UI
+    case Pad // iPad style UI
+}
+
 /// ViewController showing the loyalty card
 class LoyaltyCardViewController: LoyaltyUIViewController {
-
     /// Current user
     var user: User!
     //Card frame constants
@@ -24,9 +31,14 @@ class LoyaltyCardViewController: LoyaltyUIViewController {
     @IBAction func addToPassbook(sender: AnyObject) {
         PassbookUtils.showPass("loyalty", context: self)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            self.dropChevron.hidden = true
+        }
         user = UserDataManager.sharedInstance.currentUser
         
         let tapToDismiss = UITapGestureRecognizer(target: self, action: "dismiss")
