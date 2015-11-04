@@ -1,3 +1,4 @@
+![](README_assets/banner.png)
 # IBM-Ready-App-for-Loyalty
 
 IBM Ready App for Loyalty is the fifth of the IBM Ready App Series. This app
