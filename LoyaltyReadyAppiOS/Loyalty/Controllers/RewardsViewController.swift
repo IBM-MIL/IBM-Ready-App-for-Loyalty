@@ -69,13 +69,12 @@ class RewardsViewController: LoyaltyUIViewController {
     func checkInternetConnection(){
         if !Utils.checkInternetConnection() { //no internet, so disable create account button
             MILLoadViewManager.sharedInstance.hide()
+            self.savedDealsCollectionView.userInteractionEnabled = false
             MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), view: self.view, underView: self.rewardsNavBarView, callback: checkInternetConnection)
             self.allowTransition = false
         } else {
             MILAlertViewManager.sharedInstance.hide() //hide alert if shown
-//            if (self.navigationBar != nil){
-//                self.setUpAndShowToolTip()
-//            }
+            self.savedDealsCollectionView.userInteractionEnabled = true
             self.allowTransition = true
         }
     }
@@ -116,7 +115,7 @@ class RewardsViewController: LoyaltyUIViewController {
     func gotUserData(data: [String : AnyObject]) {
         
         if let failString = data["failure"] as? String { //failure of some kind
-            
+            self.savedDealsCollectionView.userInteractionEnabled = false
             MILLoadViewManager.sharedInstance.hide()
             self.allowTransition = false
             
@@ -130,7 +129,7 @@ class RewardsViewController: LoyaltyUIViewController {
                 MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), view: self.view, underView: self.rewardsNavBarView, callback: retryRequest)
             }
         } else { //success! (no failure string)
-            
+            self.savedDealsCollectionView.userInteractionEnabled = true
             self.allowTransition = true
             MILAlertViewManager.sharedInstance.hide() //hide alert if shown
             MQALogger.log("Anon User Data Received: \(data)")
@@ -220,6 +219,8 @@ class RewardsViewController: LoyaltyUIViewController {
         SearchManager.getClosestGasStation(user.gasStations, callback: { (station: GasStation?) -> () in
             MILLoadViewManager.sharedInstance.hide()
             if (station != nil) {
+                header.cheapestStationView.userInteractionEnabled = true
+                header.closestStationView.userInteractionEnabled = true
                 MILAlertViewManager.sharedInstance.hide() //hide alert if shown
                 header.closestStationView.setValues(station!)
                 self.closestStation = station
@@ -228,6 +229,8 @@ class RewardsViewController: LoyaltyUIViewController {
             } else {
                 //self.view.insertSubview(MILAlertViewManager.sharedInstance.milAlertView, belowSubview: self.rewardsNavBarView)
                 //MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), overView: self.rewardsNavBarView, callback: {self.savedDealsCollectionView.reloadData()})
+                header.cheapestStationView.userInteractionEnabled = false
+                header.closestStationView.userInteractionEnabled = false
                 MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), view: self.view, underView: self.rewardsNavBarView, callback: {self.getClosestStation(header)})
                 
             }
