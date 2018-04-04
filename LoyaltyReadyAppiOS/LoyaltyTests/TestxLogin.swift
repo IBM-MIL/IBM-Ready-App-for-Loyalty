@@ -119,15 +119,6 @@ class TestxLogin: KIFTestCase {
         //var tot = count(view.visibleCells())
         print("total: \( view.visibleCells().count)")
         XCTAssertTrue(view.visibleCells().count == 4, "We clicked on 4 deals, but there wasnt 4 to be found")
-/*        for viewMember in cells {
-            MQALogger.log("*******************")
-            MQALogger.log("viewmember: \(viewMember)")
-            var children : NSArray! = viewMember.subviews.first?.subviews.first?.subviews as! [UIView]
-            while children.count > 0 {
-                MQALogger.log ("children: \(children)")
-                children = children.firstObject?.subviews
-            }
-        }*/
     }
 }
 

@@ -42,19 +42,19 @@ class DealsViewController: LoyaltyUIViewController {
         dealsCollectionView.accessibilityIdentifier = NSLocalizedString("offersId", comment: "")
         
         let navigationBar = self.navigationController?.navigationBar
-        navigationBar?.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        navigationBar?.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationBar?.shadowImage = UIImage()
         
         // Show nearest if initally not logged in
         showingNearest = !UserDataManager.sharedInstance.currentUser.loggedIn
         
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // Update local user object
@@ -71,13 +71,13 @@ class DealsViewController: LoyaltyUIViewController {
     func checkInternetConnection(){
         if !Utils.checkInternetConnection(){ //no internet, so disable create account button
             MILLoadViewManager.sharedInstance.hide()
-            createAccountButton.userInteractionEnabled = false
-            createAccountButton.setBackgroundColorForState(UIColor.grayLoyalty(), forState: .Normal)
+            createAccountButton.isUserInteractionEnabled = false
+            createAccountButton.setBackgroundColorForState(UIColor.grayLoyalty(), forState: UIControlState())
             MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), view: self.view, underView: self.nearMeButton, callback: checkInternetConnection)
         } else {
             MILAlertViewManager.sharedInstance.hide() //hide alert if shown
-            createAccountButton.userInteractionEnabled = true
-            createAccountButton.setBackgroundColorForState(UIColor.purpleLoyalty(), forState: .Normal)
+            createAccountButton.isUserInteractionEnabled = true
+            createAccountButton.setBackgroundColorForState(UIColor.purpleLoyalty(), forState: UIControlState())
         }
     }
     
@@ -104,14 +104,14 @@ class DealsViewController: LoyaltyUIViewController {
     
     - parameter sender: UIButton tapped
     */
-    @IBAction func filterButtonTapped(sender: UIButton) {
-        sender.selected = true
+    @IBAction func filterButtonTapped(_ sender: UIButton) {
+        sender.isSelected = true
         checkInternetConnection() //make sure user has internet when changing states
         if sender.tag == 0{
-            nearMeButton.selected = false
+            nearMeButton.isSelected = false
             showingNearest = false
         }else{
-            recommendedButton.selected = false
+            recommendedButton.isSelected = false
             showingNearest = true
         }
         
@@ -124,8 +124,8 @@ class DealsViewController: LoyaltyUIViewController {
     func reloadCollectionView() {
         
         if !showingNearest {
-            nearMeButton.selected = false
-            recommendedButton.selected = true
+            nearMeButton.isSelected = false
+            recommendedButton.isSelected = true
             if !user.loggedIn {
                 view.insertSubview(createAccountView, aboveSubview: dealsCollectionView)
             }else{
@@ -134,23 +134,23 @@ class DealsViewController: LoyaltyUIViewController {
                 view.insertSubview(dealsCollectionView, aboveSubview: createAccountView)
             }
         }else{
-            nearMeButton.selected = true
-            recommendedButton.selected = false
+            nearMeButton.isSelected = true
+            recommendedButton.isSelected = false
             if nearestStation != nil {
                 deals = nearestStation.deals
                 
                 dealsCollectionView.reloadData()
             }
-            self.view.sendSubviewToBack(createAccountView)
+            self.view.sendSubview(toBack: createAccountView)
         }
         
-        if self.recommendedButton.selected {
+        if self.recommendedButton.isSelected {
             self.indicatorViewLeadingContraint.constant = 0
         }else{
             self.indicatorViewLeadingContraint.constant = self.view.width/2
         }
         
-        UIView.animateWithDuration(0.25, delay: 0, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: {
             self.indicatorViewOne.layoutIfNeeded()
             }, completion: nil)
         
@@ -160,24 +160,24 @@ class DealsViewController: LoyaltyUIViewController {
 }
 
 extension DealsViewController: UICollectionViewDataSource{
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! DealCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DealCollectionViewCell
         let deal = deals[indexPath.row]
         Utils.setCellBasedOnDeal(cell, deal: deal, showSaved: true)
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return deals.count
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 }
 
 extension DealsViewController: UICollectionViewDelegate {
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let dealsDetailViewController = Utils.vcWithNameFromStoryboardWithName("DealsDetailViewController", storyboardName: "Deals") as? DealsDetailViewController {
             dealsDetailViewController.deal = deals[indexPath.row]
             navigationController?.pushViewController(dealsDetailViewController, animated: true)
@@ -186,7 +186,7 @@ extension DealsViewController: UICollectionViewDelegate {
 }
 
 extension DealsViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return Utils.sizeOfCellForCollectionView(collectionView)
     }
 }

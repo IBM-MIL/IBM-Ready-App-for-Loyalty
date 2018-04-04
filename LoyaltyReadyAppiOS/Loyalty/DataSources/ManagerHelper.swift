@@ -5,18 +5,22 @@ Licensed Materials - Property of IBM
 
 import UIKit
 
+
 /**
 *  Protocol to provide success and failure messages
 */
 protocol HelperDelegate {
-  func resourceSuccess(response: WLResponse!)
-  func resourceFailure(response: String!)
+  func resourceSuccess(_ response: WLResponse!)
+  func resourceFailure(_ response: String!)
+   
 }
 
 /**
 *  Helper class to connect to MFP and initiate a resource request ]
 */
 class ManagerHelper: NSObject {
+    let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
+
   /// HelperDelegate for the ManagerHelper
   var delegate: HelperDelegate!
   /// String containing the url to initiate the resource request
@@ -25,13 +29,15 @@ class ManagerHelper: NSObject {
   init(URLString: String!, delegate: HelperDelegate!) {
     self.URLString = URLString
     self.delegate = delegate
+    
+    
   }
   
     /**
     Method to initiate a connection to the WLClient.sharedInstance()
     */
   func getResource() {
-    WLClient.sharedInstance().wlConnectWithDelegate(self)
+    WLClient.sharedInstance().wlConnect(with: self)
   }
     
 }
@@ -42,10 +48,13 @@ extension ManagerHelper: WLDelegate {
     
     - parameter response: WLResponse containing user data
     */
-  func onSuccess(response: WLResponse!) {
-    MQALogger.log("Connection SUCCESS!")
-    let request = WLResourceRequest(URL: NSURL(string: URLString), method: WLHttpMethodGet)
-    request.sendWithCompletionHandler { (WLResponse response, NSError error) -> Void in
+    
+    
+  func onSuccess(_ response: WLResponse!) {
+    
+    logger.logInfoWithMessages(message: "Connection SUCCESS!")
+    let request = WLResourceRequest(url: URL(string: URLString), method: WLHttpMethodGet)
+    request?.send { (response, error) -> Void in
       if(error != nil){ //connection success with error (can't find user)
         //self.delegate.resourceFailure(error.description)
         self.delegate.resourceFailure("unknown user")
@@ -61,8 +70,8 @@ extension ManagerHelper: WLDelegate {
     
     - parameter response: WLFailResponse containing failure response
     */
-  func onFailure(response: WLFailResponse!) {
-    MQALogger.log("Connection FAILURE!")
+  func onFailure(_ response: WLFailResponse!) {
+    logger.logInfoWithMessages(message:"Connection FAILURE!")
     
     //self.delegate.resourceFailure(response.errorMsg)
     self.delegate.resourceFailure("no connection")

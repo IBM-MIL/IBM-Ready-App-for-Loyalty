@@ -8,9 +8,9 @@ import Foundation
 extension String{
     var length:Int {return self.characters.count}
     
-    func containsString(s:String) -> Bool
+    func containsString(_ s:String) -> Bool
     {
-        if(rangeOfString(s) != nil)
+        if(range(of: s) != nil)
         {
             return true
         }
@@ -20,9 +20,9 @@ extension String{
         }
     }
     
-    func containsString(s:String, compareOption: NSStringCompareOptions) -> Bool
+    func containsString(_ s:String, compareOption: NSString.CompareOptions) -> Bool
     {
-        if((rangeOfString(s, options: compareOption)) != nil)
+        if((range(of: s, options: compareOption)) != nil)
         {
             return true
         }
@@ -50,10 +50,10 @@ extension String{
     - returns: Returns the user Id (sasaatho)
     */
     func getUserIdFromEmail() -> String? {
-        let range = rangeOfString("@")
+        let range = self.range(of: "@")
         if range != nil {
-            let startRange: Range<String.Index> = Range<String.Index>(start: startIndex, end: range!.startIndex)
-            let id = substringWithRange(startRange)
+            let startRange: Range<String.Index> = (startIndex ..< range!.lowerBound)
+            let id = substring(with: startRange)
             return id
         } else {
             return nil
@@ -61,7 +61,7 @@ extension String{
     }
     
     func lowercaseFirstLetterString() ->String{
-        return stringByReplacingCharactersInRange(startIndex...startIndex, withString: String(self[startIndex]).lowercaseString)
+        return replacingCharacters(in: startIndex..<startIndex, with: String(self[startIndex]).lowercased())
     }
 
 }

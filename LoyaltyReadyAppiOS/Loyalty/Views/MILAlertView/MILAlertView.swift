@@ -8,7 +8,7 @@ import UIKit
 /**
 *  The view presented when an alert is triggered
 */
-public class MILAlertView : UIView {
+open class MILAlertView : UIView {
     
     //// Label of the alert
     @IBOutlet weak var alertLabel : UILabel!
@@ -25,7 +25,7 @@ public class MILAlertView : UIView {
     - returns: And instance of MILAlertView
     */
     class func instanceFromNib() -> MILAlertView {
-        return UINib(nibName: "MILAlertView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! MILAlertView
+        return UINib(nibName: "MILAlertView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! MILAlertView
     }
     
     /**
@@ -33,7 +33,7 @@ public class MILAlertView : UIView {
     
     - parameter text: The text to be displayed
     */
-    func setLabel(text: String!) {
+    func setLabel(_ text: String!) {
         if text != nil {
             self.alertLabel.text = text
         }
@@ -44,13 +44,13 @@ public class MILAlertView : UIView {
     
     - parameter callback: The callback function that is to be executed when the reload button is tapped
     */
-    func setCallbackFunc(callback:(()->())!){
+    func setCallbackFunc(_ callback:(()->())!){
         if callback != nil {
-            self.reloadButton.hidden = false
+            self.reloadButton.isHidden = false
             self.callback = callback
-            reloadButton.addTarget(self, action: "reloadButtonTapped", forControlEvents: UIControlEvents.TouchUpInside)
+            reloadButton.addTarget(self, action: #selector(MILAlertView.reloadButtonTapped), for: UIControlEvents.touchUpInside)
         }else{
-            self.reloadButton.hidden = true
+            self.reloadButton.isHidden = true
         }
     }
     

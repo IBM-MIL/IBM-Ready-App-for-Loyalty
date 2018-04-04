@@ -24,23 +24,23 @@ class EditProfileViewController: LoyaltyUIViewController, UIPageViewControllerDe
     
     func resetPageViewController() {
         
-        pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageController") as! UIPageViewController
+        pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageController") as! UIPageViewController
         self.pageViewController.dataSource = self
         self.pageViewController.delegate = self
         
         let pageContentViewController = self.viewControllerAtIndex(self.startingIndex)
-        self.pageViewController.setViewControllers([pageContentViewController!], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        self.pageViewController.setViewControllers([pageContentViewController!], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
         self.pageControl.currentPage = self.startingIndex
         
-        self.pageViewController.view.frame = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height - 60)
+        self.pageViewController.view.frame = CGRect(x: 0, y: 60, width: self.view.frame.size.width, height: self.view.frame.size.height - 60)
         self.addChildViewController(pageViewController)
         self.view.addSubview(pageViewController.view)
-        self.pageViewController.didMoveToParentViewController(self)
+        self.pageViewController.didMove(toParentViewController: self)
         
     }
     
-    @IBAction func exitFlow(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func exitFlow(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /**
@@ -49,24 +49,24 @@ class EditProfileViewController: LoyaltyUIViewController, UIPageViewControllerDe
     - parameter index:     page index to go to
     - parameter fromIndex: page index coming from
     */
-    func navigateToIndex(index: Int, fromIndex: Int, animated: Bool) {
+    func navigateToIndex(_ index: Int, fromIndex: Int, animated: Bool) {
         
         // disable view when doing a manual transition to avoid weird UIPageViewController behavior
-        self.pageViewController?.view.userInteractionEnabled = false
+        self.pageViewController?.view.isUserInteractionEnabled = false
         
         // need to set manually when manually navigating
         self.pageControl.currentPage = index
         
         let viewController = viewControllerAtIndex(index)
         let selectedViewControllers = [viewController!] as [AnyObject]
-        self.pageViewController.setViewControllers(selectedViewControllers as? [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: animated) { (done: Bool) -> Void in
-            self.pageViewController?.view.userInteractionEnabled = true
+        self.pageViewController.setViewControllers(selectedViewControllers as? [UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: animated) { (done: Bool) -> Void in
+            self.pageViewController?.view.isUserInteractionEnabled = true
         }
     }
     
     // MARK: UIPageViewControllerDelegate
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         if completed {
             // Method used to keep a pageControl updated with current index
@@ -86,7 +86,7 @@ extension EditProfileViewController: UIPageViewControllerDataSource {
     
     // MARK: UIPageViewControllerDataSource
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         var index = 0
         if let subSettings = viewController as? SubSettingsViewController {
@@ -97,17 +97,17 @@ extension EditProfileViewController: UIPageViewControllerDataSource {
             return nil
         }
         
-        index--
+        index -= 1
         return self.viewControllerAtIndex(index)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         var index = 0
         if let subSettings = viewController as? SubSettingsViewController {
             index = subSettings.pageIndex
         }
-        index++
+        index += 1
         
         if index >= self.pageCount {
             return nil
@@ -116,7 +116,7 @@ extension EditProfileViewController: UIPageViewControllerDataSource {
         return self.viewControllerAtIndex(index)
     }
     
-    func viewControllerAtIndex(index : Int) -> UIViewController? {
+    func viewControllerAtIndex(_ index : Int) -> UIViewController? {
         
         if index >= self.pageCount {
             return nil

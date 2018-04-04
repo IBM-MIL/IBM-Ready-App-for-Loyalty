@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0830"
    version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B16ABC191B273D510036878B"
+               BlueprintIdentifier = "C3B0C83A2062477A001E0044"
                BuildableName = "Loyalty WatchKit App.app"
                BlueprintName = "Loyalty WatchKit App"
                ReferencedContainer = "container:Loyalty.xcodeproj">
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B16ABC191B273D510036878B"
+            BlueprintIdentifier = "C3B0C83A2062477A001E0044"
             BuildableName = "Loyalty WatchKit App.app"
             BlueprintName = "Loyalty WatchKit App"
             ReferencedContainer = "container:Loyalty.xcodeproj">
@@ -87,7 +87,7 @@
          RemotePath = "/Loyalty">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B16ABC191B273D510036878B"
+            BlueprintIdentifier = "C3B0C83A2062477A001E0044"
             BuildableName = "Loyalty WatchKit App.app"
             BlueprintName = "Loyalty WatchKit App"
             ReferencedContainer = "container:Loyalty.xcodeproj">
@@ -96,7 +96,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B16ABC191B273D510036878B"
+            BlueprintIdentifier = "C3B0C83A2062477A001E0044"
             BuildableName = "Loyalty WatchKit App.app"
             BlueprintName = "Loyalty WatchKit App"
             ReferencedContainer = "container:Loyalty.xcodeproj">
@@ -119,7 +119,7 @@
          RemotePath = "/Loyalty">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B16ABC191B273D510036878B"
+            BlueprintIdentifier = "C3B0C83A2062477A001E0044"
             BuildableName = "Loyalty WatchKit App.app"
             BlueprintName = "Loyalty WatchKit App"
             ReferencedContainer = "container:Loyalty.xcodeproj">
@@ -128,7 +128,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B16ABC191B273D510036878B"
+            BlueprintIdentifier = "C3B0C83A2062477A001E0044"
             BuildableName = "Loyalty WatchKit App.app"
             BlueprintName = "Loyalty WatchKit App"
             ReferencedContainer = "container:Loyalty.xcodeproj">

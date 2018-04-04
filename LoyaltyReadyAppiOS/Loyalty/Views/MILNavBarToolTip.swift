@@ -18,31 +18,31 @@ class MILNavBarToolTip: UIView {
     /**
     This method sets up the tool tip with the text parameter and the navBarButtonFrame to correctly place the arrow in the right spot
     */
-    func setUp(text : String, navBarButtonFrameCenter : CGFloat){
+    func setUp(_ text : String, navBarButtonFrameCenter : CGFloat){
         self.alpha = 0.0
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         
-        let backgroundColorView = UIView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
+        let backgroundColorView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height))
         backgroundColorView.backgroundColor = UIColor.purpleLoyalty()
         backgroundColorView.alpha = kBackgroundAlpha
         self.addSubview(backgroundColorView)
         
-        let toolTipLabel = UILabel(frame: CGRectMake(12, 0, self.frame.size.width - 24 , self.frame.size.height))
+        let toolTipLabel = UILabel(frame: CGRect(x: 12, y: 0, width: self.frame.size.width - 24 , height: self.frame.size.height))
         toolTipLabel.text = text
         toolTipLabel.font = UIFont.montserratRegular(13)
-        toolTipLabel.textColor = UIColor.whiteColor()
+        toolTipLabel.textColor = UIColor.white
         toolTipLabel.numberOfLines = 0
         self.addSubview(toolTipLabel)
         
-        self.actionButton = UIButton(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
-        self.actionButton.backgroundColor = UIColor.clearColor()
-        self.actionButton.addTarget(self, action: "toolTipTouched", forControlEvents: UIControlEvents.TouchUpInside)
+        self.actionButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height))
+        self.actionButton.backgroundColor = UIColor.clear
+        self.actionButton.addTarget(self, action: #selector(MILNavBarToolTip.toolTipTouched), for: UIControlEvents.touchUpInside)
         self.addSubview(self.actionButton)
         
         let arrowUpImage = UIImage(named: "tooltip-arrow-up")
         self.toolTipArrowImageView = UIImageView(image: arrowUpImage)
         self.toolTipArrowImageView.alpha = kArrowAlpha
-        self.toolTipArrowImageView.frame = CGRectMake(0,-8, 20, 8)
+        self.toolTipArrowImageView.frame = CGRect(x: 0,y: -8, width: 20, height: 8)
         self.toolTipArrowImageView.center.x = navBarButtonFrameCenter
         self.addSubview(self.toolTipArrowImageView)
     }
@@ -57,8 +57,8 @@ class MILNavBarToolTip: UIView {
     /**
     This method shows the tooltip after the time defined in the delay parameter
     */
-    func showWithTimeDelay(delay : NSTimeInterval){
-        NSTimer.scheduledTimerWithTimeInterval(delay, target: self, selector: "show", userInfo: nil, repeats: false)
+    func showWithTimeDelay(_ delay : TimeInterval){
+        Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(MILNavBarToolTip.show), userInfo: nil, repeats: false)
     }
     
     /**
@@ -66,7 +66,7 @@ class MILNavBarToolTip: UIView {
     */
     func show(){
         if(self.isShown == false){
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.alpha = 1.0
             })
             self.isShown = true
@@ -78,7 +78,7 @@ class MILNavBarToolTip: UIView {
     */
     func hide(){
         if(self.isShown == true){
-            UIView.animateWithDuration(0.3, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.alpha = 0
             })
             self.isShown = false

@@ -9,13 +9,13 @@ import UIKit
 
 extension UIView{
     var width: CGFloat { return frame.size.width }
-    func width(value: CGFloat?) -> UIView {
+    func width(_ value: CGFloat?) -> UIView {
         setWidth(value ?? 0)
         return self
     }
     
     var height: CGFloat { return frame.size.height }
-    func height(value: CGFloat?) -> UIView {
+    func height(_ value: CGFloat?) -> UIView {
         setHeight(value ?? 0)
         return self
     }
@@ -25,7 +25,7 @@ extension UIView{
     var x: CGFloat { return frame.origin.x }
     var y: CGFloat { return frame.origin.y }
     var centerX: CGFloat { return center.x }
-    func centerX(value: CGFloat?) -> UIView {
+    func centerX(_ value: CGFloat?) -> UIView {
         setCenterX(value ?? 0)
         return self
     }
@@ -36,78 +36,78 @@ extension UIView{
     var right: CGFloat { return frame.origin.x + frame.size.width }
     
     var top: CGFloat { return frame.origin.y }
-    func top(value: CGFloat?) -> UIView {
+    func top(_ value: CGFloat?) -> UIView {
         setTop(value ?? 0)
         return self
     }
     
     var bottom: CGFloat { return frame.origin.y + frame.size.height }
-    func bottom(value: CGFloat?) -> UIView {
+    func bottom(_ value: CGFloat?) -> UIView {
         setBottom(value ?? 0)
         return self
     }
     
-    func setWidth(width:CGFloat)
+    func setWidth(_ width:CGFloat)
     {
         frame.size.width = width
     }
     
-    func setHeight(height:CGFloat)
+    func setHeight(_ height:CGFloat)
     {
         frame.size.height = height
     }
     
-    func setSize(size:CGSize)
+    func setSize(_ size:CGSize)
     {
         frame.size = size
     }
     
-    func setOrigin(point:CGPoint)
+    func setOrigin(_ point:CGPoint)
     {
         frame.origin = point
     }
     
-    func setOriginX(x:CGFloat)
+    func setOriginX(_ x:CGFloat)
     {
-        frame.origin = CGPointMake(x, frame.origin.y)
+        frame.origin = CGPoint(x: x, y: frame.origin.y)
     }
     
-    func setOriginY(y:CGFloat)
+    func setOriginY(_ y:CGFloat)
     {
-        frame.origin = CGPointMake(frame.origin.x, y)
+        frame.origin = CGPoint(x: frame.origin.x, y: y)
     }
     
-    func setCenterX(x:CGFloat)
+    func setCenterX(_ x:CGFloat)
     {
-        center = CGPointMake(x, center.y)
+        center = CGPoint(x: x, y: center.y)
     }
     
-    func setCenterY(y:CGFloat)
+    func setCenterY(_ y:CGFloat)
     {
-        center = CGPointMake(center.x, y)
+        center = CGPoint(x: center.x, y: y)
     }
     
-    func roundCorner(radius:CGFloat)
+    func roundCorner(_ radius:CGFloat)
     {
         layer.cornerRadius = radius
     }
     
-    func setTop(top:CGFloat)
+    func setTop(_ top:CGFloat)
     {
         frame.origin.y = top
     }
     
-    func setLeft(left:CGFloat)
+    func setLeft(_ left:CGFloat)
     {
         frame.origin.x = left
     }
     
-    func setRight(right:CGFloat)
+    func setRight(_ right:CGFloat)
     {
         frame.origin.x = right - frame.size.width
     }
     
-    func setBottom(bottom:CGFloat)
+    func setBottom(_ bottom:CGFloat)
     {
         frame.origin.y = bottom - frame.size.height
     }
@@ -133,14 +133,14 @@ extension UIView{
     
     @IBInspectable var borderColor: UIColor? {
         get {
-            return UIColor(CGColor: layer.borderColor!)
+            return UIColor(cgColor: layer.borderColor!)
         }
         set {
-            layer.borderColor = newValue?.CGColor
+            layer.borderColor = newValue?.cgColor
         }
     }
     
-    func rotate(percent: CGFloat = 100, duration: CFTimeInterval = 1.0, completionDelegate: AnyObject? = nil) {
+    func rotate(_ percent: CGFloat = 100, duration: CFTimeInterval = 1.0, completionDelegate: AnyObject? = nil) {
         let p: CGFloat
         if percent > 1 {
             p = percent / 100
@@ -148,22 +148,22 @@ extension UIView{
             p = percent
         }
         
-        self.transform = CGAffineTransformMakeRotation(0)
+        self.transform = CGAffineTransform(rotationAngle: 0)
         CATransaction.begin()
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimation.fromValue = 0
         rotateAnimation.toValue = CGFloat(M_PI) * p
         rotateAnimation.duration = duration
-        rotateAnimation.removedOnCompletion = false
+        rotateAnimation.isRemovedOnCompletion = false
         
         if let _: AnyObject = completionDelegate {
-            rotateAnimation.delegate = self
+            rotateAnimation.delegate = self as! CAAnimationDelegate
         }
         CATransaction.setCompletionBlock { () -> Void in
             self.layer.removeAllAnimations()
-            self.transform = CGAffineTransformMakeRotation(CGFloat(M_PI) * p)
+            self.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI) * p)
         }
-        self.layer.addAnimation(rotateAnimation, forKey: nil)
+        self.layer.add(rotateAnimation, forKey: nil)
         CATransaction.commit()
         
     }
@@ -175,23 +175,23 @@ extension UIView{
     - parameter animationDuration: duration the whole animation should take
     - parameter bottomMoves:       deteremines if the bottom should stay in place while the view's size increases
     */
-    func animateIncreaseWithBounce(pixelsLarger: CGFloat, animationDuration: NSTimeInterval, bottomMoves: Bool) {
+    func animateIncreaseWithBounce(_ pixelsLarger: CGFloat, animationDuration: TimeInterval, bottomMoves: Bool) {
         
         let offset = pixelsLarger / 2
         let halvedDuration = animationDuration / 2
         let originalFrame = self.frame
         
-        UIView.animateWithDuration(halvedDuration, animations: {
+        UIView.animate(withDuration: halvedDuration, animations: {
             
-            self.frame = CGRectMake(self.frame.origin.x - offset, self.frame.origin.y - (bottomMoves ? offset : pixelsLarger), self.frame.size.width + pixelsLarger, self.frame.size.height + pixelsLarger)
+            self.frame = CGRect(x: self.frame.origin.x - offset, y: self.frame.origin.y - (bottomMoves ? offset : pixelsLarger), width: self.frame.size.width + pixelsLarger, height: self.frame.size.height + pixelsLarger)
             
-        }) { (done: Bool) -> Void in
+        }, completion: { (done: Bool) -> Void in
             
-            UIView.animateWithDuration(halvedDuration, animations: {
-                self.frame = CGRectMake(originalFrame.origin.x, originalFrame.origin.y, self.frame.size.width - pixelsLarger, self.frame.size.height - pixelsLarger)
+            UIView.animate(withDuration: halvedDuration, animations: {
+                self.frame = CGRect(x: originalFrame.origin.x, y: originalFrame.origin.y, width: self.frame.size.width - pixelsLarger, height: self.frame.size.height - pixelsLarger)
             })
             
-        }
+        }) 
         
     }
 }

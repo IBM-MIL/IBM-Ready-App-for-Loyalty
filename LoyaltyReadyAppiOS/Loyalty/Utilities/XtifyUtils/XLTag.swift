@@ -7,28 +7,28 @@ import Foundation
 /**
  * This class represents an Xtify Tag
  **/
-public class XLTag {
-    private var tagName : String;
-    private var isSet : Bool;
+open class XLTag {
+    fileprivate var tagName : String;
+    fileprivate var isSet : Bool;
     
     init(tagName : String, isSet : Bool) {
         self.tagName = tagName;
         self.isSet = isSet;
     }
     
-    public func getTagName() -> String {
+    open func getTagName() -> String {
         return tagName;
     }
     
-    public func setTagName(tagName : String) {
+    open func setTagName(_ tagName : String) {
         self.tagName = tagName;
     }
     
-    public func getIsSet() -> Bool {
+    open func getIsSet() -> Bool {
         return isSet;
     }
     
-    public func setIsSet(isSet : Bool) {
+    open func setIsSet(_ isSet : Bool) {
         self.isSet = isSet;
     }
 }

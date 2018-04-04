@@ -4,16 +4,17 @@ Licensed Materials - Property of IBM
 */
 
 import UIKit
+import IBMMobileFirstPlatformFoundationJSONStore
 
 /**
 *   Asks ManagerHelper to initiate a resource request to get authorized User data
 */
-public class UserDataManager: NSObject {
+open class UserDataManager: NSObject {
     
     /// String for the user's phone number to be part of the resource request
     var phoneNumber: String!
     /// String for the locale of the user's device to be part of the resource request
-    var locale: String! = NSLocale.preferredLanguages()[0] 
+    var locale: String! = Locale.preferredLanguages[0] 
     /// Callback object to return data to the requesting class
     var callback: (([String: AnyObject])->())!
     /// Data dictionary to contain user data
@@ -31,9 +32,10 @@ public class UserDataManager: NSObject {
     
     - parameter callback: callback to send user data
     */
-    public func getUserData(phoneNumber: String!, callback: ([String: AnyObject])->()) {
+    open func getUserData(_ phoneNumber: String!, callback: @escaping ([String: AnyObject])->()) {
         self.callback = callback
         let url = "/adapters/LoyaltyUserAdapter/user-data/" + phoneNumber + "/" + locale
+        //let url = "/adapters/LoyaltyUserAdapter/resource/user-data/" + phoneNumber + "/" + "en"
         
         let manHelper = ManagerHelper(URLString: url, delegate: self)
         manHelper.getResource()
@@ -44,9 +46,10 @@ public class UserDataManager: NSObject {
     
     - parameter callback: callback to send anonymous user data
     */
-    public func getAnonUserData(callback: ([String: AnyObject])->()) {
+    open func getAnonUserData(_ callback: @escaping ([String: AnyObject])->()) {
         self.callback = callback
         let url = "/adapters/LoyaltyUserAdapter/app-data/" + locale
+        //let url = "/adapters/LoyaltyUserAdapter/resource/app-data/" + "en"
         
         let manHelper = ManagerHelper(URLString: url, delegate: self)
         manHelper.getResource()
@@ -55,7 +58,7 @@ public class UserDataManager: NSObject {
     /**
     Method to send user data via callback
     */
-    private func sendUserData() {
+    fileprivate func sendUserData() {
         callback(data)
     }
     
@@ -67,14 +70,14 @@ extension UserDataManager: HelperDelegate {
     
     - parameter response: WLResponse containing data
     */
-    func resourceSuccess(response: WLResponse!) {
-        data = response.getResponseJson() as! [String: AnyObject]
+    func resourceSuccess(_ response: WLResponse!) {
+        data = response.getJson() as! [String: AnyObject]
         if data != nil {
             //Sample JSONStore implementation
             let collection = JSONStoreCollection(name: "authUser")
-            collection.setSearchField("id", withType: JSONStore_Integer)
+            collection?.setSearchField("id", with: JSONStore_Integer)
             do {
-                try JSONStore.sharedInstance().openCollections([collection], withOptions: nil)
+                try JSONStore.sharedInstance().openCollections([collection], with: nil)
             } catch _ {
             }
             //Now send data to ViewController
@@ -87,8 +90,8 @@ extension UserDataManager: HelperDelegate {
     
     - parameter error: error message for resource request failure
     */
-    func resourceFailure(error: String!) {
-        data = ["failure":error] //either "unknown user" or "no connection"
+    func resourceFailure(_ error: String!) {
+        data = ["failure":error as AnyObject] //either "unknown user" or "no connection"
         sendUserData()
     }
 }

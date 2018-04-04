@@ -38,7 +38,7 @@ class LoginFinishViewController: LoyaltyUIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismissToMain(sender: AnyObject) {
+    @IBAction func dismissToMain(_ sender: AnyObject) {
         if sender.tag == 1 {
             dismiss()
         }else{

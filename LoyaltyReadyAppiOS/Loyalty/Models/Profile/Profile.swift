@@ -42,7 +42,7 @@ class Profile: NSObject {
     
     - returns: Array of objects
     */
-    private func getVehicles(jsonArray: [[String:AnyObject]]) -> [Vehicle] {
+    fileprivate func getVehicles(_ jsonArray: [[String:AnyObject]]) -> [Vehicle] {
         var returnVehicles = [Vehicle]()
         for vehicleJson in jsonArray{
             let vehicle = Vehicle(json: vehicleJson)

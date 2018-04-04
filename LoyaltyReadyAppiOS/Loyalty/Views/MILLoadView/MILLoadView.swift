@@ -8,7 +8,7 @@ import UIKit
 /**
 *  The view presented when an loading sequence is triggered
 */
-public class MILLoadView : UIView {
+open class MILLoadView : UIView {
     /// The UIImageView that holds the loading image
     @IBOutlet weak var loadingImageView : UIImageView!
 
@@ -18,7 +18,7 @@ public class MILLoadView : UIView {
     - returns: And instance of MILLoadView
     */
     class func instanceFromNib() -> MILLoadView {
-        return UINib(nibName: "MILLoadView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! MILLoadView
+        return UINib(nibName: "MILLoadView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! MILLoadView
     }
     
     /**
@@ -26,6 +26,6 @@ public class MILLoadView : UIView {
     */
     func showLoadingAnimation() {
         self.loadingImageView.image = UIImage.animatedImageNamed("roadrunner loading_", duration: 0.65)
-        self.loadingImageView.hidden = false
+        self.loadingImageView.isHidden = false
     }
 }

@@ -8,16 +8,16 @@ import UIKit
 /**
 *  Class that manages the creation, display, hiding, and deletion of the MILFakeMessageAlertView
 */
-public class MILFakeMessageAlertViewManager: NSObject {
+open class MILFakeMessageAlertViewManager: NSObject {
     
     /// The MILFakeMessageAlertView. Private to just this class
-    private var milFakeMessageAlertView : MILFakeMessageAlertView!
+    fileprivate var milFakeMessageAlertView : MILFakeMessageAlertView!
     /// The callback of the reload
     var callback : (()->())!
 
     
     
-    public class var sharedInstance : MILFakeMessageAlertViewManager{
+    open class var sharedInstance : MILFakeMessageAlertViewManager{
         
         struct Singleton {
             static let instance = MILFakeMessageAlertViewManager()
@@ -31,7 +31,7 @@ public class MILFakeMessageAlertViewManager: NSObject {
     - parameter text:     Text to display on the MILFakeMessageAlertView
     - parameter callback: Callback function to execute when the MILFakeMessageAlertView or its reload button is tapped
     */
-    func show(text: String!, callback: (()->())!) {
+    func show(_ text: String!, callback: (()->())!) {
         
         // show alertview on main UI
         
@@ -42,15 +42,15 @@ public class MILFakeMessageAlertViewManager: NSObject {
         self.callback = callback
         self.milFakeMessageAlertView = self.buildAlert(text, callback: callback)
         
-        UIApplication.sharedApplication().keyWindow?.addSubview(self.milFakeMessageAlertView)
+        UIApplication.shared.keyWindow?.addSubview(self.milFakeMessageAlertView)
         
-        UIView.animateWithDuration(1, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
             self.milFakeMessageAlertView.setBottom(self.milFakeMessageAlertView.height)
             }, completion: { finished -> Void in
                 if finished{
-                    self.milFakeMessageAlertView.userInteractionEnabled = true
+                    self.milFakeMessageAlertView.isUserInteractionEnabled = true
                     if callback == nil {
-                        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "hide", userInfo: nil, repeats: false)
+                        Timer.scheduledTimer(timeInterval: 3, target: self, selector: "hide", userInfo: nil, repeats: false)
                     }
                 }
         })
@@ -65,18 +65,18 @@ public class MILFakeMessageAlertViewManager: NSObject {
     
     - returns: An initialized MILFakeMessageAlertView
     */
-    private func buildAlert(text: String!, callback: (()->())!)-> MILFakeMessageAlertView{
+    fileprivate func buildAlert(_ text: String!, callback: (()->())!)-> MILFakeMessageAlertView{
         let milFakeMessageAlertView : MILFakeMessageAlertView = MILFakeMessageAlertView.instanceFromNib() as MILFakeMessageAlertView
         milFakeMessageAlertView.setOriginX(0)
-        milFakeMessageAlertView.setWidth(UIScreen.mainScreen().bounds.width)
+        milFakeMessageAlertView.setWidth(UIScreen.main.bounds.width)
         milFakeMessageAlertView.setBottom(0)
         milFakeMessageAlertView.setLabel(text)
-        milFakeMessageAlertView.userInteractionEnabled = false
+        milFakeMessageAlertView.isUserInteractionEnabled = false
         milFakeMessageAlertView.setCallbackFunc(callback)
         
-        var tapGesture = UITapGestureRecognizer(target: self, action: "hide")
+        var tapGesture = UITapGestureRecognizer(target: self, action: #selector(MILFakeMessageAlertViewManager.hide))
         if callback != nil {
-            tapGesture = UITapGestureRecognizer(target: self, action: "reload")
+            tapGesture = UITapGestureRecognizer(target: self, action: #selector(MILFakeMessageAlertViewManager.reload))
         }
         milFakeMessageAlertView.addGestureRecognizer(tapGesture)
         
@@ -86,10 +86,10 @@ public class MILFakeMessageAlertViewManager: NSObject {
     /**
     Hides the MILFakeMessageAlertView with an animation
     */
-    public func hide() {
+    open func hide() {
         if self.milFakeMessageAlertView != nil{
-            self.milFakeMessageAlertView.userInteractionEnabled = false
-            UIView.animateWithDuration(1, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            self.milFakeMessageAlertView.isUserInteractionEnabled = false
+            UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
                 self.milFakeMessageAlertView.setBottom(0)
                 }, completion: { finished -> Void in
                     if finished {

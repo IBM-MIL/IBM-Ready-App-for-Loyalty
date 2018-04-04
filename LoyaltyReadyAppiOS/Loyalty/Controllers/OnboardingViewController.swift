@@ -36,7 +36,7 @@ class OnboardingViewController: LoyaltyUIViewController, UIPageViewControllerDel
         super.viewDidLoad()
         
         // Set color to be transparent, but not affect child views
-        self.transparentView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.75)
+        self.transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         reset()
         
         // Hide before resizing happens
@@ -44,14 +44,14 @@ class OnboardingViewController: LoyaltyUIViewController, UIPageViewControllerDel
         self.extendedView.alpha = 0
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // Page View Controller wasn't adjusting to the container's size, so we do it manually
         self.pageViewController.view.frame = self.containerView.frame
         
         // Hiding views and then showing views makes the resizing smooth
-        UIView.animateWithDuration(0.4, animations: {
+        UIView.animate(withDuration: 0.4, animations: {
             self.pageViewController.view.alpha = 1.0
             self.extendedView.alpha = 1.0
         }, completion: { (value: Bool) in
@@ -63,7 +63,7 @@ class OnboardingViewController: LoyaltyUIViewController, UIPageViewControllerDel
         })
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
 
         self.tellDelegatesOnBoardingDisappeared()
     }
@@ -77,7 +77,7 @@ class OnboardingViewController: LoyaltyUIViewController, UIPageViewControllerDel
     */
     func reset() {
         
-        pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("OnboardingPageViewController") as! UIPageViewController
+        pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingPageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         self.pageViewController.delegate = self
         
@@ -88,18 +88,18 @@ class OnboardingViewController: LoyaltyUIViewController, UIPageViewControllerDel
         }
         
         let pageContentViewController = self.viewControllerAtIndex(0)
-        self.pageViewController.setViewControllers([pageContentViewController!], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        self.pageViewController.setViewControllers([pageContentViewController!], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
 
         self.addChildViewController(pageViewController)
         self.view.addSubview(pageViewController.view)
-        self.pageViewController.didMoveToParentViewController(self)
+        self.pageViewController.didMove(toParentViewController: self)
         
     }
 
     
     // MARK: UIPageViewControllerDelegate
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         if completed {
             // Method used to keep a pageControl updated with current index
@@ -128,20 +128,20 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
     
     // MARK: UIPageViewControllerDataSource
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! PageContentViewController).pageIndex!
         if index <= 0 {
             return nil
         }
         
-        index--
+        index -= 1
         return self.viewControllerAtIndex(index)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         var index = (viewController as! PageContentViewController).pageIndex!
-        index++
+        index += 1
         
         if index >= self.imageBaseNames.count {
             return nil
@@ -150,12 +150,12 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
         return self.viewControllerAtIndex(index)
     }
     
-    func viewControllerAtIndex(index : Int) -> UIViewController? {
+    func viewControllerAtIndex(_ index : Int) -> UIViewController? {
         
         if (self.pageTitles.count == 0 || index >= self.pageTitles.count) {
             return nil
         }
-        let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageContentViewController") as! PageContentViewController
+        let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageContentViewController") as! PageContentViewController
         
         // Load new data for each page
         pageContentViewController.imageAnimationName = self.imageBaseNames[index]
@@ -175,23 +175,23 @@ extension OnboardingViewController: UIScrollViewDelegate {
     // The following scrollView methods disable the bounce almost completely
     // There is still an edge case when you swipe fast in a certain way
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         if (0 == self.pageControl.currentPage && scrollView.contentOffset.x < scrollView.bounds.size.width) {
-            scrollView.contentOffset = CGPointMake(scrollView.bounds.size.width, 0);
+            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0);
         }
         if (self.pageControl.currentPage == self.pageTitles.count - 1 && scrollView.contentOffset.x > scrollView.bounds.size.width) {
-            scrollView.contentOffset = CGPointMake(scrollView.bounds.size.width, 0);
+            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0);
         }
 
     }
     
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if (0 == self.pageControl.currentPage && scrollView.contentOffset.x <= scrollView.bounds.size.width) {
-            targetContentOffset.memory = CGPointMake(scrollView.bounds.size.width, 0);
+            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
         }
         if (self.pageControl.currentPage == self.pageTitles.count - 1 && scrollView.contentOffset.x >= scrollView.bounds.size.width) {
-            targetContentOffset.memory = CGPointMake(scrollView.bounds.size.width, 0);
+            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
         }
     }
     

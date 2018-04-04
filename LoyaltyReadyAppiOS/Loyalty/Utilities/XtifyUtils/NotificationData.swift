@@ -13,7 +13,7 @@ class NotificationData: NSObject {
     // There are 2 timestamp objects because keyTimestamp acts as a key for the object when put in the dictionary for NSUserDefaults
     // Also, NSDate objects are a lot easier to work when displaying in a specific format or sorting by date
     var keyTimestamp: String = ""
-    var timestamp: NSDate!
+    var timestamp: Date!
     var title: String = ""
     var body: String = ""
     var isRead: Bool = false
@@ -30,20 +30,20 @@ class NotificationData: NSObject {
     
     - parameter notificationJson: A json dictionary of notification data
     */
-    init(notificationJson: Dictionary<NSObject, AnyObject>) {
+    init(notificationJson: Dictionary<AnyHashable, Any>) {
         super.init()
         
         if let tempTitle = notificationJson["title"] as? String {
             self.title = tempTitle
         }
         
-        var aps = notificationJson["aps"] as! Dictionary<NSObject, AnyObject>
-        var alert = aps["alert"] as! Dictionary<NSObject, AnyObject>
+        var aps = notificationJson["aps"] as! Dictionary<String, AnyHashable>
+        var alert = aps["alert"] as! Dictionary<String, AnyHashable>
         let bodyText = alert["body"] as! String
         self.body = bodyText.htmlToText()
         
-        self.keyTimestamp = self.createTimeStamp(NSDate())
-        self.timestamp = NSDate()
+        self.keyTimestamp = self.createTimeStamp(Date())
+        self.timestamp = Date()
     }
     
     /**
@@ -51,7 +51,7 @@ class NotificationData: NSObject {
     
     - parameter richNotificationJson: A json dictionary of rich notification data
     */
-    init(richNotificationJson: Dictionary<NSObject, AnyObject>) {
+    init(richNotificationJson: Dictionary<AnyHashable, Any>) {
         super.init()
         
         if let tempTitle = richNotificationJson["subject"] as? String {
@@ -67,11 +67,11 @@ class NotificationData: NSObject {
         // such as an image or video
         if let actionData = richNotificationJson["actionData"] as? String {
             if actionData != "" {
-                let objectData: NSData = actionData.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) as NSData!
+                let objectData: Data = actionData.data(using: String.Encoding.utf8, allowLossyConversion: false) as Data!
                 do{
-                    self.actionJson = try! NSJSONSerialization.JSONObjectWithData(objectData, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<NSObject, AnyObject>
+                    self.actionJson = try! JSONSerialization.jsonObject(with: objectData, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<NSObject, AnyObject>
                     
-                    if let category = self.actionJson!["category"] as? String {
+             /*       if let category = self.actionJson!["category"] as? String {
                         self.category = category
                     }
                     if let mediaType = self.actionJson!["mediaType"] as? String {
@@ -80,41 +80,42 @@ class NotificationData: NSObject {
                     if let mediaName = self.actionJson!["mediaName"] as? String {
                         self.mediaName = mediaName
                     }
+ */
                 }
                 
             }
         }
         
-        self.keyTimestamp = self.createTimeStamp(NSDate())
-        self.timestamp = NSDate()
+        self.keyTimestamp = self.createTimeStamp(Date())
+        self.timestamp = Date()
     }
     
     // MARK: Encoding and Decoding methods to enable conversion to NSData in order to store in NSUserDefaults
     
     init(coder aDecoder: NSCoder!) {
 
-        self.title = aDecoder.decodeObjectForKey("title") as! String
-        self.body = aDecoder.decodeObjectForKey("body") as! String
-        self.keyTimestamp = aDecoder.decodeObjectForKey("keyTimestamp") as! String
-        self.timestamp = aDecoder.decodeObjectForKey("timestamp") as! NSDate
-        self.isRead = aDecoder.decodeBoolForKey("isRead") as Bool
-        self.actionJson = aDecoder.decodeObjectForKey("actionJson") as? Dictionary<NSObject, AnyObject>
-        self.category = aDecoder.decodeObjectForKey("category") as? String
-        self.mediaType = aDecoder.decodeObjectForKey("mediaType") as? String
-        self.mediaName = aDecoder.decodeObjectForKey("mediaName") as? String
+        self.title = aDecoder.decodeObject(forKey: "title") as! String
+        self.body = aDecoder.decodeObject(forKey: "body") as! String
+        self.keyTimestamp = aDecoder.decodeObject(forKey: "keyTimestamp") as! String
+        self.timestamp = aDecoder.decodeObject(forKey: "timestamp") as! Date
+        self.isRead = aDecoder.decodeBool(forKey: "isRead") as Bool
+        self.actionJson = aDecoder.decodeObject(forKey: "actionJson") as? Dictionary<NSObject, AnyObject>
+        self.category = aDecoder.decodeObject(forKey: "category") as? String
+        self.mediaType = aDecoder.decodeObject(forKey: "mediaType") as? String
+        self.mediaName = aDecoder.decodeObject(forKey: "mediaName") as? String
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
+    func encodeWithCoder(_ aCoder: NSCoder) {
         
-        aCoder.encodeObject(self.title, forKey: "title")
-        aCoder.encodeObject(self.body, forKey: "body")
-        aCoder.encodeObject(self.keyTimestamp, forKey: "keyTimestamp")
-        aCoder.encodeObject(self.timestamp, forKey: "timestamp")
-        aCoder.encodeBool(self.isRead, forKey: "isRead")
-        aCoder.encodeObject(self.actionJson, forKey: "actionJson")
-        aCoder.encodeObject(self.category, forKey: "category")
-        aCoder.encodeObject(self.mediaType, forKey: "mediaType")
-        aCoder.encodeObject(self.mediaName, forKey: "mediaName")
+        aCoder.encode(self.title, forKey: "title")
+        aCoder.encode(self.body, forKey: "body")
+        aCoder.encode(self.keyTimestamp, forKey: "keyTimestamp")
+        aCoder.encode(self.timestamp, forKey: "timestamp")
+        aCoder.encode(self.isRead, forKey: "isRead")
+        aCoder.encode(self.actionJson, forKey: "actionJson")
+        aCoder.encode(self.category, forKey: "category")
+        aCoder.encode(self.mediaType, forKey: "mediaType")
+        aCoder.encode(self.mediaName, forKey: "mediaName")
     }
 
     /**
@@ -122,11 +123,11 @@ class NotificationData: NSObject {
     
     - returns: an NSDate formatted String
     */
-    func createTimeStamp(date: NSDate) -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        return dateFormatter.stringFromDate(date)
+    func createTimeStamp(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        return dateFormatter.string(from: date)
     }
     
     /**

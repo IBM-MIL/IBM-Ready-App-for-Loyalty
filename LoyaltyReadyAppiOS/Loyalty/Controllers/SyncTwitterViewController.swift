@@ -54,13 +54,13 @@ class SyncTwitterViewController: SubSettingsViewController {
     */
     override func mainButtonAction(){
         
-        let alertView = UIAlertController(title: NSLocalizedString("Notice", comment: ""), message: NSLocalizedString("Syncing with Twitter not currently supported", comment: ""), preferredStyle: .Alert)
-        alertView.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .Default) { (action) in self.noThanksAction() })
-        self.presentViewController(alertView, animated: true, completion: nil)
+        let alertView = UIAlertController(title: NSLocalizedString("Notice", comment: ""), message: NSLocalizedString("Syncing with Twitter not currently supported", comment: ""), preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { (action) in self.noThanksAction() })
+        self.present(alertView, animated: true, completion: nil)
         
         // Simulate user being synced with Twitter
         let user = UserDataManager.sharedInstance.currentUser
-        user.syncedWithTwitter = true
+        user?.syncedWithTwitter = true
 
     }
     
@@ -77,7 +77,7 @@ class SyncTwitterViewController: SubSettingsViewController {
     func addTwitterLogoToMainButton(){
         let image = UIImage(named: "twitter")
         
-        self.subSettingsView.mainButton.setImage(image, forState: UIControlState.Normal)
+        self.subSettingsView.mainButton.setImage(image, for: UIControlState())
         
         let spacing: CGFloat = 5
         self.subSettingsView.mainButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, spacing)

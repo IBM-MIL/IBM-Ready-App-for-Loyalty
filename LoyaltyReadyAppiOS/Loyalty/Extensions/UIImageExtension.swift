@@ -58,11 +58,11 @@ extension UIImage{
 }
 
 extension UIImage{
-    func croppedImage(bound : CGRect) -> UIImage
+    func croppedImage(_ bound : CGRect) -> UIImage
     {
-        let scaledBounds : CGRect = CGRectMake(bound.origin.x * scale, bound.origin.y * scale, bound.size.width * scale, bound.size.height * scale)
-        let imageRef = CGImageCreateWithImageInRect(CGImage, scaledBounds)
-        let croppedImage : UIImage = UIImage(CGImage: imageRef!, scale: scale, orientation: UIImageOrientation.Up)
+        let scaledBounds : CGRect = CGRect(x: bound.origin.x * scale, y: bound.origin.y * scale, width: bound.size.width * scale, height: bound.size.height * scale)
+        let imageRef = cgImage!.cropping(to: scaledBounds)
+        let croppedImage : UIImage = UIImage(cgImage: imageRef!, scale: scale, orientation: UIImageOrientation.up)
         return croppedImage
     }
     
@@ -73,13 +73,13 @@ extension UIImage{
     
     - returns: The thumbnail image
     */
-    class func getThumbnailFromVideo(videoURL: NSURL) -> UIImage {
-        let asset: AVURLAsset = AVURLAsset(URL: videoURL, options: nil)
+    class func getThumbnailFromVideo(_ videoURL: URL) -> UIImage {
+        let asset: AVURLAsset = AVURLAsset(url: videoURL, options: nil)
         let imageGen: AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
         imageGen.appliesPreferredTrackTransform = true
         let time = CMTimeMakeWithSeconds(1.0, 600)
-        let image: CGImageRef = try! imageGen.copyCGImageAtTime(time, actualTime: nil)
-        let thumbnail: UIImage = UIImage(CGImage: image)
+        let image: CGImage = try! imageGen.copyCGImage(at: time, actualTime: nil)
+        let thumbnail: UIImage = UIImage(cgImage: image)
         
         return thumbnail
     }
@@ -93,18 +93,18 @@ extension UIImage{
     
     - returns: An image with the color, height and width
     */
-    class func imageWithColor(color: UIColor, width: CGFloat, height: CGFloat) -> UIImage {
+    class func imageWithColor(_ color: UIColor, width: CGFloat, height: CGFloat) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: width, height: height)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
         
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextFillRect(context, rect)
+        context!.setFillColor(color.cgColor)
+        context!.fill(rect)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image
+        return image!
     }
     
     /**
@@ -116,7 +116,7 @@ extension UIImage{
     
     - returns: UIImage - the cropped image
     */
-    func cropImageInView(view: UIView, square: CGRect, fromCam: Bool) -> UIImage {
+    func cropImageInView(_ view: UIView, square: CGRect, fromCam: Bool) -> UIImage {
         let cropSquare: CGRect
         let frameWidth = view.frame.size.width
         let imageHeight = size.height
@@ -135,17 +135,17 @@ extension UIImage{
             let posX = (imageWidth  - edge) / 2.0
             let posY = (imageHeight - edge) / 2.0
             
-            cropSquare = CGRectMake(posX, posY, edge, edge)
+            cropSquare = CGRect(x: posX, y: posY, width: edge, height: edge)
             
         } else {
             
             let imageScale: CGFloat!
             imageScale = imageWidth / frameWidth
             // x and y are switched because image has -90 degrees rotation by default
-            cropSquare = CGRectMake(square.origin.y * imageScale, square.origin.x * imageScale, square.size.width * imageScale, square.size.height * imageScale)
+            cropSquare = CGRect(x: square.origin.y * imageScale, y: square.origin.x * imageScale, width: square.size.width * imageScale, height: square.size.height * imageScale)
         }
         
-        let imageRef = CGImageCreateWithImageInRect(CGImage, cropSquare)
-        return UIImage(CGImage: imageRef!, scale: UIScreen.mainScreen().scale, orientation: imageOrientation)
+        let imageRef = cgImage!.cropping(to: cropSquare)
+        return UIImage(cgImage: imageRef!, scale: UIScreen.main.scale, orientation: imageOrientation)
     }
 }

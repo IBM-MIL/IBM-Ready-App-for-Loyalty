@@ -17,7 +17,7 @@ class SettingsViewController: LoyaltyUIViewController {
         setNavigationUI()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.updateCheckIcons()
     }
@@ -28,19 +28,19 @@ class SettingsViewController: LoyaltyUIViewController {
     func updateCheckIcons() {
         
         if UserDataManager.sharedInstance.currentUser.interests.count > 0 {
-            firstCheckButton.setImage(UIImage(named: "check_selected"), forState: UIControlState.Normal)
+            firstCheckButton.setImage(UIImage(named: "check_selected"), for: UIControlState())
         }
         
         if UserDataManager.sharedInstance.currentUser.syncedWithTwitter {
-            secondCheckButton.setImage(UIImage(named: "check_selected"), forState: UIControlState.Normal)
+            secondCheckButton.setImage(UIImage(named: "check_selected"), for: UIControlState())
         }
         
-        if UIApplication.sharedApplication().isRegisteredForRemoteNotifications() {
-            thirdCheckButton.setImage(UIImage(named: "check_selected"), forState: UIControlState.Normal)
+        if UIApplication.shared.isRegisteredForRemoteNotifications {
+            thirdCheckButton.setImage(UIImage(named: "check_selected"), for: UIControlState())
         }
         
         if CLLocationManager.authorizationStatus().rawValue >= 3 {
-            fourthCheckButton.setImage(UIImage(named: "check_selected"), forState: UIControlState.Normal)
+            fourthCheckButton.setImage(UIImage(named: "check_selected"), for: UIControlState())
         }
         
     }
@@ -55,16 +55,16 @@ class SettingsViewController: LoyaltyUIViewController {
     /**
     This method defines the action that is taken when the back button is pressed. In this case it brings the app back to the rewards view controller
     */
-    @IBAction func backButtonTapped(sender: AnyObject) {
+    @IBAction func backButtonTapped(_ sender: AnyObject) {
         
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
     
     
     /**
     This method brings up the edit profile flow to the Interests view controller
     */
-    @IBAction func addInterests(sender: AnyObject) {
+    @IBAction func addInterests(_ sender: AnyObject) {
         self.loadEditProfileFlow(0)
     }
     
@@ -72,20 +72,20 @@ class SettingsViewController: LoyaltyUIViewController {
     /**
     This method brings up the edit profile flow to the enableTwitter view controller
     */
-    @IBAction func enableTwitter(sender: AnyObject) {
+    @IBAction func enableTwitter(_ sender: AnyObject) {
         self.loadEditProfileFlow(1)
     }
     
     /**
     This method brings up the edit profile flow to the enable notifications view controller */
-    @IBAction func enableNotifications(sender: AnyObject) {
+    @IBAction func enableNotifications(_ sender: AnyObject) {
         self.loadEditProfileFlow(2)
     }
     
     /**
     This method brings up the edit profile flow to the enableLocation view controller
     */
-    @IBAction func enableLocation(sender: AnyObject) {
+    @IBAction func enableLocation(_ sender: AnyObject) {
         self.loadEditProfileFlow(3)
     }
     
@@ -93,14 +93,14 @@ class SettingsViewController: LoyaltyUIViewController {
     /**
     This method brings up the edit profile flow from the beginning
     */
-    @IBAction func editProfile(sender: AnyObject) {
+    @IBAction func editProfile(_ sender: AnyObject) {
         self.loadEditProfileFlow(0)
     }
     
     /**
     This method shows the user information about Roadrunner's point system
     */
-    @IBAction func aboutPoints(sender: AnyObject) {
+    @IBAction func aboutPoints(_ sender: AnyObject) {
         let aboutPointsVC = Utils.vcWithNameFromStoryboardWithName("AboutPointsViewController", storyboardName: "Settings")
         self.navigationController?.pushViewController(aboutPointsVC!, animated: true)
     }
@@ -108,32 +108,32 @@ class SettingsViewController: LoyaltyUIViewController {
     /**
     This method causes the app to go back to the RewardsViewController and shows the onboarding card
     */
-    @IBAction func showTutorial(sender: AnyObject) {
+    @IBAction func showTutorial(_ sender: AnyObject) {
 
-        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "hasShownOnboarding")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.set(false, forKey: "hasShownOnboarding")
+        UserDefaults.standard.synchronize()
         
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
     
     
     /**
     This method loads the edit profile flow to the index provided in the index parameter
     */
-    func loadEditProfileFlow(index: Int) {
+    func loadEditProfileFlow(_ index: Int) {
         
         // Don't allow any edit profile actions if not logged in
         if UserDataManager.sharedInstance.currentUser.loggedIn {
             
             if let editProfileVC = Utils.vcWithNameFromStoryboardWithName("EditProfileViewController", storyboardName: "Settings") as? EditProfileViewController {
                 editProfileVC.startingIndex = index
-                self.presentViewController(editProfileVC, animated: true, completion: nil)
+                self.present(editProfileVC, animated: true, completion: nil)
             }
             
         } else {
             
             if let viewController = Utils.vcWithNameFromStoryboardWithName("LoginNavController", storyboardName: "Login") as? LoginNavController {
-                presentViewController(viewController, animated: true, completion: nil)
+                present(viewController, animated: true, completion: nil)
             }
         }
     }

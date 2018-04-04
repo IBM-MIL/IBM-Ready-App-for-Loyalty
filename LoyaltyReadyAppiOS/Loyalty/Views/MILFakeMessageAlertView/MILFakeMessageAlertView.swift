@@ -8,7 +8,7 @@ import UIKit
 /**
 *  The view presented when an alert is triggered
 */
-public class MILFakeMessageAlertView : UIView {
+open class MILFakeMessageAlertView : UIView {
     
     //// Label of the alert
     @IBOutlet weak var alertLabel : UILabel!
@@ -25,7 +25,7 @@ public class MILFakeMessageAlertView : UIView {
     - returns: And instance of MILFakeMessageAlertView
     */
     class func instanceFromNib() -> MILFakeMessageAlertView {
-        return UINib(nibName: "MILFakeMessageAlertView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! MILFakeMessageAlertView
+        return UINib(nibName: "MILFakeMessageAlertView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! MILFakeMessageAlertView
     }
     
     /**
@@ -33,7 +33,7 @@ public class MILFakeMessageAlertView : UIView {
     
     - parameter text: The text to be displayed
     */
-    func setLabel(text: String!) {
+    func setLabel(_ text: String!) {
         if text != nil {
             self.alertLabel.text = text
         }
@@ -44,13 +44,13 @@ public class MILFakeMessageAlertView : UIView {
     
     - parameter callback: The callback function that is to be executed when the reload button is tapped
     */
-    func setCallbackFunc(callback:(()->())!){
+    func setCallbackFunc(_ callback:(()->())!){
         if callback != nil {
-            self.reloadButton.hidden = false
+            self.reloadButton.isHidden = false
             self.callback = callback
-            reloadButton.addTarget(self, action: "reloadButtonTapped", forControlEvents: UIControlEvents.TouchUpInside)
+            reloadButton.addTarget(self, action: #selector(MILFakeMessageAlertView.reloadButtonTapped), for: UIControlEvents.touchUpInside)
         }else{
-            self.reloadButton.hidden = true
+            self.reloadButton.isHidden = true
         }
     }
     

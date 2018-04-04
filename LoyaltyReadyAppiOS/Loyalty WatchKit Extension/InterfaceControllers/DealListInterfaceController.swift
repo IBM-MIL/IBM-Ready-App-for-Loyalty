@@ -85,7 +85,7 @@ class DealListInterfaceController: WKInterfaceController {
             WKInterfaceController.reloadRootControllersWithNames(["firstController", "secondController"], contexts:[user, user])
             
         } else {
-            MQALogger.log("Failure with data: \(data)")
+            logger.logInfoWithMessages("Failure with data: \(data)")
             self.errorLabel.setHidden(false)
         }
         

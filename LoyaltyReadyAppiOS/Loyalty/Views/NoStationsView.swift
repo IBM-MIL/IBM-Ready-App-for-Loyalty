@@ -20,10 +20,10 @@ class NoStationsView: UIView {
     var delegate: NoStationsActionDelegate?
 
     class func instanceFromNib() -> NoStationsView {
-        return UINib(nibName: "NoStationsView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! NoStationsView
+        return UINib(nibName: "NoStationsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! NoStationsView
     }
     
-    @IBAction func refineSearch(sender: AnyObject) {
+    @IBAction func refineSearch(_ sender: AnyObject) {
         
         if let delegate = self.delegate {
             delegate.refineSearchAction()

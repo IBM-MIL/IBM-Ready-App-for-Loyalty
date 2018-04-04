@@ -26,23 +26,23 @@ import UIKit
 
 protocol RAMItemAnimationProtocol {
 
-    func playAnimation(icon : UIImageView, textLabel : UILabel, selectedImage: UIImage)
-    func deselectAnimation(icon : UIImageView, textLabel : UILabel, defaultTextColor : UIColor)
-    func selectedState(icon : UIImageView, textLabel : UILabel, selectedImage: UIImage)
+    func playAnimation(_ icon : UIImageView, textLabel : UILabel, selectedImage: UIImage)
+    func deselectAnimation(_ icon : UIImageView, textLabel : UILabel, defaultTextColor : UIColor)
+    func selectedState(_ icon : UIImageView, textLabel : UILabel, selectedImage: UIImage)
 }
 
 class RAMItemAnimation: NSObject, RAMItemAnimationProtocol {
 
     @IBInspectable var duration : CGFloat = 0.5;
-    @IBInspectable var textSelectedColor: UIColor = UIColor.clearColor()
+    @IBInspectable var textSelectedColor: UIColor = UIColor.clear
     @IBInspectable var iconSelectedColor: UIColor! = UIColor.purpleLoyalty()
 
-    func playAnimation(icon : UIImageView, textLabel : UILabel, selectedImage: UIImage) {
+    func playAnimation(_ icon : UIImageView, textLabel : UILabel, selectedImage: UIImage) {
     }
 
-    func deselectAnimation(icon : UIImageView, textLabel : UILabel, defaultTextColor : UIColor) {
+    func deselectAnimation(_ icon : UIImageView, textLabel : UILabel, defaultTextColor : UIColor) {
     }
 
-    func selectedState(icon: UIImageView, textLabel : UILabel, selectedImage: UIImage) {
+    func selectedState(_ icon: UIImageView, textLabel : UILabel, selectedImage: UIImage) {
     }
 }

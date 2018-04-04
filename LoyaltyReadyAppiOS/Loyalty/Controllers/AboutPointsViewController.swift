@@ -19,8 +19,8 @@ class AboutPointsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backButtonTapped(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func backButtonTapped(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true)
     }
 
 }

@@ -11,11 +11,11 @@ import UIKit
 class LoginNavController: UINavigationController {
 
     func dismiss(){
-        dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     // Hiding the status bar causes odd animatioons when dismissing login flow
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return false
     }
 }

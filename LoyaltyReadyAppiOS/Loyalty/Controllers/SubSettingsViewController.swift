@@ -30,15 +30,15 @@ class SubSettingsViewController: LoyaltyUIViewController {
     func setUpSubSettingsView(){
         
         self.subSettingsView = SubSettingsView.instanceFromNib()
-        self.subSettingsView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        self.subSettingsView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         
         self.subSettingsView.titleLabel.text = self.titleText
         self.subSettingsView.descriptionTextView.text = self.descriptionText
-        self.subSettingsView.noThanksButton.setTitle(NSLocalizedString("No thanks",comment: ""), forState: UIControlState.Normal)
-        self.subSettingsView.mainButton.setTitle(mainButtonText, forState: UIControlState.Normal)
+        self.subSettingsView.noThanksButton.setTitle(NSLocalizedString("No thanks",comment: ""), for: UIControlState())
+        self.subSettingsView.mainButton.setTitle(mainButtonText, for: UIControlState())
         
-        self.subSettingsView.mainButton.addTarget(self, action: "mainButtonAction", forControlEvents: .TouchUpInside)
-        self.subSettingsView.noThanksButton.addTarget(self, action: "noThanksAction", forControlEvents: .TouchUpInside)
+        self.subSettingsView.mainButton.addTarget(self, action: #selector(SubSettingsViewController.mainButtonAction), for: .touchUpInside)
+        self.subSettingsView.noThanksButton.addTarget(self, action: #selector(SubSettingsViewController.noThanksAction), for: .touchUpInside)
         
         self.view.addSubview(self.subSettingsView)
     }

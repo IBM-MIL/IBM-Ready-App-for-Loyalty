@@ -1,33 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TIW-v5-VJU">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17D47" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TIW-v5-VJU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Montserrat-Bold.ttf">
+        <array key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
-            <string>Montserrat-Bold</string>
-            <string>Montserrat-Bold</string>
-            <string>Montserrat-Bold</string>
-            <string>Montserrat-Bold</string>
-            <string>Montserrat-Bold</string>
-            <string>Montserrat-Bold</string>
-            <string>Montserrat-Bold</string>
-            <string>Montserrat-Bold</string>
-        </mutableArray>
-        <mutableArray key="Montserrat-Regular.ttf">
+        </array>
+        <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--Login-->
@@ -39,19 +27,18 @@
                         <viewControllerLayoutGuide type="bottom" id="w13-Se-72H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OqZ-cR-XtN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nyh-Dr-3mR">
-                                <rect key="frame" x="176" y="200" width="247" height="43"/>
+                                <rect key="frame" x="64" y="200" width="247" height="43"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="BJz-JT-0VT">
                                         <rect key="frame" x="10" y="0.0" width="227" height="43"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="hQX-bB-OLx"/>
                                         </constraints>
-                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
@@ -64,8 +51,7 @@
                                         </connections>
                                     </textField>
                                 </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="BIF-JR-MmW"/>
                                     <constraint firstAttribute="width" constant="247" id="O05-jY-Elt"/>
@@ -79,7 +65,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -89,29 +75,26 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhc-vu-O4I">
-                                <rect key="frame" x="158" y="46" width="285" height="101"/>
+                                <rect key="frame" x="45" y="46" width="285" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start saving today!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbh-Mm-FeC">
                                         <rect key="frame" x="29" y="13" width="226" height="30"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="24"/>
-                                        <color key="textColor" red="0.0" green="0.70588237050000002" blue="0.62745100259999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.70588237050000002" blue="0.62745100259999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlS-nJ-Doc">
                                         <rect key="frame" x="2" y="49" width="281" height="52"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="Cfa-8d-BsV"/>
                                         </constraints>
                                         <string key="text">Please enter your phone number
 to receive a confirmation code.</string>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                        <color key="textColor" red="0.58431372549019611" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.51390296220779419" green="0.55597162246704102" blue="0.55509048700332642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="dlS-nJ-Doc" firstAttribute="top" secondItem="nhc-vu-O4I" secondAttribute="top" constant="49" id="3gt-hm-WZz"/>
                                     <constraint firstAttribute="height" constant="101" id="Dp6-CJ-Ycb"/>
@@ -124,41 +107,39 @@ to receive a confirmation code.</string>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oTQ-9N-ait">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
-                                <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9x-OO-2aY">
-                                <rect key="frame" x="0.0" y="290" width="600" height="42"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.45098039509999999" green="0.25098040700000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="290" width="375" height="42"/>
+                                <color key="backgroundColor" red="0.45098039509999999" green="0.25098040700000002" blue="0.59607845540000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="3IZ-ky-bpd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                 <state key="normal" title="RECEIVE CODE">
-                                    <color key="titleColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="tappedReceiveCode:" destination="H3X-3M-h4u" eventType="touchUpInside" id="I9e-gE-TNd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbZ-eq-Fln">
-                                <rect key="frame" x="294" y="351" width="13" height="15"/>
-                                <animations/>
+                                <rect key="frame" x="181" y="351" width="13" height="15"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klU-lF-eFl">
-                                <rect key="frame" x="0.0" y="385" width="600" height="42"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.45098039507865906" green="0.25098040699958801" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="385" width="375" height="42"/>
+                                <color key="backgroundColor" red="0.45098039507865906" green="0.25098040699958801" blue="0.59607845544815063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="5ch-uJ-T7O"/>
                                     <constraint firstAttribute="height" constant="42" id="EXJ-gX-LBy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                 <state key="normal" title="LOG IN WITH TWITTER">
-                                    <color key="titleColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="tappedLoginWithTwitter:" destination="H3X-3M-h4u" eventType="touchUpInside" id="f1S-DE-H9Z"/>
@@ -166,21 +147,20 @@ to receive a confirmation code.</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB7-dO-wRp">
                                 <rect key="frame" x="0.0" y="10" width="40" height="40"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Aw9-ra-dl7"/>
                                     <constraint firstAttribute="width" constant="40" id="u5X-yG-Vgj"/>
                                 </constraints>
                                 <state key="normal" image="x">
-                                    <color key="titleColor" red="0.58431372549019611" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.51390296220779419" green="0.55597162246704102" blue="0.55509048700332642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissToMain:" destination="H3X-3M-h4u" eventType="touchUpInside" id="Kta-IC-R6n"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8j5-TF-7bU">
-                                <rect key="frame" x="161" y="150" width="276" height="70"/>
+                                <rect key="frame" x="48.5" y="150" width="276" height="70"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tooltip-arrow-down" translatesAutoresizingMaskIntoConstraints="NO" id="I3z-Vq-FGq">
                                         <rect key="frame" x="27" y="45" width="34" height="12"/>
@@ -202,12 +182,13 @@ to receive a confirmation code.</string>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Incorrect login!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSB-38-w6m">
                                                 <rect key="frame" x="36" y="5" width="174" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.43137254901960786" green="0.24313725490196078" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.43137254901960786" green="0.24313725490196078" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="8YS-VN-7zb"/>
                                             <constraint firstAttribute="width" constant="247" id="gfl-C2-hNQ"/>
@@ -229,8 +210,7 @@ to receive a confirmation code.</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96545171737670898" green="0.96526479721069336" blue="0.97034978866577148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="n9x-OO-2aY" firstAttribute="top" secondItem="Nyh-Dr-3mR" secondAttribute="bottom" constant="47" id="14m-bQ-FbV"/>
                             <constraint firstAttribute="centerX" secondItem="mbZ-eq-Fln" secondAttribute="centerX" id="3ZD-b0-w1R"/>
@@ -280,36 +260,33 @@ to receive a confirmation code.</string>
                         <viewControllerLayoutGuide type="bottom" id="u7A-rv-to9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rAt-Vh-YsT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1D3-v9-YKr">
-                                <rect key="frame" x="157" y="56" width="285" height="140"/>
+                                <rect key="frame" x="45" y="56" width="285" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyN-K4-38o">
                                         <rect key="frame" x="14" y="13" width="257" height="29"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="CMx-rN-HU6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="24"/>
-                                        <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chn-4Q-UjJ">
                                         <rect key="frame" x="2" y="50" width="281" height="52"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="VGJ-LM-dAo"/>
                                         </constraints>
                                         <string key="text">We texted you a confirmation
 code at </string>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                        <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="YyN-K4-38o" firstAttribute="top" secondItem="1D3-v9-YKr" secondAttribute="top" constant="13" id="7wD-2o-ers"/>
                                     <constraint firstAttribute="width" constant="285" id="JoB-bQ-klb"/>
@@ -328,32 +305,30 @@ code at </string>
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sor-GO-sQz">
-                                <rect key="frame" x="0.0" y="290" width="600" height="42"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.45098039507865906" green="0.25098040699958801" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="290" width="375" height="42"/>
+                                <color key="backgroundColor" red="0.45098039507865906" green="0.25098040699958801" blue="0.59607845544815063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="geI-ed-bB1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                 <state key="normal" title="VERIFY DEVICE">
-                                    <color key="titleColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="tappedVerifyDevice:" destination="A02-AI-B5v" eventType="touchUpInside" id="yI6-cW-uTd"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="910-Sm-Plt">
-                                <rect key="frame" x="185" y="204" width="232" height="43"/>
+                                <rect key="frame" x="72.5" y="204" width="232" height="43"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zT3-mB-awY">
                                         <rect key="frame" x="0.0" y="1" width="43" height="46"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="O4b-Jz-TaG"/>
                                             <constraint firstAttribute="width" constant="43" id="l1c-2A-wVq"/>
                                         </constraints>
-                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
@@ -367,13 +342,12 @@ code at </string>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U64-RM-Xoo">
                                         <rect key="frame" x="64" y="1" width="43" height="46"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="64g-Uu-6qY"/>
                                             <constraint firstAttribute="width" constant="46" id="u2Y-NG-QIR"/>
                                         </constraints>
-                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <variation key="default">
@@ -388,13 +362,12 @@ code at </string>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0x0-XU-MRO">
                                         <rect key="frame" x="189" y="1" width="43" height="46"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="034-YD-rxl"/>
                                             <constraint firstAttribute="height" constant="43" id="gJ6-JU-QHc"/>
                                         </constraints>
-                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <variation key="default">
@@ -409,13 +382,12 @@ code at </string>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqX-2K-79P">
                                         <rect key="frame" x="126" y="1" width="43" height="46"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.89019608497619629" green="0.89019608497619629" blue="0.89019608497619629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="5lU-fJ-K40"/>
                                             <constraint firstAttribute="height" constant="43" id="Vf8-od-Iy9"/>
                                         </constraints>
-                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <variation key="default">
@@ -429,7 +401,6 @@ code at </string>
                                         </connections>
                                     </textField>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="zT3-mB-awY" firstAttribute="width" secondItem="uqX-2K-79P" secondAttribute="width" id="1ap-Hg-ZHg"/>
                                     <constraint firstItem="U64-RM-Xoo" firstAttribute="top" secondItem="910-Sm-Plt" secondAttribute="top" constant="1" id="4cI-bt-6wD"/>
@@ -451,21 +422,20 @@ code at </string>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPJ-t6-Y6x">
                                 <rect key="frame" x="0.0" y="10" width="40" height="40"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="3rF-fP-Csi"/>
                                     <constraint firstAttribute="height" constant="40" id="tC9-zf-RKm"/>
                                 </constraints>
                                 <state key="normal" image="x">
-                                    <color key="titleColor" red="0.58431372550000005" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.51390296220779419" green="0.55597162246704102" blue="0.55509048700332642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissToMain:" destination="A02-AI-B5v" eventType="touchUpInside" id="O6b-jf-5SZ"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDX-6E-ZTk">
-                                <rect key="frame" x="162" y="154" width="276" height="70"/>
+                                <rect key="frame" x="49.5" y="154" width="276" height="70"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tooltip-arrow-down" translatesAutoresizingMaskIntoConstraints="NO" id="7vT-Io-Czj">
                                         <rect key="frame" x="27" y="45" width="34" height="12"/>
@@ -487,12 +457,13 @@ code at </string>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Incorrect code!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTD-vC-m1D">
                                                 <rect key="frame" x="36" y="5" width="174" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.43137254899999999" green="0.24313725489999999" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.24313725489999999" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="AdS-eJ-Qsc"/>
                                             <constraint firstAttribute="width" constant="247" id="Vng-Ek-wjV"/>
@@ -514,8 +485,7 @@ code at </string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96545171737670898" green="0.96526479721069336" blue="0.97034978866577148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XPJ-t6-Y6x" firstAttribute="leading" secondItem="rAt-Vh-YsT" secondAttribute="leadingMargin" constant="-16" id="3qz-KD-JP4"/>
                             <constraint firstAttribute="centerX" secondItem="910-Sm-Plt" secondAttribute="centerX" constant="-1" id="5Ph-VS-YDN"/>
@@ -556,25 +526,23 @@ code at </string>
                         <viewControllerLayoutGuide type="bottom" id="xkV-qX-es0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ddf-mR-xQv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7h-lD-39u">
-                                <rect key="frame" x="158" y="56" width="285" height="204"/>
+                                <rect key="frame" x="45" y="56" width="285" height="204"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code confirmed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bE-Sd-2Y4">
                                         <rect key="frame" x="44" y="7" width="197" height="29"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="msY-kc-fgy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
-                                        <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hm-ry-FtJ">
                                         <rect key="frame" x="2" y="123" width="281" height="66"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="1xa-DX-E1C"/>
                                             <constraint firstAttribute="height" constant="66" id="79I-pd-sTO"/>
@@ -584,23 +552,21 @@ off per gallon of gas. Earn points
 by spending money at the pump
 or at a convenience store.</string>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwK-Rc-Few">
                                         <rect key="frame" x="2" y="63" width="281" height="52"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="loV-0C-5OK"/>
                                         </constraints>
                                         <string key="text">You’ve earned 10 points just for
 creating an account!</string>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="1bE-Sd-2Y4" firstAttribute="leading" secondItem="B7h-lD-39u" secondAttribute="leading" constant="44" id="AWv-2m-fFB"/>
                                     <constraint firstAttribute="bottom" secondItem="2Hm-ry-FtJ" secondAttribute="bottom" constant="15" id="BVm-Sm-JHf"/>
@@ -621,15 +587,14 @@ creating an account!</string>
                                 </variation>
                             </view>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r5-0N-z77">
-                                <rect key="frame" x="0.0" y="290" width="600" height="42"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.45098039507865906" green="0.25098040699958801" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="290" width="375" height="42"/>
+                                <color key="backgroundColor" red="0.45098039507865906" green="0.25098040699958801" blue="0.59607845544815063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="fHS-Fl-4t7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                 <state key="normal" title="START SAVING!">
-                                    <color key="titleColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissToMain:" destination="0sN-hd-LXa" eventType="touchUpInside" id="AW4-Pn-LIy"/>
@@ -637,22 +602,20 @@ creating an account!</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soj-2s-ZWf">
                                 <rect key="frame" x="0.0" y="10" width="40" height="40"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="E8w-hC-yjw"/>
                                     <constraint firstAttribute="width" constant="40" id="HRE-k8-vwe"/>
                                 </constraints>
                                 <state key="normal" image="x">
-                                    <color key="titleColor" red="0.58431372550000005" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.51390296220779419" green="0.55597162246704102" blue="0.55509048700332642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissToMain:" destination="0sN-hd-LXa" eventType="touchUpInside" id="f29-Fi-4Ng"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96545171737670898" green="0.96526479721069336" blue="0.97034978866577148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="B7h-lD-39u" firstAttribute="top" secondItem="Cxt-NV-nRc" secondAttribute="bottom" constant="56" id="KyR-0c-zQf"/>
                             <constraint firstAttribute="centerX" secondItem="B7h-lD-39u" secondAttribute="centerX" id="RDf-sN-rAn"/>
@@ -680,10 +643,9 @@ creating an account!</string>
                         <viewControllerLayoutGuide type="bottom" id="5Vq-NI-yIG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aOL-7o-9KY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Main"/>
@@ -701,11 +663,9 @@ creating an account!</string>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kbw-8i-z0H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kbw-8i-z0H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -718,7 +678,7 @@ creating an account!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="tooltip-arrow-down" width="23" height="11"/>
+        <image name="tooltip-arrow-down" width="22" height="11"/>
         <image name="x" width="17" height="17"/>
     </resources>
 </document>

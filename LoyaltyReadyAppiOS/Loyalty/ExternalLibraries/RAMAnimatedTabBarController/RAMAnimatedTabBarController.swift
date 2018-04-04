@@ -27,7 +27,7 @@ class RAMAnimatedTabBarItem: UITabBarItem {
     @IBOutlet weak var animation: RAMItemAnimation!
     @IBInspectable var textColor: UIColor = UIColor.purpleLoyalty()
     
-    func playAnimation(icon: UIImageView, textLabel: UILabel, selectedImage: UIImage) {
+    func playAnimation(_ icon: UIImageView, textLabel: UILabel, selectedImage: UIImage) {
         
         assert(animation != nil, "add animation in UITabBarItem")
         if animation != nil {
@@ -35,13 +35,13 @@ class RAMAnimatedTabBarItem: UITabBarItem {
         }
     }
     
-    func deselectAnimation(icon: UIImageView, textLabel: UILabel) {
+    func deselectAnimation(_ icon: UIImageView, textLabel: UILabel) {
         if animation != nil {
             animation.deselectAnimation(icon, textLabel: textLabel, defaultTextColor: textColor)
         }
     }
     
-    func selectedState(icon: UIImageView, textLabel: UILabel, selectedImage: UIImage) {
+    func selectedState(_ icon: UIImageView, textLabel: UILabel, selectedImage: UIImage) {
         if animation != nil {
             animation.selectedState(icon, textLabel: textLabel, selectedImage: selectedImage)
         }
@@ -65,7 +65,7 @@ class RAMAnimatedTabBarController: UITabBarController {
     
     // MARK: create methods
     
-    func createCustomIcons(containers : NSDictionary) {
+    func createCustomIcons(_ containers : NSDictionary) {
         
         if let _ = tabBar.items {
             let itemsCount = tabBar.items!.count as Int - 1
@@ -85,10 +85,10 @@ class RAMAnimatedTabBarController: UITabBarController {
                 // text
                 let textLabel = UILabel()
                 textLabel.text = item.title
-                textLabel.backgroundColor = UIColor.clearColor()
+                textLabel.backgroundColor = UIColor.clear
                 textLabel.textColor = item.textColor
-                textLabel.font = UIFont.systemFontOfSize(10)
-                textLabel.textAlignment = NSTextAlignment.Center
+                textLabel.font = UIFont.systemFont(ofSize: 10)
+                textLabel.textAlignment = NSTextAlignment.center
                 textLabel.translatesAutoresizingMaskIntoConstraints = false
                 
                 container.addSubview(icon)
@@ -106,45 +106,45 @@ class RAMAnimatedTabBarController: UITabBarController {
                 
                 item.image = nil
                 item.title = ""
-                index++
+                index += 1
             }
         }
     }
     
-    func createConstraints(view:UIView, container:UIView, size:CGSize, yOffset:CGFloat) {
+    func createConstraints(_ view:UIView, container:UIView, size:CGSize, yOffset:CGFloat) {
         
         let constX = NSLayoutConstraint(item: view,
-            attribute: NSLayoutAttribute.CenterX,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.centerX,
+            relatedBy: NSLayoutRelation.equal,
             toItem: container,
-            attribute: NSLayoutAttribute.CenterX,
+            attribute: NSLayoutAttribute.centerX,
             multiplier: 1,
             constant: 0)
         container.addConstraint(constX)
         
         let constY = NSLayoutConstraint(item: view,
-            attribute: NSLayoutAttribute.CenterY,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.centerY,
+            relatedBy: NSLayoutRelation.equal,
             toItem: container,
-            attribute: NSLayoutAttribute.CenterY,
+            attribute: NSLayoutAttribute.centerY,
             multiplier: 1,
             constant: yOffset)
         container.addConstraint(constY)
         
         let constW = NSLayoutConstraint(item: view,
-            attribute: NSLayoutAttribute.Width,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.width,
+            relatedBy: NSLayoutRelation.equal,
             toItem: nil,
-            attribute: NSLayoutAttribute.NotAnAttribute,
+            attribute: NSLayoutAttribute.notAnAttribute,
             multiplier: 1,
             constant: size.width)
         view.addConstraint(constW)
         
         let constH = NSLayoutConstraint(item: view,
-            attribute: NSLayoutAttribute.Height,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.height,
+            relatedBy: NSLayoutRelation.equal,
             toItem: nil,
-            attribute: NSLayoutAttribute.NotAnAttribute,
+            attribute: NSLayoutAttribute.notAnAttribute,
             multiplier: 1,
             constant: size.height)
         view.addConstraint(constH)
@@ -165,42 +165,42 @@ class RAMAnimatedTabBarController: UITabBarController {
             formatString += "-(0)-[container\(index)(==container0)]"
         }
         formatString += "-(0)-|"
-        let constranints = NSLayoutConstraint.constraintsWithVisualFormat(formatString,
-            options:NSLayoutFormatOptions.DirectionRightToLeft,
+        let constranints = NSLayoutConstraint.constraints(withVisualFormat: formatString,
+            options:NSLayoutFormatOptions.directionRightToLeft,
             metrics: nil,
             views: containersDict)
         view.addConstraints(constranints)
         
-        return containersDict
+        return containersDict as NSDictionary
     }
     
     func createViewContainer() -> UIView {
         let viewContainer = UIView();
-        viewContainer.backgroundColor = UIColor.clearColor() // for test
+        viewContainer.backgroundColor = UIColor.clear // for test
         viewContainer.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(viewContainer)
         
         // add gesture
-        let tapGesture = UITapGestureRecognizer(target: self, action: "tapHandler:")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RAMAnimatedTabBarController.tapHandler(_:)))
         tapGesture.numberOfTouchesRequired = 1
         viewContainer.addGestureRecognizer(tapGesture)
         
         // add constrains
         let constY = NSLayoutConstraint(item: viewContainer,
-            attribute: NSLayoutAttribute.Bottom,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.bottom,
+            relatedBy: NSLayoutRelation.equal,
             toItem: view,
-            attribute: NSLayoutAttribute.Bottom,
+            attribute: NSLayoutAttribute.bottom,
             multiplier: 1,
             constant: 0)
         
         view.addConstraint(constY)
         
         let constH = NSLayoutConstraint(item: viewContainer,
-            attribute: NSLayoutAttribute.Height,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.height,
+            relatedBy: NSLayoutRelation.equal,
             toItem: nil,
-            attribute: NSLayoutAttribute.NotAnAttribute,
+            attribute: NSLayoutAttribute.notAnAttribute,
             multiplier: 1,
             constant: tabBar.frame.size.height)
         viewContainer.addConstraint(constH)
@@ -210,7 +210,7 @@ class RAMAnimatedTabBarController: UITabBarController {
     
     // MARK: actions
     
-    func tapHandler(gesture:UIGestureRecognizer) {
+    func tapHandler(_ gesture:UIGestureRecognizer) {
         
         let items = tabBar.items as! [RAMAnimatedTabBarItem]
         
@@ -228,7 +228,7 @@ class RAMAnimatedTabBarController: UITabBarController {
             deselectItem.deselectAnimation(deselelectIcon, textLabel: deselelectTextLabel)
             
             //This line was added to remove a modal view (specifically the loyalty card modal) on tab switch
-            self.selectedViewController?.dismissViewControllerAnimated(false, completion: nil)
+            self.selectedViewController?.dismiss(animated: false, completion: nil)
             
             selectedIndex = gesture.view!.tag
             
@@ -236,12 +236,12 @@ class RAMAnimatedTabBarController: UITabBarController {
 
             // If user selects selectedIndex, pop to root if possible
             if let navVC = self.viewControllers![selectedIndex] as? UINavigationController {
-                navVC.popToRootViewControllerAnimated(true)
+                navVC.popToRootViewController(animated: true)
             }
         }
     }
     
-    func setSelectIndex(from from:Int,to:Int) {
+    func setSelectIndex(from:Int,to:Int) {
         self.selectedIndex = to
         let items = self.tabBar.items as! [RAMAnimatedTabBarItem]
         items[from].deselectAnimation(iconsView[from].icon, textLabel: iconsView[from].textLabel)

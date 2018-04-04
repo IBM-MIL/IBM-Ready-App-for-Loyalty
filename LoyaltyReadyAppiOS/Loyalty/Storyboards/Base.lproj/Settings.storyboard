@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="srp-3z-1lh">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17D47" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="srp-3z-1lh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Montserrat-Regular.ttf">
+        <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--Edit Profile View Controller-->
@@ -28,32 +24,29 @@
                         <viewControllerLayoutGuide type="bottom" id="pXv-MV-mFN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Eld-U4-MDY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="BCi-Oo-f52">
-                                <rect key="frame" x="273" y="25" width="55" height="37"/>
-                                <animations/>
-                                <color key="pageIndicatorTintColor" red="0.47843137254901963" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.086274509803921567" green="0.65490196078431373" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="160" y="25" width="55" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.47843137254901963" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.086274509803921567" green="0.65490196078431373" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-3M-fnt">
                                 <rect key="frame" x="13" y="25" width="25" height="35"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="V7h-ji-aSb"/>
                                     <constraint firstAttribute="height" constant="35" id="eDr-RW-EwJ"/>
                                 </constraints>
                                 <state key="normal" image="x">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="exitFlow:" destination="srp-3z-1lh" eventType="touchUpInside" id="aKW-va-xv8"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KdG-3M-fnt" firstAttribute="leading" secondItem="Eld-U4-MDY" secondAttribute="leading" constant="13" id="Eb7-fp-3Zl"/>
                             <constraint firstItem="BCi-Oo-f52" firstAttribute="top" secondItem="Rha-TJ-7CF" secondAttribute="bottom" constant="5" id="JqV-jc-0cZ"/>
@@ -92,49 +85,45 @@
                         <viewControllerLayoutGuide type="bottom" id="wUR-dX-xbk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N1B-ic-wVP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTH-Ws-Sb7">
-                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.45098039507865906" green="0.25098040699958801" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.45098039507865906" green="0.25098040699958801" blue="0.59607845544815063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fOl-af-Udh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <state key="normal" title="NEXT">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="nextButtonAction:" destination="cR8-Mm-3Q7" eventType="touchUpInside" id="Lua-lR-RRh"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQN-i3-no7">
-                                <rect key="frame" x="0.0" y="20" width="600" height="530"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-6u-QhB" userLabel="scrollViewContentSize">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can add or change them later" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uki-YG-Rgb">
-                                                <rect key="frame" x="189" y="47" width="221.5" height="16"/>
-                                                <animations/>
+                                                <rect key="frame" x="76.5" y="47" width="221.5" height="16"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your interests" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCO-th-mBc">
-                                                <rect key="frame" x="212.5" y="5" width="176.5" height="23.5"/>
-                                                <animations/>
+                                                <rect key="frame" x="100" y="5" width="176.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
-                                                <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.70588237047195435" blue="0.62745100259780884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SFQ-jV-QEb">
-                                                <rect key="frame" x="15" y="92" width="570" height="421"/>
-                                                <animations/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="15" y="92" width="345" height="421"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="421" id="Wxp-OY-lB7"/>
                                                 </constraints>
@@ -154,21 +143,16 @@
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrG-cI-lYn">
                                                                     <rect key="frame" x="0.0" y="0.0" width="117" height="121"/>
-                                                                    <animations/>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Np-iO-tLb">
                                                                     <rect key="frame" x="10" y="51" width="97" height="18.5"/>
-                                                                    <animations/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <animations/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
-                                                        <animations/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailingMargin" secondItem="4Np-iO-tLb" secondAttribute="trailing" constant="2" id="BY5-dm-0hP"/>
                                                             <constraint firstItem="OrG-cI-lYn" firstAttribute="leading" secondItem="VJx-Dg-xT3" secondAttribute="leading" id="KRU-Vo-eqx"/>
@@ -186,7 +170,6 @@
                                                 </cells>
                                             </collectionView>
                                         </subviews>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="SFQ-jV-QEb" firstAttribute="top" secondItem="Uki-YG-Rgb" secondAttribute="bottom" constant="29" id="1Cd-6A-Ssc"/>
                                             <constraint firstItem="Uki-YG-Rgb" firstAttribute="top" secondItem="pCO-th-mBc" secondAttribute="bottom" constant="19" id="EzB-88-9Yg"/>
@@ -199,7 +182,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="9gZ-6u-QhB" firstAttribute="centerY" secondItem="SQN-i3-no7" secondAttribute="centerY" id="82w-Ss-9Lg"/>
                                     <constraint firstItem="9gZ-6u-QhB" firstAttribute="leading" secondItem="SQN-i3-no7" secondAttribute="leading" id="as8-do-bgo"/>
@@ -215,8 +197,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wUR-dX-xbk" firstAttribute="top" secondItem="NTH-Ws-Sb7" secondAttribute="bottom" id="01G-15-myN"/>
                             <constraint firstAttribute="width" secondItem="NTH-Ws-Sb7" secondAttribute="width" id="A49-vR-QWB"/>
@@ -265,14 +246,13 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHJ-bc-541">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="Hiu-Ru-uIX"/>
                                             <constraint firstAttribute="height" constant="44" id="oZN-iE-cHg"/>
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                         <state key="normal" image="arrow-back">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="backButtonTapped:" destination="gHX-4B-MUv" eventType="touchUpInside" id="UjV-9O-kV0"/>
@@ -280,14 +260,12 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT POINTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLt-2g-Ewm">
                                         <rect key="frame" x="128" y="12" width="118" height="19"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                        <color key="textColor" red="0.29019609089999998" green="0.29019609089999998" blue="0.29019609089999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.29019609089999998" green="0.29019609089999998" blue="0.29019609089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="TLt-2g-Ewm" firstAttribute="centerY" secondItem="VHJ-bc-541" secondAttribute="centerY" constant="-0.75" id="65z-OP-aNX"/>
                                     <constraint firstAttribute="height" constant="44" id="AIT-8V-Ntq"/>
@@ -298,28 +276,25 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUu-Cp-n1E">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW DO I EARN POINTS?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-T1-z2i">
                                 <rect key="frame" x="16" y="91" width="343" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="8oo-Tb-Xv1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRw-b7-8pS">
                                 <rect key="frame" x="16" y="120" width="343" height="69"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="5fN-r1-7xT"/>
                                 </constraints>
                                 <string key="text">Earn points by spending money at the gas pump or in the convenience store. One dollar equals one point, so every dollar you spend gets you closer to 100 points.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -329,23 +304,21 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW DO I USE MY POINTS?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Nh-i3p">
                                 <rect key="frame" x="16" y="205" width="343" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="CPo-nR-GfX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ll9-FN-uwq">
                                 <rect key="frame" x="16" y="234" width="343" height="69"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="u2n-tr-6an"/>
                                 </constraints>
                                 <string key="text">Once you’ve reached 100 points, you receive 10% off the total cost of your fill-up. Redeem this reward simply by entering your phone number at the pump.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -354,8 +327,7 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fYp-BV-9ph" firstAttribute="top" secondItem="BUu-Cp-n1E" secondAttribute="bottom" id="4ff-9U-VfP"/>
                             <constraint firstItem="PRw-b7-8pS" firstAttribute="top" secondItem="hbc-T1-z2i" secondAttribute="bottom" constant="8" id="EP2-BV-QoC"/>
@@ -386,7 +358,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="firstParagraphLabel" destination="PRw-b7-8pS" id="Uq1-91-l8h"/>
                     </connections>
@@ -404,10 +375,9 @@
                         <viewControllerLayoutGuide type="bottom" id="tKH-S7-QFP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xPA-ev-Sgd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unp-0F-maE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -423,10 +393,9 @@
                         <viewControllerLayoutGuide type="bottom" id="G1z-if-gOz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rqz-LM-AdZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6Y-he-xCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -442,10 +411,9 @@
                         <viewControllerLayoutGuide type="bottom" id="GG3-bC-JYA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0HE-JB-Zvq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4y-Qx-a7k" userLabel="First Responder" sceneMemberID="firstResponder"/>

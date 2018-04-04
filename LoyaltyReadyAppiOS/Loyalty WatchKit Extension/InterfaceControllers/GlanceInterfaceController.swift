@@ -63,7 +63,7 @@ class GlanceInterfaceController: WKInterfaceController {
             
             self.updateInterfaceUI()
         } else {
-            MQALogger.log("Failure getting user data")
+            logger.logInfoWithMessages("Failure getting user data")
         }
     }
     

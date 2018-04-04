@@ -12,7 +12,7 @@ class Deal: NSObject {
     /// Name of the deal
     var name: String!
     /// Expiration date of the deal
-    var expiration: NSDate!
+    var expiration: Date!
     /// Short description of the deal
     var highlight: String!
     /// Long description of the deal
@@ -25,6 +25,8 @@ class Deal: NSObject {
     var watchImage: String!
     /// ID for each deal
     var dealId: Int!
+    let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
+    
     
     /**
     Convinence init of object to intialize based on json dictionary
@@ -35,9 +37,9 @@ class Deal: NSObject {
         self.init()
         name = json["name"] as? String
         if let expirationValue = json["expiration"] as? Int{
-            expiration = NSDate().dateByAddingDays(expirationValue)
+            expiration = Date().dateByAddingDays(expirationValue)
         }
-        MQALogger.log("name-----\(name)")
+        logger.logInfoWithMessages(message: "name-----\(name)")
         dealId = json["deal_id"] as! Int
         highlight = json["highlight"] as! String
         finePrint = json["fine_print"] as! String
@@ -57,12 +59,12 @@ class Deal: NSObject {
         
         name = notificationJson["name"] as? String
         if let expirationValue = notificationJson["exp"] as? Int {
-            expiration = NSDate().dateByAddingDays(expirationValue)
+            expiration = Date().dateByAddingDays(expirationValue)
         } else if let expirationString = notificationJson["exp"] as? String {
             
             // In case a string is sent as an expiration number
             if let expValue = Int(expirationString) {
-                expiration = NSDate().dateByAddingDays(expValue)
+                expiration = Date().dateByAddingDays(expValue)
             }
         }
         

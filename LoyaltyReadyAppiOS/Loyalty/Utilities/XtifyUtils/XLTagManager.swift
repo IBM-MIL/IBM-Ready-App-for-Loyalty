@@ -5,11 +5,12 @@ Licensed Materials - Property of IBM
 
 import Foundation
 
-public class XLTagManager {
+open class XLTagManager {
     
-    private var tagsChanged : Bool;
-    private var recentTags : [XLTag];
-    public static let sharedInstance = XLTagManager()
+    fileprivate var tagsChanged : Bool;
+    fileprivate var recentTags : [XLTag];
+    open static let sharedInstance = XLTagManager()
+    let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
     
     init() {
         self.tagsChanged = false;
@@ -21,7 +22,7 @@ public class XLTagManager {
     
     - parameter tag: XLTag to add
     */
-    func updatedTag(tag : XLTag) {
+    func updatedTag(_ tag : XLTag) {
         self.recentTags.append(tag);
     }
     
@@ -63,7 +64,7 @@ public class XLTagManager {
     
     - parameter value: boolean to dermine if tags changed
     */
-    func notifyTagsChanged(value : Bool){
+    func notifyTagsChanged(_ value : Bool){
         self.tagsChanged = value;
     }
     
@@ -73,10 +74,10 @@ public class XLTagManager {
     - parameter tags:   array of tags in string format
     - parameter toKeep: if true, we are adding tags in array, if false, we are removing all tags in array
     */
-    func updateWithTags(tags: [String], toKeep: Bool) {
+    func updateWithTags(_ tags: [String], toKeep: Bool) {
         
         for tag in tags {
-            MQALogger.log("tags: \(tag)")
+            logger.logInfoWithMessages(message: "tags: \(tag)")
             XLTagManager.sharedInstance.updatedTag(XLTag(tagName: tag, isSet: toKeep))
         }
         

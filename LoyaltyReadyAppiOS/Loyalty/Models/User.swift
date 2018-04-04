@@ -70,7 +70,7 @@ class User: NSObject {
     
     - returns: Array of objects
     */
-    private func getGasStations(jsonArray: [[String:AnyObject]]!) -> [GasStation]! {
+    fileprivate func getGasStations(_ jsonArray: [[String:AnyObject]]!) -> [GasStation]! {
         if jsonArray != nil{
             var returnGasStations = [GasStation]()
             for gasStationJson in jsonArray{
@@ -91,7 +91,7 @@ class User: NSObject {
     
     - returns: Array of objects
     */
-    private func getDeals(jsonArray: [[String:AnyObject]]!) -> [Deal]! {
+    fileprivate func getDeals(_ jsonArray: [[String:AnyObject]]!) -> [Deal]! {
         if jsonArray != nil{
             var returnDeals = [Deal]()
             for dealJson in jsonArray{
@@ -112,7 +112,7 @@ class User: NSObject {
     
     - returns: Array of objects
     */
-    private func getTransactions(jsonArray: [[String:AnyObject]]!) -> [Transaction]! {
+    fileprivate func getTransactions(_ jsonArray: [[String:AnyObject]]!) -> [Transaction]! {
         if jsonArray != nil{
             var returnTransactions = [Transaction]()
             for transactionJson in jsonArray{

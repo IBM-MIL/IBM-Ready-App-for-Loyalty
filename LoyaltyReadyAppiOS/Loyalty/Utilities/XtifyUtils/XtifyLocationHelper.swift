@@ -12,8 +12,9 @@ class XtifyLocationHelper: NSObject {
     */
     class func updateNearGasStation() {
         
-        let cllocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 30.332, longitude: -97.705)
-        XLappMgr.get().updateLocationWithCoordinate(cllocation, andAlt: Float(229.225098), andAccuracy: Float(4000.000000))
+      //  let cllocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 30.332, longitude: -97.705)
+      //  XLappMgr.get().updateLocation(with: cllocation, andAlt: Float(229.225098), andAccuracy: Float(4000.000000))
+        // watson trigger a notification here to simualate location based notification
     }
     
     
@@ -23,7 +24,7 @@ class XtifyLocationHelper: NSObject {
     class func resetLocationForDemo() {
         
         let cllocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 43.001, longitude: -85.71)
-        XLappMgr.get().updateLocationWithCoordinate(cllocation, andAlt: Float(229.225098), andAccuracy: Float(4000.000000))
+        XLappMgr.get().updateLocation(with: cllocation, andAlt: Float(229.225098), andAccuracy: Float(4000.000000))
     }
     
 }

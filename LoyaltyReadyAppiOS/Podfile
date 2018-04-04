@@ -1,0 +1,47 @@
+# Uncomment this line to define a global platform for your project
+ platform :ios, '10.0'
+install! 'cocoapods', :deterministic_uuids => false
+use_frameworks!
+
+target 'Loyalty' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'IBMMobileFirstPlatformFoundation'
+  pod 'IBMMobileFirstPlatformFoundationJSONStore'
+  pod 'BMSPush', '~> 3.0'
+  pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
+
+  # Pods for Loyalty
+
+end
+
+#target 'Loyalty WatchKit App' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  #use_frameworks!
+
+# Pods for Loyalty WatchKit App
+
+#   platform :ios, 9.0
+#   pod 'IBMMobileFirstPlatformFoundation'
+#   pod 'IBMMobileFirstPlatformFoundationJSONStore'
+#   pod 'IBMMobileFirstPlatformFoundationPush'
+# end
+
+#end
+
+#target 'Loyalty WatchKit Extension' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  #use_frameworks!
+
+  # Pods for Loyalty WatchKit Extension
+# platform :watchos, 2.0
+# pod 'IBMMobileFirstPlatformFoundation'
+# pod 'IBMMobileFirstPlatformFoundationPush'
+# pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
+
+
+#end
+
+
+
+

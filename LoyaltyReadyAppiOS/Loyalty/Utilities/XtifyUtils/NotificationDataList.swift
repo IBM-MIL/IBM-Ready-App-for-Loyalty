@@ -31,13 +31,13 @@ class NotificationDataList: NSObject {
     /**
     Essentially populates the decodedDictionary with a decoded version of everything in the encodedDictionary
     */
-    private func populateAndDecode() {
+    fileprivate func populateAndDecode() {
         let tempDict = NSDictionary(dictionary: encodedDictionary!)
         decodedDictionary = NSMutableDictionary()
         
         for (_, data) in tempDict {
-            let unarchived = NSKeyedUnarchiver.unarchiveObjectWithData(data as! NSData) as! NotificationData
-            decodedDictionary?.setObject(unarchived, forKey: unarchived.keyTimestamp)
+            let unarchived = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as! NotificationData
+            decodedDictionary?.setObject(unarchived, forKey: unarchived.keyTimestamp as NSCopying)
         }
     }
     
@@ -46,7 +46,7 @@ class NotificationDataList: NSObject {
     
     - returns: NotificationDataList object if already created
     */
-    class func loadSaved(key: String) -> NotificationDataList? {
+    class func loadSaved(_ key: String) -> NotificationDataList? {
         if let _ = DataAPI.objectForKey(key) as? NSMutableDictionary {
             return NotificationDataList(key: key)
         }
@@ -58,12 +58,12 @@ class NotificationDataList: NSObject {
     
     - parameter data: NotificationData object to add
     */
-    func add(data: NotificationData) {
+    func add(_ data: NotificationData) {
         
-        self.decodedDictionary?.setObject(data, forKey: data.keyTimestamp)
+        self.decodedDictionary?.setObject(data, forKey: data.keyTimestamp as NSCopying)
         
-        let encoded = NSKeyedArchiver.archivedDataWithRootObject(data)
-        self.encodedDictionary?.setObject(encoded, forKey: data.keyTimestamp)
+        let encoded = NSKeyedArchiver.archivedData(withRootObject: data)
+        self.encodedDictionary?.setObject(encoded, forKey: data.keyTimestamp as NSCopying)
         self.save()
     }
     
@@ -72,9 +72,9 @@ class NotificationDataList: NSObject {
     
     - parameter data: data object to be removed
     */
-    func remove(data: NotificationData) {
-        self.decodedDictionary?.removeObjectForKey(data.keyTimestamp)
-        self.encodedDictionary?.removeObjectForKey(data.keyTimestamp)
+    func remove(_ data: NotificationData) {
+        self.decodedDictionary?.removeObject(forKey: data.keyTimestamp)
+        self.encodedDictionary?.removeObject(forKey: data.keyTimestamp)
         self.save()
     }
     
@@ -92,10 +92,10 @@ class NotificationDataList: NSObject {
     - parameter key:        dictionary key for object to update
     - parameter dataObject: the modified data object
     */
-    func updateNotificationWithKey(dataObject: NotificationData) {
+    func updateNotificationWithKey(_ dataObject: NotificationData) {
         
-        self.decodedDictionary?.removeObjectForKey(dataObject.keyTimestamp)
-        self.encodedDictionary?.removeObjectForKey(dataObject.keyTimestamp)
+        self.decodedDictionary?.removeObject(forKey: dataObject.keyTimestamp)
+        self.encodedDictionary?.removeObject(forKey: dataObject.keyTimestamp)
         self.add(dataObject)
     }
     
@@ -116,7 +116,7 @@ class NotificationDataList: NSObject {
     
     - returns: an array of NotificationData
     */
-    func sortWithCategory(category: String) -> [NotificationData] {
+    func sortWithCategory(_ category: String) -> [NotificationData] {
         
         var filteredData = [NotificationData]()
         let allVals = self.decodedDictionary?.allValues as! [NotificationData]
@@ -152,9 +152,9 @@ class NotificationDataList: NSObject {
     
     - returns: sorted NotificationData array
     */
-    class func sortByDate(data: [NotificationData]) -> [NotificationData] {
+    class func sortByDate(_ data: [NotificationData]) -> [NotificationData] {
         var mutableSorted = data
-        mutableSorted.sortInPlace({ $0.timestamp.compare($1.timestamp) == NSComparisonResult.OrderedDescending })
+        mutableSorted.sort(by: { $0.timestamp.compare($1.timestamp as Date) == ComparisonResult.orderedDescending })
         return mutableSorted as [NotificationData]
     }
     

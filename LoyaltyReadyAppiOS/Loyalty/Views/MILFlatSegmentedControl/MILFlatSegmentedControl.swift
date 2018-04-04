@@ -6,7 +6,7 @@ Licensed Materials - Property of IBM
 import UIKit
 
 @objc protocol MILFlatSegmentedControlDelegate {
-    func colorPickerSelectedIndexChanged(selectedIndex : Int) -> Void
+    func colorPickerSelectedIndexChanged(_ selectedIndex : Int) -> Void
 }
 
 class MILFlatSegmentedControl: UIView {
@@ -34,7 +34,7 @@ class MILFlatSegmentedControl: UIView {
     - parameter selectedIndex:             the selected index that is selected by default
     - parameter isFixed:                   whether the selected button should be fixed forever
     */
-    func setUp(buttonTitles : [String],buttonSelectedColor : UIColor, buttonTextSelectedColor : UIColor, buttonUnSelectedColor : UIColor, buttonTextUnSelectedColor : UIColor, font : UIFont, selectedIndex : Int, isFixed : Bool){
+    func setUp(_ buttonTitles : [String],buttonSelectedColor : UIColor, buttonTextSelectedColor : UIColor, buttonUnSelectedColor : UIColor, buttonTextUnSelectedColor : UIColor, font : UIFont, selectedIndex : Int, isFixed : Bool){
         
         self.buttonTitles = buttonTitles
         self.buttonSelectedColor = buttonSelectedColor
@@ -45,7 +45,7 @@ class MILFlatSegmentedControl: UIView {
         self.selectedIndex = selectedIndex
         self.isFixed = isFixed
         
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         
         let numberOfButtons : CGFloat = CGFloat(buttonTitles.count)
         
@@ -54,15 +54,15 @@ class MILFlatSegmentedControl: UIView {
         var currentX : CGFloat = 0
         let offset = buttonWidth
         
-        for (index, _) in buttonTitles.enumerate() {
+        for (index, _) in buttonTitles.enumerated() {
             
-            let button = MILFlatSegmentedControlButton(frame:  CGRectMake(currentX, 0,  buttonWidth, self.frame.size.height))
+            let button = MILFlatSegmentedControlButton(frame:  CGRect(x: currentX, y: 0,  width: buttonWidth, height: self.frame.size.height))
             
             let buttonText = self.buttonTitles[index]
             
             button.setUp(index, buttonText: buttonText, selectedColor: self.buttonSelectedColor, selectedTextColor: self.buttonTextSelectedColor, unselectedColor: self.buttonUnSelectedColor, unselectedTextColor: self.buttonTextUnSelectedColor, font: self.font)
             
-            button.addTarget(self, action: "buttonSelected:", forControlEvents: .TouchUpInside)
+            button.addTarget(self, action: #selector(MILFlatSegmentedControl.buttonSelected(_:)), for: .touchUpInside)
             
             if(index == selectedIndex){
                 button.select()
@@ -81,7 +81,7 @@ class MILFlatSegmentedControl: UIView {
     
     - parameter sender: the button that was selected
     */
-    func buttonSelected(sender : MILFlatSegmentedControlButton){
+    func buttonSelected(_ sender : MILFlatSegmentedControlButton){
         if(isFixed == false){
             
             self.buttonArray[self.selectedIndex].deSelect()
@@ -112,7 +112,7 @@ class MILFlatSegmentedControl: UIView {
     
     - returns: the returned button that was at the parameter index
     */
-    func getButtonAtIndex(index : Int) -> MILFlatSegmentedControlButton {
+    func getButtonAtIndex(_ index : Int) -> MILFlatSegmentedControlButton {
         return self.buttonArray[index]
     }
     
@@ -123,7 +123,7 @@ class MILFlatSegmentedControl: UIView {
     - parameter index: the index of the button that should be selected
     
     */
-    func selectButtonAtIndex(index : Int){
+    func selectButtonAtIndex(_ index : Int){
         let button = self.getButtonAtIndex(index)
         self.buttonSelected(button)
     }
@@ -134,11 +134,11 @@ class MILFlatSegmentedControl: UIView {
     
     - parameter lineColor: the color to make the separator line
     */
-    func addTopSeparatorLine(lineColor : UIColor){
-        let separatorView = UIView(frame: CGRectMake(0,0,self.frame.size.width, 1))
+    func addTopSeparatorLine(_ lineColor : UIColor){
+        let separatorView = UIView(frame: CGRect(x: 0,y: 0,width: self.frame.size.width, height: 1))
         separatorView.backgroundColor = lineColor
         self.addSubview(separatorView)
-        self.bringSubviewToFront(separatorView)
+        self.bringSubview(toFront: separatorView)
     }
 
 

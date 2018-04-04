@@ -23,24 +23,9 @@
 		05088A3A1B263A3700C1FD9F /* XtifyStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05088A391B263A3700C1FD9F /* XtifyStringExtension.swift */; };
 		053CC3D91B29FFB10098288F /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CC3D81B29FFB10098288F /* DealsViewController.swift */; };
 		05460BC31B3B5714004AD326 /* RewardsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05460BC21B3B5714004AD326 /* RewardsCollectionReusableView.swift */; };
-		0554364B1B41C88F00D1C5C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BE61B2A1F3600E530FF /* User.swift */; };
 		0554364C1B41C89000D1C5C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BE61B2A1F3600E530FF /* User.swift */; };
-		0554364D1B41C89100D1C5C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BE61B2A1F3600E530FF /* User.swift */; };
-		057371941B3B06620094DBE7 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 057371911B3B06620094DBE7 /* Montserrat-Light.otf */; };
 		057371951B3B06620094DBE7 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 057371911B3B06620094DBE7 /* Montserrat-Light.otf */; };
-		057371971B3B06620094DBE7 /* Montserrat-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 057371921B3B06620094DBE7 /* Montserrat-UltraLight.otf */; };
 		057371981B3B06620094DBE7 /* Montserrat-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 057371921B3B06620094DBE7 /* Montserrat-UltraLight.otf */; };
-		057371991B3B06760094DBE7 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53DC1B30B59200B94AAE /* Montserrat-Bold.ttf */; };
-		0573719B1B3B377F0094DBE7 /* DealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058F17D61B2F65960034E1C6 /* DealCollectionViewCell.swift */; };
-		058807C51B30A19B00332DF9 /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BE81B2A1F3600E530FF /* Deal.swift */; };
-		058807C61B30A19F00332DF9 /* GasStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BEA1B2A1F3600E530FF /* GasStation.swift */; };
-		058807C81B30A19F00332DF9 /* Hours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BEC1B2A1F3600E530FF /* Hours.swift */; };
-		058807C91B30A1A400332DF9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BEF1B2A1F3600E530FF /* Profile.swift */; };
-		058807CA1B30A1A400332DF9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BEE1B2A1F3600E530FF /* Contact.swift */; };
-		058807CB1B30A1A400332DF9 /* Rewards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BF01B2A1F3600E530FF /* Rewards.swift */; };
-		058807CC1B30A1A400332DF9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BF11B2A1F3600E530FF /* Vehicle.swift */; };
-		058807CD1B30A1A900332DF9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BF31B2A1F3600E530FF /* Transaction.swift */; };
-		058807CE1B30A1A900332DF9 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BF41B2A1F3600E530FF /* TransactionItem.swift */; };
 		058F17D71B2F65960034E1C6 /* DealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058F17D61B2F65960034E1C6 /* DealCollectionViewCell.swift */; };
 		05A87BB81B546BCA009D3F37 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A87BAD1B546BCA009D3F37 /* RAMBounceAnimation.swift */; };
 		05A87BB91B546BCA009D3F37 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A87BAF1B546BCA009D3F37 /* RAMFrameItemAnimation.swift */; };
@@ -66,6 +51,9 @@
 		05F4C8E31B28833D00B81D66 /* RBStoryboardPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F4C8D21B28833D00B81D66 /* RBStoryboardPushSegue.m */; };
 		05F4C8E41B28833D00B81D66 /* RBStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F4C8D41B28833D00B81D66 /* RBStoryboardSegue.m */; };
 		05F4C8E51B28833D00B81D66 /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F4C8D61B28833D00B81D66 /* UIViewController+RBStoryboardLink.m */; };
+		0BAA48B71DB907A300A56FDD /* mfpclient.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BAA48B61DB907A300A56FDD /* mfpclient.plist */; };
+		0BB719F31DB80C8C00CDE9CA /* XtifyPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DE28971B1F8682004A2DE8 /* XtifyPush.framework */; };
+		0BB719F41DB8111900CDE9CA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83211B18E44100FD80F5 /* MobileCoreServices.framework */; };
 		1B03F1841B4C144E000D511D /* SubSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B03F1831B4C144E000D511D /* SubSettingsView.xib */; };
 		1B03F18C1B4C1B1D000D511D /* SubSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03F18B1B4C1B1D000D511D /* SubSettingsView.swift */; };
 		1B03F18E1B4C20E7000D511D /* EnableNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03F18D1B4C20E7000D511D /* EnableNotificationsViewController.swift */; };
@@ -85,92 +73,17 @@
 		1BEFE61B1B41CD67001F6469 /* SearchSortTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFE61A1B41CD67001F6469 /* SearchSortTableViewCell.swift */; };
 		2E0A15EC1B4C38C500690AFE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A15EB1B4C38C500690AFE /* OnboardingViewController.swift */; };
 		2E0A15F01B4C4FD500690AFE /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A15EF1B4C4FD500690AFE /* PageContentViewController.swift */; };
-		2E0A8B881B44774200E13011 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A8B871B44774200E13011 /* BeaconManager.swift */; };
 		2E0A8B901B4481E300E13011 /* XtifyLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A8B8F1B4481E300E13011 /* XtifyLocationHelper.swift */; };
 		2E2BD7681B56FA1100D865F8 /* AboutPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BD7671B56FA1100D865F8 /* AboutPointsViewController.swift */; };
-		2E2BD7691B56FA1100D865F8 /* AboutPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BD7671B56FA1100D865F8 /* AboutPointsViewController.swift */; };
-		2E3E31241B3B0D7D0005D9FF /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3E31231B3B0D7D0005D9FF /* SharedConstants.swift */; };
 		2E3E31251B3B0D7D0005D9FF /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3E31231B3B0D7D0005D9FF /* SharedConstants.swift */; };
 		2E4098CE1B5039B2005AD7FD /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4098CD1B5039B2005AD7FD /* EditProfileViewController.swift */; };
 		2E499C041B603F9700A0823B /* NoStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E499C031B603F9700A0823B /* NoStationsView.swift */; };
-		2E5CA0491B321221002E4F5F /* libWorklightStaticLibProjectNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC831A1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a */; };
-		2E5CA04A1B321224002E4F5F /* sqlcipher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC82C21B18E2CC00FD80F5 /* sqlcipher.framework */; };
-		2E5CA04B1B321233002E4F5F /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E65BE01B28BC1800B1C493 /* UserDataManager.swift */; };
-		2E5CA04C1B321237002E4F5F /* ManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E65BE21B28BC4400B1C493 /* ManagerHelper.swift */; };
-		2E5CA04E1B32126E002E4F5F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83B11B18EBBB00FD80F5 /* CoreMotion.framework */; };
-		2E5CA04F1B32126E002E4F5F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AF1B18EBB500FD80F5 /* CoreText.framework */; };
-		2E5CA0501B32126E002E4F5F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AD1B18EBAD00FD80F5 /* QuartzCore.framework */; };
-		2E5CA0511B32126E002E4F5F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AB1B18EBA400FD80F5 /* AudioToolbox.framework */; };
-		2E5CA0521B32126E002E4F5F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83A91B18EB9400FD80F5 /* AssetsLibrary.framework */; };
-		2E5CA0531B32126E002E4F5F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */; };
-		2E5CA0541B32126E002E4F5F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838E1B18E9A900FD80F5 /* CoreTelephony.framework */; };
-		2E5CA0551B32126E002E4F5F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838C1B18E99800FD80F5 /* libz.1.1.3.dylib */; };
-		2E5CA0561B32126E002E4F5F /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838A1B18E98D00FD80F5 /* libxml2.2.dylib */; };
-		2E5CA0571B32126E002E4F5F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83881B18E98500FD80F5 /* CFNetwork.framework */; };
-		2E5CA0581B32126E002E4F5F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83861B18E96C00FD80F5 /* MessageUI.framework */; };
-		2E5CA0591B32126E002E4F5F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
-		2E5CA05A1B32126E002E4F5F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83821B18E96200FD80F5 /* MapKit.framework */; };
-		2E5CA05B1B32126E002E4F5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83801B18E95600FD80F5 /* CoreGraphics.framework */; };
-		2E5CA05C1B32126E002E4F5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837E1B18E95000FD80F5 /* UIKit.framework */; };
-		2E5CA05D1B32126E002E4F5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837C1B18E94A00FD80F5 /* Foundation.framework */; };
-		2E5CA05E1B32126E002E4F5F /* Q4M.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83771B18E68800FD80F5 /* Q4M.framework */; };
-		2E5CA0601B32126E002E4F5F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832B1B18E47100FD80F5 /* libc++.dylib */; };
-		2E5CA0611B32126E002E4F5F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83291B18E46400FD80F5 /* libz.dylib */; };
-		2E5CA0621B32126E002E4F5F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83271B18E45C00FD80F5 /* Security.framework */; };
-		2E5CA0631B32126E002E4F5F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83251B18E45200FD80F5 /* CoreLocation.framework */; };
-		2E5CA0641B32126E002E4F5F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
-		2E5CA0651B32126E002E4F5F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83211B18E44100FD80F5 /* MobileCoreServices.framework */; };
-		2E5CA0671B32146C002E4F5F /* worklight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D11B30B56300B94AAE /* worklight.plist */; };
-		2E5CA0681B3216D4002E4F5F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832D1B18E47900FD80F5 /* libstdc++.dylib */; };
-		2E5CA06B1B3217FA002E4F5F /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83B81B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib */; };
 		2EB037ED1B4D7C5D002BBDFB /* Onboarding.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB037EC1B4D7C5D002BBDFB /* Onboarding.xcassets */; };
-		2EC0083D1B3DE7BD00BB3523 /* GoalNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC0083C1B3DE7BD00BB3523 /* GoalNotificationController.swift */; };
-		2EC72AB81B3C4CF4001913CE /* LoyaltyWatchDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC72AB71B3C4CF4001913CE /* LoyaltyWatchDataTests.swift */; };
-		2EC72ABF1B3C4E18001913CE /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E65BE01B28BC1800B1C493 /* UserDataManager.swift */; };
-		2EC72AC01B3C55B7001913CE /* ManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E65BE21B28BC4400B1C493 /* ManagerHelper.swift */; };
-		2EC72AC31B3C5746001913CE /* libWorklightStaticLibProjectNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC831A1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a */; };
-		2EC72AC41B3C5748001913CE /* sqlcipher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC82C21B18E2CC00FD80F5 /* sqlcipher.framework */; };
-		2EC72AC61B3C5756001913CE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83B11B18EBBB00FD80F5 /* CoreMotion.framework */; };
-		2EC72AC71B3C5756001913CE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AF1B18EBB500FD80F5 /* CoreText.framework */; };
-		2EC72AC81B3C5756001913CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AD1B18EBAD00FD80F5 /* QuartzCore.framework */; };
-		2EC72AC91B3C5756001913CE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AB1B18EBA400FD80F5 /* AudioToolbox.framework */; };
-		2EC72ACA1B3C5756001913CE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83A91B18EB9400FD80F5 /* AssetsLibrary.framework */; };
-		2EC72ACB1B3C5756001913CE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */; };
-		2EC72ACC1B3C5756001913CE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838E1B18E9A900FD80F5 /* CoreTelephony.framework */; };
-		2EC72ACD1B3C5756001913CE /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838C1B18E99800FD80F5 /* libz.1.1.3.dylib */; };
-		2EC72ACE1B3C5756001913CE /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838A1B18E98D00FD80F5 /* libxml2.2.dylib */; };
-		2EC72ACF1B3C5756001913CE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83881B18E98500FD80F5 /* CFNetwork.framework */; };
-		2EC72AD01B3C5756001913CE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83861B18E96C00FD80F5 /* MessageUI.framework */; };
-		2EC72AD11B3C5756001913CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
-		2EC72AD21B3C5756001913CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83821B18E96200FD80F5 /* MapKit.framework */; };
-		2EC72AD31B3C5756001913CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83801B18E95600FD80F5 /* CoreGraphics.framework */; };
-		2EC72AD41B3C5756001913CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837E1B18E95000FD80F5 /* UIKit.framework */; };
-		2EC72AD51B3C5756001913CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837C1B18E94A00FD80F5 /* Foundation.framework */; };
-		2EC72AD61B3C5756001913CE /* Q4M.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83771B18E68800FD80F5 /* Q4M.framework */; };
-		2EC72AD71B3C5756001913CE /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832D1B18E47900FD80F5 /* libstdc++.dylib */; };
-		2EC72AD81B3C5756001913CE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832B1B18E47100FD80F5 /* libc++.dylib */; };
-		2EC72AD91B3C5756001913CE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83291B18E46400FD80F5 /* libz.dylib */; };
-		2EC72ADA1B3C5756001913CE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83271B18E45C00FD80F5 /* Security.framework */; };
-		2EC72ADB1B3C5756001913CE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83251B18E45200FD80F5 /* CoreLocation.framework */; };
-		2EC72ADC1B3C5756001913CE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
-		2EC72ADD1B3C5756001913CE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83211B18E44100FD80F5 /* MobileCoreServices.framework */; };
-		2EC72AEF1B3C5E3A001913CE /* worklight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D11B30B56300B94AAE /* worklight.plist */; };
-		2EED14A51B419398001E123A /* WatchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED14A41B419398001E123A /* WatchDataManager.swift */; };
-		2EED14A61B419398001E123A /* WatchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED14A41B419398001E123A /* WatchDataManager.swift */; };
-		2EED6E601B39F9FE00AB52F1 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED6E5F1B39F9FE00AB52F1 /* Context.swift */; };
-		2EED6E611B39F9FE00AB52F1 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED6E5F1B39F9FE00AB52F1 /* Context.swift */; };
-		2EED6E6E1B3A0AAC00AB52F1 /* DealDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED6E691B3A0AAC00AB52F1 /* DealDetailInterfaceController.swift */; };
-		2EED6E701B3A0AAC00AB52F1 /* DealListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED6E6A1B3A0AAC00AB52F1 /* DealListInterfaceController.swift */; };
-		2EED6E721B3A0AAC00AB52F1 /* GlanceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED6E6B1B3A0AAC00AB52F1 /* GlanceInterfaceController.swift */; };
-		2EED6E741B3A0AAC00AB52F1 /* RewardsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED6E6C1B3A0AAC00AB52F1 /* RewardsInterfaceController.swift */; };
-		2EED6E761B3A0AAC00AB52F1 /* DealNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED6E6D1B3A0AAC00AB52F1 /* DealNotificationController.swift */; };
 		326671631B29CEB900915075 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326671621B29CEB900915075 /* StationsViewController.swift */; };
 		326671651B29CF2F00915075 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326671641B29CF2F00915075 /* StationTableViewCell.swift */; };
 		329869961B311DDB00CC6B55 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329869951B311DDB00CC6B55 /* MapPin.swift */; };
 		32B52DDD1B33741E00C155D2 /* AmenitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B52DDC1B33741E00C155D2 /* AmenitiesCollectionViewCell.swift */; };
 		340127D91B962EE000A7B126 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340127D81B962EE000A7B126 /* NSDateExtension.swift */; };
-		340127DA1B962EE000A7B126 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340127D81B962EE000A7B126 /* NSDateExtension.swift */; };
-		340127DB1B962FEF00A7B126 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340127D81B962EE000A7B126 /* NSDateExtension.swift */; };
 		3410D5641B56C84500CA4D7C /* ReachabilityMIL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3410D5631B56C84500CA4D7C /* ReachabilityMIL.m */; };
 		3430258B1B544BA900F3BF03 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343025861B544BA900F3BF03 /* DesignableButton.swift */; };
 		3430258C1B544BA900F3BF03 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343025871B544BA900F3BF03 /* DesignableView.swift */; };
@@ -189,7 +102,6 @@
 		346D78FC1B50221D0071BFA9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346D78FE1B50221D0071BFA9 /* Search.storyboard */; };
 		346D79031B5022410071BFA9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346D79051B5022410071BFA9 /* Settings.storyboard */; };
 		346D790A1B5022790071BFA9 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346D790C1B5022790071BFA9 /* Onboarding.storyboard */; };
-		34715B4C1B95086600F4E9B2 /* MQA_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34715B4B1B95086600F4E9B2 /* MQA_key.plist */; };
 		34806D9B1B3B871B002BD904 /* LocalizationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34806D9A1B3B871B002BD904 /* LocalizationUtils.swift */; };
 		34806DA71B3C60D8002BD904 /* StationsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34806DA61B3C60D8002BD904 /* StationsCollectionReusableView.swift */; };
 		348839161B3B0D5000BC5A80 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348839151B3B0D5000BC5A80 /* SearchViewController.swift */; };
@@ -209,36 +121,12 @@
 		34E65BE11B28BC1800B1C493 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E65BE01B28BC1800B1C493 /* UserDataManager.swift */; };
 		34E65BE31B28BC4400B1C493 /* ManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E65BE21B28BC4400B1C493 /* ManagerHelper.swift */; };
 		34E704DD1B62CB52004ADF65 /* NoStationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E704DF1B62CB52004ADF65 /* NoStationsView.xib */; };
-		7E8E4BD71B614D0C000FF032 /* MQAExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E4BD61B614D0C000FF032 /* MQAExceptionHandler.m */; };
-		7E8E4BD81B614D0C000FF032 /* MQAExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E4BD61B614D0C000FF032 /* MQAExceptionHandler.m */; };
-		7E8E4BD91B614D0C000FF032 /* MQAExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E4BD61B614D0C000FF032 /* MQAExceptionHandler.m */; };
-		7E8E4BDA1B614D0C000FF032 /* MQAExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E4BD61B614D0C000FF032 /* MQAExceptionHandler.m */; };
-		8021C3671B39051E004037EF /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021C3621B39051E004037EF /* TestConstants.swift */; };
-		8021C3681B39051E004037EF /* TestDealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021C3631B39051E004037EF /* TestDealsView.swift */; };
-		8021C3691B39051E004037EF /* TestMyRewards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021C3641B39051E004037EF /* TestMyRewards.swift */; };
-		8021C36A1B39051E004037EF /* TestStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021C3651B39051E004037EF /* TestStationsView.swift */; };
-		803C1A711B2F58DA0085999E /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803C1A661B2F58650085999E /* libKIF.a */; };
-		803C1A721B2F58E50085999E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83801B18E95600FD80F5 /* CoreGraphics.framework */; };
-		803C1A751B2F59A00085999E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837E1B18E95000FD80F5 /* UIKit.framework */; };
-		803C1A781B2F75B80085999E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803C1A771B2F75B80085999E /* IOKit.framework */; };
-		803C1A791B2F75F80085999E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC837C1B18E94A00FD80F5 /* Foundation.framework */; };
-		8052FCD21B45EAC300DE864D /* TestxLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052FCD11B45EAC300DE864D /* TestxLogin.swift */; };
-		8053CBB91B2F85C3007BFE64 /* KIFSwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053CBB81B2F85C3007BFE64 /* KIFSwiftExtension.swift */; };
-		8053CBC11B2F8631007BFE64 /* TestSwitchingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053CBC01B2F8631007BFE64 /* TestSwitchingViews.swift */; };
 		8125386E1B1E52340008C299 /* apns-certificate-production.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 8125386B1B1E52340008C299 /* apns-certificate-production.p12 */; };
 		81BC82A11B18E29500FD80F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BC82A01B18E29500FD80F5 /* AppDelegate.swift */; };
 		81BC82A61B18E29500FD80F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BC82A41B18E29500FD80F5 /* Main.storyboard */; };
 		81BC82A81B18E29500FD80F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BC82A71B18E29500FD80F5 /* Images.xcassets */; };
 		81BC82AB1B18E29500FD80F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BC82A91B18E29500FD80F5 /* LaunchScreen.xib */; };
-		81BC831D1B18E2CC00FD80F5 /* sqlcipher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC82C21B18E2CC00FD80F5 /* sqlcipher.framework */; };
-		81BC831E1B18E2CC00FD80F5 /* iOS-Cloudant-Data-Layer-SDK-Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81BC83191B18E2CC00FD80F5 /* iOS-Cloudant-Data-Layer-SDK-Podfile */; };
-		81BC831F1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC831A1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a */; };
-		81BC83201B18E2CC00FD80F5 /* Localizations.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 81BC831B1B18E2CC00FD80F5 /* Localizations.bundle */; };
-		81BC83221B18E44100FD80F5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83211B18E44100FD80F5 /* MobileCoreServices.framework */; };
-		81BC83261B18E45200FD80F5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83251B18E45200FD80F5 /* CoreLocation.framework */; };
-		81BC83281B18E45C00FD80F5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83271B18E45C00FD80F5 /* Security.framework */; };
 		81BC832C1B18E47100FD80F5 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC832B1B18E47100FD80F5 /* libc++.dylib */; };
-		81BC83781B18E68800FD80F5 /* Q4M.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83771B18E68800FD80F5 /* Q4M.framework */; };
 		81BC83921B18E9E800FD80F5 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83901B18E9B000FD80F5 /* CoreBluetooth.framework */; };
 		81BC83931B18E9E800FD80F5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838E1B18E9A900FD80F5 /* CoreTelephony.framework */; };
 		81BC83941B18E9E800FD80F5 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC838C1B18E99800FD80F5 /* libz.1.1.3.dylib */; };
@@ -254,20 +142,14 @@
 		81BC83B51B18EBCE00FD80F5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AD1B18EBAD00FD80F5 /* QuartzCore.framework */; };
 		81BC83B61B18EBCE00FD80F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83AB1B18EBA400FD80F5 /* AudioToolbox.framework */; };
 		81BC83B71B18EBCE00FD80F5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83A91B18EB9400FD80F5 /* AssetsLibrary.framework */; };
-		81BC83B91B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83B81B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib */; };
-		81BF53D21B30B56300B94AAE /* worklight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D11B30B56300B94AAE /* worklight.plist */; };
 		81BF53DF1B30B59200B94AAE /* Heuristica-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D61B30B59200B94AAE /* Heuristica-Bold.otf */; };
 		81BF53E11B30B59200B94AAE /* Heuristica-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D71B30B59200B94AAE /* Heuristica-BoldItalic.otf */; };
 		81BF53E31B30B59200B94AAE /* Heuristica-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D81B30B59200B94AAE /* Heuristica-Italic.otf */; };
-		81BF53E41B30B59200B94AAE /* Heuristica-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D81B30B59200B94AAE /* Heuristica-Italic.otf */; };
 		81BF53E51B30B59200B94AAE /* Heuristica-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53D91B30B59200B94AAE /* Heuristica-Regular.otf */; };
 		81BF53E71B30B59200B94AAE /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53DA1B30B59200B94AAE /* SIL Open Font License.txt */; };
-		81BF53E81B30B59200B94AAE /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53DA1B30B59200B94AAE /* SIL Open Font License.txt */; };
 		81BF53E91B30B59200B94AAE /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53DC1B30B59200B94AAE /* Montserrat-Bold.ttf */; };
 		81BF53EB1B30B59200B94AAE /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53DD1B30B59200B94AAE /* Montserrat-Regular.ttf */; };
-		81BF53EC1B30B59200B94AAE /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53DD1B30B59200B94AAE /* Montserrat-Regular.ttf */; };
 		81BF53ED1B30B59200B94AAE /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53DE1B30B59200B94AAE /* OFL.txt */; };
-		81BF53EE1B30B59200B94AAE /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81BF53DE1B30B59200B94AAE /* OFL.txt */; };
 		81DE286A1B1F8649004A2DE8 /* DataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE28641B1F8649004A2DE8 /* DataUtils.swift */; };
 		81DE286B1B1F8649004A2DE8 /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE28651B1F8649004A2DE8 /* NotificationData.swift */; };
 		81DE286C1B1F8649004A2DE8 /* NotificationDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE28661B1F8649004A2DE8 /* NotificationDataList.swift */; };
@@ -290,47 +172,15 @@
 		81DE28A61B1F8682004A2DE8 /* richnotification.mom in Resources */ = {isa = PBXBuildFile; fileRef = 81DE28941B1F8682004A2DE8 /* richnotification.mom */; };
 		81DE28A71B1F8682004A2DE8 /* richnotificationV1.15.mom in Resources */ = {isa = PBXBuildFile; fileRef = 81DE28951B1F8682004A2DE8 /* richnotificationV1.15.mom */; };
 		81DE28A81B1F8682004A2DE8 /* silence.caf in Resources */ = {isa = PBXBuildFile; fileRef = 81DE28961B1F8682004A2DE8 /* silence.caf */; };
-		81DE28A91B1F8682004A2DE8 /* XtifyPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DE28971B1F8682004A2DE8 /* XtifyPush.framework */; };
-		A2D4E9AA1BDAD14D00EB9693 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB161BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB171BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB181BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB191BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB1A1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB1B1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB1C1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB1D1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB1E1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB1F1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB201BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; settings = {ASSET_TAGS = (); }; };
-		A2D4EB211BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; settings = {ASSET_TAGS = (); }; };
+		92F76B402BB5A38562E45437 /* Pods_Loyalty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97120AA95E668FBB1C5FD9D9 /* Pods_Loyalty.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A2D4E9AA1BDAD14D00EB9693 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */; };
+		A2D4EB161BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB051BDADC0F00EB9693 /* libGGLAnalytics.a */; };
+		A2D4EB1A1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB061BDADC0F00EB9693 /* libGGLCore.a */; };
+		A2D4EB1E1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB151BDADC0F00EB9693 /* libGoogleAnalytics.a */; };
 		A2D4EB291BDADFA700EB9693 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */; };
-		A2D4EB2A1BDADFE400EB9693 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
-		A2D4EB2B1BDADFF000EB9693 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
 		A2D4EB2D1BDAE01100EB9693 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */; };
-		A2D4EB2E1BDAE11300EB9693 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83841B18E96700FD80F5 /* CoreData.framework */; };
-		A2D4EB2F1BDAE12100EB9693 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */; };
-		A2D4EB311BDAE14B00EB9693 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */; };
-		A2D4EB321BDAE15200EB9693 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */; };
-		A2D4EB3E1BDAE6B500EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB3D1BDAE6B500EB9693 /* LoyaltyUIViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B16ABC171B273D500036878B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC161B273D500036878B /* Images.xcassets */; };
-		B16ABC1B1B273D510036878B /* Loyalty WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC1A1B273D510036878B /* Loyalty WatchKit App.app */; };
-		B16ABC231B273D510036878B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC211B273D510036878B /* Interface.storyboard */; };
-		B16ABC251B273D510036878B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16ABC241B273D510036878B /* Images.xcassets */; };
-		B16ABC281B273D510036878B /* Loyalty WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B16ABC0B1B273D500036878B /* Loyalty WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B16ABCAF1B2F2A860036878B /* DealRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16ABCAE1B2F2A860036878B /* DealRow.swift */; };
+		A2D4EB3E1BDAE6B500EB9693 /* LoyaltyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D4EB3D1BDAE6B500EB9693 /* LoyaltyUIViewController.swift */; };
 		B1D775C51B4C32470078A65B /* loyalty.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = B1D775C41B4C32470078A65B /* loyalty.pkpass */; };
-		B1E34A241B387043008950D9 /* LoyaltyLocalWatchDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E34A231B387043008950D9 /* LoyaltyLocalWatchDataTests.swift */; };
-		B1E34A311B3870F8008950D9 /* DealRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16ABCAE1B2F2A860036878B /* DealRow.swift */; };
-		B1E34A4F1B39BF76008950D9 /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BE81B2A1F3600E530FF /* Deal.swift */; };
-		B1E34A531B39BFE5008950D9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BEF1B2A1F3600E530FF /* Profile.swift */; };
-		B1E34A541B39BFFB008950D9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BEE1B2A1F3600E530FF /* Contact.swift */; };
-		B1E34A551B39BFFE008950D9 /* Rewards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BF01B2A1F3600E530FF /* Rewards.swift */; };
-		B1E34A561B39C000008950D9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BF11B2A1F3600E530FF /* Vehicle.swift */; };
-		B1E34A571B39C009008950D9 /* GasStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BEA1B2A1F3600E530FF /* GasStation.swift */; };
-		B1E34A581B39C00C008950D9 /* Hours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BEC1B2A1F3600E530FF /* Hours.swift */; };
-		B1E34A591B39C012008950D9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BF31B2A1F3600E530FF /* Transaction.swift */; };
-		B1E34A5A1B39C017008950D9 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34958BF41B2A1F3600E530FF /* TransactionItem.swift */; };
 		B1F21C171B446E260029ED80 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B1F21C151B446E260029ED80 /* manifest.json */; };
 		B1F21C181B446E260029ED80 /* pass.json in Resources */ = {isa = PBXBuildFile; fileRef = B1F21C161B446E260029ED80 /* pass.json */; };
 		B1F21C1A1B446E670029ED80 /* PassbookUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F21C191B446E670029ED80 /* PassbookUtils.swift */; };
@@ -348,23 +198,12 @@
 		BDBC7D9B1B3A433100A2F0CD /* NBPhoneNumberMetadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDBC7D8B1B3A433100A2F0CD /* NBPhoneNumberMetadata.plist */; };
 		BDBC7D9C1B3A433100A2F0CD /* NBPhoneNumberUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC7D8D1B3A433100A2F0CD /* NBPhoneNumberUtil.m */; };
 		BDBC7D9D1B3A433100A2F0CD /* NSArray+NBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC7D8F1B3A433100A2F0CD /* NSArray+NBAdditions.m */; };
+		C3324100206A193B002DC36A /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33240FF206A193B002DC36A /* Geotification.swift */; };
+		C3B0C82A20616662001E0044 /* OCLoggerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0C82920616662001E0044 /* OCLoggerExtension.swift */; };
+		C3B0C8482062477A001E0044 /* Loyalty WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C3B0C8472062477A001E0044 /* Loyalty WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2EC72AE21B3C57D0001913CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81BC82931B18E29500FD80F5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B16ABC191B273D510036878B;
-			remoteInfo = "Loyalty WatchKit App";
-		};
-		2EC72AE41B3C57EF001913CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81BC82931B18E29500FD80F5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 81BC829A1B18E29500FD80F5;
-			remoteInfo = Loyalty;
-		};
 		803C1A651B2F58650085999E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 803C1A5B1B2F58650085999E /* KIF.xcodeproj */;
@@ -407,33 +246,12 @@
 			remoteGlobalIDString = 9CC9673B1AD4B1B600576D13;
 			remoteInfo = KIFFramework;
 		};
-		803C1A731B2F59180085999E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 803C1A5B1B2F58650085999E /* KIF.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EABD46791857A0C700A5F081;
-			remoteInfo = KIF;
-		};
-		81BC82B11B18E29500FD80F5 /* PBXContainerItemProxy */ = {
+		C3B0C8492062477A001E0044 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 81BC82931B18E29500FD80F5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 81BC829A1B18E29500FD80F5;
-			remoteInfo = Loyalty;
-		};
-		B16ABC1C1B273D510036878B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81BC82931B18E29500FD80F5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B16ABC191B273D510036878B;
-			remoteInfo = "Loyalty WatchKit App";
-		};
-		B16ABC261B273D510036878B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81BC82931B18E29500FD80F5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B16ABC0A1B273D500036878B;
-			remoteInfo = "Loyalty WatchKit Extension";
+			remoteGlobalIDString = C3B0C8462062477A001E0044;
+			remoteInfo = "Loyalty WatchKit App Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -444,7 +262,27 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B16ABC281B273D510036878B /* Loyalty WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B0C8592062477A001E0044 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B0C8672062477B001E0044 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C3B0C8482062477A001E0044 /* Loyalty WatchKit App Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +340,8 @@
 		05F4C8D41B28833D00B81D66 /* RBStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardSegue.m; sourceTree = "<group>"; };
 		05F4C8D51B28833D00B81D66 /* UIViewController+RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RBStoryboardLink.h"; sourceTree = "<group>"; };
 		05F4C8D61B28833D00B81D66 /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
+		0B4788631DC12C730089E1BC /* Loyalty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Loyalty.entitlements; sourceTree = "<group>"; };
+		0BAA48B61DB907A300A56FDD /* mfpclient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mfpclient.plist; sourceTree = SOURCE_ROOT; };
 		1B03F1831B4C144E000D511D /* SubSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubSettingsView.xib; sourceTree = "<group>"; };
 		1B03F18B1B4C1B1D000D511D /* SubSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSettingsView.swift; sourceTree = "<group>"; };
 		1B03F18D1B4C20E7000D511D /* EnableNotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableNotificationsViewController.swift; sourceTree = "<group>"; };
@@ -521,7 +361,6 @@
 		1BEFE61A1B41CD67001F6469 /* SearchSortTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSortTableViewCell.swift; sourceTree = "<group>"; };
 		2E0A15EB1B4C38C500690AFE /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2E0A15EF1B4C4FD500690AFE /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
-		2E0A8B871B44774200E13011 /* BeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		2E0A8B8F1B4481E300E13011 /* XtifyLocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XtifyLocationHelper.swift; sourceTree = "<group>"; };
 		2E2BD7671B56FA1100D865F8 /* AboutPointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPointsViewController.swift; sourceTree = "<group>"; };
 		2E3E31231B3B0D7D0005D9FF /* SharedConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
@@ -580,7 +419,6 @@
 		346D79041B5022410071BFA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		346D790B1B5022790071BFA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		346D79101B50227F0071BFA9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Onboarding.strings; sourceTree = "<group>"; };
-		34715B4B1B95086600F4E9B2 /* MQA_key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MQA_key.plist; sourceTree = "<group>"; };
 		34806D9A1B3B871B002BD904 /* LocalizationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationUtils.swift; sourceTree = "<group>"; };
 		34806DA61B3C60D8002BD904 /* StationsCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsCollectionReusableView.swift; sourceTree = "<group>"; };
 		348839151B3B0D5000BC5A80 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -607,15 +445,12 @@
 		34E704E91B62CB5D004ADF65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/NoStationsView.strings; sourceTree = "<group>"; };
 		34E704F41B667E8B004ADF65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MyRewards.strings; sourceTree = "<group>"; };
 		34E704F61B667EB1004ADF65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MyRewards.strings; sourceTree = "<group>"; };
-		7E8E4BD51B614D0C000FF032 /* MQAExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQAExceptionHandler.h; sourceTree = "<group>"; };
-		7E8E4BD61B614D0C000FF032 /* MQAExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQAExceptionHandler.m; sourceTree = "<group>"; };
 		8021C3621B39051E004037EF /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
 		8021C3631B39051E004037EF /* TestDealsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDealsView.swift; sourceTree = "<group>"; };
 		8021C3641B39051E004037EF /* TestMyRewards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMyRewards.swift; sourceTree = "<group>"; };
 		8021C3651B39051E004037EF /* TestStationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStationsView.swift; sourceTree = "<group>"; };
 		803C1A5B1B2F58650085999E /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = Loyalty/Frameworks/KIF/KIF.xcodeproj; sourceTree = SOURCE_ROOT; };
 		803C1A761B2F67A00085999E /* FeatureTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FeatureTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		803C1A771B2F75B80085999E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = "../../../../Library/Developer/Xcode/iOS DeviceSupport/8.2 (12D508)/Symbols/System/Library/Frameworks/IOKit.framework"; sourceTree = "<group>"; };
 		8052FCD11B45EAC300DE864D /* TestxLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestxLogin.swift; sourceTree = "<group>"; };
 		8053CBB81B2F85C3007BFE64 /* KIFSwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIFSwiftExtension.swift; sourceTree = "<group>"; };
 		8053CBC01B2F8631007BFE64 /* TestSwitchingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSwitchingViews.swift; sourceTree = "<group>"; };
@@ -625,97 +460,7 @@
 		81BC82A51B18E29500FD80F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81BC82A71B18E29500FD80F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		81BC82AA1B18E29500FD80F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		81BC82B01B18E29500FD80F5 /* LoyaltyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoyaltyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BC82B51B18E29500FD80F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81BC82C21B18E2CC00FD80F5 /* sqlcipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = sqlcipher.framework; sourceTree = "<group>"; };
-		81BC82C41B18E2CC00FD80F5 /* AbstractAcquisitionError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAcquisitionError.h; sourceTree = "<group>"; };
-		81BC82C51B18E2CC00FD80F5 /* AbstractGeoAreaTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGeoAreaTrigger.h; sourceTree = "<group>"; };
-		81BC82C61B18E2CC00FD80F5 /* AbstractGeoDwellTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGeoDwellTrigger.h; sourceTree = "<group>"; };
-		81BC82C71B18E2CC00FD80F5 /* AbstractPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractPosition.h; sourceTree = "<group>"; };
-		81BC82C81B18E2CC00FD80F5 /* AbstractTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractTrigger.h; sourceTree = "<group>"; };
-		81BC82C91B18E2CC00FD80F5 /* AbstractWifiAreaTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractWifiAreaTrigger.h; sourceTree = "<group>"; };
-		81BC82CA1B18E2CC00FD80F5 /* AbstractWifiDwellTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractWifiDwellTrigger.h; sourceTree = "<group>"; };
-		81BC82CB1B18E2CC00FD80F5 /* AbstractWifiFilterTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractWifiFilterTrigger.h; sourceTree = "<group>"; };
-		81BC82CC1B18E2CC00FD80F5 /* AcquisitionCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquisitionCallback.h; sourceTree = "<group>"; };
-		81BC82CD1B18E2CC00FD80F5 /* AcquisitionFailureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquisitionFailureCallback.h; sourceTree = "<group>"; };
-		81BC82CE1B18E2CC00FD80F5 /* BaseChallengeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseChallengeHandler.h; sourceTree = "<group>"; };
-		81BC82CF1B18E2CC00FD80F5 /* BaseDeviceAuthChallengeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDeviceAuthChallengeHandler.h; sourceTree = "<group>"; };
-		81BC82D01B18E2CC00FD80F5 /* BaseProvisioningChallengeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseProvisioningChallengeHandler.h; sourceTree = "<group>"; };
-		81BC82D11B18E2CC00FD80F5 /* ChallengeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeHandler.h; sourceTree = "<group>"; };
-		81BC82D21B18E2CC00FD80F5 /* JSONStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStore.h; sourceTree = "<group>"; };
-		81BC82D31B18E2CC00FD80F5 /* JSONStoreAddOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStoreAddOptions.h; sourceTree = "<group>"; };
-		81BC82D41B18E2CC00FD80F5 /* JSONStoreCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStoreCollection.h; sourceTree = "<group>"; };
-		81BC82D51B18E2CC00FD80F5 /* JSONStoreOpenOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStoreOpenOptions.h; sourceTree = "<group>"; };
-		81BC82D61B18E2CC00FD80F5 /* JSONStoreQueryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStoreQueryOptions.h; sourceTree = "<group>"; };
-		81BC82D71B18E2CC00FD80F5 /* JSONStoreQueryPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStoreQueryPart.h; sourceTree = "<group>"; };
-		81BC82D81B18E2CC00FD80F5 /* OCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCLogger.h; sourceTree = "<group>"; };
-		81BC82D91B18E2CC00FD80F5 /* WLAcquisitionFailureCallbacksConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLAcquisitionFailureCallbacksConfiguration.h; sourceTree = "<group>"; };
-		81BC82DA1B18E2CC00FD80F5 /* WLAcquisitionPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLAcquisitionPolicy.h; sourceTree = "<group>"; };
-		81BC82DB1B18E2CC00FD80F5 /* WLAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLAnalytics.h; sourceTree = "<group>"; };
-		81BC82DC1B18E2CC00FD80F5 /* WLArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLArea.h; sourceTree = "<group>"; };
-		81BC82DD1B18E2CC00FD80F5 /* WLAuthorizationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLAuthorizationManager.h; sourceTree = "<group>"; };
-		81BC82DE1B18E2CC00FD80F5 /* WLCallbackFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCallbackFactory.h; sourceTree = "<group>"; };
-		81BC82DF1B18E2CC00FD80F5 /* WLChallengeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLChallengeHandler.h; sourceTree = "<group>"; };
-		81BC82E01B18E2CC00FD80F5 /* WLCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCircle.h; sourceTree = "<group>"; };
-		81BC82E11B18E2CC00FD80F5 /* WLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLClient.h; sourceTree = "<group>"; };
-		81BC82E21B18E2CC00FD80F5 /* WLConfidenceLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLConfidenceLevel.h; sourceTree = "<group>"; };
-		81BC82E31B18E2CC00FD80F5 /* WLCookieExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCookieExtractor.h; sourceTree = "<group>"; };
-		81BC82E41B18E2CC00FD80F5 /* WLCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCoordinate.h; sourceTree = "<group>"; };
-		81BC82E51B18E2CC00FD80F5 /* WLDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLDelegate.h; sourceTree = "<group>"; };
-		81BC82E61B18E2CC00FD80F5 /* WLDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLDevice.h; sourceTree = "<group>"; };
-		81BC82E71B18E2CC00FD80F5 /* WLDeviceAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLDeviceAuthManager.h; sourceTree = "<group>"; };
-		81BC82E81B18E2CC00FD80F5 /* WLDeviceContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLDeviceContext.h; sourceTree = "<group>"; };
-		81BC82E91B18E2CC00FD80F5 /* WLEventSourceListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLEventSourceListener.h; sourceTree = "<group>"; };
-		81BC82EA1B18E2CC00FD80F5 /* WLEventTransmissionPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLEventTransmissionPolicy.h; sourceTree = "<group>"; };
-		81BC82EB1B18E2CC00FD80F5 /* WLFailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLFailResponse.h; sourceTree = "<group>"; };
-		81BC82EC1B18E2CC00FD80F5 /* WLGeoAcquisitionPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoAcquisitionPolicy.h; sourceTree = "<group>"; };
-		81BC82ED1B18E2CC00FD80F5 /* WLGeoCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoCallback.h; sourceTree = "<group>"; };
-		81BC82EE1B18E2CC00FD80F5 /* WLGeoDwellInsideTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoDwellInsideTrigger.h; sourceTree = "<group>"; };
-		81BC82EF1B18E2CC00FD80F5 /* WLGeoDwellOutsideTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoDwellOutsideTrigger.h; sourceTree = "<group>"; };
-		81BC82F01B18E2CC00FD80F5 /* WLGeoEnterTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoEnterTrigger.h; sourceTree = "<group>"; };
-		81BC82F11B18E2CC00FD80F5 /* WLGeoError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoError.h; sourceTree = "<group>"; };
-		81BC82F21B18E2CC00FD80F5 /* WLGeoExitTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoExitTrigger.h; sourceTree = "<group>"; };
-		81BC82F31B18E2CC00FD80F5 /* WLGeoFailureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoFailureCallback.h; sourceTree = "<group>"; };
-		81BC82F41B18E2CC00FD80F5 /* WLGeoPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoPosition.h; sourceTree = "<group>"; };
-		81BC82F51B18E2CC00FD80F5 /* WLGeoPositionChangeTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoPositionChangeTrigger.h; sourceTree = "<group>"; };
-		81BC82F61B18E2CC00FD80F5 /* WLGeoTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoTrigger.h; sourceTree = "<group>"; };
-		81BC82F71B18E2CC00FD80F5 /* WLGeoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLGeoUtils.h; sourceTree = "<group>"; };
-		81BC82F81B18E2CC00FD80F5 /* WLLocationServicesConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLocationServicesConfiguration.h; sourceTree = "<group>"; };
-		81BC82F91B18E2CC00FD80F5 /* WLOnReadyToSubscribeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLOnReadyToSubscribeListener.h; sourceTree = "<group>"; };
-		81BC82FA1B18E2CC00FD80F5 /* WLPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPolygon.h; sourceTree = "<group>"; };
-		81BC82FB1B18E2CC00FD80F5 /* WLProcedureInvocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLProcedureInvocationData.h; sourceTree = "<group>"; };
-		81BC82FC1B18E2CC00FD80F5 /* WLProcedureInvocationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLProcedureInvocationResult.h; sourceTree = "<group>"; };
-		81BC82FD1B18E2CC00FD80F5 /* WLPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPush.h; sourceTree = "<group>"; };
-		81BC82FE1B18E2CC00FD80F5 /* WLPushOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPushOptions.h; sourceTree = "<group>"; };
-		81BC82FF1B18E2CC00FD80F5 /* WLResourceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLResourceRequest.h; sourceTree = "<group>"; };
-		81BC83001B18E2CC00FD80F5 /* WLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLResponse.h; sourceTree = "<group>"; };
-		81BC83011B18E2CC00FD80F5 /* WLResponseListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLResponseListener.h; sourceTree = "<group>"; };
-		81BC83021B18E2CC00FD80F5 /* WLSecurityUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSecurityUtils.h; sourceTree = "<group>"; };
-		81BC83031B18E2CC00FD80F5 /* WLSimpleDataSharing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSimpleDataSharing.h; sourceTree = "<group>"; };
-		81BC83041B18E2CC00FD80F5 /* WLSwiftBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSwiftBridgingHeader.h; sourceTree = "<group>"; };
-		81BC83051B18E2CC00FD80F5 /* WLTriggerCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLTriggerCallback.h; sourceTree = "<group>"; };
-		81BC83061B18E2CC00FD80F5 /* WLTriggersConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLTriggersConfiguration.h; sourceTree = "<group>"; };
-		81BC83071B18E2CC00FD80F5 /* WLTrusteer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLTrusteer.h; sourceTree = "<group>"; };
-		81BC83081B18E2CC00FD80F5 /* WLUserCertAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLUserCertAuth.h; sourceTree = "<group>"; };
-		81BC83091B18E2CC00FD80F5 /* WLWifiAccessPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiAccessPoint.h; sourceTree = "<group>"; };
-		81BC830A1B18E2CC00FD80F5 /* WLWifiAccessPointFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiAccessPointFilter.h; sourceTree = "<group>"; };
-		81BC830B1B18E2CC00FD80F5 /* WLWifiAcquisitionCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiAcquisitionCallback.h; sourceTree = "<group>"; };
-		81BC830C1B18E2CC00FD80F5 /* WLWifiAcquisitionPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiAcquisitionPolicy.h; sourceTree = "<group>"; };
-		81BC830D1B18E2CC00FD80F5 /* WLWifiConnectedCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiConnectedCallback.h; sourceTree = "<group>"; };
-		81BC830E1B18E2CC00FD80F5 /* WLWifiConnectTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiConnectTrigger.h; sourceTree = "<group>"; };
-		81BC830F1B18E2CC00FD80F5 /* WLWifiDisconnectTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiDisconnectTrigger.h; sourceTree = "<group>"; };
-		81BC83101B18E2CC00FD80F5 /* WLWifiDwellInsideTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiDwellInsideTrigger.h; sourceTree = "<group>"; };
-		81BC83111B18E2CC00FD80F5 /* WLWifiDwellOutsideTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiDwellOutsideTrigger.h; sourceTree = "<group>"; };
-		81BC83121B18E2CC00FD80F5 /* WLWifiEnterTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiEnterTrigger.h; sourceTree = "<group>"; };
-		81BC83131B18E2CC00FD80F5 /* WLWifiError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiError.h; sourceTree = "<group>"; };
-		81BC83141B18E2CC00FD80F5 /* WLWifiExitTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiExitTrigger.h; sourceTree = "<group>"; };
-		81BC83151B18E2CC00FD80F5 /* WLWifiFailureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiFailureCallback.h; sourceTree = "<group>"; };
-		81BC83161B18E2CC00FD80F5 /* WLWifiLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiLocation.h; sourceTree = "<group>"; };
-		81BC83171B18E2CC00FD80F5 /* WLWifiTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiTrigger.h; sourceTree = "<group>"; };
-		81BC83181B18E2CC00FD80F5 /* WLWifiVisibleAccessPointsChangeTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLWifiVisibleAccessPointsChangeTrigger.h; sourceTree = "<group>"; };
-		81BC83191B18E2CC00FD80F5 /* iOS-Cloudant-Data-Layer-SDK-Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS-Cloudant-Data-Layer-SDK-Podfile"; sourceTree = "<group>"; };
-		81BC831A1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWorklightStaticLibProjectNative.a; sourceTree = "<group>"; };
-		81BC831B1B18E2CC00FD80F5 /* Localizations.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Localizations.bundle; sourceTree = "<group>"; };
 		81BC83211B18E44100FD80F5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		81BC83231B18E44B00FD80F5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BC83251B18E45200FD80F5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -724,7 +469,6 @@
 		81BC832B1B18E47100FD80F5 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		81BC832D1B18E47900FD80F5 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		81BC83371B18E58F00FD80F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81BC83771B18E68800FD80F5 /* Q4M.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Q4M.framework; sourceTree = "<group>"; };
 		81BC837B1B18E79D00FD80F5 /* Loyalty-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loyalty-BridgingHeader.h"; sourceTree = "<group>"; };
 		81BC837C1B18E94A00FD80F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81BC837E1B18E95000FD80F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -743,7 +487,6 @@
 		81BC83AF1B18EBB500FD80F5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		81BC83B11B18EBBB00FD80F5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		81BC83B81B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
-		81BF53D11B30B56300B94AAE /* worklight.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = worklight.plist; sourceTree = "<group>"; };
 		81BF53D61B30B59200B94AAE /* Heuristica-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heuristica-Bold.otf"; sourceTree = "<group>"; };
 		81BF53D71B30B59200B94AAE /* Heuristica-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heuristica-BoldItalic.otf"; sourceTree = "<group>"; };
 		81BF53D81B30B59200B94AAE /* Heuristica-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heuristica-Italic.otf"; sourceTree = "<group>"; };
@@ -791,6 +534,7 @@
 		81DE28951B1F8682004A2DE8 /* richnotificationV1.15.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = richnotificationV1.15.mom; sourceTree = "<group>"; };
 		81DE28961B1F8682004A2DE8 /* silence.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = silence.caf; sourceTree = "<group>"; };
 		81DE28971B1F8682004A2DE8 /* XtifyPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XtifyPush.framework; sourceTree = "<group>"; };
+		97120AA95E668FBB1C5FD9D9 /* Pods_Loyalty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loyalty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2D4EAFC1BDADC0F00EB9693 /* Analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Analytics.h; sourceTree = "<group>"; };
 		A2D4EAFD1BDADC0F00EB9693 /* GGLContext+Analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGLContext+Analytics.h"; sourceTree = "<group>"; };
@@ -814,17 +558,14 @@
 		A2D4EB281BDADFA700EB9693 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = "<absolute>"; };
 		A2D4EB2C1BDAE01100EB9693 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = /usr/lib/libz.1.dylib; sourceTree = "<absolute>"; };
 		A2D4EB3D1BDAE6B500EB9693 /* LoyaltyUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyUIViewController.swift; sourceTree = "<group>"; };
-		B16ABC0B1B273D500036878B /* Loyalty WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Loyalty WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16ABC0E1B273D500036878B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16ABC0F1B273D500036878B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		B16ABC161B273D500036878B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B16ABC1A1B273D510036878B /* Loyalty WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Loyalty WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16ABC201B273D510036878B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16ABC221B273D510036878B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B16ABC241B273D510036878B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B16ABCAE1B2F2A860036878B /* DealRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealRow.swift; sourceTree = "<group>"; };
 		B1D775C41B4C32470078A65B /* loyalty.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = loyalty.pkpass; sourceTree = "<group>"; };
-		B1E34A1F1B387043008950D9 /* Loyality WatchKit Extension Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Loyality WatchKit Extension Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E34A221B387043008950D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1E34A231B387043008950D9 /* LoyaltyLocalWatchDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyLocalWatchDataTests.swift; sourceTree = "<group>"; };
 		B1F21C151B446E260029ED80 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
@@ -858,6 +599,14 @@
 		BDBC7D8D1B3A433100A2F0CD /* NBPhoneNumberUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPhoneNumberUtil.m; path = libPhoneNumber/NBPhoneNumberUtil.m; sourceTree = "<group>"; };
 		BDBC7D8E1B3A433100A2F0CD /* NSArray+NBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+NBAdditions.h"; path = "libPhoneNumber/NSArray+NBAdditions.h"; sourceTree = "<group>"; };
 		BDBC7D8F1B3A433100A2F0CD /* NSArray+NBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+NBAdditions.m"; path = "libPhoneNumber/NSArray+NBAdditions.m"; sourceTree = "<group>"; };
+		C33240FF206A193B002DC36A /* Geotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		C3324108206A3363002DC36A /* TestLocations.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestLocations.gpx; sourceTree = "<group>"; };
+		C3B0C81820616563001E0044 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		C3B0C82920616662001E0044 /* OCLoggerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCLoggerExtension.swift; sourceTree = "<group>"; };
+		C3B0C83B2062477A001E0044 /* Loyalty WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Loyalty WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B0C8472062477A001E0044 /* Loyalty WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Loyalty WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4DE27B71222A8107FC245FC /* Pods-Loyalty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.debug.xcconfig"; sourceTree = "<group>"; };
+		D6639FD4B232A13931B2B848 /* Pods-Loyalty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loyalty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -865,11 +614,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB719F41DB8111900CDE9CA /* MobileCoreServices.framework in Frameworks */,
+				0BB719F31DB80C8C00CDE9CA /* XtifyPush.framework in Frameworks */,
 				A2D4EB2D1BDAE01100EB9693 /* libz.1.dylib in Frameworks */,
-				A2D4EB2B1BDADFF000EB9693 /* SystemConfiguration.framework in Frameworks */,
-				A2D4EB2A1BDADFE400EB9693 /* CoreData.framework in Frameworks */,
 				A2D4EB291BDADFA700EB9693 /* libsqlite3.dylib in Frameworks */,
-				81BC83B91B18EC5E00FD80F5 /* libstdc++.6.0.9.dylib in Frameworks */,
 				81BC83B31B18EBCE00FD80F5 /* CoreMotion.framework in Frameworks */,
 				81BC83B41B18EBCE00FD80F5 /* CoreText.framework in Frameworks */,
 				81BC83B51B18EBCE00FD80F5 /* QuartzCore.framework in Frameworks */,
@@ -880,7 +628,6 @@
 				81BC83941B18E9E800FD80F5 /* libz.1.1.3.dylib in Frameworks */,
 				A2D4EB161BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */,
 				A2D4EB1A1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */,
-				81DE28A91B1F8682004A2DE8 /* XtifyPush.framework in Frameworks */,
 				81BC83951B18E9E800FD80F5 /* libxml2.2.dylib in Frameworks */,
 				81BC83961B18E9E800FD80F5 /* CFNetwork.framework in Frameworks */,
 				81BC83971B18E9E800FD80F5 /* MessageUI.framework in Frameworks */,
@@ -888,106 +635,23 @@
 				81BC839A1B18E9E800FD80F5 /* CoreGraphics.framework in Frameworks */,
 				81BC839B1B18E9E800FD80F5 /* UIKit.framework in Frameworks */,
 				81BC839C1B18E9E800FD80F5 /* Foundation.framework in Frameworks */,
-				81BC83781B18E68800FD80F5 /* Q4M.framework in Frameworks */,
 				81BC832C1B18E47100FD80F5 /* libc++.dylib in Frameworks */,
-				81BC83281B18E45C00FD80F5 /* Security.framework in Frameworks */,
-				81BC83261B18E45200FD80F5 /* CoreLocation.framework in Frameworks */,
-				81BC83221B18E44100FD80F5 /* MobileCoreServices.framework in Frameworks */,
-				81BC831F1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a in Frameworks */,
-				81BC831D1B18E2CC00FD80F5 /* sqlcipher.framework in Frameworks */,
 				A2D4EB1E1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */,
+				92F76B402BB5A38562E45437 /* Pods_Loyalty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81BC82AD1B18E29500FD80F5 /* Frameworks */ = {
+		85346076CAACE0A5EB4247D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2D4EB2F1BDAE12100EB9693 /* SystemConfiguration.framework in Frameworks */,
-				A2D4EB2E1BDAE11300EB9693 /* CoreData.framework in Frameworks */,
-				803C1A791B2F75F80085999E /* Foundation.framework in Frameworks */,
-				803C1A751B2F59A00085999E /* UIKit.framework in Frameworks */,
-				A2D4EB321BDAE15200EB9693 /* libsqlite3.dylib in Frameworks */,
-				803C1A781B2F75B80085999E /* IOKit.framework in Frameworks */,
-				A2D4EB181BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */,
-				A2D4EB1C1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */,
-				803C1A721B2F58E50085999E /* CoreGraphics.framework in Frameworks */,
-				803C1A711B2F58DA0085999E /* libKIF.a in Frameworks */,
-				A2D4EB201BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */,
-				A2D4EB311BDAE14B00EB9693 /* libz.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B16ABC081B273D500036878B /* Frameworks */ = {
+		C3B0C8442062477A001E0044 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5CA04E1B32126E002E4F5F /* CoreMotion.framework in Frameworks */,
-				2E5CA04F1B32126E002E4F5F /* CoreText.framework in Frameworks */,
-				2E5CA0501B32126E002E4F5F /* QuartzCore.framework in Frameworks */,
-				2E5CA0511B32126E002E4F5F /* AudioToolbox.framework in Frameworks */,
-				2E5CA0521B32126E002E4F5F /* AssetsLibrary.framework in Frameworks */,
-				2E5CA0531B32126E002E4F5F /* CoreBluetooth.framework in Frameworks */,
-				2E5CA0541B32126E002E4F5F /* CoreTelephony.framework in Frameworks */,
-				2E5CA0551B32126E002E4F5F /* libz.1.1.3.dylib in Frameworks */,
-				2E5CA0561B32126E002E4F5F /* libxml2.2.dylib in Frameworks */,
-				A2D4EB171BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */,
-				A2D4EB1B1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */,
-				2E5CA0571B32126E002E4F5F /* CFNetwork.framework in Frameworks */,
-				2E5CA0581B32126E002E4F5F /* MessageUI.framework in Frameworks */,
-				2E5CA0591B32126E002E4F5F /* CoreData.framework in Frameworks */,
-				2E5CA06B1B3217FA002E4F5F /* libstdc++.6.0.9.dylib in Frameworks */,
-				2E5CA05A1B32126E002E4F5F /* MapKit.framework in Frameworks */,
-				2E5CA05B1B32126E002E4F5F /* CoreGraphics.framework in Frameworks */,
-				2E5CA05C1B32126E002E4F5F /* UIKit.framework in Frameworks */,
-				2E5CA05D1B32126E002E4F5F /* Foundation.framework in Frameworks */,
-				2E5CA05E1B32126E002E4F5F /* Q4M.framework in Frameworks */,
-				2E5CA0601B32126E002E4F5F /* libc++.dylib in Frameworks */,
-				2E5CA0611B32126E002E4F5F /* libz.dylib in Frameworks */,
-				2E5CA0681B3216D4002E4F5F /* libstdc++.dylib in Frameworks */,
-				2E5CA0621B32126E002E4F5F /* Security.framework in Frameworks */,
-				2E5CA0631B32126E002E4F5F /* CoreLocation.framework in Frameworks */,
-				2E5CA0641B32126E002E4F5F /* SystemConfiguration.framework in Frameworks */,
-				2E5CA0651B32126E002E4F5F /* MobileCoreServices.framework in Frameworks */,
-				2E5CA0491B321221002E4F5F /* libWorklightStaticLibProjectNative.a in Frameworks */,
-				2E5CA04A1B321224002E4F5F /* sqlcipher.framework in Frameworks */,
-				A2D4EB1F1BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1E34A1C1B387043008950D9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2EC72AC31B3C5746001913CE /* libWorklightStaticLibProjectNative.a in Frameworks */,
-				2EC72AC41B3C5748001913CE /* sqlcipher.framework in Frameworks */,
-				2EC72AC61B3C5756001913CE /* CoreMotion.framework in Frameworks */,
-				2EC72AC71B3C5756001913CE /* CoreText.framework in Frameworks */,
-				2EC72AC81B3C5756001913CE /* QuartzCore.framework in Frameworks */,
-				2EC72AC91B3C5756001913CE /* AudioToolbox.framework in Frameworks */,
-				2EC72ACA1B3C5756001913CE /* AssetsLibrary.framework in Frameworks */,
-				2EC72ACB1B3C5756001913CE /* CoreBluetooth.framework in Frameworks */,
-				2EC72ACC1B3C5756001913CE /* CoreTelephony.framework in Frameworks */,
-				2EC72ACD1B3C5756001913CE /* libz.1.1.3.dylib in Frameworks */,
-				2EC72ACE1B3C5756001913CE /* libxml2.2.dylib in Frameworks */,
-				2EC72ACF1B3C5756001913CE /* CFNetwork.framework in Frameworks */,
-				2EC72AD01B3C5756001913CE /* MessageUI.framework in Frameworks */,
-				2EC72AD11B3C5756001913CE /* CoreData.framework in Frameworks */,
-				2EC72AD21B3C5756001913CE /* MapKit.framework in Frameworks */,
-				2EC72AD31B3C5756001913CE /* CoreGraphics.framework in Frameworks */,
-				2EC72AD41B3C5756001913CE /* UIKit.framework in Frameworks */,
-				2EC72AD51B3C5756001913CE /* Foundation.framework in Frameworks */,
-				A2D4EB211BDADC0F00EB9693 /* libGoogleAnalytics.a in Frameworks */,
-				2EC72AD61B3C5756001913CE /* Q4M.framework in Frameworks */,
-				2EC72AD71B3C5756001913CE /* libstdc++.dylib in Frameworks */,
-				2EC72AD81B3C5756001913CE /* libc++.dylib in Frameworks */,
-				2EC72AD91B3C5756001913CE /* libz.dylib in Frameworks */,
-				2EC72ADA1B3C5756001913CE /* Security.framework in Frameworks */,
-				2EC72ADB1B3C5756001913CE /* CoreLocation.framework in Frameworks */,
-				A2D4EB191BDADC0F00EB9693 /* libGGLAnalytics.a in Frameworks */,
-				A2D4EB1D1BDADC0F00EB9693 /* libGGLCore.a in Frameworks */,
-				2EC72ADC1B3C5756001913CE /* SystemConfiguration.framework in Frameworks */,
-				2EC72ADD1B3C5756001913CE /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,6 +675,7 @@
 				05088A271B26267500C1FD9F /* UIImageViewExtension.swift */,
 				05088A281B26267500C1FD9F /* UILabelExtension.swift */,
 				05088A291B26267500C1FD9F /* UIViewExtensions.swift */,
+				C3B0C82920616662001E0044 /* OCLoggerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1270,6 +935,7 @@
 				2E4098CD1B5039B2005AD7FD /* EditProfileViewController.swift */,
 				05E8BE171B540FCC0048BE46 /* CustomTabBarController.swift */,
 				2E2BD7671B56FA1100D865F8 /* AboutPointsViewController.swift */,
+				C33240FF206A193B002DC36A /* Geotification.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1277,20 +943,10 @@
 		34E65BDF1B28BBAC00B1C493 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				2E0A8B871B44774200E13011 /* BeaconManager.swift */,
 				34E65BE01B28BC1800B1C493 /* UserDataManager.swift */,
 				34E65BE21B28BC4400B1C493 /* ManagerHelper.swift */,
 			);
 			path = DataSources;
-			sourceTree = "<group>";
-		};
-		7E8E4BD41B614D0C000FF032 /* MQAExceptionHandler */ = {
-			isa = PBXGroup;
-			children = (
-				7E8E4BD51B614D0C000FF032 /* MQAExceptionHandler.h */,
-				7E8E4BD61B614D0C000FF032 /* MQAExceptionHandler.m */,
-			);
-			path = MQAExceptionHandler;
 			sourceTree = "<group>";
 		};
 		803C1A5C1B2F58650085999E /* Products */ = {
@@ -1309,7 +965,6 @@
 		811F135C1B1DFABB00C45D84 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				7E8E4BD41B614D0C000FF032 /* MQAExceptionHandler */,
 				B1F21C191B446E670029ED80 /* PassbookUtils.swift */,
 				B1F21C0E1B446DE40029ED80 /* Loyalty.pass */,
 				05BF550E1B30782A00BC827C /* Utils.swift */,
@@ -1325,13 +980,14 @@
 			isa = PBXGroup;
 			children = (
 				8125386B1B1E52340008C299 /* apns-certificate-production.p12 */,
-				81BC82C01B18E2CC00FD80F5 /* WorklightAPI */,
 				81BC829D1B18E29500FD80F5 /* Loyalty */,
 				81BC82B31B18E29500FD80F5 /* LoyaltyTests */,
 				B16ABC1E1B273D510036878B /* Loyalty WatchKit App */,
 				B16ABC0C1B273D500036878B /* Loyalty WatchKit Extension */,
 				B1E34A201B387043008950D9 /* Loyality WatchKit Extension Tests */,
 				81BC829C1B18E29500FD80F5 /* Products */,
+				8CC30E367EA906A7F6C3CCFA /* Pods */,
+				B9E9AFD3A2B4765A5DEC1C6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1339,10 +995,8 @@
 			isa = PBXGroup;
 			children = (
 				81BC829B1B18E29500FD80F5 /* Loyalty.app */,
-				81BC82B01B18E29500FD80F5 /* LoyaltyTests.xctest */,
-				B16ABC0B1B273D500036878B /* Loyalty WatchKit Extension.appex */,
-				B16ABC1A1B273D510036878B /* Loyalty WatchKit App.app */,
-				B1E34A1F1B387043008950D9 /* Loyality WatchKit Extension Tests.xctest */,
+				C3B0C83B2062477A001E0044 /* Loyalty WatchKit App.app */,
+				C3B0C8472062477A001E0044 /* Loyalty WatchKit App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1350,6 +1004,8 @@
 		81BC829D1B18E29500FD80F5 /* Loyalty */ = {
 			isa = PBXGroup;
 			children = (
+				0B4788631DC12C730089E1BC /* Loyalty.entitlements */,
+				0BAA48B61DB907A300A56FDD /* mfpclient.plist */,
 				81BF53D31B30B59200B94AAE /* Resources */,
 				81BF53D01B30B56300B94AAE /* Configuration */,
 				34958BE41B2A1F3600E530FF /* Models */,
@@ -1394,132 +1050,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		81BC82C01B18E2CC00FD80F5 /* WorklightAPI */ = {
-			isa = PBXGroup;
-			children = (
-				81BC82C11B18E2CC00FD80F5 /* Frameworks */,
-				81BC82C31B18E2CC00FD80F5 /* include */,
-				81BC83191B18E2CC00FD80F5 /* iOS-Cloudant-Data-Layer-SDK-Podfile */,
-				81BC831A1B18E2CC00FD80F5 /* libWorklightStaticLibProjectNative.a */,
-				81BC831B1B18E2CC00FD80F5 /* Localizations.bundle */,
-				81BC831C1B18E2CC00FD80F5 /* resources */,
-			);
-			path = WorklightAPI;
-			sourceTree = "<group>";
-		};
-		81BC82C11B18E2CC00FD80F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				81BC82C21B18E2CC00FD80F5 /* sqlcipher.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		81BC82C31B18E2CC00FD80F5 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				81BC82C41B18E2CC00FD80F5 /* AbstractAcquisitionError.h */,
-				81BC82C51B18E2CC00FD80F5 /* AbstractGeoAreaTrigger.h */,
-				81BC82C61B18E2CC00FD80F5 /* AbstractGeoDwellTrigger.h */,
-				81BC82C71B18E2CC00FD80F5 /* AbstractPosition.h */,
-				81BC82C81B18E2CC00FD80F5 /* AbstractTrigger.h */,
-				81BC82C91B18E2CC00FD80F5 /* AbstractWifiAreaTrigger.h */,
-				81BC82CA1B18E2CC00FD80F5 /* AbstractWifiDwellTrigger.h */,
-				81BC82CB1B18E2CC00FD80F5 /* AbstractWifiFilterTrigger.h */,
-				81BC82CC1B18E2CC00FD80F5 /* AcquisitionCallback.h */,
-				81BC82CD1B18E2CC00FD80F5 /* AcquisitionFailureCallback.h */,
-				81BC82CE1B18E2CC00FD80F5 /* BaseChallengeHandler.h */,
-				81BC82CF1B18E2CC00FD80F5 /* BaseDeviceAuthChallengeHandler.h */,
-				81BC82D01B18E2CC00FD80F5 /* BaseProvisioningChallengeHandler.h */,
-				81BC82D11B18E2CC00FD80F5 /* ChallengeHandler.h */,
-				81BC82D21B18E2CC00FD80F5 /* JSONStore.h */,
-				81BC82D31B18E2CC00FD80F5 /* JSONStoreAddOptions.h */,
-				81BC82D41B18E2CC00FD80F5 /* JSONStoreCollection.h */,
-				81BC82D51B18E2CC00FD80F5 /* JSONStoreOpenOptions.h */,
-				81BC82D61B18E2CC00FD80F5 /* JSONStoreQueryOptions.h */,
-				81BC82D71B18E2CC00FD80F5 /* JSONStoreQueryPart.h */,
-				81BC82D81B18E2CC00FD80F5 /* OCLogger.h */,
-				81BC82D91B18E2CC00FD80F5 /* WLAcquisitionFailureCallbacksConfiguration.h */,
-				81BC82DA1B18E2CC00FD80F5 /* WLAcquisitionPolicy.h */,
-				81BC82DB1B18E2CC00FD80F5 /* WLAnalytics.h */,
-				81BC82DC1B18E2CC00FD80F5 /* WLArea.h */,
-				81BC82DD1B18E2CC00FD80F5 /* WLAuthorizationManager.h */,
-				81BC82DE1B18E2CC00FD80F5 /* WLCallbackFactory.h */,
-				81BC82DF1B18E2CC00FD80F5 /* WLChallengeHandler.h */,
-				81BC82E01B18E2CC00FD80F5 /* WLCircle.h */,
-				81BC82E11B18E2CC00FD80F5 /* WLClient.h */,
-				81BC82E21B18E2CC00FD80F5 /* WLConfidenceLevel.h */,
-				81BC82E31B18E2CC00FD80F5 /* WLCookieExtractor.h */,
-				81BC82E41B18E2CC00FD80F5 /* WLCoordinate.h */,
-				81BC82E51B18E2CC00FD80F5 /* WLDelegate.h */,
-				81BC82E61B18E2CC00FD80F5 /* WLDevice.h */,
-				81BC82E71B18E2CC00FD80F5 /* WLDeviceAuthManager.h */,
-				81BC82E81B18E2CC00FD80F5 /* WLDeviceContext.h */,
-				81BC82E91B18E2CC00FD80F5 /* WLEventSourceListener.h */,
-				81BC82EA1B18E2CC00FD80F5 /* WLEventTransmissionPolicy.h */,
-				81BC82EB1B18E2CC00FD80F5 /* WLFailResponse.h */,
-				81BC82EC1B18E2CC00FD80F5 /* WLGeoAcquisitionPolicy.h */,
-				81BC82ED1B18E2CC00FD80F5 /* WLGeoCallback.h */,
-				81BC82EE1B18E2CC00FD80F5 /* WLGeoDwellInsideTrigger.h */,
-				81BC82EF1B18E2CC00FD80F5 /* WLGeoDwellOutsideTrigger.h */,
-				81BC82F01B18E2CC00FD80F5 /* WLGeoEnterTrigger.h */,
-				81BC82F11B18E2CC00FD80F5 /* WLGeoError.h */,
-				81BC82F21B18E2CC00FD80F5 /* WLGeoExitTrigger.h */,
-				81BC82F31B18E2CC00FD80F5 /* WLGeoFailureCallback.h */,
-				81BC82F41B18E2CC00FD80F5 /* WLGeoPosition.h */,
-				81BC82F51B18E2CC00FD80F5 /* WLGeoPositionChangeTrigger.h */,
-				81BC82F61B18E2CC00FD80F5 /* WLGeoTrigger.h */,
-				81BC82F71B18E2CC00FD80F5 /* WLGeoUtils.h */,
-				81BC82F81B18E2CC00FD80F5 /* WLLocationServicesConfiguration.h */,
-				81BC82F91B18E2CC00FD80F5 /* WLOnReadyToSubscribeListener.h */,
-				81BC82FA1B18E2CC00FD80F5 /* WLPolygon.h */,
-				81BC82FB1B18E2CC00FD80F5 /* WLProcedureInvocationData.h */,
-				81BC82FC1B18E2CC00FD80F5 /* WLProcedureInvocationResult.h */,
-				81BC82FD1B18E2CC00FD80F5 /* WLPush.h */,
-				81BC82FE1B18E2CC00FD80F5 /* WLPushOptions.h */,
-				81BC82FF1B18E2CC00FD80F5 /* WLResourceRequest.h */,
-				81BC83001B18E2CC00FD80F5 /* WLResponse.h */,
-				81BC83011B18E2CC00FD80F5 /* WLResponseListener.h */,
-				81BC83021B18E2CC00FD80F5 /* WLSecurityUtils.h */,
-				81BC83031B18E2CC00FD80F5 /* WLSimpleDataSharing.h */,
-				81BC83041B18E2CC00FD80F5 /* WLSwiftBridgingHeader.h */,
-				81BC83051B18E2CC00FD80F5 /* WLTriggerCallback.h */,
-				81BC83061B18E2CC00FD80F5 /* WLTriggersConfiguration.h */,
-				81BC83071B18E2CC00FD80F5 /* WLTrusteer.h */,
-				81BC83081B18E2CC00FD80F5 /* WLUserCertAuth.h */,
-				81BC83091B18E2CC00FD80F5 /* WLWifiAccessPoint.h */,
-				81BC830A1B18E2CC00FD80F5 /* WLWifiAccessPointFilter.h */,
-				81BC830B1B18E2CC00FD80F5 /* WLWifiAcquisitionCallback.h */,
-				81BC830C1B18E2CC00FD80F5 /* WLWifiAcquisitionPolicy.h */,
-				81BC830D1B18E2CC00FD80F5 /* WLWifiConnectedCallback.h */,
-				81BC830E1B18E2CC00FD80F5 /* WLWifiConnectTrigger.h */,
-				81BC830F1B18E2CC00FD80F5 /* WLWifiDisconnectTrigger.h */,
-				81BC83101B18E2CC00FD80F5 /* WLWifiDwellInsideTrigger.h */,
-				81BC83111B18E2CC00FD80F5 /* WLWifiDwellOutsideTrigger.h */,
-				81BC83121B18E2CC00FD80F5 /* WLWifiEnterTrigger.h */,
-				81BC83131B18E2CC00FD80F5 /* WLWifiError.h */,
-				81BC83141B18E2CC00FD80F5 /* WLWifiExitTrigger.h */,
-				81BC83151B18E2CC00FD80F5 /* WLWifiFailureCallback.h */,
-				81BC83161B18E2CC00FD80F5 /* WLWifiLocation.h */,
-				81BC83171B18E2CC00FD80F5 /* WLWifiTrigger.h */,
-				81BC83181B18E2CC00FD80F5 /* WLWifiVisibleAccessPointsChangeTrigger.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		81BC831C1B18E2CC00FD80F5 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = resources;
-			sourceTree = "<group>";
-		};
 		81BC83361B18E58F00FD80F5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				346D78E41B5021A10071BFA9 /* Localizable.strings */,
 				81BC83371B18E58F00FD80F5 /* Info.plist */,
 				81BC837B1B18E79D00FD80F5 /* Loyalty-BridgingHeader.h */,
+				C3324108206A3363002DC36A /* TestLocations.gpx */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -1577,7 +1114,6 @@
 				81BC83801B18E95600FD80F5 /* CoreGraphics.framework */,
 				81BC837E1B18E95000FD80F5 /* UIKit.framework */,
 				81BC837C1B18E94A00FD80F5 /* Foundation.framework */,
-				81BC83771B18E68800FD80F5 /* Q4M.framework */,
 				81BC832D1B18E47900FD80F5 /* libstdc++.dylib */,
 				81BC832B1B18E47100FD80F5 /* libc++.dylib */,
 				81BC83291B18E46400FD80F5 /* libz.dylib */,
@@ -1593,8 +1129,6 @@
 			isa = PBXGroup;
 			children = (
 				A2D4E9A91BDAD14D00EB9693 /* GoogleService-Info.plist */,
-				81BF53D11B30B56300B94AAE /* worklight.plist */,
-				34715B4B1B95086600F4E9B2 /* MQA_key.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -1733,6 +1267,15 @@
 				81DE28961B1F8682004A2DE8 /* silence.caf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8CC30E367EA906A7F6C3CCFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4DE27B71222A8107FC245FC /* Pods-Loyalty.debug.xcconfig */,
+				D6639FD4B232A13931B2B848 /* Pods-Loyalty.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A2D4EAF71BDADC0F00EB9693 /* GoogleAnalyticsServices */ = {
@@ -1920,6 +1463,15 @@
 			path = Loyalty.pass;
 			sourceTree = "<group>";
 		};
+		B9E9AFD3A2B4765A5DEC1C6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97120AA95E668FBB1C5FD9D9 /* Pods_Loyalty.framework */,
+				C3B0C81820616563001E0044 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BDBC7D6D1B3A432200A2F0CD /* libPhoneNumber */ = {
 			isa = PBXGroup;
 			children = (
@@ -1962,91 +1514,58 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81BC82BA1B18E29500FD80F5 /* Build configuration list for PBXNativeTarget "Loyalty" */;
 			buildPhases = (
+				3B2B420852F9DB33C1ED10F5 /* [CP] Check Pods Manifest.lock */,
 				81BC82971B18E29500FD80F5 /* Sources */,
 				81BC82981B18E29500FD80F5 /* Frameworks */,
 				81BC82991B18E29500FD80F5 /* Resources */,
 				B16ABC311B273D510036878B /* Embed App Extensions */,
+				0C4D29DC7FDD275A584D9162 /* [CP] Embed Pods Frameworks */,
+				5EA843039D7BF3FC96C47904 /* [CP] Copy Pods Resources */,
+				C3B0C8592062477A001E0044 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B16ABC271B273D510036878B /* PBXTargetDependency */,
 			);
 			name = Loyalty;
 			productName = Loyalty;
 			productReference = 81BC829B1B18E29500FD80F5 /* Loyalty.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81BC82AF1B18E29500FD80F5 /* LoyaltyTests */ = {
+		C3B0C83A2062477A001E0044 /* Loyalty WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81BC82BD1B18E29500FD80F5 /* Build configuration list for PBXNativeTarget "LoyaltyTests" */;
+			buildConfigurationList = C3B0C8682062477B001E0044 /* Build configuration list for PBXNativeTarget "Loyalty WatchKit App" */;
 			buildPhases = (
-				81BC82AC1B18E29500FD80F5 /* Sources */,
-				81BC82AD1B18E29500FD80F5 /* Frameworks */,
-				81BC82AE1B18E29500FD80F5 /* Resources */,
+				C3B0C8392062477A001E0044 /* Resources */,
+				C3B0C8672062477B001E0044 /* Embed App Extensions */,
+				85346076CAACE0A5EB4247D7 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				803C1A741B2F59180085999E /* PBXTargetDependency */,
-				81BC82B21B18E29500FD80F5 /* PBXTargetDependency */,
-			);
-			name = LoyaltyTests;
-			productName = LoyaltyTests;
-			productReference = 81BC82B01B18E29500FD80F5 /* LoyaltyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B16ABC0A1B273D500036878B /* Loyalty WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B16ABC301B273D510036878B /* Build configuration list for PBXNativeTarget "Loyalty WatchKit Extension" */;
-			buildPhases = (
-				B16ABC071B273D500036878B /* Sources */,
-				B16ABC081B273D500036878B /* Frameworks */,
-				B16ABC091B273D500036878B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B16ABC1D1B273D510036878B /* PBXTargetDependency */,
-			);
-			name = "Loyalty WatchKit Extension";
-			productName = "Loyalty WatchKit Extension";
-			productReference = B16ABC0B1B273D500036878B /* Loyalty WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
-		};
-		B16ABC191B273D510036878B /* Loyalty WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B16ABC2F1B273D510036878B /* Build configuration list for PBXNativeTarget "Loyalty WatchKit App" */;
-			buildPhases = (
-				B16ABC181B273D510036878B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
+				C3B0C84A2062477A001E0044 /* PBXTargetDependency */,
 			);
 			name = "Loyalty WatchKit App";
 			productName = "Loyalty WatchKit App";
-			productReference = B16ABC1A1B273D510036878B /* Loyalty WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
+			productReference = C3B0C83B2062477A001E0044 /* Loyalty WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
 		};
-		B1E34A1E1B387043008950D9 /* Loyality WatchKit Extension Tests */ = {
+		C3B0C8462062477A001E0044 /* Loyalty WatchKit App Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1E34A2E1B387043008950D9 /* Build configuration list for PBXNativeTarget "Loyality WatchKit Extension Tests" */;
+			buildConfigurationList = C3B0C8662062477B001E0044 /* Build configuration list for PBXNativeTarget "Loyalty WatchKit App Extension" */;
 			buildPhases = (
-				B1E34A1B1B387043008950D9 /* Sources */,
-				B1E34A1C1B387043008950D9 /* Frameworks */,
-				B1E34A1D1B387043008950D9 /* Resources */,
+				C3B0C8432062477A001E0044 /* Sources */,
+				C3B0C8442062477A001E0044 /* Frameworks */,
+				C3B0C8452062477A001E0044 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2EC72AE31B3C57D0001913CE /* PBXTargetDependency */,
-				2EC72AE51B3C57EF001913CE /* PBXTargetDependency */,
 			);
-			name = "Loyality WatchKit Extension Tests";
-			productName = "Loyality WatchKit Extension Tests";
-			productReference = B1E34A1F1B387043008950D9 /* Loyality WatchKit Extension Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "Loyalty WatchKit App Extension";
+			productName = "Loyalty WatchKit App Extension";
+			productReference = C3B0C8472062477A001E0044 /* Loyalty WatchKit App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -2055,29 +1574,31 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = ibm;
 				TargetAttributes = {
 					81BC829A1B18E29500FD80F5 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = PP64RT7P8Z;
+						DevelopmentTeam = TN6YQNGLXP;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
-					81BC82AF1B18E29500FD80F5 = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = PP64RT7P8Z;
-						TestTargetID = 81BC829A1B18E29500FD80F5;
+					C3B0C83A2062477A001E0044 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
 					};
-					B16ABC0A1B273D500036878B = {
-						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = PP64RT7P8Z;
-					};
-					B16ABC191B273D510036878B = {
-						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = PP64RT7P8Z;
-					};
-					B1E34A1E1B387043008950D9 = {
-						CreatedOnToolsVersion = 6.3.1;
+					C3B0C8462062477A001E0044 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -2102,10 +1623,8 @@
 			projectRoot = "";
 			targets = (
 				81BC829A1B18E29500FD80F5 /* Loyalty */,
-				B16ABC0A1B273D500036878B /* Loyalty WatchKit Extension */,
-				B16ABC191B273D510036878B /* Loyalty WatchKit App */,
-				81BC82AF1B18E29500FD80F5 /* LoyaltyTests */,
-				B1E34A1E1B387043008950D9 /* Loyality WatchKit Extension Tests */,
+				C3B0C83A2062477A001E0044 /* Loyalty WatchKit App */,
+				C3B0C8462062477A001E0044 /* Loyalty WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -2162,7 +1681,6 @@
 			files = (
 				B1F21C181B446E260029ED80 /* pass.json in Resources */,
 				81BF53ED1B30B59200B94AAE /* OFL.txt in Resources */,
-				81BF53D21B30B56300B94AAE /* worklight.plist in Resources */,
 				3430258E1B544BA900F3BF03 /* MILFakeMessageAlertView.xib in Resources */,
 				81BC82A61B18E29500FD80F5 /* Main.storyboard in Resources */,
 				1BEFE6191B41CAD1001F6469 /* SearchSortTableViewCell.xib in Resources */,
@@ -2177,7 +1695,6 @@
 				346D79031B5022410071BFA9 /* Settings.storyboard in Resources */,
 				81BF53E51B30B59200B94AAE /* Heuristica-Regular.otf in Resources */,
 				34E704DD1B62CB52004ADF65 /* NoStationsView.xib in Resources */,
-				81BC831E1B18E2CC00FD80F5 /* iOS-Cloudant-Data-Layer-SDK-Podfile in Resources */,
 				81DE28A51B1F8682004A2DE8 /* expireMsgTemplate.html in Resources */,
 				057371951B3B06620094DBE7 /* Montserrat-Light.otf in Resources */,
 				057371981B3B06620094DBE7 /* Montserrat-UltraLight.otf in Resources */,
@@ -2188,13 +1705,13 @@
 				81DE28A61B1F8682004A2DE8 /* richnotification.mom in Resources */,
 				1B03F1841B4C144E000D511D /* SubSettingsView.xib in Resources */,
 				A2D4E9AA1BDAD14D00EB9693 /* GoogleService-Info.plist in Resources */,
+				0BAA48B71DB907A300A56FDD /* mfpclient.plist in Resources */,
 				81DE28A71B1F8682004A2DE8 /* richnotificationV1.15.mom in Resources */,
 				346D78E21B5021A10071BFA9 /* Localizable.strings in Resources */,
 				BDBC7D9B1B3A433100A2F0CD /* NBPhoneNumberMetadata.plist in Resources */,
 				81BF53E91B30B59200B94AAE /* Montserrat-Bold.ttf in Resources */,
 				1BEFE60C1B3DE8CB001F6469 /* SearchFilterTableViewCell.xib in Resources */,
 				B1D775C51B4C32470078A65B /* loyalty.pkpass in Resources */,
-				34715B4C1B95086600F4E9B2 /* MQA_key.plist in Resources */,
 				05CD7E4B1B56EC3400D25B38 /* LoadImages.xcassets in Resources */,
 				81BF53E31B30B59200B94AAE /* Heuristica-Italic.otf in Resources */,
 				346D78E71B5021C70071BFA9 /* Deals.storyboard in Resources */,
@@ -2202,7 +1719,6 @@
 				81DE289F1B1F8682004A2DE8 /* CompanyInboxVC.xib in Resources */,
 				8125386E1B1E52340008C299 /* apns-certificate-production.p12 in Resources */,
 				346D78F51B5021F50071BFA9 /* Stations.storyboard in Resources */,
-				81BC83201B18E2CC00FD80F5 /* Localizations.bundle in Resources */,
 				05CD7E481B56EBEC00D25B38 /* MILLoadView.xib in Resources */,
 				81BC82AB1B18E29500FD80F5 /* LaunchScreen.xib in Resources */,
 				81DE28A81B1F8682004A2DE8 /* silence.caf in Resources */,
@@ -2213,48 +1729,88 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81BC82AE1B18E29500FD80F5 /* Resources */ = {
+		C3B0C8392062477A001E0044 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B16ABC091B273D500036878B /* Resources */ = {
+		C3B0C8452062477A001E0044 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5CA0671B32146C002E4F5F /* worklight.plist in Resources */,
-				81BF53EE1B30B59200B94AAE /* OFL.txt in Resources */,
-				81BF53EC1B30B59200B94AAE /* Montserrat-Regular.ttf in Resources */,
-				81BF53E81B30B59200B94AAE /* SIL Open Font License.txt in Resources */,
-				057371971B3B06620094DBE7 /* Montserrat-UltraLight.otf in Resources */,
-				81BF53E41B30B59200B94AAE /* Heuristica-Italic.otf in Resources */,
-				B16ABC171B273D500036878B /* Images.xcassets in Resources */,
-				B16ABC1B1B273D510036878B /* Loyalty WatchKit App.app in Resources */,
-				057371991B3B06760094DBE7 /* Montserrat-Bold.ttf in Resources */,
-				057371941B3B06620094DBE7 /* Montserrat-Light.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B16ABC181B273D510036878B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B16ABC231B273D510036878B /* Interface.storyboard in Resources */,
-				B16ABC251B273D510036878B /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1E34A1D1B387043008950D9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2EC72AEF1B3C5E3A001913CE /* worklight.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C4D29DC7FDD275A584D9162 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/BMSPush/BMSPush.framework",
+				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Frameworks/IBMMobileFirstPlatformFoundation.framework",
+				"${PODS_ROOT}/IBMMobileFirstPlatformFoundationOpenSSLUtils/IBMMobileFirstPlatformFoundation/Frameworks/IBMMobileFirstPlatformFoundationOpenSSLUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/OpenWhisk/OpenWhisk.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSPush.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBMMobileFirstPlatformFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBMMobileFirstPlatformFoundationOpenSSLUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenWhisk.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B2B420852F9DB33C1ED10F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Loyalty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EA843039D7BF3FC96C47904 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty-resources.sh",
+				"${PODS_ROOT}/IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation/Resources/Localizations.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Localizations.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Loyalty/Pods-Loyalty-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81BC82971B18E29500FD80F5 /* Sources */ = {
@@ -2270,6 +1826,7 @@
 				1BEFE6041B3DD54D001F6469 /* MILFlatSegmentedControlButton.swift in Sources */,
 				3430258F1B544BA900F3BF03 /* MILFakeMessageAlertViewManager.swift in Sources */,
 				1B140A031B3DD3A000B9802F /* MILFlatSegmentedControl.swift in Sources */,
+				C3B0C82A20616662001E0044 /* OCLoggerExtension.swift in Sources */,
 				2E0A15F01B4C4FD500690AFE /* PageContentViewController.swift in Sources */,
 				05A87BBC1B546BCA009D3F37 /* RAMTransitionItemAnimation.swift in Sources */,
 				05088A301B26267500C1FD9F /* StringExtension.swift in Sources */,
@@ -2288,7 +1845,6 @@
 				05A87BBA1B546BCA009D3F37 /* RAMFumeAnimation.swift in Sources */,
 				3430258B1B544BA900F3BF03 /* DesignableButton.swift in Sources */,
 				34958BFB1B2A1F3600E530FF /* Contact.swift in Sources */,
-				2E0A8B881B44774200E13011 /* BeaconManager.swift in Sources */,
 				2E4098CE1B5039B2005AD7FD /* EditProfileViewController.swift in Sources */,
 				05F4C8E41B28833D00B81D66 /* RBStoryboardSegue.m in Sources */,
 				05088A2B1B26267500C1FD9F /* DoubleExtension.swift in Sources */,
@@ -2317,6 +1873,7 @@
 				32B52DDD1B33741E00C155D2 /* AmenitiesCollectionViewCell.swift in Sources */,
 				1BEFE61B1B41CD67001F6469 /* SearchSortTableViewCell.swift in Sources */,
 				2E0A15EC1B4C38C500690AFE /* OnboardingViewController.swift in Sources */,
+				C3324100206A193B002DC36A /* Geotification.swift in Sources */,
 				BDBC7D981B3A433100A2F0CD /* NBPhoneMetaDataGenerator.m in Sources */,
 				05F4C8E21B28833D00B81D66 /* RBStoryboardPopoverSegue.m in Sources */,
 				05A87BBE1B546BCA009D3F37 /* RAMItemAnimationProtocol.swift in Sources */,
@@ -2335,7 +1892,6 @@
 				05A87BBD1B546BCA009D3F37 /* RAMAnimatedTabBarController.swift in Sources */,
 				05A87BB81B546BCA009D3F37 /* RAMBounceAnimation.swift in Sources */,
 				05F4C8E31B28833D00B81D66 /* RBStoryboardPushSegue.m in Sources */,
-				7E8E4BD71B614D0C000FF032 /* MQAExceptionHandler.m in Sources */,
 				340127D91B962EE000A7B126 /* NSDateExtension.swift in Sources */,
 				81DE28981B1F8682004A2DE8 /* CompanyCustomInbox.m in Sources */,
 				053CC3D91B29FFB10098288F /* DealsViewController.swift in Sources */,
@@ -2386,112 +1942,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81BC82AC1B18E29500FD80F5 /* Sources */ = {
+		C3B0C8432062477A001E0044 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8021C3681B39051E004037EF /* TestDealsView.swift in Sources */,
-				8021C36A1B39051E004037EF /* TestStationsView.swift in Sources */,
-				7E8E4BD91B614D0C000FF032 /* MQAExceptionHandler.m in Sources */,
-				0573719B1B3B377F0094DBE7 /* DealCollectionViewCell.swift in Sources */,
-				8053CBB91B2F85C3007BFE64 /* KIFSwiftExtension.swift in Sources */,
-				8052FCD21B45EAC300DE864D /* TestxLogin.swift in Sources */,
-				8021C3691B39051E004037EF /* TestMyRewards.swift in Sources */,
-				2E2BD7691B56FA1100D865F8 /* AboutPointsViewController.swift in Sources */,
-				340127DB1B962FEF00A7B126 /* NSDateExtension.swift in Sources */,
-				8053CBC11B2F8631007BFE64 /* TestSwitchingViews.swift in Sources */,
-				8021C3671B39051E004037EF /* TestConstants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B16ABC071B273D500036878B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				058807CA1B30A1A400332DF9 /* Contact.swift in Sources */,
-				2EED6E721B3A0AAC00AB52F1 /* GlanceInterfaceController.swift in Sources */,
-				058807CD1B30A1A900332DF9 /* Transaction.swift in Sources */,
-				058807C91B30A1A400332DF9 /* Profile.swift in Sources */,
-				058807CC1B30A1A400332DF9 /* Vehicle.swift in Sources */,
-				2E3E31241B3B0D7D0005D9FF /* SharedConstants.swift in Sources */,
-				2EED6E6E1B3A0AAC00AB52F1 /* DealDetailInterfaceController.swift in Sources */,
-				058807CB1B30A1A400332DF9 /* Rewards.swift in Sources */,
-				2EED6E701B3A0AAC00AB52F1 /* DealListInterfaceController.swift in Sources */,
-				058807CE1B30A1A900332DF9 /* TransactionItem.swift in Sources */,
-				2EC0083D1B3DE7BD00BB3523 /* GoalNotificationController.swift in Sources */,
-				7E8E4BD81B614D0C000FF032 /* MQAExceptionHandler.m in Sources */,
-				340127DA1B962EE000A7B126 /* NSDateExtension.swift in Sources */,
-				2EED14A51B419398001E123A /* WatchDataManager.swift in Sources */,
-				2E5CA04C1B321237002E4F5F /* ManagerHelper.swift in Sources */,
-				058807C51B30A19B00332DF9 /* Deal.swift in Sources */,
-				2EED6E761B3A0AAC00AB52F1 /* DealNotificationController.swift in Sources */,
-				2EED6E741B3A0AAC00AB52F1 /* RewardsInterfaceController.swift in Sources */,
-				2E5CA04B1B321233002E4F5F /* UserDataManager.swift in Sources */,
-				2EED6E601B39F9FE00AB52F1 /* Context.swift in Sources */,
-				B16ABCAF1B2F2A860036878B /* DealRow.swift in Sources */,
-				058807C61B30A19F00332DF9 /* GasStation.swift in Sources */,
-				058807C81B30A19F00332DF9 /* Hours.swift in Sources */,
-				0554364D1B41C89100D1C5C7 /* User.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1E34A1B1B387043008950D9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E8E4BDA1B614D0C000FF032 /* MQAExceptionHandler.m in Sources */,
-				2EED6E611B39F9FE00AB52F1 /* Context.swift in Sources */,
-				B1E34A541B39BFFB008950D9 /* Contact.swift in Sources */,
-				B1E34A5A1B39C017008950D9 /* TransactionItem.swift in Sources */,
-				B1E34A571B39C009008950D9 /* GasStation.swift in Sources */,
-				2EED14A61B419398001E123A /* WatchDataManager.swift in Sources */,
-				2EC72AB81B3C4CF4001913CE /* LoyaltyWatchDataTests.swift in Sources */,
-				2EC72AC01B3C55B7001913CE /* ManagerHelper.swift in Sources */,
-				B1E34A561B39C000008950D9 /* Vehicle.swift in Sources */,
-				B1E34A591B39C012008950D9 /* Transaction.swift in Sources */,
-				B1E34A581B39C00C008950D9 /* Hours.swift in Sources */,
-				2EC72ABF1B3C4E18001913CE /* UserDataManager.swift in Sources */,
-				B1E34A4F1B39BF76008950D9 /* Deal.swift in Sources */,
-				B1E34A241B387043008950D9 /* LoyaltyLocalWatchDataTests.swift in Sources */,
-				0554364B1B41C88F00D1C5C7 /* User.swift in Sources */,
-				B1E34A531B39BFE5008950D9 /* Profile.swift in Sources */,
-				B1E34A311B3870F8008950D9 /* DealRow.swift in Sources */,
-				B1E34A551B39BFFE008950D9 /* Rewards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2EC72AE31B3C57D0001913CE /* PBXTargetDependency */ = {
+		C3B0C84A2062477A001E0044 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B16ABC191B273D510036878B /* Loyalty WatchKit App */;
-			targetProxy = 2EC72AE21B3C57D0001913CE /* PBXContainerItemProxy */;
-		};
-		2EC72AE51B3C57EF001913CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 81BC829A1B18E29500FD80F5 /* Loyalty */;
-			targetProxy = 2EC72AE41B3C57EF001913CE /* PBXContainerItemProxy */;
-		};
-		803C1A741B2F59180085999E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KIF;
-			targetProxy = 803C1A731B2F59180085999E /* PBXContainerItemProxy */;
-		};
-		81BC82B21B18E29500FD80F5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 81BC829A1B18E29500FD80F5 /* Loyalty */;
-			targetProxy = 81BC82B11B18E29500FD80F5 /* PBXContainerItemProxy */;
-		};
-		B16ABC1D1B273D510036878B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B16ABC191B273D510036878B /* Loyalty WatchKit App */;
-			targetProxy = B16ABC1C1B273D510036878B /* PBXContainerItemProxy */;
-		};
-		B16ABC271B273D510036878B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B16ABC0A1B273D500036878B /* Loyalty WatchKit Extension */;
-			targetProxy = B16ABC261B273D510036878B /* PBXContainerItemProxy */;
+			target = C3B0C8462062477A001E0044 /* Loyalty WatchKit App Extension */;
+			targetProxy = C3B0C8492062477A001E0044 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2624,6 +2088,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2633,10 +2098,13 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2658,12 +2126,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "cba7a885-3487-4872-afc2-aa9eab6b2b84";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -2671,6 +2140,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2680,10 +2150,13 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2698,336 +2171,193 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "cba7a885-3487-4872-afc2-aa9eab6b2b84";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "109c42db-81d5-4466-9f46-dd920b80716f";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		81BC82BB1B18E29500FD80F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DE27B71222A8107FC245FC /* Pods-Loyalty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Loyalty/Loyalty.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				DEVELOPMENT_TEAM = TN6YQNGLXP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI/Frameworks",
 					"$(PROJECT_DIR)/Loyalty/Frameworks/XtifyLib/XtifyPush.embeddedframework",
 					"$(PROJECT_DIR)/Loyalty/Frameworks",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = Loyalty/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI",
 					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
 					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
 				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mil.readyapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dfe35fa9-ad72-43d3-a036-d5568fd175b4";
+				PROVISIONING_PROFILE_SPECIFIER = "ReadyApps Push Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Loyalty/SupportingFiles/Loyalty-BridgingHeader.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/WorklightAPI/include";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
 		81BC82BC1B18E29500FD80F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6639FD4B232A13931B2B848 /* Pods-Loyalty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Loyalty/Loyalty.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				DEVELOPMENT_TEAM = TN6YQNGLXP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI/Frameworks",
 					"$(PROJECT_DIR)/Loyalty/Frameworks/XtifyLib/XtifyPush.embeddedframework",
 					"$(PROJECT_DIR)/Loyalty/Frameworks",
 				);
 				INFOPLIST_FILE = Loyalty/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI",
 					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
 					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
 				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mil.readyapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dfe35fa9-ad72-43d3-a036-d5568fd175b4";
+				PROVISIONING_PROFILE_SPECIFIER = "ReadyApps Push Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Loyalty/SupportingFiles/Loyalty-BridgingHeader.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(SRCROOT)/Loyalty/SupportingFiles/Loyalty-BridgingHeader.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/WorklightAPI/include";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Release;
 		};
-		81BC82BE1B18E29500FD80F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LoyaltyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/LoyaltyTests/FeatureTests-Bridging-Header.h";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loyalty.app/Loyalty";
-			};
-			name = Debug;
-		};
-		81BC82BF1B18E29500FD80F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LoyaltyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/LoyaltyTests/FeatureTests-Bridging-Header.h";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loyalty.app/Loyalty";
-			};
-			name = Release;
-		};
-		B16ABC291B273D510036878B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI/Frameworks",
-					"$(PROJECT_DIR)/Loyalty/Frameworks",
-					"$(PROJECT_DIR)/Loyalty/Frameworks/XtifyLib/XtifyPush.embeddedframework",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Loyalty WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
-				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Loyalty/SupportingFiles/Loyalty-BridgingHeader.h";
-			};
-			name = Debug;
-		};
-		B16ABC2B1B273D510036878B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI/Frameworks",
-					"$(PROJECT_DIR)/Loyalty/Frameworks",
-					"$(PROJECT_DIR)/Loyalty/Frameworks/XtifyLib/XtifyPush.embeddedframework",
-				);
-				INFOPLIST_FILE = "Loyalty WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
-				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Loyalty/SupportingFiles/Loyalty-BridgingHeader.h";
-			};
-			name = Release;
-		};
-		B16ABC2C1B273D510036878B /* Debug */ = {
+		C3B0C85B2062477A001E0044 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IBSC_MODULE = Loyalty_WatchKit_Extension;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = Loyalty_WatchKit_App_Extension;
 				INFOPLIST_FILE = "Loyalty WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mil.LoyaltyReadyAppiOS.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Debug;
 		};
-		B16ABC2E1B273D510036878B /* Release */ = {
+		C3B0C85C2062477A001E0044 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				IBSC_MODULE = Loyalty_WatchKit_Extension;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = Loyalty_WatchKit_App_Extension;
 				INFOPLIST_FILE = "Loyalty WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test1.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mil.LoyaltyReadyAppiOS.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Release;
 		};
-		B1E34A251B387043008950D9 /* Debug */ = {
+		C3B0C85D2062477A001E0044 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI/Frameworks",
-					"$(PROJECT_DIR)/Loyalty/Frameworks",
-					"$(PROJECT_DIR)/Loyalty/Frameworks/XtifyLib/XtifyPush.embeddedframework",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(PROJECT_DIR)/WorklightAPI/**",
-					"$(PROJECT_DIR)/Loyalty/Frameworks/XtifyLib/",
-				);
-				INFOPLIST_FILE = "Loyality WatchKit Extension Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mil.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Loyality WatchKit Extension Tests/WatchKitTests-BridgingHeader.h";
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Loyalty WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mil.LoyaltyReadyAppiOS.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Debug;
 		};
-		B1E34A271B387043008950D9 /* Release */ = {
+		C3B0C85E2062477A001E0044 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI/Frameworks",
-					"$(PROJECT_DIR)/Loyalty/Frameworks",
-					"$(PROJECT_DIR)/Loyalty/Frameworks/XtifyLib/XtifyPush.embeddedframework",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(PROJECT_DIR)/WorklightAPI/**",
-					"$(PROJECT_DIR)/Loyalty/Frameworks/XtifyLib/",
-				);
-				INFOPLIST_FILE = "Loyality WatchKit Extension Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WorklightAPI",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/Google/Libraries",
-					"$(PROJECT_DIR)/Loyalty/ExternalLibraries/GoogleAnalyticsServices/GoogleAnalytics/Libraries",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mil.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Loyality WatchKit Extension Tests/WatchKitTests-BridgingHeader.h";
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = "Loyalty WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mil.LoyaltyReadyAppiOS.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Release;
 		};
@@ -3052,38 +2382,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81BC82BD1B18E29500FD80F5 /* Build configuration list for PBXNativeTarget "LoyaltyTests" */ = {
+		C3B0C8662062477B001E0044 /* Build configuration list for PBXNativeTarget "Loyalty WatchKit App Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				81BC82BE1B18E29500FD80F5 /* Debug */,
-				81BC82BF1B18E29500FD80F5 /* Release */,
+				C3B0C85D2062477A001E0044 /* Debug */,
+				C3B0C85E2062477A001E0044 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B16ABC2F1B273D510036878B /* Build configuration list for PBXNativeTarget "Loyalty WatchKit App" */ = {
+		C3B0C8682062477B001E0044 /* Build configuration list for PBXNativeTarget "Loyalty WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B16ABC2C1B273D510036878B /* Debug */,
-				B16ABC2E1B273D510036878B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B16ABC301B273D510036878B /* Build configuration list for PBXNativeTarget "Loyalty WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B16ABC291B273D510036878B /* Debug */,
-				B16ABC2B1B273D510036878B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B1E34A2E1B387043008950D9 /* Build configuration list for PBXNativeTarget "Loyality WatchKit Extension Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1E34A251B387043008950D9 /* Debug */,
-				B1E34A271B387043008950D9 /* Release */,
+				C3B0C85B2062477A001E0044 /* Debug */,
+				C3B0C85C2062477A001E0044 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

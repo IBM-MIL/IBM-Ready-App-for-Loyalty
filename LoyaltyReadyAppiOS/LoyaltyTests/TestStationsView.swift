@@ -61,7 +61,8 @@ private extension KIFUITestActor {
         let annotations = mapView.annotations
         var userLocation : MKPointAnnotation?
         for view in annotations {
-            if  _stdlib_getDemangledTypeName(view) == "MKPointAnnotation" {
+            //if  _stdlib_getDemangledTypeName(view) == "MKPointAnnotation" {
+            if  String(reflecting: view.dynamicType) == "MKPointAnnotation" {
                 userLocation = view as? MKPointAnnotation
             }
         }
@@ -75,7 +76,8 @@ private extension KIFUITestActor {
         var pins = [AnyObject]()
         
         for view in mapView.annotations {
-            if  _stdlib_getDemangledTypeName(view) == "Loyalty.MapPin" {
+            //if  _stdlib_getDemangledTypeName(view) == "Loyalty.MapPin" {
+            if  String(reflecting: view.dynamicType) == "Loyalty.MapPin" {
                 pins.append(view)
             }
         }

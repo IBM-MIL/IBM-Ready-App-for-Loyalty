@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>TRACKING_ID</key>
-	<string>&lt;YOUR_TRACKING_ID&gt;</string>
+	<string>UA-116074219-1</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>&lt;YOUR_BUNDLE_ID&gt;</string>
+	<string>com.ibm.mil.readyapps</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -19,6 +19,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<false/>
 	<key>GOOGLE_APP_ID</key>
-	<string>&lt;YOUR_GOOGLE_ID&gt;</string>
+	<string>Loyalty</string>
 </dict>
 </plist>

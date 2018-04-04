@@ -36,7 +36,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
         self.registerNibFiles()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.setUpBottomSegmentedControl()
     }
 
@@ -58,9 +58,9 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     This method registers various nib files need to populate the table view with tableviewcell nibs
     */
     func registerNibFiles(){
-        tableView.registerNib(UINib(nibName: "SearchFilterTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchFilterTableViewCell")
+        tableView.register(UINib(nibName: "SearchFilterTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchFilterTableViewCell")
         
-        tableView.registerNib(UINib(nibName: "SearchSortTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchSortTableViewCell")
+        tableView.register(UINib(nibName: "SearchSortTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchSortTableViewCell")
     }
     
     /**
@@ -69,14 +69,14 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     func setUpBottomSegmentedControl(){
         if(self.bottomSegmentedControlHolderView.subviews.count == 0){
         
-            let frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, self.bottomSegmentedControlHolderView.frame.size.height)
+            let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: self.bottomSegmentedControlHolderView.frame.size.height)
         
             let flatSegmentedControl = MILFlatSegmentedControl(frame: frame)
         
-            flatSegmentedControl.setUp([NSLocalizedString("CANCEL", comment: ""), NSLocalizedString("APPLY", comment: "")], buttonSelectedColor: UIColor.purpleLoyalty(), buttonTextSelectedColor: UIColor.whiteColor(), buttonUnSelectedColor: UIColor.whiteColor(), buttonTextUnSelectedColor: UIColor.purpleLoyalty(), font: UIFont.montserratRegular(13), selectedIndex: 1, isFixed: true)
+            flatSegmentedControl.setUp([NSLocalizedString("CANCEL", comment: ""), NSLocalizedString("APPLY", comment: "")], buttonSelectedColor: UIColor.purpleLoyalty(), buttonTextSelectedColor: UIColor.white, buttonUnSelectedColor: UIColor.white, buttonTextUnSelectedColor: UIColor.purpleLoyalty(), font: UIFont.montserratRegular(13), selectedIndex: 1, isFixed: true)
         
-            flatSegmentedControl.getButtonAtIndex(1).addTarget(self, action: "applyButtonAction", forControlEvents: .TouchUpInside)
-            flatSegmentedControl.getButtonAtIndex(0).addTarget(self, action: "cancelButtonAction", forControlEvents: .TouchUpInside)
+            flatSegmentedControl.getButtonAtIndex(1).addTarget(self, action: "applyButtonAction", for: .touchUpInside)
+            flatSegmentedControl.getButtonAtIndex(0).addTarget(self, action: "cancelButtonAction", for: .touchUpInside)
         
             flatSegmentedControl.addTopSeparatorLine(UIColor.grayLightLoyalty())
         
@@ -91,7 +91,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns:
     */
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
@@ -103,7 +103,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns:
     */
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0){
             return 1
         }
@@ -121,7 +121,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns:
     */
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if(indexPath.section == 0){
             return kSEARCHSORTTABLEVIEWCELLHEIGHT
         }
@@ -130,14 +130,14 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
         }
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 
         // Allows separator line to take up full width
-        cell.separatorInset = UIEdgeInsetsZero
+        cell.separatorInset = UIEdgeInsets.zero
         
         cell.preservesSuperviewLayoutMargins = false
         
-        cell.layoutMargins = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsets.zero
     }
     
     /**
@@ -148,18 +148,18 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns:
     */
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let view = UIView(frame: CGRectMake(0, 0, self.tableView.frame.width, 37))
-        view.backgroundColor = UIColor.whiteColor()
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 37))
+        view.backgroundColor = UIColor.white
         
-        let label = UILabel(frame: CGRectMake(37, 0, view.frame.size.width-20, view.frame.size.height))
+        let label = UILabel(frame: CGRect(x: 37, y: 0, width: view.frame.size.width-20, height: view.frame.size.height))
         
         label.font = UIFont.montserratRegular(13)
         
         label.textColor = UIColor.blackLoyalty()
         
-        label.center = CGPointMake(view.center.x + 5, view.center.y + 3)
+        label.center = CGPoint(x: view.center.x + 5, y: view.center.y + 3)
         
         let sectionZeroTitle = NSLocalizedString("SORT BY", comment: "n/a")
         let sectionOneTitle = NSLocalizedString("FILTER BY", comment: "n/a")
@@ -185,7 +185,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns:
     */
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return kHEIGHTFORSECTIONHEADER
     }
     
@@ -198,7 +198,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns:
     */
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.section == 0){
             return self.setUpSearchSortTableViewCell(indexPath)
         }
@@ -215,17 +215,17 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns:
     */
-    func setUpSearchSortTableViewCell(indexPath : NSIndexPath) -> SearchSortTableViewCell {
+    func setUpSearchSortTableViewCell(_ indexPath : IndexPath) -> SearchSortTableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("SearchSortTableViewCell", forIndexPath: indexPath) as! SearchSortTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchSortTableViewCell", for: indexPath) as! SearchSortTableViewCell
         
-        let frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, kSEARCHSORTTABLEVIEWCELLHEIGHT)
+        let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: kSEARCHSORTTABLEVIEWCELLHEIGHT)
         
         if(sortBySegmentedControl == nil){
         
             self.sortBySegmentedControl = MILFlatSegmentedControl(frame: frame)
         
-            sortBySegmentedControl.setUp([NSLocalizedString("CLOSEST", comment: ""), NSLocalizedString("CHEAPEST", comment: "")], buttonSelectedColor: UIColor.tealLoyalty(), buttonTextSelectedColor: UIColor.whiteColor(), buttonUnSelectedColor: UIColor.whiteColor(), buttonTextUnSelectedColor: UIColor.blackLoyalty(), font: UIFont.montserratRegular(13), selectedIndex: 0, isFixed: false)
+            sortBySegmentedControl.setUp([NSLocalizedString("CLOSEST", comment: ""), NSLocalizedString("CHEAPEST", comment: "")], buttonSelectedColor: UIColor.tealLoyalty(), buttonTextSelectedColor: UIColor.white, buttonUnSelectedColor: UIColor.white, buttonTextUnSelectedColor: UIColor.blackLoyalty(), font: UIFont.montserratRegular(13), selectedIndex: 0, isFixed: false)
         }
         
         if(cell.contentView.subviews.count == 0){
@@ -243,8 +243,8 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns: the searchFilterTableViewCell created within this method
     */
-    func setUpSearchFilterTableViewCell(indexPath : NSIndexPath) -> SearchFilterTableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SearchFilterTableViewCell", forIndexPath: indexPath) as! SearchFilterTableViewCell
+    func setUpSearchFilterTableViewCell(_ indexPath : IndexPath) -> SearchFilterTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchFilterTableViewCell", for: indexPath) as! SearchFilterTableViewCell
         
         let amenityString = Amenities().amenitiesArray[indexPath.row]
         
@@ -262,14 +262,14 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     - parameter tableView:
     - parameter indexPath:
     */
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if(indexPath.section == 0){
             
         }
         else if(indexPath.section == 1){
-            let cell = tableView.cellForRowAtIndexPath(indexPath) as! SearchFilterTableViewCell
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
+            let cell = tableView.cellForRow(at: indexPath) as! SearchFilterTableViewCell
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark;
         }
     }
     
@@ -280,13 +280,13 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     - parameter tableView:
     - parameter indexPath: 
     */
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if(indexPath.section == 0){
 
         }
         else if(indexPath.section == 1){
-            let cell = tableView.cellForRowAtIndexPath(indexPath) as! SearchFilterTableViewCell
-            cell.accessoryType = UITableViewCellAccessoryType.None
+            let cell = tableView.cellForRow(at: indexPath) as! SearchFilterTableViewCell
+            cell.accessoryType = UITableViewCellAccessoryType.none
         }
     }
     
@@ -296,7 +296,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     - returns: an array of NSIndexPath representing the idnex of selected rows in the table
     */
-    func getSelectedAmenitiesIndexPaths() -> [NSIndexPath]{
+    func getSelectedAmenitiesIndexPaths() -> [IndexPath]{
         
         if let selectedIndexPaths = self.tableView.indexPathsForSelectedRows {
              return selectedIndexPaths
@@ -316,9 +316,9 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
         let selectedAmenityIndexs = self.getSelectedAmenitiesIndexPaths()
         
         for index in selectedAmenityIndexs {
-            let cell = self.tableView.cellForRowAtIndexPath(index) as! SearchFilterTableViewCell
-            self.tableView.deselectRowAtIndexPath(index, animated: false)
-            cell.accessoryType = UITableViewCellAccessoryType.None
+            let cell = self.tableView.cellForRow(at: index) as! SearchFilterTableViewCell
+            self.tableView.deselectRow(at: index, animated: false)
+            cell.accessoryType = UITableViewCellAccessoryType.none
         }
         
         self.sortBySegmentedControl.selectButtonAtIndex(0)

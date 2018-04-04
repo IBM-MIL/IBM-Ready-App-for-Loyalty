@@ -36,6 +36,7 @@ class RewardsViewController: LoyaltyUIViewController {
     var cheapestStation: GasStation!
     var toolTipView : MILNavBarToolTip!
     var tapCount: Int = 0
+    let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ class RewardsViewController: LoyaltyUIViewController {
         self.user = UserDataManager.sharedInstance.currentUser
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.showOnboarding()
@@ -54,12 +55,12 @@ class RewardsViewController: LoyaltyUIViewController {
         setNavigationUI()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.checkIfShouldHideToolTip()
     }
     
@@ -69,12 +70,12 @@ class RewardsViewController: LoyaltyUIViewController {
     func checkInternetConnection(){
         if !Utils.checkInternetConnection() { //no internet, so disable create account button
             MILLoadViewManager.sharedInstance.hide()
-            self.savedDealsCollectionView.userInteractionEnabled = false
+            self.savedDealsCollectionView.isUserInteractionEnabled = false
             MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), view: self.view, underView: self.rewardsNavBarView, callback: checkInternetConnection)
             self.allowTransition = false
         } else {
             MILAlertViewManager.sharedInstance.hide() //hide alert if shown
-            self.savedDealsCollectionView.userInteractionEnabled = true
+            self.savedDealsCollectionView.isUserInteractionEnabled = true
             self.allowTransition = true
         }
     }
@@ -84,17 +85,17 @@ class RewardsViewController: LoyaltyUIViewController {
     */
     func retryRequest() {
         if !UserDataManager.sharedInstance.currentUser.loggedIn {
-            self.passbookButton.userInteractionEnabled = false
-            self.passbookButton.hidden = true
+            self.passbookButton.isUserInteractionEnabled = false
+            self.passbookButton.isHidden = true
             MILLoadViewManager.sharedInstance.show()
             UserDataManager.sharedInstance.getAnonUserData(gotUserData)
         } else {
-            self.passbookButton.userInteractionEnabled = true
-            self.passbookButton.hidden = false
+            self.passbookButton.isUserInteractionEnabled = true
+            self.passbookButton.isHidden = false
             self.gotUserData = true
             self.user = UserDataManager.sharedInstance.currentUser
             self.deals = [Deal]()
-            
+            // add watson call here and ignore the response and call getallpossibledeals.
             let tempDeals = Utils.getAllPossibleDeals(self.user)
             for deal in tempDeals {
                 if deal.saved {
@@ -112,33 +113,33 @@ class RewardsViewController: LoyaltyUIViewController {
     
     - parameter data: data returned from UserDataManager
     */
-    func gotUserData(data: [String : AnyObject]) {
+    func gotUserData(_ data: [String : AnyObject]) {
         
         if let failString = data["failure"] as? String { //failure of some kind
-            self.savedDealsCollectionView.userInteractionEnabled = false
+            self.savedDealsCollectionView.isUserInteractionEnabled = false
             MILLoadViewManager.sharedInstance.hide()
             self.allowTransition = false
             
             if (failString == "no connection") { //failure -- no connection
                 
-                MQALogger.log("FAILURE NO CONNECTION - \(data)")
+                logger.logInfoWithMessages(message:"FAILURE NO CONNECTION - \(data)")
                 MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), view: self.view, underView: self.rewardsNavBarView, callback: retryRequest)
             } else if (failString == "unknown user") { //failure -- unknown user
                 
-                MQALogger.log("FAILURE UNKNOWN USER - \(data)")
+                logger.logInfoWithMessages(message:"FAILURE UNKNOWN USER - \(data)")
                 MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), view: self.view, underView: self.rewardsNavBarView, callback: retryRequest)
             }
         } else { //success! (no failure string)
-            self.savedDealsCollectionView.userInteractionEnabled = true
+            self.savedDealsCollectionView.isUserInteractionEnabled = true
             self.allowTransition = true
             MILAlertViewManager.sharedInstance.hide() //hide alert if shown
-            MQALogger.log("Anon User Data Received: \(data)")
+            logger.logInfoWithMessages(message:"Anon User Data Received: \(data)")
             MILAlertViewManager.sharedInstance.hide() //hide alert if shown
             
             /* Register Custom Notifications after initial worklight call
                Must happen in this sequence or notification actions won't appear. */
             if self.user.deals.count <= 0 {
-                let appDelegate = UIApplication.sharedApplication().delegate! as! AppDelegate
+                let appDelegate = UIApplication.shared.delegate! as! AppDelegate
                 appDelegate.registerSettingsAndCategories()
             }
             
@@ -170,17 +171,17 @@ class RewardsViewController: LoyaltyUIViewController {
     */
     func setUpAndShowToolTip(){
         
-        if !NSUserDefaults.standardUserDefaults().boolForKey("hasShownToolTip") {
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasShownToolTip")
-            NSUserDefaults.standardUserDefaults().synchronize()
+        if !UserDefaults.standard.bool(forKey: "hasShownToolTip") {
+            UserDefaults.standard.set(true, forKey: "hasShownToolTip")
+            UserDefaults.standard.synchronize()
 
-            self.toolTipView = MILNavBarToolTip(frame: CGRectMake(0,self.navigationBar!.frame.size.height, UIScreen.mainScreen().bounds.width, 50))
+            self.toolTipView = MILNavBarToolTip(frame: CGRect(x: 0,y: self.navigationBar!.frame.size.height, width: UIScreen.main.bounds.width, height: 50))
             let toolTipText = NSLocalizedString("Complete your profile to earn 20 points towards your next reward!", comment: "n/a")
             toolTipView.setUp(toolTipText, navBarButtonFrameCenter: calcSettingsButtonCenter())
             self.view.addSubview(self.toolTipView)
             self.toolTipView.showWithTimeDelay(0.3)
             
-            self.toolTipView.actionButton.addTarget(self, action: "toolTipAction", forControlEvents: UIControlEvents.TouchUpInside)
+            self.toolTipView.actionButton.addTarget(self, action: #selector(RewardsViewController.toolTipAction), for: UIControlEvents.touchUpInside)
         }
     }
     
@@ -189,7 +190,7 @@ class RewardsViewController: LoyaltyUIViewController {
     This method defines the action that is taken when the tool tip is touched
     */
     func toolTipAction(){
-        self.performSegueWithIdentifier("settings", sender: self)
+        self.performSegue(withIdentifier: "settings", sender: self)
     }
     
     /**
@@ -197,16 +198,16 @@ class RewardsViewController: LoyaltyUIViewController {
     */
     func showOnboarding() {
         
-        if !NSUserDefaults.standardUserDefaults().boolForKey("hasShownOnboarding") {
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasShownOnboarding")
-            NSUserDefaults.standardUserDefaults().synchronize()
+        if !UserDefaults.standard.bool(forKey: "hasShownOnboarding") {
+            UserDefaults.standard.set(true, forKey: "hasShownOnboarding")
+            UserDefaults.standard.synchronize()
             
             if let tabBar = self.tabBarController {
                 let vc = Utils.vcWithNameFromStoryboardWithName("OnboardingViewController", storyboardName: "Onboarding") as? OnboardingViewController
                 vc?.delegates.append(self)
-                vc?.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-                vc?.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-                tabBar.presentViewController(vc!, animated: true, completion: nil)
+                vc?.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+                vc?.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                tabBar.present(vc!, animated: true, completion: nil)
             }
         }
         
@@ -215,12 +216,12 @@ class RewardsViewController: LoyaltyUIViewController {
     /**
     Method to get closest gas station
     */
-    func getClosestStation(header: RewardsCollectionReusableView){
+    func getClosestStation(_ header: RewardsCollectionReusableView){
         SearchManager.getClosestGasStation(user.gasStations, callback: { (station: GasStation?) -> () in
             MILLoadViewManager.sharedInstance.hide()
             if (station != nil) {
-                header.cheapestStationView.userInteractionEnabled = true
-                header.closestStationView.userInteractionEnabled = true
+                header.cheapestStationView.isUserInteractionEnabled = true
+                header.closestStationView.isUserInteractionEnabled = true
                 MILAlertViewManager.sharedInstance.hide() //hide alert if shown
                 header.closestStationView.setValues(station!)
                 self.closestStation = station
@@ -229,8 +230,8 @@ class RewardsViewController: LoyaltyUIViewController {
             } else {
                 //self.view.insertSubview(MILAlertViewManager.sharedInstance.milAlertView, belowSubview: self.rewardsNavBarView)
                 //MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), overView: self.rewardsNavBarView, callback: {self.savedDealsCollectionView.reloadData()})
-                header.cheapestStationView.userInteractionEnabled = false
-                header.closestStationView.userInteractionEnabled = false
+                header.cheapestStationView.isUserInteractionEnabled = false
+                header.closestStationView.isUserInteractionEnabled = false
                 MILAlertViewManager.sharedInstance.show(NSLocalizedString("Network Error", comment: ""), view: self.view, underView: self.rewardsNavBarView, callback: {self.getClosestStation(header)})
                 
             }
@@ -244,7 +245,7 @@ class RewardsViewController: LoyaltyUIViewController {
     func setNavigationUI(){
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.navigationBar = self.navigationController?.navigationBar
-        self.navigationBar?.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationBar?.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationBar?.shadowImage = UIImage()
     }
     
@@ -254,13 +255,13 @@ class RewardsViewController: LoyaltyUIViewController {
     */
     func calcSettingsButtonCenter() -> CGFloat {
         
-        let rightEdge = UIScreen.mainScreen().bounds.width - self.settingsButtonTrailingSpace.constant
+        let rightEdge = UIScreen.main.bounds.width - self.settingsButtonTrailingSpace.constant
         let halfWidth = self.settingsButton.frame.size.width/2
         let center = rightEdge - halfWidth
         return center + 0.5
     }
     
-    @IBAction func closestStationButtonTapped(sender: AnyObject) {
+    @IBAction func closestStationButtonTapped(_ sender: AnyObject) {
         if (self.allowTransition) {
             if let tabBarController = self.tabBarController as? CustomTabBarController {
                 tabBarController.goToStationTabWithStation(closestStation)
@@ -268,7 +269,7 @@ class RewardsViewController: LoyaltyUIViewController {
         }
     }
     
-    @IBAction func cheapestStationButtonTapped(sender: AnyObject) {
+    @IBAction func cheapestStationButtonTapped(_ sender: AnyObject) {
         if (self.allowTransition) {
             if let tabBarController = self.tabBarController as? CustomTabBarController {
                 tabBarController.goToStationTabWithStation(cheapestStation)
@@ -284,37 +285,37 @@ class RewardsViewController: LoyaltyUIViewController {
     }
     
     
-    @IBAction func tappedSpedometer(sender: AnyObject) {
-        tapCount++
+    @IBAction func tappedSpedometer(_ sender: AnyObject) {
+        tapCount += 1
         if (tapCount == 10) {
-            spedometerButton.setImage(UIImage(named: "gas_alternate"), forState: UIControlState.Normal)
+            spedometerButton.setImage(UIImage(named: "gas_alternate"), for: UIControlState())
             tapCount = 0
         } else {
-            spedometerButton.setImage(UIImage(named: "logo"), forState: UIControlState.Normal)
+            spedometerButton.setImage(UIImage(named: "logo"), for: UIControlState())
         }
     }
     
 }
 
 extension RewardsViewController: UICollectionViewDataSource{
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! DealCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DealCollectionViewCell
         let deal = deals[indexPath.row]
         Utils.setCellBasedOnDeal(cell, deal: deal, showSaved: false)
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return deals.count
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath) as! RewardsCollectionReusableView
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! RewardsCollectionReusableView
         
         Utils.addShadowToViews([header.closestStationView, header.cheapestStationView])
         if user.loggedIn{
@@ -352,7 +353,7 @@ MARK: UICollectionViewDelegate
 
 */
 extension RewardsViewController: UICollectionViewDelegate {
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let dealsDetailViewController = Utils.vcWithNameFromStoryboardWithName("DealsDetailViewController", storyboardName: "Deals") as? DealsDetailViewController {
             dealsDetailViewController.deal = deals[indexPath.row]
             navigationController?.pushViewController(dealsDetailViewController, animated: true)
@@ -361,12 +362,12 @@ extension RewardsViewController: UICollectionViewDelegate {
 }
 
 extension RewardsViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
         let collectionWidth = collectionView.width
-        return CGSizeMake(collectionWidth, 400)
+        return CGSize(width: collectionWidth, height: 400)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return Utils.sizeOfCellForCollectionView(collectionView)
     }
 }

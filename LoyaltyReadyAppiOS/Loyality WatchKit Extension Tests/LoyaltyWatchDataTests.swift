@@ -53,7 +53,7 @@ class LoyaltyWatchDataTests: XCTestCase {
                 expectation.fulfill()
                 
             } else {
-                MQALogger.log("Failure with data: \(replyDictionary)")
+                logger.logInfoWithMessages("Failure with data: \(replyDictionary)")
             }
             
         })

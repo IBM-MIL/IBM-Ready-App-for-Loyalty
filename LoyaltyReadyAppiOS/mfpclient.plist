@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>protocol</key>
+	<string>https</string>
+	<key>host</key>
+	<string>mobilefoundation-6m92-server.eu-gb.mybluemix.net</string>
+	<key>port</key>
+	<string>443</string>
+	<key>wlServerContext</key>
+	<string>/mfp/</string>
+	<key>languagePreferences</key>
+	<string>en</string>
+</dict>
+</plist>

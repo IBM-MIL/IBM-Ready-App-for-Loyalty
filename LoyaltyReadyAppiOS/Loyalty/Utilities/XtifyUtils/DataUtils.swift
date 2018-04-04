@@ -6,7 +6,7 @@ Licensed Materials - Property of IBM
 import UIKit
 
 protocol DataUtilsDelegate {
-    func richNotificationsReceived(jsonDictionary: NSDictionary)
+    func richNotificationsReceived(_ jsonDictionary: NSDictionary)
 }
 
 /**
@@ -15,6 +15,7 @@ protocol DataUtilsDelegate {
 class DataUtils {
     
     var dataDelegate: DataUtilsDelegate!
+    var logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
     
     init() {}
     
@@ -23,7 +24,7 @@ class DataUtils {
     
     - parameter richID: determines if we are getting an individual notification by ID or gathering all pending notifications
     */
-    func richNotificationsRequest(richID: String) {
+    func richNotificationsRequest(_ richID: String) {
         
         var url = ""
         // if richID exists, find specific rich notification
@@ -34,23 +35,23 @@ class DataUtils {
         }
         
         let request = NSMutableURLRequest()
-        request.URL = NSURL(string: url)
-        request.HTTPMethod = "GET"
+        request.url = URL(string: url)
+        request.httpMethod = "GET"
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse?, data: NSData?, error: NSError?) -> Void in
-            if error == nil && data!.length > 0 {
-                if let jsonResult: NSDictionary! = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue(), completionHandler:{ (response:URLResponse?, data: Data?, error: NSError?) -> Void in
+            if error == nil && data!.count > 0 {
+                if let jsonResult: NSDictionary? = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                     if jsonResult != nil {
                         self.dataDelegate.richNotificationsReceived(jsonResult!)
                     }
                 }
-            } else if error == nil && data!.length == 0 {
-                MQALogger.log("Empty Reply Error: \(error!.localizedDescription)")
+            } else if error == nil && data!.count == 0 {
+                self.logger.logErrorWithMessages(message: "Empty Reply Error: \(error!.localizedDescription)");
             } else {
-                MQALogger.log("Error: \(error!.localizedDescription)")
+                self.logger.logErrorWithMessages(message: "Error: \(error!.localizedDescription)");
             }
 
-        })
+        } as! (URLResponse?, Data?, Error?) -> Void)
         
     }
     
@@ -61,7 +62,7 @@ class DataUtils {
     
     - returns: Modified NotificationDataList
     */
-    class func saveNotificationLocally(notificationData: NotificationData) -> Bool {
+    class func saveNotificationLocally(_ notificationData: NotificationData) -> Bool {
         
         if var _ = notificationData.category {
             
@@ -85,22 +86,22 @@ class DataUtils {
 */
 class DataAPI {
     
-    class func setObject(value: AnyObject!, forKey defaultName: String!) {
-        let defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(value, forKey:defaultName)
+    class func setObject(_ value: AnyObject!, forKey defaultName: String!) {
+        let defaults:UserDefaults = UserDefaults.standard
+        defaults.set(value, forKey:defaultName)
         defaults.synchronize()
     }
     
-    class func objectForKey(defaultName: String!) -> AnyObject! {
-        let defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    class func objectForKey(_ defaultName: String!) -> AnyObject! {
+        let defaults:UserDefaults = UserDefaults.standard
         
-        return defaults.objectForKey(defaultName)
+        return defaults.object(forKey: defaultName) as AnyObject
     }
     
-    class func removeObjectForKey(defaultName: String!) {
-        let defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    class func removeObjectForKey(_ defaultName: String!) {
+        let defaults:UserDefaults = UserDefaults.standard
         
-        defaults.removeObjectForKey(defaultName)
+        defaults.removeObject(forKey: defaultName)
     }
     
 }

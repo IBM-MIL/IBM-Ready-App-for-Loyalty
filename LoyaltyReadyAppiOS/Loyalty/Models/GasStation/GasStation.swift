@@ -36,7 +36,7 @@ class GasStation: NSObject {
         let openMinutes = hours.open.minute()
         let closedHour = hours.close.hour()
         let closedMinutes = hours.close.minute()
-        let now = NSDate()
+        let now = Date()
         let openTime = now.dateAt(hours: openHour, minutes: openMinutes)
         let closeTime = now.dateAt(hours: closedHour, minutes: closedMinutes)
         
@@ -76,7 +76,7 @@ class GasStation: NSObject {
     
     - returns: Array of objects
     */
-    private func getDeals(jsonArray: [[String:AnyObject]]) -> [Deal] {
+    fileprivate func getDeals(_ jsonArray: [[String:AnyObject]]) -> [Deal] {
         var returnDeals = [Deal]()
         for dealJson in jsonArray{
             let deal = Deal(json: dealJson)

@@ -21,7 +21,7 @@ class SubSettingsView: UIView {
     - returns: an instance of the SubSettingsView from the SubSettingsView nib file
     */
     class func instanceFromNib() -> SubSettingsView {
-        return UINib(nibName: "SubSettingsView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! SubSettingsView
+        return UINib(nibName: "SubSettingsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! SubSettingsView
     }
 
 

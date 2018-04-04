@@ -28,15 +28,15 @@ extension UIColor {
                 
         if hex.hasPrefix("#") {
             let nsHex = hex as NSString
-            hexString = nsHex.substringFromIndex(1)
+            hexString = nsHex.substring(from: 1)
             
         } else {
             hexString = hex
         }
-        
-        let scanner = NSScanner(string: hexString)
+        let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
+        let scanner = Scanner(string: hexString)
         var hexValue: CUnsignedLongLong = 0
-        if scanner.scanHexLongLong(&hexValue) {
+        if scanner.scanHexInt64(&hexValue) {
             switch (hexString.characters.count) {
             case 3:
                 red = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
@@ -50,7 +50,7 @@ extension UIColor {
                 print("Invalid HEX string, number of characters after '#' should be either 3, 6", terminator: "")
             }
         } else {
-            MQALogger.log("Scan hex error")
+            logger.logInfoWithMessages(message: "Scan hex error")
         }
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
@@ -58,8 +58,8 @@ extension UIColor {
     convenience init?(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat, alpha: CGFloat = 1.0){
         let cmykColorSpace = CGColorSpaceCreateDeviceCMYK()
         let colors = [cyan, magenta, yellow, black, alpha] // CMYK+Alpha
-        let cgColor = CGColorCreate(cmykColorSpace, colors)
-        self.init(CGColor: cgColor!)
+        let cgColor = CGColor(colorSpace: cmykColorSpace, components: colors)
+        self.init(cgColor: cgColor!)
     }
     
 }

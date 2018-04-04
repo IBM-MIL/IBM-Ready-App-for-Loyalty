@@ -33,6 +33,7 @@ class LoginConfirmationViewController: LoyaltyUIViewController {
     var user: User!
     /// User stations
     var stations: [GasStation]!
+    let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
     
     
     override func viewDidLoad() {
@@ -40,8 +41,8 @@ class LoginConfirmationViewController: LoyaltyUIViewController {
         if let instructionLabelText = instructionsLabel.text {
             instructionsLabel.text = instructionLabelText + phoneNumberString
         }
-        verifyDeviceButton.userInteractionEnabled = false //disable initially
-        verifyDeviceButton.setBackgroundColorForState(UIColor.grayLoyalty(), forState: .Normal)
+        verifyDeviceButton.isUserInteractionEnabled = false //disable initially
+        verifyDeviceButton.setBackgroundColorForState(UIColor.grayLoyalty(), forState: UIControlState())
         // Do any additional setup after loading the view.
     }
 
@@ -50,7 +51,7 @@ class LoginConfirmationViewController: LoyaltyUIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         codeField1.becomeFirstResponder()
         MILFakeMessageAlertViewManager.sharedInstance.show(NSLocalizedString("Your confirmation code is 1234.", comment: ""), callback: tappedAlert) //show SMS alert
         codeField1.tintColor = UIColor.blackLoyalty() //black text cursor
@@ -65,17 +66,17 @@ class LoginConfirmationViewController: LoyaltyUIViewController {
     
     - parameter sender:
     */
-    @IBAction func tappedVerifyDevice(sender: AnyObject) {
+    @IBAction func tappedVerifyDevice(_ sender: AnyObject) {
         if (confirmationString == "1234") {
             //now move to next VC
-            incorrectCodeView.hidden = true
-            let destinationVC = self.storyboard?.instantiateViewControllerWithIdentifier("finish") as! LoginFinishViewController
+            incorrectCodeView.isHidden = true
+            let destinationVC = self.storyboard?.instantiateViewController(withIdentifier: "finish") as! LoginFinishViewController
             destinationVC.rawPhoneNumber = rawPhoneNumber
             destinationVC.user = user
             destinationVC.stations = stations
             self.navigationController?.pushViewController(destinationVC, animated: true)
         } else {
-            incorrectCodeView.hidden = false
+            incorrectCodeView.isHidden = false
             codeField1.text = ""
             codeField2.text = ""
             codeField3.text = ""
@@ -89,10 +90,10 @@ class LoginConfirmationViewController: LoyaltyUIViewController {
     Callback method called after the MILFakeMessageAlertViewManager completes showing
     */
     func tappedAlert(){
-        MQALogger.log("User tapped MILFakeMessageAlertView!")
+        logger.logInfoWithMessages(message:"User tapped MILFakeMessageAlertView!")
     }
     
-    @IBAction func dismissToMain(sender: AnyObject) {
+    @IBAction func dismissToMain(_ sender: AnyObject) {
 
         if let nav = navigationController as? LoginNavController {
             nav.dismiss()
@@ -117,7 +118,7 @@ extension LoginConfirmationViewController: UITextFieldDelegate {
     
     - returns: boolean representing whether or not the change will be made
     */
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var currentField: UITextField!
         var nextField: UITextField!
         var previousField: UITextField!
@@ -138,9 +139,9 @@ extension LoginConfirmationViewController: UITextFieldDelegate {
             currentField = codeField4
             previousField = codeField3
         default:
-            MQALogger.log("unknown text field!")
+            logger.logInfoWithMessages(message:"unknown text field!")
         }
-        incorrectCodeView.hidden = true
+        incorrectCodeView.isHidden = true
         
         let insertStringLength = string.characters.count
         if(insertStringLength == 0){ //backspace entered
@@ -153,8 +154,8 @@ extension LoginConfirmationViewController: UITextFieldDelegate {
             }
         }
         else {  //actual character entered
-            let disallowedCharacterSet = NSCharacterSet(charactersInString: "0123456789").invertedSet
-            let replacementStringIsLegal = string.rangeOfCharacterFromSet(disallowedCharacterSet) == nil
+            let disallowedCharacterSet = CharacterSet(charactersIn: "0123456789").inverted
+            let replacementStringIsLegal = string.rangeOfCharacter(from: disallowedCharacterSet) == nil
             if (replacementStringIsLegal) { //check if numerical
                 if (currentField.tag == 4){
                     currentField.resignFirstResponder()
@@ -191,7 +192,7 @@ extension LoginConfirmationViewController: UITextFieldDelegate {
     
     - parameter textField: textField that began editing
     */
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         if (textField.text == ""){ //add " " space to all empty fields to allow for backspacing
             textField.text = " "
         }
@@ -203,11 +204,11 @@ extension LoginConfirmationViewController: UITextFieldDelegate {
     func checkIfValid() {
         if ((codeField1.text != "" && codeField1.text != " ") && (codeField2.text != "" && codeField2.text != " ") && (codeField3.text != "" && codeField3.text != " ") && (codeField4.text != "" && codeField4.text != " ")) {
             confirmationString = codeField1.text! + codeField2.text! + codeField3.text! + codeField4.text!
-            verifyDeviceButton.userInteractionEnabled = true
-            verifyDeviceButton.setBackgroundColorForState(UIColor.purpleLoyalty(), forState: .Normal)
+            verifyDeviceButton.isUserInteractionEnabled = true
+            verifyDeviceButton.setBackgroundColorForState(UIColor.purpleLoyalty(), forState: UIControlState())
         } else {
-            verifyDeviceButton.userInteractionEnabled = false
-            verifyDeviceButton.setBackgroundColorForState(UIColor.grayLoyalty(), forState: .Normal)
+            verifyDeviceButton.isUserInteractionEnabled = false
+            verifyDeviceButton.setBackgroundColorForState(UIColor.grayLoyalty(), forState: UIControlState())
         }
     }
    

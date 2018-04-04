@@ -18,7 +18,7 @@ class Utils: NSObject {
     
     - returns: An array of Deals
     */
-    class func getAllDealsFromStations(stations: [GasStation]) -> [Deal] {
+    class func getAllDealsFromStations(_ stations: [GasStation]) -> [Deal] {
         
         // Collect deals together
         let arrayOfDeals: [[Deal]] = stations.map { return $0.deals }
@@ -36,8 +36,9 @@ class Utils: NSObject {
     
     - returns: An array of all deals available
     */
-    class func getAllPossibleDeals(user: User) -> [Deal] {
+    class func getAllPossibleDeals(_ user: User) -> [Deal] {
         return Utils.getAllDealsFromStations(user.gasStations) + user.deals
+        
     }
     
     /**
@@ -47,7 +48,7 @@ class Utils: NSObject {
     - parameter offset:  Shadow offset
     - parameter opacity: Shadow opacity
     */
-    class func addShadowToView(view: UIView, offset: CGSize = CGSizeMake(1, 2), opacity: Float = 0.1) {
+    class func addShadowToView(_ view: UIView, offset: CGSize = CGSize(width: 1, height: 2), opacity: Float = 0.1) {
         view.layer.masksToBounds = false
         view.layer.shadowOffset = offset
         view.layer.shadowRadius = 1.5
@@ -61,7 +62,7 @@ class Utils: NSObject {
     - parameter offset:  Shadow offset
     - parameter opacity: Shadow opacity
     */
-    class func addShadowToViews(views: [UIView], offset: CGSize = CGSizeMake(1, 2), opacity: Float = 0.1) {
+    class func addShadowToViews(_ views: [UIView], offset: CGSize = CGSize(width: 1, height: 2), opacity: Float = 0.1) {
         for view in views {
             addShadowToView(view, offset: offset, opacity: opacity)
         }
@@ -74,16 +75,16 @@ class Utils: NSObject {
     - parameter deal:      Deal whose values to user
     - parameter showSaved: Whether or not to show the indicator that a deal is saved
     */
-    class func setCellBasedOnDeal(cell: DealCollectionViewCell, deal: Deal, showSaved: Bool) {
+    class func setCellBasedOnDeal(_ cell: DealCollectionViewCell, deal: Deal, showSaved: Bool) {
         cell.nameLabel.text = deal.name
-        let dateString = deal.expiration.toString(dateStyle: NSDateFormatterStyle.LongStyle, timeStyle: NSDateFormatterStyle.NoStyle, doesRelativeDateFormatting: true)
+        let dateString = deal.expiration.toString(dateStyle: DateFormatter.Style.long, timeStyle: DateFormatter.Style.none, doesRelativeDateFormatting: true)
         cell.expiresOnLabel.text = NSLocalizedString("Expires", comment: "") + " \(dateString)"
         cell.dealImageView.image = UIImage(named: deal.imageName)
         if cell.dimView != nil {
-            cell.dimView.hidden = !deal.saved || !showSaved
+            cell.dimView.isHidden = !deal.saved || !showSaved
         }
         if cell.savedImageView != nil {
-            cell.savedImageView.hidden = !deal.saved || !showSaved
+            cell.savedImageView.isHidden = !deal.saved || !showSaved
         }
         // Configure the cell
         Utils.addShadowToView(cell)
@@ -96,12 +97,12 @@ class Utils: NSObject {
     
     - returns: The size
     */
-    class func sizeOfCellForCollectionView(collectionView: UICollectionView) -> CGSize {
+    class func sizeOfCellForCollectionView(_ collectionView: UICollectionView) -> CGSize {
         let collectionWidth = collectionView.width - 40
         let width = collectionWidth/2
         let ratio = CGFloat(25)/CGFloat(28)
         let height = width/ratio
-        return CGSizeMake(width, height)
+        return CGSize(width: width, height: height)
     }
     
     /**
@@ -112,9 +113,9 @@ class Utils: NSObject {
     
     - returns: The view controller
     */
-    class func vcWithNameFromStoryboardWithName(vcName : String, storyboardName : String) -> UIViewController?{
-        let storyboard = UIStoryboard(name: storyboardName, bundle: NSBundle.mainBundle())
-        let viewController: AnyObject! = storyboard.instantiateViewControllerWithIdentifier(vcName)
+    class func vcWithNameFromStoryboardWithName(_ vcName : String, storyboardName : String) -> UIViewController?{
+        let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+        let viewController: AnyObject! = storyboard.instantiateViewController(withIdentifier: vcName)
         return viewController as? UIViewController
     }
     
@@ -126,23 +127,23 @@ class Utils: NSObject {
     
     - returns: frame of tab
     */
-    class func frameForTabInTabBar(tabBar: UITabBar!, withIndex index: Int) -> CGRect {
+    class func frameForTabInTabBar(_ tabBar: UITabBar!, withIndex index: Int) -> CGRect {
         var tabBarItems = [UIView]()
         for view in tabBar.subviews {
-            if  view.isKindOfClass(UIControl){
+            if  view.isKind(of: UIControl.self){
                     tabBarItems.append(view)
             }
         }
         if tabBarItems.isEmpty {
             // no tabBarItems means either no UITabBarButtons were in the subView, or none responded to -frame
             // return CGRectZero to indicate that we couldn't figure out the frame
-            return CGRectZero
+            return CGRect.zero
         }
         
         // sort by origin.x of the frame because the items are not necessarily in the correct order
-        tabBarItems.sortInPlace({ $0.x < $1.x})
+        tabBarItems.sort(by: { $0.x < $1.x})
         
-        var frame = CGRectZero
+        var frame = CGRect.zero
         if index < tabBarItems.count {
             // viewController is in a regular tab
             let tabView = tabBarItems[index]
@@ -175,11 +176,11 @@ class Utils: NSObject {
     This method returns a deal by seaching all deals for a deal wirth
     
     */
-    class func getDealByID(dealID : Int) -> Deal? {
+    class func getDealByID(_ dealID : Int) -> Deal? {
         
         let user = UserDataManager.sharedInstance.currentUser
         
-        let userDeals = Utils.getAllPossibleDeals(user)
+        let userDeals = Utils.getAllPossibleDeals(user!)
         
         let filteredDeals : [Deal] = userDeals.filter{
             
@@ -199,11 +200,11 @@ class Utils: NSObject {
         return nil
     }
     
-    class func setDealSaved(dealID : Int){
+    class func setDealSaved(_ dealID : Int){
         
         let user = UserDataManager.sharedInstance.currentUser
         
-        let userDeals = Utils.getAllPossibleDeals(user)
+        let userDeals = Utils.getAllPossibleDeals(user!)
         
         let filteredDeals : [Deal] = userDeals.filter{
             

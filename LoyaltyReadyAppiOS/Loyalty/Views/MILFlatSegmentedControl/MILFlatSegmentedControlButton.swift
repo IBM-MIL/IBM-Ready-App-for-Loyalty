@@ -27,7 +27,7 @@ class MILFlatSegmentedControlButton: UIButton {
     - parameter unselectedTextColor: the color the button text will be when the button is unselected
     - parameter font:                the font the button text will be
     */
-    func setUp(index : Int, buttonText : String, selectedColor : UIColor, selectedTextColor : UIColor, unselectedColor : UIColor, unselectedTextColor : UIColor, font: UIFont){
+    func setUp(_ index : Int, buttonText : String, selectedColor : UIColor, selectedTextColor : UIColor, unselectedColor : UIColor, unselectedTextColor : UIColor, font: UIFont){
         
         self.index = index
         self.buttonText = buttonText
@@ -36,10 +36,10 @@ class MILFlatSegmentedControlButton: UIButton {
         self.unselectedColor = unselectedColor
         self.unselectedTextColor = unselectedTextColor
         
-        self.setTitle(self.buttonText, forState: UIControlState.Normal)
-        self.setTitle(self.buttonText, forState: UIControlState.Selected)
-        self.setTitleColor(self.unselectedTextColor, forState: UIControlState.Normal)
-        self.setTitleColor(self.selectedTextColor, forState: UIControlState.Selected)
+        self.setTitle(self.buttonText, for: UIControlState())
+        self.setTitle(self.buttonText, for: UIControlState.selected)
+        self.setTitleColor(self.unselectedTextColor, for: UIControlState())
+        self.setTitleColor(self.selectedTextColor, for: UIControlState.selected)
         self.titleLabel!.font = font
     
     }
@@ -49,7 +49,7 @@ class MILFlatSegmentedControlButton: UIButton {
     */
     func select(){
         self.backgroundColor = self.selectedColor
-        self.selected = true
+        self.isSelected = true
     }
     
     /**
@@ -57,7 +57,7 @@ class MILFlatSegmentedControlButton: UIButton {
     */
     func deSelect(){
         self.backgroundColor = self.unselectedColor
-        self.selected = false
+        self.isSelected = false
     }
     
 }

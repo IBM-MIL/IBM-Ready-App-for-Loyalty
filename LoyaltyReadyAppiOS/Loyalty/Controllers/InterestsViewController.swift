@@ -84,7 +84,7 @@ class InterestsViewController: LoyaltyUIViewController {
     */
     func getSelectedInterests() -> [String]{
         
-       let selectedIndexPaths =  self.collectionView.indexPathsForSelectedItems()
+       let selectedIndexPaths =  self.collectionView.indexPathsForSelectedItems
        var selectedInterests = [String]()
         
         for indexPath in selectedIndexPaths! {
@@ -104,7 +104,7 @@ class InterestsViewController: LoyaltyUIViewController {
     
     - parameter sender:
     */
-    @IBAction func nextButtonAction(sender: AnyObject) {
+    @IBAction func nextButtonAction(_ sender: AnyObject) {
         self.editProfileVCReference.navigateToIndex(1, fromIndex: 0, animated: true)
     }
 
@@ -120,8 +120,8 @@ extension InterestsViewController: UICollectionViewDataSource {
     
     - returns:
     */
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("InterestCollectionViewCell", forIndexPath: indexPath) as! InterestCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InterestCollectionViewCell", for: indexPath) as! InterestCollectionViewCell
         
         cell.interestLabel.numberOfLines = 0
         cell.interestLabel.text = self.interestsArray[indexPath.row]
@@ -130,10 +130,10 @@ extension InterestsViewController: UICollectionViewDataSource {
         // Manually call selectItemAtIndexPath or cell won't get deslected properly
         if user.interests.contains(self.interestsArray[indexPath.row]) {
             cell.setSelected()
-            collectionView.selectItemAtIndexPath(indexPath, animated: false, scrollPosition: UICollectionViewScrollPosition.None)
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: UICollectionViewScrollPosition())
         } else {
             cell.setDeselected()
-            collectionView.deselectItemAtIndexPath(indexPath, animated: false)
+            collectionView.deselectItem(at: indexPath, animated: false)
         }
         
         Utils.addShadowToView(cell)
@@ -151,7 +151,7 @@ extension InterestsViewController: UICollectionViewDataSource {
     
     - returns:
     */
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.interestsArray.count
     }
     
@@ -163,7 +163,7 @@ extension InterestsViewController: UICollectionViewDataSource {
     
     - returns:
     */
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
@@ -176,7 +176,7 @@ extension InterestsViewController: UICollectionViewDataSource {
     
     - returns:
     */
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
         
         let numberOfItemsInARow : CGFloat = 3
         
@@ -188,7 +188,7 @@ extension InterestsViewController: UICollectionViewDataSource {
         
         let cellWidth = (width - totalInsetWidths)/numberOfItemsInARow
         
-        return CGSizeMake(cellWidth,cellWidth)
+        return CGSize(width: cellWidth,height: cellWidth)
     }
     
     
@@ -201,7 +201,7 @@ extension InterestsViewController: UICollectionViewDataSource {
     
     - returns:
     */
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         
         return kMinimumSpacing
     }
@@ -216,12 +216,12 @@ extension InterestsViewController: UICollectionViewDataSource {
     
     - returns:
     */
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         
         return kMinimumRowSpacing
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0, 2, 0, 2)
     }
     
@@ -238,9 +238,9 @@ extension InterestsViewController: UICollectionViewDelegate {
     - parameter collectionView:
     - parameter indexPath:
     */
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        let selectedCell = self.collectionView.cellForItemAtIndexPath(indexPath) as! InterestCollectionViewCell
+        let selectedCell = self.collectionView.cellForItem(at: indexPath) as! InterestCollectionViewCell
         selectedCell.setSelected()
         selectedCell.addInterest()
         
@@ -255,9 +255,9 @@ extension InterestsViewController: UICollectionViewDelegate {
     - parameter collectionView:
     - parameter indexPath:
     */
-    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
-        let selectedCell = self.collectionView.cellForItemAtIndexPath(indexPath) as! InterestCollectionViewCell
+        let selectedCell = self.collectionView.cellForItem(at: indexPath) as! InterestCollectionViewCell
         
         selectedCell.setDeselected()
         selectedCell.removeInterest()

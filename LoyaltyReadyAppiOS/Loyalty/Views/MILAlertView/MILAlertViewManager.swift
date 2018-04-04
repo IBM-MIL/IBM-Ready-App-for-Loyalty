@@ -8,7 +8,7 @@ import UIKit
 /**
 *  Class that manages the creation, display, hiding, and deletion of the MILAlertView
 */
-public class MILAlertViewManager: NSObject {
+open class MILAlertViewManager: NSObject {
     
     /// The MILAlertView. Private to just this class
     var milAlertView : MILAlertView!
@@ -16,7 +16,7 @@ public class MILAlertViewManager: NSObject {
     var callback : (()->())!
     
     
-    public class var sharedInstance : MILAlertViewManager{
+    open class var sharedInstance : MILAlertViewManager{
         
         struct Singleton {
             static let instance = MILAlertViewManager()
@@ -39,7 +39,7 @@ public class MILAlertViewManager: NSObject {
     - parameter toHeight:  height of how far down the alert will show
     - parameter callback:  Callback function to execute when the MILAlertView or its reload button is tapped
     */
-    func show(text: String!, view: UIView! = nil, underView: UIView! = nil, toHeight: CGFloat! = 44, callback: (()->())!) {
+    func show(_ text: String!, view: UIView! = nil, underView: UIView! = nil, toHeight: CGFloat! = 44, callback: (()->())!) {
         
         // show alertview on main UI
         
@@ -55,17 +55,17 @@ public class MILAlertViewManager: NSObject {
             view.addSubview(self.milAlertView)
         }
         
-        UIView.animateWithDuration(1, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
             self.milAlertView.setBottom(self.milAlertView.height + toHeight)
             }, completion: { finished -> Void in
                 if finished{
                     if let alertview = self.milAlertView {
-                        alertview.userInteractionEnabled = true
+                        alertview.isUserInteractionEnabled = true
                     }else{
                         
                     }
                     if callback == nil {
-                        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "hide", userInfo: nil, repeats: false)
+                        Timer.scheduledTimer(timeInterval: 3, target: self, selector: "hide", userInfo: nil, repeats: false)
                     }
                 }
         })
@@ -81,16 +81,16 @@ public class MILAlertViewManager: NSObject {
     
     - returns: An initialized MILAlertView
     */
-    private func buildAlert(text: String!, callback: (()->())!)-> MILAlertView{
+    fileprivate func buildAlert(_ text: String!, callback: (()->())!)-> MILAlertView{
         let milAlertView : MILAlertView = MILAlertView.instanceFromNib() as MILAlertView
         milAlertView.setOriginX(0)
-        milAlertView.setWidth(UIScreen.mainScreen().bounds.width)
+        milAlertView.setWidth(UIScreen.main.bounds.width)
         milAlertView.setBottom(44)
         milAlertView.setLabel(text)
-        milAlertView.userInteractionEnabled = false
+        milAlertView.isUserInteractionEnabled = false
         milAlertView.setCallbackFunc(callback)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: "reload")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MILAlertViewManager.reload))
 //        if callback != nil {
 //            tapGesture = UITapGestureRecognizer(target: self, action: "reload")
 //        }
@@ -102,10 +102,10 @@ public class MILAlertViewManager: NSObject {
     /**
     Hides the MILAlertView with an animation
     */
-    public func hide() {
+    open func hide() {
         if self.milAlertView != nil{
-            self.milAlertView.userInteractionEnabled = false
-            UIView.animateWithDuration(1, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            self.milAlertView.isUserInteractionEnabled = false
+            UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
                 self.milAlertView.setBottom(44)
                 }, completion: { finished -> Void in
                     if finished {

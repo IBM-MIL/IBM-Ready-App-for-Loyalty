@@ -9,12 +9,13 @@ import UIKit
 /**
 *  Class that manages the creation, display, hiding, and deletion of the MILLoadView
 */
-public class MILLoadViewManager: NSObject {
+open class MILLoadViewManager: NSObject {
     
     /// The MILLoadView
-    private var milLoadView : MILLoadView!
+    fileprivate var milLoadView : MILLoadView!
+    let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
     
-    public class var sharedInstance : MILLoadViewManager{
+    open class var sharedInstance : MILLoadViewManager{
         
         struct Singleton {
             static let instance = MILLoadViewManager()
@@ -25,8 +26,8 @@ public class MILLoadViewManager: NSObject {
     /**
     Function that builds and displays a MILLoadView
     */
-    public func show() {
-        MQALogger.log("SHOWING LOADING VIEW")
+    open func show() {
+        logger.logInfoWithMessages(message:"SHOWING LOADING VIEW")
         
         
         // show alertview on main UI
@@ -36,12 +37,12 @@ public class MILLoadViewManager: NSObject {
             self.milLoadView.removeFromSuperview()
             self.milLoadView = nil
         }
-        milLoadView.frame = UIApplication.sharedApplication().keyWindow!.frame
+        milLoadView.frame = UIApplication.shared.keyWindow!.frame
         
         milLoadView.showLoadingAnimation()
         
         self.milLoadView = milLoadView
-        UIApplication.sharedApplication().keyWindow?.addSubview(milLoadView)
+        UIApplication.shared.keyWindow?.addSubview(milLoadView)
         
 //        if root != nil{
 //            root?.view.addSubview(milLoadView)
@@ -54,9 +55,9 @@ public class MILLoadViewManager: NSObject {
     /**
     Hides the MILLoadView
     */
-    public func hide(callback: (()->())! = nil) {
+    open func hide(_ callback: (()->())! = nil) {
         if self.milLoadView != nil{
-            MQALogger.log("HIDING LOADING VIEW")
+            logger.logInfoWithMessages(message:"HIDING LOADING VIEW")
             self.milLoadView.removeFromSuperview()
             self.milLoadView = nil
             

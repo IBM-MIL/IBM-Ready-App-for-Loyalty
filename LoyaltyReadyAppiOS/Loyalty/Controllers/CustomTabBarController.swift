@@ -50,10 +50,10 @@ class CustomTabBarController: RAMAnimatedTabBarController {
         self.view.addSubview(toolTipBody!)
         
         toolTipLabel = UILabel(frame: toolTipBody!.frame)
-        toolTipLabel?.textAlignment = NSTextAlignment.Center
+        toolTipLabel?.textAlignment = NSTextAlignment.center
         toolTipLabel?.font = UIFont.montserratBold(18)
         toolTipLabel?.text = NSLocalizedString("SAVED TO MY DEALS!", comment: "")
-        toolTipLabel?.textColor = UIColor.whiteColor()
+        toolTipLabel?.textColor = UIColor.white
         
         self.view.addSubview(toolTipLabel!)
         
@@ -78,14 +78,14 @@ class CustomTabBarController: RAMAnimatedTabBarController {
         toolTipLabel?.removeFromSuperview()
     }
     
-    func goToStationTabWithStation(station: GasStation){
+    func goToStationTabWithStation(_ station: GasStation){
         UserDataManager.sharedInstance.selectedStation = station
         selectedIndex = 2
         setSelectIndex(from: 0, to: 2)
         
         let nav = self.selectedViewController as! UINavigationController
         
-        nav.popToRootViewControllerAnimated(false)
+        nav.popToRootViewController(animated: false)
         
     }
     

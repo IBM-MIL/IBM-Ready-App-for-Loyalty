@@ -20,7 +20,7 @@ extension UIImageView{
     - parameter imagePrefix: name consistent with all images in sequence
     - parameter range:       numerical suffix of sequence of images
     */
-    func createImageAnimation(imagePrefix: String, range: (Int, Int)) {
+    func createImageAnimation(_ imagePrefix: String, range: (Int, Int)) {
         
         var animatedImagesArray = [UIImage]()
         for index in range.0...range.1 {

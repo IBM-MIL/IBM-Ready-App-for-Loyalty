@@ -9,19 +9,19 @@ import UIKit
 
 extension UILabel {
     
-    func sizeToFitFixedWidth(fixedWidth: CGFloat) {
+    func sizeToFitFixedWidth(_ fixedWidth: CGFloat) {
         if text != "" {
-            let objcString: NSString = text!
-            var frame = objcString.boundingRectWithSize(CGSizeMake(fixedWidth, CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
-            frame = CGRectMake(frame.origin.x, frame.origin.y, fixedWidth, frame.size.height)
+            let objcString: NSString = text! as NSString
+            var frame = objcString.boundingRect(with: CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
+            frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: fixedWidth, height: frame.size.height)
         }
 
     }
     
-    class func heightForText(text: String, font: UIFont, width: CGFloat)->CGFloat{
-        let label:UILabel = UILabel(frame: CGRectMake(0, 0, width, CGFloat.max))
+    class func heightForText(_ text: String, font: UIFont, width: CGFloat)->CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
         label.numberOfLines = 0
-        label.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
         label.font = font
         label.text = text
         
@@ -30,7 +30,7 @@ extension UILabel {
         return label.frame.size.height
     }
     
-    func setKernAttribute(size: CGFloat!){
+    func setKernAttribute(_ size: CGFloat!){
         let kernAttribute : Dictionary = [NSKernAttributeName: size]
         if text != nil {
             attributedText = NSAttributedString(string: text!, attributes: kernAttribute)

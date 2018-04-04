@@ -4,13 +4,26 @@ Licensed Materials - Property of IBM
 */
 
 import UIKit
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 enum SortType: Int {
-    case Distance = 0, Price = 1
+    case distance = 0, price = 1
 }
 
 @objc protocol SearchManagerDelegate {
-    func newSearchResults(result : [GasStation]) -> Void
+    func newSearchResults(_ result : [GasStation]) -> Void
 }
 
 class SearchManager: NSObject {
@@ -27,7 +40,7 @@ class SearchManager: NSObject {
     - parameter sortIndex:         the selected index of the segmented control in the searchViewController
     - parameter amenityIndexPaths: the amenities selected in the SearchViewController's tableView
     */
-    func applySortingandFilters(searchText : String, sortType : SortType, amenityIndexPaths : [NSIndexPath]){
+    func applySortingandFilters(_ searchText : String, sortType : SortType, amenityIndexPaths : [IndexPath]){
         
         //Collect all the data needed for Sorting and Filtering
         let selectedAmenitiesArray : [String] = determineSelectedAmenities(amenityIndexPaths)
@@ -62,13 +75,13 @@ class SearchManager: NSObject {
     
     - returns: returns an array of sorted gas stations
     */
-    private func sortGasStations(sortType : SortType, gasStationArray : [GasStation], callback: ([GasStation])->()) {
-        if(sortType == SortType.Distance){
+    fileprivate func sortGasStations(_ sortType : SortType, gasStationArray : [GasStation], callback: @escaping ([GasStation])->()) {
+        if(sortType == SortType.distance){
             SearchManager.sortGasStationByDistance(gasStationArray, callback: { (stations:[GasStation]) -> () in
                 callback(stations)
             })
         }
-        else if(sortType == SortType.Price){
+        else if(sortType == SortType.price){
             callback(SearchManager.sortGasStationByGasPrice(gasStationArray))
         }
         else{
@@ -83,7 +96,7 @@ class SearchManager: NSObject {
     
     - returns: the closest gas station
     */
-    class func getClosestGasStation(gasStations: [GasStation], callback: (GasStation?)->()) {
+    class func getClosestGasStation(_ gasStations: [GasStation], callback: @escaping (GasStation?)->()) {
         sortGasStationByDistance(gasStations, callback: { (stations: [GasStation]) -> () in
             if (stations.first != nil) {
                 callback(stations.first!)
@@ -101,7 +114,7 @@ class SearchManager: NSObject {
     
     - returns: the cheapest gas station
     */
-    class func getCheapestGasStation(gasStations: [GasStation]) -> GasStation {
+    class func getCheapestGasStation(_ gasStations: [GasStation]) -> GasStation {
         let stations = sortGasStationByGasPrice(gasStations)
         return stations.first!
     }
@@ -114,23 +127,24 @@ class SearchManager: NSObject {
     
     - returns: the sorted gas station array by distance
     */
-    private class func sortGasStationByDistance(gasStationArray : [GasStation], callback: ([GasStation])->()) {
+    fileprivate class func sortGasStationByDistance(_ gasStationArray : [GasStation], callback: @escaping ([GasStation])->()) {
         var gasStationDistance = [GasStation: CLLocationDistance]()
         
         var gasStationDistancesFound = 0
         if gasStationArray.isEmpty{
             callback([])
         }
-        for (index, station) in gasStationArray.enumerate() {
+        for (index, station) in gasStationArray.enumerated() {
             LocationUtils.sharedInstance.calcDistanceFromUsersLocation(index, gasStation: station, callback: { (actualIndex : Int, distance: CLLocationDistance?, success) -> () in
                 if (success) {
                     
                     gasStationDistance[station] = distance
-                    gasStationDistancesFound++
+                    gasStationDistancesFound += 1
+                
                     
                     if gasStationDistancesFound == gasStationArray.count {
                         
-                        let sortedGasStationArray = gasStationArray.sort({ gasStationDistance[$0] < gasStationDistance[$1]})
+                        let sortedGasStationArray = gasStationArray.sorted(by: { gasStationDistance[$0] < gasStationDistance[$1]})
             
                         callback(sortedGasStationArray)
                     }
@@ -152,8 +166,8 @@ class SearchManager: NSObject {
     
     - returns: the sorted gas station array by price
     */
-    private class func sortGasStationByGasPrice(gasStationArray : [GasStation]) -> [GasStation]{
-        return gasStationArray.sort({ $0.gasPrice < $1.gasPrice})
+    fileprivate class func sortGasStationByGasPrice(_ gasStationArray : [GasStation]) -> [GasStation]{
+        return gasStationArray.sorted(by: { $0.gasPrice < $1.gasPrice})
     }
     
     /**
@@ -161,7 +175,7 @@ class SearchManager: NSObject {
     
     - returns: the gas station array from the app delegates user object
     */
-    private  func getGasStations() -> [GasStation]{
+    fileprivate  func getGasStations() -> [GasStation]{
         return UserDataManager.sharedInstance.currentUser.gasStations
     }
     
@@ -177,7 +191,7 @@ class SearchManager: NSObject {
     
     - returns: a gas station are that has the same amenities that are in the amenities paramenter
     */
-    private func filterAmenities(gasStationArray : [GasStation], amenities : [String]) -> [GasStation]{
+    fileprivate func filterAmenities(_ gasStationArray : [GasStation], amenities : [String]) -> [GasStation]{
         
         let filteredArray = gasStationArray.filter() {
             
@@ -185,10 +199,10 @@ class SearchManager: NSObject {
             var include = true
             for amenity in amenities {
                 if amenity == "openNow" {
-                    let nowHour = NSDate().hour()
+                    let nowHour = Date().hour()
                     include = include && nowHour >= $0.hours.open.hour() && nowHour < $0.hours.close.hour()
                 }else{
-                    include = include && amenitiesArray.contains(amenity)
+                    include = include && (amenitiesArray?.contains(amenity))!
                 }
             }
             return include
@@ -204,7 +218,7 @@ class SearchManager: NSObject {
     
     - returns: an array of amenities representing the selected amenities from the table view in the SearchViewController
     */
-    private func determineSelectedAmenities(amenityIndexPaths : [NSIndexPath]) -> [String]{
+    fileprivate func determineSelectedAmenities(_ amenityIndexPaths : [IndexPath]) -> [String]{
         
         var selectedAmenitiesArray : [String] = []
         var amenitiesArray = Amenities().amenitiesArray
@@ -227,20 +241,20 @@ class SearchManager: NSObject {
     
     - returns: a filtered gas station array
     */
-    func searchWithText(text : String, gasStationArray : [GasStation]) -> [GasStation]{
+    func searchWithText(_ text : String, gasStationArray : [GasStation]) -> [GasStation]{
         var searchResultsArray : [GasStation] = []
         
         if(text.length > 0){
-            let lowerCaseText = text.lowercaseString
+            let lowerCaseText = text.lowercased()
             
             mainloop: for gasStation in gasStationArray {
                 
-                if(gasStation.name.lowercaseString.containsString(lowerCaseText)){
+                if(gasStation.name.lowercased().containsString(lowerCaseText)){
                     searchResultsArray.append(gasStation)
                     continue
                 }
                 
-                if(gasStation.address.lowercaseString.containsString(lowerCaseText)){
+                if(gasStation.address.lowercased().containsString(lowerCaseText)){
                     searchResultsArray.append(gasStation)
                     continue
                 }
@@ -248,17 +262,17 @@ class SearchManager: NSObject {
                 for amenity in gasStation.amenities {
                     
                     //check if the gas station amenities contain the "text" string
-                    if(amenity.lowercaseString.containsString(lowerCaseText)){
+                    if(amenity.lowercased().containsString(lowerCaseText)){
                         searchResultsArray.append(gasStation)
                         continue mainloop
                     }
                     
                     //just incase -- also try to find the equivalent table view cell title that matches up with the gas station amenity -- to see if it contains the "text" string
-                    let keys = (Amenities().amenityStringByTableViewCellTitle as NSDictionary).allKeysForObject(amenity)
+                    let keys = (Amenities().amenityStringByTableViewCellTitle as NSDictionary).allKeys(for: amenity)
                     if(keys.count > 0){
                         let tableViewCellTitle = keys[0] as! String
                         
-                        if(tableViewCellTitle.lowercaseString.containsString(lowerCaseText)){
+                        if(tableViewCellTitle.lowercased().containsString(lowerCaseText)){
                             searchResultsArray.append(gasStation)
                             continue mainloop
                         }
@@ -266,7 +280,7 @@ class SearchManager: NSObject {
                 }
                 
                 for item in gasStation.items{
-                    if(item.lowercaseString.containsString(lowerCaseText)){
+                    if(item.lowercased().containsString(lowerCaseText)){
                         searchResultsArray.append(gasStation)
                         continue mainloop
                     }
@@ -286,7 +300,7 @@ class SearchManager: NSObject {
     
     - parameter result: the sorted and filtered gas station array
     */
-    func tellDelegatesThereAreNewSearchResults(result : [GasStation]){
+    func tellDelegatesThereAreNewSearchResults(_ result : [GasStation]){
         for delegate in delegates {
             delegate.newSearchResults(result)
         }

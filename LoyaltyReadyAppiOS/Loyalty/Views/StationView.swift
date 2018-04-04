@@ -24,9 +24,9 @@ class StationView: UIView {
     
     - parameter gasStation: Station whose values to display
     */
-    func setValues(gasStation: GasStation){
+    func setValues(_ gasStation: GasStation){
         MILLoadViewManager.sharedInstance.show()
-        LocationUtils.sharedInstance.calcDistanceAndTimeFromUsersLocation(gasStation, callback: { (distance: CLLocationDistance?, time: NSTimeInterval?, success) -> () in
+        LocationUtils.sharedInstance.calcDistanceAndTimeFromUsersLocation(gasStation, callback: { (distance: CLLocationDistance?, time: TimeInterval?, success) -> () in
             MILLoadViewManager.sharedInstance.hide()
             if (success) {
                 MILAlertViewManager.sharedInstance.hide() //hide alert if shown

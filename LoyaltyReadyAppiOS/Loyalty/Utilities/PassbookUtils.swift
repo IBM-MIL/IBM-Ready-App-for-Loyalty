@@ -11,13 +11,14 @@ import PassKit
 **/
 class PassbookUtils: NSObject {
     
-    class func showPass(passName: String, context: AnyObject) {
-        let filePath = NSBundle.mainBundle().pathForResource(passName, ofType:"pkpass")
-        MQALogger.log("\(NSBundle.mainBundle())")
-        let pkfile : NSData = NSData(contentsOfFile: filePath!)!
+    class func showPass(_ passName: String, context: AnyObject) {
+        let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
+        let filePath = Bundle.main.path(forResource: passName, ofType:"pkpass")
+        logger.logInfoWithMessages(message:"\(Bundle.main)")
+        let pkfile : Data = try! Data(contentsOf: URL(fileURLWithPath: filePath!))
         if let pass : PKPass = PKPass(data: pkfile, error: nil) {
             let vc = PKAddPassesViewController(pass: pass) as PKAddPassesViewController
-            context.presentViewController(vc, animated: true, completion: nil)
+            context.present(vc, animated: true, completion: nil)
         }
     }
     

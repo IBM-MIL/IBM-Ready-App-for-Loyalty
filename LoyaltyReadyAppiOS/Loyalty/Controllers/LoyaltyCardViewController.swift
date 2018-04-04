@@ -7,10 +7,10 @@ import UIKit
 
 // used to determine if user is on an ipad or an iphone
 enum UIUserInterfaceIdiom : Int {
-    case Unspecified
+    case unspecified
     
-    case Phone // iPhone and iPod touch style UI
-    case Pad // iPad style UI
+    case phone // iPhone and iPod touch style UI
+    case pad // iPad style UI
 }
 
 /// ViewController showing the loyalty card
@@ -28,7 +28,7 @@ class LoyaltyCardViewController: LoyaltyUIViewController {
     @IBOutlet weak var avaliableDeals: UILabel!
     @IBOutlet weak var rewardAlert: UIView!
     
-    @IBAction func addToPassbook(sender: AnyObject) {
+    @IBAction func addToPassbook(_ sender: AnyObject) {
         PassbookUtils.showPass("loyalty", context: self)
     }
 
@@ -36,12 +36,12 @@ class LoyaltyCardViewController: LoyaltyUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-            self.dropChevron.hidden = true
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            self.dropChevron.isHidden = true
         }
         user = UserDataManager.sharedInstance.currentUser
         
-        let tapToDismiss = UITapGestureRecognizer(target: self, action: "dismiss")
+        let tapToDismiss = UITapGestureRecognizer(target: self, action: #selector(LoyaltyCardViewController.dismiss as (LoyaltyCardViewController) -> () -> ()))
         dimView.addGestureRecognizer(tapToDismiss)
         
         if(user.loggedIn) {
@@ -57,13 +57,13 @@ class LoyaltyCardViewController: LoyaltyUIViewController {
     Dismiss this view controller modally
     */
     func dismiss(){
-        dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func expandOnTap(recognizer:UITapGestureRecognizer) {
+    @IBAction func expandOnTap(_ recognizer:UITapGestureRecognizer) {
         if(cardView.height < contractedHeight+1) {
-            UIView.animateWithDuration(0.5, animations: {
-                self.dropChevron.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+            UIView.animate(withDuration: 0.5, animations: {
+                self.dropChevron.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
                 self.cardView.setHeight(self.expandedHeight)
                 self.view.layoutIfNeeded()
                 self.dropChevron.center.y += self.expandedHeight - self.contractedHeight
@@ -71,8 +71,8 @@ class LoyaltyCardViewController: LoyaltyUIViewController {
             })
         }
         else {
-            UIView.animateWithDuration(0.5, animations: {
-                self.dropChevron.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            UIView.animate(withDuration: 0.5, animations: {
+                self.dropChevron.transform = CGAffineTransform(rotationAngle: CGFloat(0))
                 self.cardView.setHeight(self.contractedHeight)
                 self.dropChevron.center.y -= self.expandedHeight - self.contractedHeight //don't use layoutIfNeeded here; it moves it up to the center of the view
                 self.rewardAlert.center.y -= self.expandedHeight - self.contractedHeight

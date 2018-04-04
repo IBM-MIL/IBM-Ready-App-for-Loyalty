@@ -16,7 +16,7 @@ class InterestCollectionViewCell: UICollectionViewCell {
     func setDeselected(){
         self.backgroundCellView.backgroundColor = UIColor.grayLightLoyalty()
         self.interestLabel.textColor = UIColor.blackLoyalty()
-        self.selected = false
+        self.isSelected = false
     }
     
     /**
@@ -24,8 +24,8 @@ class InterestCollectionViewCell: UICollectionViewCell {
     */
     func setSelected(){
         self.backgroundCellView.backgroundColor = UIColor.tealLoyalty()
-        self.interestLabel.textColor = UIColor.whiteColor()
-        self.selected = true
+        self.interestLabel.textColor = UIColor.white
+        self.isSelected = true
     }
     
     /**
@@ -33,7 +33,7 @@ class InterestCollectionViewCell: UICollectionViewCell {
     */
     func addInterest() {
         let user = UserDataManager.sharedInstance.currentUser
-        user.interests.insert(self.interestLabel.text!)
+        user?.interests.insert(self.interestLabel.text!)
     }
     
     /**
@@ -41,7 +41,7 @@ class InterestCollectionViewCell: UICollectionViewCell {
     */
     func removeInterest() {
         let user = UserDataManager.sharedInstance.currentUser
-        user.interests.remove(self.interestLabel.text!)
+        user?.interests.remove(self.interestLabel.text!)
     }
     
 }

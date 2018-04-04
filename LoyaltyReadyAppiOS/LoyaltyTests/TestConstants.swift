@@ -124,7 +124,7 @@ extension KIFUITestActor {
         //This one is for the notifications prompt
         sleep(1)
         tester().acknowledgeSystemAlert()
-        tester().tapMQAName()
+        
         if (closeOnboardingView) {
             var error :NSError?
             var skip: Bool
@@ -143,29 +143,7 @@ extension KIFUITestActor {
         }
     }
     
-    func tapMQAName() {
-        //Not great, but there is no try/catch in swift so have to do this...
-        for _ in 1...2 {
-            sleep(1)
-            var error : NSError?
-            var button: Bool
-            do {
-                try tester().tryFindingTappableViewWithAccessibilityLabel(
-                                MqaLabel.milbuild.rawValue)
-                button = true
-            } catch let error1 as NSError {
-                error = error1
-                button = false
-            }
-            if let _ = error {
-                print("No mqa screen found.")
-            } else {
-                print("Tapping on \(MqaLabel.milbuild.rawValue) label")
-                tester().tapViewWithAccessibilityLabel(MqaLabel.milbuild.rawValue)
-                break
-            }
-        }
-    }
+    
     
     func closeAccountWindow() {
         var error : NSError?

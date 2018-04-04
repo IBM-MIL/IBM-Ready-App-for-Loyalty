@@ -8,8 +8,8 @@ import UIKit
 
 extension UIButton{
     
-    func setBackgroundColorForState(color: UIColor, forState: UIControlState){
-        setBackgroundImage(UIButton.imageWithColor(color, width: frame.size.width, height: frame.size.height), forState: forState)
+    func setBackgroundColorForState(_ color: UIColor, forState: UIControlState){
+        setBackgroundImage(UIButton.imageWithColor(color, width: frame.size.width, height: frame.size.height), for: forState)
     }
     
     /**
@@ -21,35 +21,35 @@ extension UIButton{
     
     - returns: An image with the color, height and width
     */
-    private class func imageWithColor(color: UIColor, width: CGFloat, height: CGFloat) -> UIImage {
+    fileprivate class func imageWithColor(_ color: UIColor, width: CGFloat, height: CGFloat) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: width, height: height)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
         
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextFillRect(context, rect)
+        context!.setFillColor(color.cgColor)
+        context!.fill(rect)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image
+        return image!
     }
     
-    func setKernAttribute(size: CGFloat!){
+    func setKernAttribute(_ size: CGFloat!){
         
-        let states = [UIControlState.Normal, UIControlState.Application, UIControlState.Disabled, UIControlState.Highlighted, UIControlState.Reserved, UIControlState.Selected]
+        let states = [UIControlState.application, UIControlState.disabled, UIControlState.highlighted, UIControlState.reserved, UIControlState.selected]
         
         for state in states{
-            let titleColor = titleColorForState(state)
+            let titleColor = self.titleColor(for: state)
             let attributes : [String: AnyObject]
             if titleColor != nil {
-                attributes = [NSKernAttributeName: size, NSForegroundColorAttributeName: titleColor!]
+                attributes = [NSKernAttributeName: size as AnyObject, NSForegroundColorAttributeName: titleColor!]
             }else{
-                attributes = [NSKernAttributeName: size]
+                attributes = [NSKernAttributeName: size as AnyObject]
             }
-            let title = titleForState(state)
+            let title = self.title(for: state)
             if(title != nil){
-                setAttributedTitle(NSAttributedString(string: title!, attributes: attributes), forState: state)
+                setAttributedTitle(NSAttributedString(string: title!, attributes: attributes), for: state)
             }
         }
         

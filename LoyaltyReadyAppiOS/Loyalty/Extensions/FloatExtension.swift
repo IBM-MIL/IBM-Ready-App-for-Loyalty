@@ -7,8 +7,8 @@ import Foundation
 import UIKit
 
 extension Float{
-    var isEven:Bool     {return (self % 2 == 0)}
-    var isOdd:Bool      {return (self % 2 != 0)}
+    var isEven:Bool     {return (self.truncatingRemainder(dividingBy: 2) == 0)}
+    var isOdd:Bool      {return (self.truncatingRemainder(dividingBy: 2) != 0)}
     var isPositive:Bool {return (self >= 0)}
     var isNegative:Bool {return (self < 0)}
     var toDouble:Double {return Double(self)}

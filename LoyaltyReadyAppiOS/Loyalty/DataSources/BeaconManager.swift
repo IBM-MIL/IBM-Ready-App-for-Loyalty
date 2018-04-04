@@ -21,7 +21,7 @@ class BeaconManager: NSObject, CLLocationManagerDelegate {
     /**
     override the init method to set up locationManager and beaconRegion monitoring
     */
-    override init() {
+  /*  override init() {
         super.init()
         
         //set beacon manager delegate
@@ -29,53 +29,53 @@ class BeaconManager: NSObject, CLLocationManagerDelegate {
         self.locationManager!.delegate = self
         
         //set beacon region
-        self.beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: kGasStationBeaconMajor, identifier: kBeaconRegionCloseGasStationID)
+        self.beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: kGasStationBeaconMajor, identifier: kBeaconRegionCloseGasStationID)
         
         self.beaconRegion!.notifyOnEntry = true
         self.beaconRegion!.notifyOnExit = true
         
     }
-    
+    */
     
     /**
     Begin beacon detection monitoring for the given beaconRegion
     */
-    func startBeaconDetection() {
+  /*  func startBeaconDetection() {
         
         // - Clear any past region monitoring
         for region in self.locationManager!.monitoredRegions {
-            self.locationManager!.stopMonitoringForRegion(region as! CLBeaconRegion)
+            self.locationManager!.stopMonitoring(for: region as! CLBeaconRegion)
         }
         
         // - Start monitoring
-        self.locationManager!.startMonitoringForRegion(self.beaconRegion!)
+        self.locationManager!.startMonitoring(for: self.beaconRegion!)
     }
-    
-    
-    func locationManager(manager: CLLocationManager, didStartMonitoringForRegion region: CLRegion) {
+    */
+  /*
+    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
         NSLog("Scanning for beacons in region --> %@...", region.identifier)
-        self.locationManager!.startRangingBeaconsInRegion(region as! CLBeaconRegion)
+        self.locationManager!.startRangingBeacons(in: region as! CLBeaconRegion)
     }
     
 
-    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         
         // - Start ranging beacons
         NSLog("You entered the region --> %@ - starting scan for beacons", region.identifier)
 
-        self.locationManager!.startRangingBeaconsInRegion(region as! CLBeaconRegion)
+        self.locationManager!.startRangingBeacons(in: region as! CLBeaconRegion)
 
         // When entering region, ask for notificaiton from Xtify
         XtifyLocationHelper.updateNearGasStation()
     }
     
     
-    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         
         // - Stop ranging beacons
         NSLog("You exited the region --> %@ - stopping scan for beacons", region)
 
-        self.locationManager!.stopRangingBeaconsInRegion(region as! CLBeaconRegion)
+        self.locationManager!.stopRangingBeacons(in: region as! CLBeaconRegion)
         
         /*var alertView = UIAlertController(title: "Exiting region", message: "left range of beacon: \(region)", preferredStyle: .Alert)
         alertView.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "n/a"), style: .Default, handler: nil))
@@ -83,22 +83,21 @@ class BeaconManager: NSObject, CLLocationManagerDelegate {
         appdel.window?.rootViewController?.presentViewController(alertView, animated: true, completion: nil)*/
     }
     
-    func locationManager(manager: CLLocationManager, monitoringDidFailForRegion region: CLRegion?, withError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
         NSLog("Error monitoring \(error)")
     }
     
     
-    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         
         //filter out unknown beacons
-        var knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
+        var knownBeacons = beacons.filter{ $0.proximity != CLProximity.unknown }
 
         //if beacons are found at all, continue
         if (knownBeacons.count > 0) {
             let closestBeacon = knownBeacons[0] //save closest Beacon for sorting later
             let newBeaconID = closestBeacon.major.stringValue + closestBeacon.minor.stringValue
             
-            MQALogger.log("closestBeacon: \(closestBeacon.major) and \(closestBeacon.minor) in prox: \(BeaconManager.proximityAsString(closestBeacon.proximity))")
             
             if (newBeaconID != self.closestBeaconID) { //if new closest beacon
                 self.closestBeaconID = newBeaconID
@@ -108,7 +107,7 @@ class BeaconManager: NSObject, CLLocationManagerDelegate {
         else {
             NSLog("No beacons are nearby")
         }
-    }
+    }*/
     
     /**
     returns the string for proximity of a beacon
@@ -117,24 +116,25 @@ class BeaconManager: NSObject, CLLocationManagerDelegate {
     
     - returns: a string representation of proximity
     */
-    class func proximityAsString(proximity: CLProximity) -> String {
+    /*
+    class func proximityAsString(_ proximity: CLProximity) -> String {
         switch proximity {
-        case CLProximity.Far:
+        case CLProximity.far:
             return "Far"
             
-        case CLProximity.Near:
+        case CLProximity.near:
             return "Near"
             
-        case CLProximity.Immediate:
+        case CLProximity.immediate:
             return "Immediate"
             
-        case CLProximity.Unknown:
+        case CLProximity.unknown:
             return "Unknown"
         }
     }
     
     
-    
+    */
     
     
 }

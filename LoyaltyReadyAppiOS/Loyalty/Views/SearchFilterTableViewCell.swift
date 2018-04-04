@@ -17,20 +17,20 @@ class SearchFilterTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func setUp(imageString : String, amenityNameText : String){
+    func setUp(_ imageString : String, amenityNameText : String){
         
         self.iconImageView.image = UIImage(named: imageString)
-        self.iconImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.iconImageView.contentMode = UIViewContentMode.scaleAspectFit
         self.filterNameLabel.text = amenityNameText
         self.tintColor = UIColor.purpleLoyalty()
-        self.accessoryType = UITableViewCellAccessoryType.None
-        self.selectionStyle = UITableViewCellSelectionStyle.None;
+        self.accessoryType = UITableViewCellAccessoryType.none
+        self.selectionStyle = UITableViewCellSelectionStyle.none;
     
     }
 

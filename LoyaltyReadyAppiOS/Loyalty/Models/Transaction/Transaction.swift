@@ -12,7 +12,7 @@ class Transaction: NSObject {
     /// Transaction id
     var id: Int!
     /// Timestamp date of the transaction
-    var timestamp: NSDate!
+    var timestamp: Date!
     /// Transaction type
     var type: String!
     /// Transaction method
@@ -32,7 +32,7 @@ class Transaction: NSObject {
     convenience init(json: [String: AnyObject]){
         self.init()
         id = json["id"] as! Int
-        timestamp = NSDate(timeIntervalSinceReferenceDate: (json["timestamp"] as! Double) / 1000)
+        timestamp = Date(timeIntervalSinceReferenceDate: (json["timestamp"] as! Double) / 1000)
         type = json["type"] as! String
         method = json["method"] as! String
         provider = json["provider"] as! String
@@ -48,7 +48,7 @@ class Transaction: NSObject {
     
     - returns: Array of objects
     */
-    private func getTransactionItems(jsonArray: [[String:AnyObject]]) -> [TransactionItem] {
+    fileprivate func getTransactionItems(_ jsonArray: [[String:AnyObject]]) -> [TransactionItem] {
         var returnTransactionItems = [TransactionItem]()
         for transactionItemJson in jsonArray{
             let transactionItem = TransactionItem(json: transactionItemJson)

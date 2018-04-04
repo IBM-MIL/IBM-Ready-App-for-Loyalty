@@ -30,11 +30,11 @@ class PageContentViewController: LoyaltyUIViewController {
         
         // If last page, show donw button instead of skip button
         if pageIndex == 2 {
-            self.skipButton.hidden = true
-            self.doneButton.hidden = false
+            self.skipButton.isHidden = true
+            self.doneButton.isHidden = false
         } else {
-            self.skipButton.hidden = false
-            self.doneButton.hidden = true
+            self.skipButton.isHidden = false
+            self.doneButton.isHidden = true
         }
         
         // Animating this way allows us to limit repeat count to 1
@@ -43,14 +43,14 @@ class PageContentViewController: LoyaltyUIViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.onboardImageView.startAnimating()
     }
     
    
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.onboardImageView.stopAnimating()
     }
@@ -60,11 +60,11 @@ class PageContentViewController: LoyaltyUIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func skipOnboarding(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func skipOnboarding(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func finishOnboarding(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func finishOnboarding(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

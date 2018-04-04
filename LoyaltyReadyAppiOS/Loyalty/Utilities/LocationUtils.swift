@@ -11,11 +11,12 @@ class LocationUtils: NSObject {
     /// Shared instance of LocationUtils
     static let sharedInstance = LocationUtils()
     /// Cache to contain estimated distances from location
-    var distanceCache = NSCache()
+    var distanceCache = NSCache<AnyObject, AnyObject>()
     /// Cache to contain estimated time from location
-    var timeCache = NSCache()
+    var timeCache = NSCache<AnyObject, AnyObject>()
     /// User's previous location if changed
     var previousUserLocation: CLLocation!
+    let logger : OCLogger = OCLogger.getInstanceWithPackage("Loyalty");
     
     /**
     This method calculates the distance the gas station is from the user's current location
@@ -24,10 +25,10 @@ class LocationUtils: NSObject {
     
     - returns: the distance the gas station is from the user's location
     */
-    func calcDistanceFromUsersLocation(actualIndex : Int, gasStation : GasStation, callback:(Int, CLLocationDistance?, Bool) -> ()) {
+    func calcDistanceFromUsersLocation(_ actualIndex : Int, gasStation : GasStation, callback:@escaping (Int, CLLocationDistance?, Bool) -> ()) {
         
-        if userHasNotMovedSignificantly() && distanceCache.objectForKey(gasStation.address) != nil {
-            callback(actualIndex, distanceCache.objectForKey(gasStation.address) as? CLLocationDistance, true)
+        if userHasNotMovedSignificantly() && distanceCache.object(forKey: gasStation.address as AnyObject) != nil {
+            callback(actualIndex, distanceCache.object(forKey: gasStation.address as AnyObject) as? CLLocationDistance, true)
         }else{
             let gasStationCoordinate = gasStation.coordinate
             let userLocation = getUsersLocation()
@@ -36,31 +37,34 @@ class LocationUtils: NSObject {
             // source and destination are the relevant MKMapItems
             let sourcePlace = MKPlacemark(coordinate: userLocation, addressDictionary: nil)
             let source = MKMapItem(placemark: sourcePlace)
-            let destPlace = MKPlacemark(coordinate: gasStationCoordinate, addressDictionary: nil)
+            let destPlace = MKPlacemark(coordinate: gasStationCoordinate!, addressDictionary: nil)
             let dest = MKMapItem(placemark: destPlace)
             request.source = source
             request.destination = dest
             // Specify the transportation type
-            request.transportType = MKDirectionsTransportType.Any;
+            request.transportType = MKDirectionsTransportType.any;
             
             // If you're open to getting more than one route,
             // requestsAlternateRoutes = true; else requestsAlternateRoutes = false;
             request.requestsAlternateRoutes = false
             let direction = MKDirections(request: request)
-            direction.calculateDirectionsWithCompletionHandler ({
-                (response: MKDirectionsResponse?, error: NSError?) in
+            direction.calculate(completionHandler: { (response, error) in
                 
-                if (error == nil) { //success
-                    if let route: MKRoute = response!.routes.first! as MKRoute{
+                if (error == nil)
+                { //success
+                    if let route: MKRoute = response!.routes.first! as MKRoute
+                    {
                         let distance = route.distance
-                        self.distanceCache.setObject(distance, forKey: gasStation.address)
+                        self.distanceCache.setObject(distance as AnyObject, forKey: gasStation.address as AnyObject)
                         callback(actualIndex, distance, true)
                     }
-                }else{ //failure to connect
-                    MQALogger.log(error?.localizedDescription)
+                }else
+                { //failure to connect
+                    self.logger.logInfoWithMessages(message: (error?.localizedDescription)!)
                     callback(actualIndex, nil, false)
                 }
             })
+
             
         }
     }
@@ -72,11 +76,11 @@ class LocationUtils: NSObject {
     
     - returns: the distance and estimated time the gas station is from the user's location
     */
-    func calcDistanceAndTimeFromUsersLocation(gasStation : GasStation, callback:(CLLocationDistance?, Double?, Bool) -> ()) {
+    func calcDistanceAndTimeFromUsersLocation(_ gasStation : GasStation, callback:@escaping (CLLocationDistance?, Double?, Bool) -> ()) {
         
-        if userHasNotMovedSignificantly() && distanceCache.objectForKey(gasStation.address) != nil && timeCache.objectForKey(gasStation.address) != nil { //if user is in same spot and cache exists, return cached data
-            let distance = distanceCache.objectForKey(gasStation.address) as! CLLocationDistance
-            let time = timeCache.objectForKey(gasStation.address) as! NSTimeInterval
+        if userHasNotMovedSignificantly() && distanceCache.object(forKey: gasStation.address as AnyObject) != nil && timeCache.object(forKey: gasStation.address as AnyObject) != nil { //if user is in same spot and cache exists, return cached data
+            let distance = distanceCache.object(forKey: gasStation.address as AnyObject) as! CLLocationDistance
+            let time = timeCache.object(forKey: gasStation.address as AnyObject) as! TimeInterval
             callback(distance, time, true)
         }else{ //if user has moved, request distance and time
             let gasStationCoordinate = gasStation.coordinate
@@ -86,33 +90,33 @@ class LocationUtils: NSObject {
             // source and destination are the relevant MKMapItems
             let sourcePlace = MKPlacemark(coordinate: userLocation, addressDictionary: nil)
             let source = MKMapItem(placemark: sourcePlace)
-            let destPlace = MKPlacemark(coordinate: gasStationCoordinate, addressDictionary: nil)
+            let destPlace = MKPlacemark(coordinate: gasStationCoordinate!, addressDictionary: nil)
             let dest = MKMapItem(placemark: destPlace)
             request.source = source
             request.destination = dest
             
             // Specify the transportation type
-            request.transportType = MKDirectionsTransportType.Any;
+            request.transportType = MKDirectionsTransportType.any;
             
             // If you're open to getting more than one route,
             // requestsAlternateRoutes = true; else requestsAlternateRoutes = false;
             request.requestsAlternateRoutes = false
             let direction = MKDirections(request: request)
-            direction.calculateDirectionsWithCompletionHandler ({
-                (response: MKDirectionsResponse?, error: NSError?) in
+            direction.calculate (completionHandler: {
+                (response, error) in
                 
                 if (error == nil) { //success
                     if let route: MKRoute = response!.routes.first! as MKRoute{
                         let distance = route.distance
                         let time = route.expectedTravelTime
                         
-                        self.distanceCache.setObject(distance, forKey: gasStation.address)
-                        self.timeCache.setObject(time, forKey: gasStation.address)
+                        self.distanceCache.setObject(distance as AnyObject, forKey: gasStation.address as AnyObject)
+                        self.timeCache.setObject(time as AnyObject, forKey: gasStation.address as AnyObject)
                         
                         callback(distance, time, true)
                     }
                 }else{ //failure to connect
-                    MQALogger.log(error?.localizedDescription)
+                    self.logger.logInfoWithMessages(message: "Error: \(error!.localizedDescription)")
                     callback(nil, nil, false)
                 }
             })
@@ -131,7 +135,7 @@ class LocationUtils: NSObject {
             let userLocationCoordinates = getUsersLocation()
             let userLocation = CLLocation(latitude: userLocationCoordinates.latitude, longitude: userLocationCoordinates.longitude)
             
-            let distance: CLLocationDistance = previousUserLocation.distanceFromLocation(userLocation)
+            let distance: CLLocationDistance = previousUserLocation.distance(from: userLocation)
             let minChangeInMeters: CLLocationDistance = 25
             
             return distance < minChangeInMeters
@@ -149,7 +153,7 @@ class LocationUtils: NSObject {
     func getUsersLocation() -> CLLocationCoordinate2D{
         let userLocation = UserDataManager.sharedInstance.currentUser.coordinate
         
-        return userLocation
+        return userLocation!
     }
     
 }

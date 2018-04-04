@@ -17,15 +17,15 @@ class LocalizationUtils: NSObject {
     
     - returns: The value using the user's locale
     */
-    class func localizeCurrency(amount: Double) -> String {
-        let currencyFormatter = NSNumberFormatter()
-        currencyFormatter.locale = NSLocale.currentLocale()
+    class func localizeCurrency(_ amount: Double) -> String {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.locale = Locale.current
         currencyFormatter.maximumFractionDigits = 2
         currencyFormatter.minimumFractionDigits = 2
         currencyFormatter.alwaysShowsDecimalSeparator = true
-        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        currencyFormatter.numberStyle = NumberFormatter.Style.currency
         
-        return currencyFormatter.stringFromNumber(amount)!
+        return currencyFormatter.string(from: NSNumber(value: amount))!
         
     }
     
@@ -36,9 +36,9 @@ class LocalizationUtils: NSObject {
     
     - returns: A string representing distance away from station in mi or km
     */
-    class func localizeDistance(distance: CLLocationDistance) -> String {
-        let locale = NSLocale.currentLocale()
-        let isMetric: Bool = locale.objectForKey(NSLocaleUsesMetricSystem)!.boolValue
+    class func localizeDistance(_ distance: CLLocationDistance) -> String {
+        let locale = Locale.current
+        let isMetric: Bool = ((locale as NSLocale).object(forKey: NSLocale.Key.usesMetricSystem)! as AnyObject).boolValue
         
         if (isMetric) {
             let d = distance / 1000 //km
@@ -56,11 +56,11 @@ class LocalizationUtils: NSObject {
     
     - returns: A string representing the localized time
     */
-    class func localizeTime(time: NSDate) -> String {
-        let locale = NSLocale.currentLocale()
-        let dateFormat = NSDateFormatter.dateFormatFromTemplate("j", options: 0, locale: locale)!
+    class func localizeTime(_ time: Date) -> String {
+        let locale = Locale.current
+        let dateFormat = DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: locale)!
         
-        if dateFormat.rangeOfString("a") != nil { //12 hour time
+        if dateFormat.range(of: "a") != nil { //12 hour time
             return time.localizedStringTime()
         } else { //24 hour time
             return time.localizedStringTime()

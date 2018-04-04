@@ -55,21 +55,21 @@ class EnableNotificationsViewController: SubSettingsViewController {
     */
     override func mainButtonAction(){
 
-        if !UIApplication.sharedApplication().isRegisteredForRemoteNotifications() {
+        if !UIApplication.shared.isRegisteredForRemoteNotifications {
         
-            let alertController = UIAlertController(title: NSLocalizedString("Notice", comment: ""), message: NSLocalizedString("You must enable Notifications in the Settings app.", comment: ""), preferredStyle: .Alert)
-            let detailAction = UIAlertAction(title: NSLocalizedString("Launch Settings", comment: ""), style: .Default) { (action) in
-                UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+            let alertController = UIAlertController(title: NSLocalizedString("Notice", comment: ""), message: NSLocalizedString("You must enable Notifications in the Settings app.", comment: ""), preferredStyle: .alert)
+            let detailAction = UIAlertAction(title: NSLocalizedString("Launch Settings", comment: ""), style: .default) { (action) in
+                UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
             }
-            let laterAction = UIAlertAction(title: NSLocalizedString("Later", comment: ""), style: .Default) { (action) in self.noThanksAction() }
+            let laterAction = UIAlertAction(title: NSLocalizedString("Later", comment: ""), style: .default) { (action) in self.noThanksAction() }
             alertController.addAction(detailAction)
             alertController.addAction(laterAction)
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
         } else {
-            let alertController = UIAlertController(title: NSLocalizedString("Notice", comment: ""), message: NSLocalizedString("You have already enabled Notifications for Roadrunner.", comment: ""), preferredStyle: .Alert)
-            let confirmAction = UIAlertAction(title: NSLocalizedString("Sounds Good!", comment: ""), style: .Default) { (action) in self.noThanksAction() }
+            let alertController = UIAlertController(title: NSLocalizedString("Notice", comment: ""), message: NSLocalizedString("You have already enabled Notifications for Roadrunner.", comment: ""), preferredStyle: .alert)
+            let confirmAction = UIAlertAction(title: NSLocalizedString("Sounds Good!", comment: ""), style: .default) { (action) in self.noThanksAction() }
             alertController.addAction(confirmAction)
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
