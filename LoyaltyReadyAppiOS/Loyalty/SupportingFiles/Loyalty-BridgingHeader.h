@@ -5,7 +5,6 @@
 
 #import <IBMMobileFirstPlatformFoundation/IBMMobileFirstPlatformFoundation.h>
 #import <IBMMobileFirstPlatformFoundationJSONStore/IBMMobileFirstPlatformFoundationJSONStore.h>
-#import "XLappMgr.h"
 #import "NBPhoneNumber.h"
 #import "NBPhoneNumberUtil.h"
 #import "NBAsYouTypeFormatter.h"

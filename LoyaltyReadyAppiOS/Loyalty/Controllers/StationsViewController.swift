@@ -186,37 +186,9 @@ class StationsViewController: LoyaltyUIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(StationsViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         
-        
-        
-        // For demo purposes, simulate telling Xtify our location to activate a push notification
-        //XtifyLocationHelper.updateNearGasStation()
-       // let cllocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 30.332, longitude: -97.705)
-        // XLappMgr.get().updateLocation(with: cllocation, andAlt: Float(229.225098), andAccuracy: Float(4000.000000))
-       
-        
-        // create whisk credentials token
-       /* let credentialsConfiguration = WhiskCredentials(accessKey: WhiskAppKey,accessToken: WhiskAppSecret)
-        let whisk = Whisk(credentials: credentialsConfiguration)
-        whisk.baseURL = "https://openwhisk.eu-gb.bluemix.net"
-        
-        // Set latitude and longitude parameters
-        if let currentLocation = currentLocation {
-            MyActionParameters = ["latitude": currentLocation[0].coordinate.latitude as AnyObject, "longitude": currentLocation[0].coordinate.longitude as AnyObject]
-        }
 
         
-        do {
-            try whisk.invokeAction(name: "sendDeals", package: "com.ibm.mil.readyapps", namespace: "dselvara@in.ibm.com_sdp", parameters: nil, hasResult: true,  callback: {(reply, error) -> Void in
-                if let error = error {
-                    print("Error invoking action \(error.localizedDescription)")
-                } else {
-                    print("Action invoked!")
-                }
-                
-            })
-        } catch {
-            print("Error \(error)")
-        }*/
+        
  
     }
     
@@ -231,9 +203,13 @@ class StationsViewController: LoyaltyUIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        self.setupMap(userLocation, latDelta: 0.015, longDelta: 0.015)
         
-        self.enableGeoFencing()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { // change 2 to desired number of seconds
+            // Your code with delay
+            self.setupMap(self.userLocation, latDelta: 0.02, longDelta: 0.02)
+            self.enableGeoFencing()
+        }
       
         
     }
@@ -256,6 +232,7 @@ class StationsViewController: LoyaltyUIViewController {
         self.checkIfUserHasSelectedClosestOrCheapestFromRewardsTab()
         isSortingRefresh = true
         self.searchViewController.applySortingAndFilters()
+        
     }
     
     /**
@@ -405,13 +382,9 @@ class StationsViewController: LoyaltyUIViewController {
         //remove pins?
         if (removeExisting == true) {
             mapView.removeAnnotations(mapView.annotations)
+            
+            
         }
-        // show user location
-        //let userPoint = MKPointAnnotation()
-        //userPoint.coordinate = userLocation
-        //userPoint.title = NSLocalizedString("Current Location", comment: "")
-        //mapView.addAnnotation(userPoint)
-        //  mapView.showsUserLocation = true
         
         
         //now show gas station pins
@@ -1141,6 +1114,7 @@ extension StationsViewController: MKMapViewDelegate{
             }
             
             self.currentCollectionViewState = .hidden
+         
             self.selectedPin = nil
         }
     }
@@ -1173,7 +1147,7 @@ extension StationsViewController: MKMapViewDelegate{
                 annotationView?.canShowCallout = true
                 let removeButton = UIButton(type: .custom)
                 removeButton.frame = CGRect(x: 0, y: 0, width: 23, height: 23)
-                removeButton.setImage(UIImage(named: "DeleteGeotification")!, for: .normal)
+                removeButton.setImage(UIImage(named: "DeleteGeotification"), for: .normal)
                 annotationView?.leftCalloutAccessoryView = removeButton
             } else {
                 annotationView?.annotation = annotation
@@ -1183,7 +1157,10 @@ extension StationsViewController: MKMapViewDelegate{
         else if (annotation.isKind(of: MapPin.self)) {
             annotationView!.image = UIImage(named: "map pin_unselected")
             annotationView!.canShowCallout = false
-            annotationView!.centerOffset = CGPoint(x: 0,y: -annotationView!.frame.size.height*0.5) //account for pin offset due to custom image
+            annotationView!.centerOffset = CGPoint(x: 0,y: -annotationView!.frame.size.height*0.5)
+            
+            
+            //account for pin offset due to custom image
         } else {
             annotationView!.image = UIImage(named: "current-location")
             annotationView!.canShowCallout = false
@@ -1374,8 +1351,12 @@ extension StationsViewController: SearchViewControllerDelegate {
     This method is called when the apply button on the SearchViewController is pressed
     */
     func applyButtonPressed() {
+        
         self.hideOrShowSearchViewController()
     }
+    
+    
+    
     
     /**
     This method is called when the cancel button on the SearchViewController is pressed

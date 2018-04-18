@@ -5,8 +5,5 @@
 
 #import "WLSwiftBridgingHeader.h"
 #import "WLClient.h"
-//#import "XLappMgr.h"
-//#import "NBPhoneNumber.h"
-//#import "NBPhoneNumberUtil.h"
-//#import "NBAsYouTypeFormatter.h"
+
 

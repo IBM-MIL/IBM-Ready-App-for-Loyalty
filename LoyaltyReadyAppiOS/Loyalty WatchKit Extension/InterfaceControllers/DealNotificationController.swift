@@ -45,11 +45,7 @@ class DealNotificationController: WKUserNotificationInterfaceController {
     
     override func didReceiveRemoteNotification(remoteNotification: [NSObject : AnyObject], withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
         
-        /* Xtify Deal Instructions */
         
-        // For deal notifications, in the Xtify console:
-        // Set Simple Notification Message the same as your deal name
-        // Set Action Category to: dealCategory
         // In JSON Payload, include json in the following format:
         /*
 
@@ -64,7 +60,7 @@ class DealNotificationController: WKUserNotificationInterfaceController {
         }
         */
 
-        if let jsonLevelOne: AnyObject = remoteNotification["aps"], jsonLevelTwo: AnyObject = jsonLevelOne["alert"] {
+        if let jsonLevelOne: AnyObject = remoteNotification["aps"], let jsonLevelTwo: AnyObject = jsonLevelOne["alert"] {
             
             let jsonObject3 = jsonLevelTwo["body"] as! String
             detailLabel.setText(jsonObject3)

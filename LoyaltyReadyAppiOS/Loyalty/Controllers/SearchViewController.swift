@@ -339,7 +339,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     }
     
     /**
-    This method si called when the apply button is pressed. It will trigger the sorting and filtering of gas stations as well as tell the SearchViewControllerDelegate that the apply button was pressed so it can refresh the UI accordingly
+    This method is called when the apply button is pressed. It will trigger the sorting and filtering of gas stations as well as tell the SearchViewControllerDelegate that the apply button was pressed so it can refresh the UI accordingly
     */
     func applyButtonAction(){
         self.applySortingAndFilters()
@@ -348,7 +348,7 @@ class SearchViewController: LoyaltyUIViewController, UITableViewDelegate, UITabl
     
     
     /**
-    This method si called when the cancel button is pressed. It will tell the SearchViewControllerDelegate that the cancel button was pressed so it can refresh the UI accordingly
+    This method is called when the cancel button is pressed. It will tell the SearchViewControllerDelegate that the cancel button was pressed so it can refresh the UI accordingly
     */
     func cancelButtonAction(){
         self.tellDelegateCancelButtonPressed()

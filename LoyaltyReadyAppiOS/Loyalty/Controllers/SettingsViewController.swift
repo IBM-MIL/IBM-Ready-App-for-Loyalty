@@ -4,6 +4,7 @@ Licensed Materials - Property of IBM
 */
 
 import UIKit
+import CoreLocation
 
 class SettingsViewController: LoyaltyUIViewController {
     

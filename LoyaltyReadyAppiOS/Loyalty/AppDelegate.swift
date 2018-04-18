@@ -49,8 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.isStatusBarHidden = false
         
         
-        
-        
         // Set the logger level for Worklight
         OCLogger.setLevel(OCLogger_DEBUG)
 
@@ -78,33 +76,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
 
         logger.logInfoWithMessages(message: "Application is about to Enter Background")
-        XLappMgr.get().appEnterBackground()
+        
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         logger.logInfoWithMessages(message: "Application moved to Foreground")
-        XLappMgr.get().appEnterForeground()
+        
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         logger.logInfoWithMessages(message: "Application moved from inactive to Active state")
-        XLappMgr.get().appEnterActive()
+        
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
         logger.logInfoWithMessages(message: "applicationWillTerminate")
-        XLappMgr.get().applicationWillTerminate()
+        func stopMonitoring(geotification: Geotification) {
+            for region in locationManager.monitoredRegions {
+                guard let circularRegion = region as? CLCircularRegion, circularRegion.identifier == geotification.identifier else { continue }
+                locationManager.stopMonitoring(for: circularRegion)
+            }
+        }
+        
+    }
+    func applicationShouldTerminate(_ application: UIApplication) {
+        logger.logInfoWithMessages(message: "applicationWillTerminate")
+        func stopMonitoring(geotification: Geotification) {
+            for region in locationManager.monitoredRegions {
+                guard let circularRegion = region as? CLCircularRegion, circularRegion.identifier == geotification.identifier else { continue }
+                locationManager.stopMonitoring(for: circularRegion)
+            }
+        }
+        
     }
     
-    // MARK: Xtify Notification Handling
+    
     
     override init() {
         super.init()
         
         registerForPush()
 
-      //  let anXtifyOptions = XLXtifyOptions.getXtifyOptions()
-       // XLappMgr.get().initilizeXoptions(anXtifyOptions)
+      
     }
     
     func registerForPush () {
@@ -119,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
   logger.logInfoWithMessages(message: "Succeeded registering for push notifications. Dev Token: \(deviceToken)")
-     //   XLappMgr.get().register(withXtify: deviceToken)
+     
         let push =  BMSPushClient.sharedInstance
         push.registerWithDeviceToken(deviceToken: deviceToken, WithUserId:"sampleUserID", completionHandler:  { (response, statusCode, error) -> Void in
             
@@ -145,9 +158,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         logger.logInfoWithMessages(message: "Recieving notification from any app state")
         
-//        let launchOptions = userInfo
-//        self.handleAnyNotification(launchOptions as! [String: Any])
-//        completionHandler(UIBackgroundFetchResult.newData)
+
         let payLoad = ((((userInfo as NSDictionary).value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String)
         
         self.showAlert(title: "Recieved Push notifications", message: payLoad)
@@ -155,7 +166,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         logger.logInfoWithMessages(message: "Failed to register with error: \(error)")
-      //  XLappMgr.get().register(withXtify: nil)
+      
         let message:String = "Error registering for push notifications: \(error.localizedDescription)"
         
         self.showAlert(title: "Registering for notifications", message: message)
@@ -186,41 +197,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          print("Error \(error)")
          }
         
-        
-        // Show an alert if application is active
-       // if UIApplication.shared.applicationState == .active {
-            //guard let message = note(fromRegionIdentifier: region.identifier) else { return }
-            //let message = "Hello"
-            //window?.showAlert(withTitle: nil, message: message)
-            //showAlert(title: "Notification", message: message)
-            
-            
-      //  } else {
-            // Otherwise present a local notification
-           // let notification = UILocalNotification()
-            //notification.alertBody = note(fromRegionIdentifier: region.identifier)
-           // notification.alertBody = "Hello"
-           // notification.soundName = "Default"
-          //  UIApplication.shared.presentLocalNotificationNow(notification)
-       // }
     }
     
-    /*   func note(fromRegionIdentifier identifier: String) -> String? {
-     let savedItems = UserDefaults.standard.array(forKey: PreferencesKeys.savedItems) as? [NSData]
-     let geotifications = savedItems?.map { NSKeyedUnarchiver.unarchiveObject(with: $0 as Data) as? Geotification }
-     let index = geotifications?.index { $0?.identifier == identifier }
-     return index != nil ? geotifications?[index!]?.note : nil
-     }*/
-    
-    //geo fencing
-    
-}
 
-// MARK: Custom Notification handling methods
-
-extension AppDelegate: DataUtilsDelegate {
     
-    //ibm push methods
+    //MARK IBM Push
     
     func sendNotifToDisplayResponse (responseValue:String, responseBool: Bool){
         
@@ -238,7 +219,7 @@ extension AppDelegate: DataUtilsDelegate {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         
         // show the alert
-        self.window!.rootViewController!.present(alert, animated: true, completion: nil)
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     func convertStringToDictionary(text: String) -> [String:AnyObject]? {
         if let data = text.data(using: String.Encoding.utf8) {
@@ -254,21 +235,15 @@ extension AppDelegate: DataUtilsDelegate {
    func unRegisterPush () {
         
         // MARK:  RETRIEVING AVAILABLE SUBSCRIPTIONS
-        
         let push =  BMSPushClient.sharedInstance
-        
         push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
             
             if error.isEmpty {
-                
                 print( "Response during retrieving subscribed tags : \(String(describing: response?.description))")
-                
                 print( "status code during retrieving subscribed tags : \(String(describing: statusCode))")
                 
                 // MARK:  UNSUBSCRIBING TO TAGS
-                
                 push.unsubscribeFromTags(tagsArray: response!, completionHandler: { (response, statusCode, error) -> Void in
-                    
                     if error.isEmpty {
                         
                         print( "Response during unsubscribed tags : \(String(describing: response?.description))")
@@ -300,14 +275,9 @@ extension AppDelegate: DataUtilsDelegate {
                 
                 print( "Error during retrieving subscribed tags \(error) ")
             }
-            
         }
-        
     }
-    
-    
-    
-    
+
     
     
     
@@ -316,116 +286,10 @@ extension AppDelegate: DataUtilsDelegate {
     
     
     
-    /**
-    Method that all notifications must go through, including when app is active and when coming from an inactive state
     
-    - parameter receivedData: data received from notification
-    */
-    func handleAnyNotification(_ receivedData: Dictionary<String,Any>) {
-       
-        
-        if receivedData.isEmpty {
-      //  if ( [receivedData count] == 0 ) {
-            return
-        }
-        
-        if let value = receivedData["RN"] as? String {
-            
-            let dataUtils = DataUtils()
-            dataUtils.dataDelegate = self
-            dataUtils.richNotificationsRequest(value)
-            return
-        }
-        
-        self.handleSimplePush(receivedData)
-    }
     
-    /**
-    Method to handle simple notifications and display them to user
     
-    - parameter receivedData: json data received from Xtify
-    */
-    func handleSimplePush(_ receivedData: Dictionary<String, Any>) {
-        
-        if let theDeal = self.parseNotificationJson(receivedData) {
-            
-            // Alert to show user the deal and display options to view details of deal
-            let alertController = UIAlertController(title: theDeal.0, message: theDeal.1.name, preferredStyle: .alert)
-            
-            let detailAction = UIAlertAction(title: NSLocalizedString("Details", comment: "n/a"), style: .default) { (action) in
-                self.loadDealDetails(theDeal.1)
-            }
-            let OKAction = UIAlertAction(title: NSLocalizedString("OK", comment: "n/a"), style: .default, handler: nil)
-            alertController.addAction(detailAction)
-            alertController.addAction(OKAction)
-
-            // Prevents UIAlertController's from being presented on top of each other
-            if let _ = UIApplication.shared.keyWindow?.rootViewController?.presentedViewController as? UIAlertController { }
-            else {
-                self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
-            }
-        }
-    }
     
-    /**
-    Method to parse json response, extracting the title and a Deal object
-    
-    - parameter json: json from Xtify
-    
-    - returns: a Tuple with the title and Deal object
-    */
-    //func parseNotificationJson(_ json: Dictionary<NSObject, AnyObject>) -> (String, Deal)? {
-    func parseNotificationJson(_ json: Dictionary<AnyHashable, Any>) -> (String, Deal)? {
-        
-        // Find alert title if available
-        var title = ""
-        if let tempTitle = json["title"] as? String {
-            title = tempTitle
-        }
-        
-        if let theDeal = json["deal"] as? String {
-            if theDeal != "" {
-            
-                let jsonData = theDeal.data(using: String.Encoding.utf8)
-                let dealJson = (try! JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions.mutableContainers)) as! [String:AnyObject]
-                
-                let notificationDeal: Deal = Deal(notificationJson: dealJson)
-                
-                return (title, notificationDeal)
-            } else {
-                return nil
-            }
-            
-        } else if (json["name"] as? String != nil) { // Verify json is flat, not nested
-            
-            // Xtify Workaround: Xtify is inconsistent in that it can send nested Json only sometimes, this else statement catches those.
-            let formattedJson = json as! [String:AnyObject]
-            let notificationDeal = Deal(notificationJson: formattedJson)
-            
-            return (title, notificationDeal)
-        } else {
-            return nil
-        }
-    }
-    
-    /**
-    Method presents the deal details view controller with the deal just received from Xtify
-    
-    - parameter deal: deal to load
-    */
-    func loadDealDetails(_ deal: Deal) {
-
-        if let tabBar = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController {
-            
-            if let dealsDetailViewController = Utils.vcWithNameFromStoryboardWithName("DealsDetailViewController", storyboardName: "Deals") as? DealsDetailViewController {
-                dealsDetailViewController.deal = deal
-                tabBar.viewControllers?[tabBar.selectedIndex].navigationController?.popToRootViewController(animated: false)
-                tabBar.viewControllers?[tabBar.selectedIndex].navigationController?.pushViewController(dealsDetailViewController, animated: true)
-            }
-            
-            
-        }
-    }
     
     /**
     Method to register custom notification actions and categories (iOS 8+)
@@ -472,48 +336,7 @@ extension AppDelegate: DataUtilsDelegate {
         
     }
     
-    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [AnyHashable: Any], completionHandler: @escaping () -> Void) {
-        
-        // If user selected details outside of app, load deal details
-        if identifier == "detailsButtonAction" || identifier == "goalReachedButtonAction" {
-            
-            if let dealObject = self.parseNotificationJson(userInfo as Dictionary<NSObject, AnyObject>) {
-                self.loadDealDetails(dealObject.1)
-            }
-            
-        }
-        
-        completionHandler()
-    }
     
-    /**
-    Delegate method to receive json data from API call
-    
-    - parameter jsonDictionary: a dictionary of json data from Xtify
-    */
-    func richNotificationsReceived(_ jsonDictionary: NSDictionary) {
-        
-        if let response = jsonDictionary["response"] as? String {
-            
-            if jsonDictionary.count > 0 && response == "SUCCESS" {
-                
-                
-                if let messages = jsonDictionary["messages"] as? NSArray {
-                    DispatchQueue.main.async(execute: {
-                        for dictionaryData in messages {
-                            let notificationData = NotificationData(richNotificationJson: dictionaryData as! Dictionary<NSObject, AnyObject>)
-                            
-                            // Alerts have no other purpose than to allow you to see the notification data on your device
-                            let alertView = UIAlertController(title: notificationData.title, message: notificationData.body, preferredStyle: .alert)
-                            alertView.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "n/a"), style: .default, handler: nil))
-                            self.window?.rootViewController?.present(alertView, animated: true, completion: nil)
-                        }
-                    })
-                }
-            }
-        }
-        
-    }
     
     // MARK: Handoff Communication
     
@@ -535,9 +358,9 @@ extension AppDelegate: DataUtilsDelegate {
         return true
     }
     
-    
-    
 }
+    
+
 
 
 extension AppDelegate: CLLocationManagerDelegate {
@@ -556,5 +379,6 @@ extension AppDelegate: CLLocationManagerDelegate {
     
    
 }
+
 
   

@@ -139,10 +139,7 @@ class LoginViewController: UIViewController {
             } else {
                 UserDataManager.sharedInstance.currentUser = user
                 UserDataManager.sharedInstance.currentUser.gasStations = currentStations
-                // Ensure the tags value exists and register tags with xtify, duplicate tags will be ignored by Xtify
-                if !user.profile.tags.isEmpty {
-                    XLTagManager.sharedInstance.updateWithTags(user.profile.tags, toKeep: true)
-                }
+                
                 self.dismissToMain(self)
             }
             
