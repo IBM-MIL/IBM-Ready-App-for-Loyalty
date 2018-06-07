@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="deal_imgs">
+        <item>@drawable/deal1</item>
+        <item>@drawable/deal2</item>
+        <item>@drawable/deal3</item>
+        <item>@drawable/deal4</item>
+        <item>@drawable/deal5</item>
+        <item>@drawable/deal6</item>
+    </integer-array>
+
+</resources>

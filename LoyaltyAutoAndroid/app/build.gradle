@@ -1,16 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
-
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
-        applicationId "mil.ibm.com.loyaltyauto"
-        minSdkVersion 21
-        targetSdkVersion 22
+        applicationId "com.ibm.mil.loyalty"
+        minSdkVersion 17
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
     }
     buildTypes {
         release {
@@ -18,13 +20,47 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/*'
+         }
 }
 
-dependencies {
-    compile 'com.google.android.gms:play-services:7.5.0'
-    compile 'com.android.support:support-v4:22.+'
-    compile 'com.android.support:appcompat-v7:22.+'
-    compile 'com.android.support:cardview-v7:22.+'
-    compile 'com.android.support:recyclerview-v7:22.+'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+ext {
+    supportLibraryVersion = '26.0.2'
+    butterknifeVersion = "8.5.1"
+
 }
+
+
+
+dependencies {
+
+    compile group: 'com.ibm.mobile.foundation',
+            name: 'ibmmobilefirstplatformfoundation',
+            version: '8.0.+',
+            ext: 'aar',
+            transitive:
+                    true
+
+    compile 'com.ibm.mobile.foundation:ibmmobilefirstplatformfoundationjsonstore:8.0.+'
+    compile 'com.google.firebase:firebase-messaging:10.2.6'
+    compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:3.6.5'
+    compile "com.jakewharton:butterknife:$butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+    compile 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support:design:26.0.2'
+    compile 'com.android.support:support-v4:26.0.2'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.android.support:cardview-v7:26.0.2'
+    compile 'com.google.android.gms:play-services-maps:10.2.6'
+    compile 'com.google.android.gms:play-services-location:10.2.6'
+    compile 'com.google.android.gms:play-services-analytics:10.2.6'
+    compile 'com.android.support:recyclerview-v7:26.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+
+
+}
+
+apply plugin: 'com.google.gms.google-services'
