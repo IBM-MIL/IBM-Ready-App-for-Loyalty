@@ -113,7 +113,7 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
         // Initialize Push client
         // You can find your App Guid and Client Secret by navigating to the Configure section of your Push dashboard, click Mobile Options (Upper Right Hand Corner)
         // TODO: Please replace <APP_GUID> and <CLIENT_SECRET> with a valid App GUID and Client Secret from the Push dashboard Mobile Options
-        push.initialize(this, "abf20737-4aa7-41ed-af6f-86e137299216", "b71f0593-5bfc-48a7-8d89-47ec0453bebf");
+        push.initialize(this, "<appGUID>", "<ClientSecret>");
 
         // Create notification listener and enable pop up notification when a message is received
         notificationListener = new MFPPushNotificationListener() {

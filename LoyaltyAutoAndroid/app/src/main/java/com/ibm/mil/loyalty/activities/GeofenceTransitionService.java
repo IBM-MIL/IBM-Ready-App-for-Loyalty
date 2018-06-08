@@ -99,7 +99,7 @@ public class GeofenceTransitionService extends IntentService {
 
         try {
             // TODO: Please replace Openwhisk URL from the IBM Cloud functions dashboard
-            URL url = new URL("https://openwhisk.eu-gb.bluemix.net/api/v1/web/dselvara%40in.ibm.com_sdp/com.ibm.mil.readyapps/sendDeals.json");
+            URL url = new URL("<IBM Cloud function URL which will send a notification>");
             HttpURLConnection hConn = (HttpURLConnection) url.openConnection();
             hConn.setRequestProperty("Content-Type", "application/json");
             hConn.setRequestMethod("POST");
