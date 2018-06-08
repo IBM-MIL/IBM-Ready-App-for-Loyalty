@@ -40,9 +40,30 @@ A test simulation gpx file has been provided with the app, which can be used (wi
 
 Watson Personality Insights adapter has been provided with the app. It retrieves the Watson personality insights for a user. You would normally take a users Twitter feed and supply it to the Watson personality insights service and leverage the results to make informed decisions about what types of offers to make to the user based on their personality. For this simple application we are hard coding the "Twitter feed" that we are supplying the Watson service and are NOT using the results to generate the custom offers we provide for the user as this logic would be very specific to the industry the application is rolled into and the specific business owners needs.
 
+
+
 ### Android
 
 The Android version of the app uses preemptive login mechanism for user authentication. Username and password need to be same for a successful login. For example, john/john. Loyalty application uses MFP JSONStore to save the deals chosen by the customer. Also,  geofencing capability is used to monitor a given radius around the gas stations. When a customer enters the area, personalized deals are sent to them using IBM Cloud function and IBM Push Notification service. 
+
+### Setup Instructions
+
+1. Download LoyaltyReadyAppiOS/LoyaltyAutoAndroid application.
+
+2. Download and deploy the adapters to MFP Server.
+
+3. Register app with APNS/FCM and get the Push credentials. Deploy IBM Push service on IBM Cloud and update the APNS/FCM push credentials in the service. Update the IBM Push service appId/clientsecret in the Loyalty application.
+
+4. Develop a IBM Cloud function action which can send a push notification. Please refer documentation [here](https://console.bluemix.net/docs/openwhisk/mobile_push_actions.html#openwhisk_catalog_pushnotifications) on the same. It is a simple call for ex,  
+*Whisk.invoke(actionNamed:"/whisk.system/pushnotifications/sendMessage",withParameters:["appSecret":"<IBM Push service-appsecret>","appId":"<IBM Push service-appId>","text":<message>,"apiHost":"<hostname.bluemix.net","apnsPayload":<message>])*
+	
+	After deploying the cloud function, get the endpoint and update the same in the Loyalty application code.  
+
+5.	Register the Loyalty application on MFP server using the MFP admin console. Configure the APNS/FCM Push credentials for the application.
+
+6. Run the application in emulator(for android, use emulator image with Google APIs). For testing the Geofencing feature, click on the 'Cheapest' or 'Closest' gas station tile on the home screen. This will open up the 'Station' map screen with geofence set. To trigger the geofence events, simulate the user location by using the location feature of emulator. For example, set the latitude to 30.4 and longitude to -97.721.	
+
+6.	User can also choose the deals from the deals page and save them. These deals are stored in local JSONStore. As they add the deals, their loyalty points increase.
 
 
 ### Documentation

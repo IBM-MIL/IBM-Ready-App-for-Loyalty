@@ -1,0 +1,7 @@
+com\ibm\mil\utils\Messages.class
+com\ibm\mil\utils\ErrorTypes.class
+com\ibm\mil\utils\JsonReader.class
+com\ibm\mil\PropertiesReader.class
+com\ibm\mil\utils\ErrorTypes$1.class
+com\ibm\mil\LoyaltyUserAdapterApplication.class
+com\ibm\mil\LoyaltyUserAdapterResource.class
