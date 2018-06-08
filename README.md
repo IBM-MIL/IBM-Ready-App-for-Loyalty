@@ -52,7 +52,7 @@ The Android version of the app uses preemptive login mechanism for user authenti
 
 2. Download and deploy the adapters to MFP Server.
 
-3. Register app with APNS/FCM and get the Push credentials. Deploy IBM Push service on IBM Cloud and update the APNS/FCM push credentials in the service. Update the IBM Push service appId/clientsecret in the Loyalty application.
+3. Register app with APNS/FCM and get the Push credentials. Deploy IBM Push Notification service on IBM Cloud and update the APNS/FCM push credentials in the service. Update the IBM Push Notification service appId/clientsecret in the Loyalty application.
 
 4. Develop a IBM Cloud function action which can send a push notification. Please refer documentation [here](https://console.bluemix.net/docs/openwhisk/mobile_push_actions.html#openwhisk_catalog_pushnotifications) on the same. It is a simple call for ex,  
 *Whisk.invoke(actionNamed:"/whisk.system/pushnotifications/sendMessage",withParameters:["appSecret":"<IBM Push service-appsecret>","appId":"<IBM Push service-appId>","text":<message>,"apiHost":"<hostname.bluemix.net","apnsPayload":<message>])*
@@ -64,6 +64,8 @@ The Android version of the app uses preemptive login mechanism for user authenti
 6. Run the application in emulator(for android, use emulator image with Google APIs). For testing the Geofencing feature, click on the 'Cheapest' or 'Closest' gas station tile on the home screen. This will open up the 'Station' map screen with geofence set. To trigger the geofence events, simulate the user location by using the location feature of emulator. For example, set the latitude to 30.4 and longitude to -97.721.	
 
 6.	User can also choose the deals from the deals page and save them. These deals are stored in local JSONStore. As they add the deals, their loyalty points increase.
+
+Note - IBM Push Notification Service works with Android API level 26 and later.
 
 
 ### Documentation
