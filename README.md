@@ -65,7 +65,7 @@ The Android version of the app uses preemptive login mechanism for user authenti
 
 6.	User can also choose the deals from the deals page and save them. These deals are stored in local JSONStore. As they add the deals, their loyalty points increase.
 
-Note - IBM Push Notification Service works with Android API level 26 and later.
+Note for Android app - IBM Push Notification Service works with Android API level 26 and later. For Geonotification to work set the Location mode on Android to 'High Accuracy'.
 
 
 ### Documentation
