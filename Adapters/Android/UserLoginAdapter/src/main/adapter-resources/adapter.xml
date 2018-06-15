@@ -27,9 +27,6 @@ limitations under the License.
 		<property name="blockedStateExpirationSec" defaultValue="10" description="How long before the client can try again (seconds)" type="integer"/>
 		<property name="successStateExpirationSec" defaultValue="60" description="How long is a successful state valid for (seconds)" type="integer"/>
 		<property name="rememberMeDurationSec" defaultValue="120" description="How long is the user remembered when using RememberMe (seconds)" type="integer"/>
-		<property name="apic_url" displayName="APIC URL" defaultValue="https://api.eu.apiconnect.ibmcloud.com/dselvarainibmcom-sdp/sb/oauth-end/oauth2/" />
-		<property name="apic_clientid" displayName="APIC Client ID" defaultValue="5fcf4990-1035-4f93-ab3b-1fe385af6c6a" />
-		<property name="apic_clientsecret" displayName="APIC Client Secret" defaultValue="gX5nH3oH7fG1dG4qU2vS7kL5hJ5bS6uC3nY1fE6dI2pY6uR6hU" />
 	</securityCheckDefinition>
 
 </mfp:adapter>
