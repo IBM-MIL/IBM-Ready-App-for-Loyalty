@@ -50,9 +50,10 @@ The Android version of the app uses preemptive login mechanism for user authenti
 
 1. Download LoyaltyReadyAppiOS/LoyaltyAutoAndroid application.
 
-2. Download and deploy the adapters to MFP Server.
+2. Download the adapters. Update the LoyaltyUserAdapter properties file with Watson service user name, build and deploy the adapters to MFP Server.
 
 3. Register app with APNS/FCM and get the Push credentials. Deploy IBM Push Notification service on IBM Cloud and update the APNS/FCM push credentials in the service. Update the IBM Push Notification service appId/clientsecret in the Loyalty application.
+
 
 4. Develop a IBM Cloud function action which can send a push notification. Please refer documentation [here](https://console.bluemix.net/docs/openwhisk/mobile_push_actions.html#openwhisk_catalog_pushnotifications) on the same. It is a simple call for ex,  
 *Whisk.invoke(actionNamed:"/whisk.system/pushnotifications/sendMessage",withParameters:["appSecret":"<IBM Push service-appsecret>","appId":"<IBM Push service-appId>","text":<message>,"apiHost":"<hostname.bluemix.net","apnsPayload":<message>])*
