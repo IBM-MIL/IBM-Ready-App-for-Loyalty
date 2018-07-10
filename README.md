@@ -13,10 +13,9 @@ IBM Ready App for Loyalty is the fifth of the IBM Ready App Series. This app
 
 IBM Ready App for Loyalty is made great via
 
-* [**IBM MobileFirst Platform**](http://www-03.ibm.com/software/products/en/mobilefirstplatform)
-* [**IBM Bluemix**](https://console.ng.bluemix.net/)
+* [**IBM MobileFirst Foundation**](http://www-03.ibm.com/software/products/en/mobilefirstplatform)
 * [**IBM Watson Personality Insights**](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/personality-insights.html)
-* [**IBM Mobile Push Notification**](https://www.ibm.com/cloud/push-notifications)
+* [**IBM Push Notification**](https://www.ibm.com/cloud/push-notifications)
 * [**IBM Cloud Functions**](https://console.bluemix.net/openwhisk/)
 
   
