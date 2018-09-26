@@ -69,4 +69,4 @@ Note for Android app - IBM Push Notification Service works with Android API leve
 
 
 ### Documentation
-Please visit [this page](https://developer.ibm.com/open/2015/10/19/ibm-ready-app-for-consumer-loyalty/) for more information.
+Please visit [this page](https://console.bluemix.net/docs/services/mobile/ms-readyapps-overview.html#readyapps-overview) for more information.
